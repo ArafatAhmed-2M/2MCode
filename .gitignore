@@ -1,0 +1,38 @@
+# 2M Code - .gitignore
+
+# Environment & Secrets
+.env
+.env.local
+credentials.json
+*.key
+*.pem
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Project-specific
+.tmp/
+.2mcode/
+*.log
+*.pid
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*

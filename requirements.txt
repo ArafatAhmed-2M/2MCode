@@ -1,0 +1,22 @@
+# 2M Code - Dependencies
+# Core AI & Model Routing
+litellm>=1.60.0
+
+# Terminal UI
+rich>=13.9.0
+prompt-toolkit>=3.0.50
+
+# CLI Framework
+click>=8.1.0
+
+# Configuration & Serialization
+pyyaml>=6.0.0
+pydantic>=2.10.0
+python-dotenv>=1.1.0
+platformdirs>=4.3.0
+
+# HTTP Client (bundled dep, for network calls in generated scripts)
+httpx>=0.28.0
+
+# Execution
+distro>=1.9.0
