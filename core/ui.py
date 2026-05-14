@@ -48,16 +48,12 @@ def make_panel(content, title="", border_style="cyan", subtitle="") -> Panel:
 
 
 def print_header() -> None:
-    title = Text()
-    title.append("  ██╗    ███╗   ███╗     ██████╗ ██████╗ ██████╗ ███████╗  \n", style="cyan")
-    title.append("  ██║    ████╗ ████║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝  \n", style="bright_cyan")
-    title.append("  ██║ █╗ ██╔████╔██║    ██║     ██║   ██║██║  ██║█████╗    \n", style="cyan")
-    title.append("  ██║███╗██║╚██╔╝██║    ██║     ██║   ██║██║  ██║██╔══╝    \n", style="bright_cyan")
-    title.append("  ╚███╔███╔╝ ╚═╝ ╚═╝    ╚██████╗╚██████╔╝██████╔╝███████╗  \n", style="cyan")
-    title.append("   ╚══╝╚══╝              ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝  \n", style="cyan")
-    title.append("  ═══════════════════════  AI  ═══════════════════════════  \n", style="bright_cyan")
-    subtitle = Text("Model-Agnostic Terminal AI Coding Assistant", style="bold white")
-    console.print(Panel(title, box=box.DOUBLE_EDGE, border_style="cyan"))
+    console.print()
+    console.print(Panel(
+        "[cyan bold]2M CODE[/cyan bold]\n[white]Model-Agnostic Terminal AI Coding Assistant[/white]",
+        border_style="blue",
+        expand=False,
+    ))
     console.print()
 
 
@@ -129,5 +125,5 @@ def print_separator() -> None:
 
 
 def confirm_action(message: str) -> bool:
-    from prompt_toolkit.shortcuts import confirm as pt_confirm
-    return pt_confirm(message)
+    from rich.prompt import Confirm
+    return Confirm.ask(f"[bold white]{message}[/bold white]", default=False)

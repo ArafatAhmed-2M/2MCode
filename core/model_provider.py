@@ -5,7 +5,9 @@ from typing import Optional, AsyncGenerator, Any
 
 import litellm
 from litellm import completion, acompletion
-from prompt_toolkit.shortcuts import radiolist_dialog, input_dialog, message_dialog
+
+from rich.prompt import Prompt, IntPrompt
+from rich.text import Text
 
 from core.config import (
     AppConfig,
@@ -16,7 +18,6 @@ from core.config import (
     get_api_key,
 )
 from core.ui import console, make_panel, status_spinner, print_header
-from rich.text import Text
 
 PROVIDERS = {
     "anthropic": {
@@ -75,63 +76,78 @@ def run_setup_wizard() -> AppConfig:
         ("custom", "Custom Endpoint (Local / Open Source / Ollama / vLLM / HuggingFace)"),
     ]
 
-    result = radiolist_dialog(
+    console.print(make_panel(
+        "[bold white]Choose your AI model provider:[/bold white]",
         title="2M Code — Model Provider Selection",
-        text="Choose your AI model provider:",
-        values=provider_choices,
-    ).run()
+        border_style="cyan",
+    ))
+    console.print()
+    for idx, (_, label) in enumerate(provider_choices, 1):
+        console.print(f"  [bold cyan]{idx}.[/bold cyan] [white]{label}[/white]")
+    console.print()
+    choice = IntPrompt.ask("[bold white]Enter your choice", default=1)
 
-    if result is None:
-        console.print("[yellow]Setup cancelled.[/yellow]")
-        raise SystemExit(0)
+    if choice < 1 or choice > len(provider_choices):
+        console.print("[red]Invalid choice.[/red]")
+        raise SystemExit(1)
 
-    provider = result
-    info = PROVIDERS.get(provider)
+    provider = provider_choices[choice - 1][0]
     api_key = ""
     api_base = None
     model_name = ""
 
     if provider == "custom":
-        api_base = input_dialog(
-            title="Custom Endpoint",
-            text="Enter your API base URL:\n(e.g. http://localhost:11434/v1 or https://your-endpoint.com/v1)",
-        ).run()
+        # ---- Custom provider flow - completely isolated from standard env mapping ----
+        env_key_name = Prompt.ask(
+            "[bold white]API Name/Env Key to use[/bold white]",
+            default="NVIDIA_API_KEY",
+        )
+        api_key = Prompt.ask(
+            "[bold white]Enter your API key (leave blank if not required)[/bold white]",
+            default="",
+        )
+        api_base = Prompt.ask(
+            "[bold white]Custom API Base URL[/bold white]",
+            default="http://localhost:11434/v1",
+        )
         if not api_base:
             console.print("[red]API base URL is required for custom endpoints.[/red]")
             raise SystemExit(1)
-        api_key = input_dialog(
-            title="Custom API Key",
-            text="Enter your API key (leave blank if not required):",
-        ).run() or ""
-        model_name = input_dialog(
-            title="Custom Model Name",
-            text="Enter the model name:\n(e.g. ollama/qwen2.5-coder, openmixtral, etc.)",
-        ).run()
+        model_name = Prompt.ask(
+            "[bold white]Model name (e.g. ollama/qwen2.5-coder, open-mixtral-8x7b)[/bold white]",
+            default="ollama/qwen2.5-coder",
+        )
         if not model_name:
             console.print("[red]Model name is required.[/red]")
             raise SystemExit(1)
-        message_dialog(
-            title="Custom Provider Configured",
-            text=f"Base URL: {api_base}\nModel: {model_name}\n\nYou can change these later with '2m configure'.",
-        ).run()
+
+        if api_key:
+            os.environ[env_key_name] = api_key
+            os.environ["CUSTOM_API_KEY"] = api_key
     else:
-        api_key = input_dialog(
-            title=f"{info['label']} — API Key",
-            text=f"Paste your {info['label']} API key:",
-        ).run()
+        # ---- Standard provider flow - safe to access PROVIDERS dict ----
+        info = PROVIDERS[provider]
+
+        api_key = Prompt.ask(
+            f"[bold white]Paste your {info['label']} API key[/bold white]",
+            default="",
+        )
         if not api_key:
             console.print("[yellow]No API key provided. Check .env file or configure later.[/yellow]")
-        model_choices = [(m, m) for m in info["models"]]
-        model_result = radiolist_dialog(
-            title="Select Model",
-            text="Choose which model to use:",
-            values=model_choices,
-        ).run()
-        model_name = model_result or info["default"]
 
-    os.environ[info["env_key"]] = api_key if provider != "custom" else ""
-    if provider == "custom" and api_key:
-        os.environ["CUSTOM_API_KEY"] = api_key
+        console.print()
+        console.print("[bold white]Choose which model to use:[/bold white]")
+        for idx, m in enumerate(info["models"], 1):
+            console.print(f"  [bold cyan]{idx}.[/bold cyan] [white]{m}[/white]")
+        console.print()
+        model_choice = IntPrompt.ask("[bold white]Enter your choice", default=1)
+        if 1 <= model_choice <= len(info["models"]):
+            model_name = info["models"][model_choice - 1]
+        else:
+            model_name = info["default"]
+
+        if api_key:
+            os.environ[info["env_key"]] = api_key
 
     cfg = load_config()
     cfg.model.provider = provider

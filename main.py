@@ -26,6 +26,7 @@ from core.ui import console, make_panel
 from core.config import load_config, CONFIG_DIR, CONFIG_FILE
 from core.model_provider import run_setup_wizard
 from core.skill_manager import interactive_skill_selection, ensure_synced
+from skill_sync import load_library, search_skills
 from orchestrator import run_chat_loop
 
 __version__ = "2.0.0"
@@ -174,6 +175,25 @@ def skills() -> None:
     """Manage active skills interactively"""
     ensure_synced()
     interactive_skill_selection()
+
+
+@cli.command(name="library")
+def library_cmd() -> None:
+    """Load and display all available library files with live progress"""
+    result = load_library()
+    if not result:
+        console.print("[yellow]No libraries loaded.[/yellow]")
+        return
+    names = [s["name"] for s in result]
+    console.print(f"[green]Libraries:[/green] {', '.join(names)}")
+
+
+@cli.command()
+@click.argument("query", nargs=-1, required=True)
+def search(query: tuple[str, ...]) -> None:
+    """Search through all library/skill files for matching content"""
+    query_text = " ".join(query)
+    search_skills(query_text)
 
 
 @cli.command()

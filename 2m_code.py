@@ -34,7 +34,7 @@ from core.ui import console, make_panel, show_table, status_spinner, print_heade
 from core.model_provider import run_setup_wizard as model_setup_wizard, send_message_sync
 
 from orchestrator import run_chat_loop, build_system_prompt, process_llm_response
-from skill_sync import ensure_synced, select_skills_interactive
+from skill_sync import ensure_synced, select_skills_interactive, load_library, search_skills
 
 __version__ = "2.0.0"
 __author__ = "2M Code Team"
@@ -65,9 +65,7 @@ def cli(ctx: click.Context, version: bool) -> None:
 @cli.command()
 def setup() -> None:
     """Run the interactive setup wizard (model + skills)"""
-    print_header()
-
-    # Step 1: Model provider setup
+    # Step 1: Model provider setup (prints its own header)
     cfg = model_setup_wizard()
 
     # Step 2: Skill selection
@@ -206,6 +204,33 @@ def skills() -> None:
     select_skills_interactive()
     cfg = load_config()
     console.print(f"[green]Active skills:[/green] {', '.join(cfg.active_skills)}")
+
+
+# ---------------------------------------------------------------------------
+# Library Command
+# ---------------------------------------------------------------------------
+
+@cli.command(name="library")
+def library_cmd() -> None:
+    """Load and display all available library files with live progress"""
+    result = load_library()
+    if not result:
+        console.print("[yellow]No libraries loaded.[/yellow]")
+        return
+    names = [s["name"] for s in result]
+    console.print(f"[green]Libraries:[/green] {', '.join(names)}")
+
+
+# ---------------------------------------------------------------------------
+# Search Command
+# ---------------------------------------------------------------------------
+
+@cli.command()
+@click.argument("query", nargs=-1, required=True)
+def search(query: tuple[str, ...]) -> None:
+    """Search through all library/skill files for matching content"""
+    query_text = " ".join(query)
+    search_skills(query_text)
 
 
 # ---------------------------------------------------------------------------

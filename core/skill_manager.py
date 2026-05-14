@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-from prompt_toolkit.shortcuts import checkboxlist_dialog, message_dialog, yes_no_dialog
+from rich.prompt import Prompt, IntPrompt
 from rich.text import Text
 from rich.markdown import Markdown
 
@@ -84,49 +84,56 @@ def interactive_skill_selection() -> list[str]:
         save_config(cfg)
         return default
 
-    choices = []
-    for s in all_skills:
+    console.print(make_panel(
+        f"[bold white]Select up to {MAX_SKILLS} skills to activate[/bold white]",
+        title="2M Code — Skill Selection",
+        border_style="cyan",
+    ))
+    console.print()
+    for idx, s in enumerate(all_skills, 1):
         label = s["label"]
         if s["name"] == "skill-creator":
             label += " [cyan](Special: Create your own skills)[/cyan]"
         else:
             label += f" [dim]{s['name']}[/dim]"
-        checked = s["name"] in current_active
-        choices.append((s["name"], label, checked))
+        active_mark = " [green]✓[/green]" if s["name"] in current_active else ""
+        console.print(f"  [bold cyan]{idx}.[/bold cyan] [white]{label}[/white]{active_mark}")
+    console.print()
+    console.print("[dim]Enter numbers separated by commas (e.g. 1,3,5). Leave blank to keep current.[/dim]")
+    console.print()
 
-    values_for_dialog = [(name, label) for name, label, _ in choices]
-    preselected = [name for name, _, checked in choices if checked]
-
-    result = checkboxlist_dialog(
-        title="2M Code — Skill Selection",
-        text=f"Select up to {MAX_SKILLS} skills to activate (skill-creator is always available):",
-        values=values_for_dialog,
-        default_values=preselected,
-    ).run()
-
-    if result is None:
-        console.print("[yellow]Using previously selected skills.[/yellow]")
+    raw = Prompt.ask("[bold white]Your selection", default="").strip()
+    if not raw:
+        console.print("[yellow]Keeping previous selection.[/yellow]")
         return cfg.active_skills
 
-    selected = list(result)
+    selected_indices = []
+    for part in raw.split(","):
+        part = part.strip()
+        if part.isdigit():
+            idx = int(part)
+            if 1 <= idx <= len(all_skills):
+                selected_indices.append(idx - 1)
 
-    if "skill-creator" not in selected:
-        selected.insert(0, "skill-creator")
+    selected_names = [all_skills[i]["name"] for i in selected_indices]
 
-    if len(selected) > MAX_SKILLS:
-        selected = selected[:MAX_SKILLS]
-        console.print(f"[yellow]Limited to {MAX_SKILLS} skills. Keeping: {', '.join(selected)}[/yellow]")
+    if "skill-creator" not in selected_names:
+        selected_names.insert(0, "skill-creator")
 
-    skill_names = [s["label"] for s in all_skills if s["name"] in selected]
+    if len(selected_names) > MAX_SKILLS:
+        selected_names = selected_names[:MAX_SKILLS]
+        console.print(f"[yellow]Limited to {MAX_SKILLS} skills. Keeping: {', '.join(selected_names)}[/yellow]")
+
+    skill_names = [s["label"] for s in all_skills if s["name"] in selected_names]
     console.print(make_panel(
         Text(f"Active skills: {', '.join(skill_names)}", style="bold white"),
         title="Skills Loaded",
         border_style="green",
     ))
 
-    cfg.active_skills = selected
+    cfg.active_skills = selected_names
     save_config(cfg)
-    return selected
+    return selected_names
 
 
 def get_active_skill_contents() -> list[dict]:
