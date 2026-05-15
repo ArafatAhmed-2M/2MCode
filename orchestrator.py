@@ -25,8 +25,8 @@ from rich.syntax import Syntax
 from rich.text import Text
 
 from core.config import AppConfig, load_config, save_config
-from core.ui import console, make_panel, status_spinner
-from core.model_provider import send_message_sync
+from core.ui import console, make_panel, status_spinner, print_separator
+from core.model_provider import send_message_sync, run_setup_wizard
 from core.skill_manager import get_active_skill_contents
 from execution.runner import run_python_code, extract_code_blocks
 
@@ -208,7 +208,7 @@ def run_chat_loop(cfg: Optional[AppConfig] = None) -> None:
         title="2M Code Orchestrator",
         border_style="cyan",
     ))
-    console.print("[dim]Type a task, 'exit' to quit, 'reset' to clear context.[/dim]\n")
+    console.print("[dim]Type a task, /help for commands, exit to quit.[/dim]\n")
 
     while True:
         try:
@@ -229,6 +229,67 @@ def run_chat_loop(cfg: Optional[AppConfig] = None) -> None:
         if not user_input:
             continue
 
+        # ── Slash Commands ──
+        if user_input.startswith("/"):
+            parts = user_input.split(maxsplit=1)
+            slash_cmd = parts[0].lower()
+            args = parts[1] if len(parts) > 1 else ""
+
+            if slash_cmd == "/connect":
+                console.print("[yellow]Launching model setup wizard...[/yellow]")
+                cfg = run_setup_wizard(show_header=False)
+                system_prompt = build_system_prompt(cfg)
+                messages = [{"role": "system", "content": system_prompt}]
+                from core.model_provider import PROVIDERS
+                p = PROVIDERS.get(cfg.model.provider, {})
+                console.print(make_panel(
+                    f"[bold green]Configuration hot-reloaded![/bold green]\n"
+                    f"[white]Provider:[/white] [cyan]{cfg.model.provider}[/cyan]\n"
+                    f"[white]Model:[/white] [cyan]{cfg.model.model_name}[/cyan]",
+                    title="Connected",
+                    border_style="green",
+                ))
+                continue
+
+            elif slash_cmd == "/model":
+                if args:
+                    cfg.model.model_name = args
+                    save_config(cfg)
+                    system_prompt = build_system_prompt(cfg)
+                    messages = [{"role": "system", "content": system_prompt}]
+                    console.print(f"[green]Model switched to [bold white]{args}[/bold white] and saved.[/green]")
+                else:
+                    console.print("[yellow]Usage: /model <model_name>  (e.g. /model gpt-4o)[/yellow]")
+                continue
+
+            elif slash_cmd == "/clear":
+                messages = [{"role": "system", "content": system_prompt}]
+                console.clear()
+                console.print("[green]Screen and context cleared.[/green]")
+                continue
+
+            elif slash_cmd == "/help":
+                print_separator()
+                console.print("[bold cyan]Available Commands[/bold cyan]")
+                print_separator()
+                commands = [
+                    ("/connect", "Launch model setup wizard (hot-reload config)"),
+                    ("/model <name>", "Switch AI model instantly & persist"),
+                    ("/clear", "Clear terminal screen & chat history"),
+                    ("/help", "Show this help menu"),
+                    ("reset", "Reset conversation context only"),
+                    ("exit / quit / q", "Exit 2M Code"),
+                ]
+                for cmd_name, desc in commands:
+                    console.print(f"  [bold cyan]{cmd_name:<20}[/bold cyan] [white]{desc}[/white]")
+                print_separator()
+                continue
+
+            else:
+                console.print(f"[yellow]Unknown command: {slash_cmd}. Type /help for available commands.[/yellow]")
+                continue
+
+        # ── Standard exit / reset commands ──
         cmd = user_input.lower()
         if cmd in ("exit", "quit", "q"):
             console.print("[cyan]Shutting down 2M Code. Goodbye![/cyan]")

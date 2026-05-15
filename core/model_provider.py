@@ -21,7 +21,7 @@ from core.ui import console, make_panel, status_spinner, print_header
 
 PROVIDERS = {
     "anthropic": {
-        "label": "Anthropic (Claude 3.5 Sonnet)",
+        "label": "Anthropic (Claude)",
         "models": [
             "claude-sonnet-4-20250514",
             "claude-3-5-sonnet-20241022",
@@ -32,18 +32,19 @@ PROVIDERS = {
         "env_key": "ANTHROPIC_API_KEY",
     },
     "openai": {
-        "label": "OpenAI (GPT-4o)",
+        "label": "OpenAI (GPT-4o / o-series)",
         "models": [
             "gpt-4o",
             "gpt-4o-mini",
             "gpt-4-turbo",
             "o1",
+            "o3-mini",
         ],
         "default": "gpt-4o",
         "env_key": "OPENAI_API_KEY",
     },
     "google": {
-        "label": "Google (Gemini Pro)",
+        "label": "Google (Gemini)",
         "models": [
             "gemini/gemini-2.0-flash-exp",
             "gemini/gemini-1.5-pro",
@@ -62,17 +63,66 @@ PROVIDERS = {
         "default": "groq/llama3-70b-8192",
         "env_key": "GROQ_API_KEY",
     },
+    "openrouter": {
+        "label": "OpenRouter (Multi-Model Gateway)",
+        "models": [
+            "openrouter/anthropic/claude-sonnet-4-20250514",
+            "openrouter/openai/gpt-4o",
+            "openrouter/google/gemini-2.0-flash-exp",
+            "openrouter/meta-llama/llama-3.3-70b-instruct",
+            "openrouter/deepseek/deepseek-chat",
+        ],
+        "default": "openrouter/anthropic/claude-sonnet-4-20250514",
+        "env_key": "OPENROUTER_API_KEY",
+        "api_base": "https://openrouter.ai/api/v1",
+    },
+    "deepseek": {
+        "label": "DeepSeek",
+        "models": [
+            "deepseek/deepseek-chat",
+            "deepseek/deepseek-reasoner",
+        ],
+        "default": "deepseek/deepseek-chat",
+        "env_key": "DEEPSEEK_API_KEY",
+    },
+    "together": {
+        "label": "Together AI",
+        "models": [
+            "together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "together_ai/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            "together_ai/deepseek-ai/deepseek-chat",
+            "together_ai/Qwen/Qwen2.5-Coder-32B-Instruct",
+        ],
+        "default": "together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+        "env_key": "TOGETHER_API_KEY",
+    },
+    "mistral": {
+        "label": "Mistral AI",
+        "models": [
+            "mistral/mistral-large-latest",
+            "mistral/mistral-medium-latest",
+            "mistral/mistral-small-latest",
+            "mistral/codestral-latest",
+        ],
+        "default": "mistral/mistral-large-latest",
+        "env_key": "MISTRAL_API_KEY",
+    },
 }
 
 
-def run_setup_wizard() -> AppConfig:
-    print_header()
+def run_setup_wizard(show_header: bool = True) -> AppConfig:
+    if show_header:
+        print_header()
 
     provider_choices = [
         ("anthropic", PROVIDERS["anthropic"]["label"]),
         ("openai", PROVIDERS["openai"]["label"]),
         ("google", PROVIDERS["google"]["label"]),
         ("groq", PROVIDERS["groq"]["label"]),
+        ("openrouter", PROVIDERS["openrouter"]["label"]),
+        ("deepseek", PROVIDERS["deepseek"]["label"]),
+        ("together", PROVIDERS["together"]["label"]),
+        ("mistral", PROVIDERS["mistral"]["label"]),
         ("custom", "Custom Endpoint (Local / Open Source / Ollama / vLLM / HuggingFace)"),
     ]
 

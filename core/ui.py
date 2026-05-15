@@ -48,11 +48,18 @@ def make_panel(content, title="", border_style="cyan", subtitle="") -> Panel:
 
 
 def print_header() -> None:
+    from rich.text import Text as RichText
+    title = RichText.assemble(
+        ("\n      " + chr(0x250F) + chr(0x2501) * 14 + "  2 M   C O D E  " + chr(0x2501) * 14 + chr(0x2513) + "\n", "bold cyan"),
+        ("      " + chr(0x2503) + "          Model-Agnostic Terminal AI Coding Assistant          " + chr(0x2503) + "\n", "white"),
+        ("      " + chr(0x2517) + chr(0x2501) * 14 + "  AI-Powered  •  Auto-Correcting  •  Skill-Enhanced  " + chr(0x2501) * 14 + chr(0x251B), "dim cyan"),
+    )
     console.print()
     console.print(Panel(
-        "[cyan bold]2M CODE[/cyan bold]\n[white]Model-Agnostic Terminal AI Coding Assistant[/white]",
-        border_style="blue",
-        expand=False,
+        title,
+        border_style="cyan",
+        box=box.ROUNDED,
+        padding=(1, 3),
     ))
     console.print()
 
