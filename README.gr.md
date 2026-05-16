@@ -1,11 +1,14 @@
 ﻿<p align="center">
-  <a href="https://2M_CODE.ai">
-    <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="2M_CODE logo">
-    </picture>
-  </a>
+
+`	ext
+██████╗ ███╗   ███╗     ██████╗ ██████╗ ██████╗ ███████╗
+╚════██╗████╗ ████║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+ █████╔╝██╔████╔██║    ██║     ██║   ██║██║  ██║█████╗  
+██╔═══╝ ██║╚██╔╝██║    ██║     ██║   ██║██║  ██║██╔══╝  
+███████╗██║ ╚═╝ ██║    ╚██████╗╚██████╔╝██████╔╝███████╗
+╚══════╝╚═╝     ╚═╝     ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+`
+
 </p>
 <p align="center">Ο πράκτορας τεχνητής νοημοσύνης ανοικτού κώδικα για προγραμματισμό.</p>
 <p align="center">

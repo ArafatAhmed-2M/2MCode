@@ -1,17 +1,20 @@
-﻿<p align="center">
-  <a href="https://2M_CODE.ai">
-    <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="2M_CODE logo">
-    </picture>
-  </a>
-</p>
-<p align="center">The open source AI coding agent.</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+
+```
+██████╗ ███╗   ███╗     ██████╗ ██████╗ ██████╗ ███████╗
+╚════██╗████╗ ████║    ██╔════╝██╔═══██╗██╔══██╗██╔════╝
+ █████╔╝██╔████╔██║    ██║     ██║   ██║██║  ██║█████╗  
+██╔═══╝ ██║╚██╔╝██║    ██║     ██║   ██║██║  ██║██╔══╝  
+███████╗██║ ╚═╝ ██║    ╚██████╗╚██████╔╝██████╔╝███████╗
+╚══════╝╚═╝     ╚═╝     ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
+```
+
+</p>
+<p align="center">The advanced, custom AI engineering assistant.</p>
+<p align="center">
+  <a href="https://github.com/ArafatAhmed-2M/2MCode"><img alt="GitHub" src="https://img.shields.io/badge/github-2MCode-blue?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2MCode/releases"><img alt="Release" src="https://img.shields.io/github/v/release/ArafatAhmed-2M/2MCode?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2MCode/actions"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/ArafatAhmed-2M/2MCode/publish.yml?style=flat-square&branch=main" /></a>
 </p>
 
 <p align="center">
@@ -39,67 +42,60 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
-
 ---
 
 ### Installation
 
 ```bash
-# YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+# Quick install
+curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
 
-# Package managers
-npm i -g 2M_CODE-ai@latest        # or bun/pnpm/yarn
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS and Linux (recommended, always up to date)
-brew install 2M_CODE              # macOS and Linux (official brew formula, updated less)
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
-paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # Any OS
-nix run nixpkgs#2M_CODE           # or github:anomalyco/2M_CODE for latest dev branch
+# npm / bun / pnpm
+npm i -g 2mcode@latest
+bun add -g 2mcode
+pnpm add -g 2mcode
+
+# Windows (Scoop)
+scoop install 2mcode
+
+# macOS / Linux (Homebrew)
+brew install ArafatAhmed-2M/tap/2mcode
+
+# Arch Linux
+paru -S 2mcode-bin
 ```
 
 > [!TIP]
-> Remove versions older than 0.1.x before installing.
+> After install, simply type `2mcode` in any project directory to start.
 
 ### Desktop App (BETA)
 
-2M_CODE is also available as a desktop application. Download directly from the [releases page](https://github.com/ArafatAhmed-2M/2mcode/releases) or [2M_CODE.ai/download](https://2M_CODE.ai/download).
+2M Code is also available as a desktop application. Download directly from the [releases page](https://github.com/ArafatAhmed-2M/2MCode/releases).
 
-| Platform              | Download                           |
-| --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
-| Linux                 | `.deb`, `.rpm`, or `.AppImage`     |
-
-```bash
-# macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
-# Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
-```
+| Platform              | Download                              |
+| --------------------- | ------------------------------------- |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`        |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`          |
+| Windows               | `2mcode-desktop-windows-x64.exe`      |
+| Linux                 | `.deb`, `.rpm`, or `.AppImage`        |
 
 #### Installation Directory
 
-The install script respects the following priority order for the installation path:
+The install script uses the following priority for the installation path:
 
-1. `$2M_CODE_INSTALL_DIR` - Custom installation directory
+1. `$2MCODE_INSTALL_DIR` - Custom installation directory
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
-3. `$HOME/bin` - Standard user binary directory (if it exists or can be created)
-4. `$HOME/.2M_CODE/bin` - Default fallback
+3. `$HOME/bin` - Standard user binary directory
+4. `$HOME/.2mcode/bin` - Default fallback
 
 ```bash
-# Examples
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+# Custom install dir example
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
 ```
 
 ### Agents
 
-2M_CODE includes two built-in agents you can switch between with the `Tab` key.
+2M Code includes two built-in agents you can switch between with the `Tab` key.
 
 - **build** - Default, full-access agent for development work
 - **plan** - Read-only agent for analysis and code exploration
@@ -110,19 +106,17 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 Also included is a **general** subagent for complex searches and multistep tasks.
 This is used internally and can be invoked using `@general` in messages.
 
-Learn more about [agents](https://2M_CODE.ai/docs/agents).
-
 ### Documentation
 
-For more info on how to configure 2M_CODE, [**head over to our docs**](https://2M_CODE.ai/docs).
+For more info on how to configure 2M Code, [**head over to our docs**](https://github.com/ArafatAhmed-2M/2MCode/wiki).
 
 ### Contributing
 
-If you're interested in contributing to 2M_CODE, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
+If you're interested in contributing to 2M Code, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
 
-### Building on 2M_CODE
+### Building on 2M Code
 
-If you are working on a project that's related to 2M_CODE and is using "2M_CODE" as part of its name, for example "2M_CODE-dashboard" or "2M_CODE-mobile", please add a note to your README to clarify that it is not built by the 2M_CODE team and is not affiliated with us in any way.
+If you are working on a project that's related to 2M Code and is using "2M Code" as part of its name, please add a note to your README to clarify that it is not built by the 2M Code team and is not affiliated with us.
 
 ### FAQ
 
@@ -131,11 +125,11 @@ If you are working on a project that's related to 2M_CODE and is using "2M_CODE"
 It's very similar to Claude Code in terms of capability. Here are the key differences:
 
 - 100% open source
-- Not coupled to any provider. Although we recommend the models we provide through [2M_CODE Zen](https://2M_CODE.ai/zen), 2M_CODE can be used with Claude, OpenAI, Google, or even local models. As models evolve, the gaps between them will close and pricing will drop, so being provider-agnostic is important.
+- Not coupled to any provider — 2M Code works with Claude, OpenAI, Google, or local models
 - Built-in opt-in LSP support
-- A focus on TUI. 2M_CODE is built by neovim users and the creators of [terminal.shop](https://terminal.shop); we are going to push the limits of what's possible in the terminal.
-- A client/server architecture. This, for example, can allow 2M_CODE to run on your computer while you drive it remotely from a mobile app, meaning that the TUI frontend is just one of the possible clients.
+- A focus on TUI — built by terminal enthusiasts, pushing the limits of what's possible in the terminal
+- A client/server architecture — 2M Code can run on your computer while you drive it remotely
 
 ---
 
-**Join our community** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**Join our community** [GitHub](https://github.com/ArafatAhmed-2M/2MCode)

@@ -1,9 +1,9 @@
-﻿/// <reference path="./.sst/platform/config.d.ts" />
+/// <reference path="./.sst/platform/config.d.ts" />
 
 export default $config({
   app(input) {
     return {
-      name: "2M_CODE",
+      name: "2mcode",
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "cloudflare",
