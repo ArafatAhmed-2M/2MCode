@@ -213,7 +213,7 @@ npm plugins can declare a version compatibility range in `package.json` using th
 - There is no uninstall, list, or update CLI command for external plugins.
 - Local file plugins are configured directly in `tui.json`.
 
-When `plugin` entries exist in a writable `.2M_CODE` dir or `2M_CODE_CONFIG_DIR`, 2M_CODE installs `@2mcode-ai/plugin` into that dir and writes:
+When `plugin` entries exist in a writable `.2M_CODE` dir or `_2MCODE_CONFIG_DIR`, 2M_CODE installs `@2mcode-ai/plugin` into that dir and writes:
 
 - `package.json`
 - `bun.lock`
@@ -420,7 +420,7 @@ Metadata is persisted by plugin id.
 
 - Internal TUI plugins load first.
 - External TUI plugins load from `tuiConfig.plugin`.
-- `--pure` / `2M_CODE_PURE` skips external TUI plugins only.
+- `--pure` / `_2MCODE_PURE` skips external TUI plugins only.
 - External plugin resolution and import are parallel.
 - Packages with no `./tui` entrypoint and valid `oc-themes` are loaded as synthetic no-op TUI plugin modules.
 - Theme-only packages loaded this way appear in `api.plugins.list()` and plugin manager rows like other external plugins.

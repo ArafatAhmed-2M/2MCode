@@ -1,5 +1,5 @@
 ﻿interface ImportMetaEnv {
-  readonly 2M_CODE_CHANNEL: string
+  readonly _2MCODE_CHANNEL: string
 }
 
 interface ImportMeta {

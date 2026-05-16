@@ -37,12 +37,12 @@ export const AttachCommand = cmd({
       .option("password", {
         alias: ["p"],
         type: "string",
-        describe: "basic auth password (defaults to 2M_CODE_SERVER_PASSWORD)",
+        describe: "basic auth password (defaults to _2MCODE_SERVER_PASSWORD)",
       })
       .option("username", {
         alias: ["u"],
         type: "string",
-        describe: "basic auth username (defaults to 2M_CODE_SERVER_USERNAME or '2M_CODE')",
+        describe: "basic auth username (defaults to _2MCODE_SERVER_USERNAME or '2M_CODE')",
       }),
   handler: async (args) => {
     const unguard = win32InstallCtrlCGuard()

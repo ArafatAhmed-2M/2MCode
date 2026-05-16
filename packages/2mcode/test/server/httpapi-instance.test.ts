@@ -21,12 +21,12 @@ import { testEffect } from "../lib/effect"
 // repeat it.
 const testStateLayer = Layer.effectDiscard(
   Effect.gen(function* () {
-    const originalWorkspaces = Flag.2M_CODE_EXPERIMENTAL_WORKSPACES
-    Flag.2M_CODE_EXPERIMENTAL_WORKSPACES = true
+    const originalWorkspaces = Flag._2MCODE_EXPERIMENTAL_WORKSPACES
+    Flag._2MCODE_EXPERIMENTAL_WORKSPACES = true
     yield* Effect.promise(() => resetDatabase())
     yield* Effect.addFinalizer(() =>
       Effect.promise(async () => {
-        Flag.2M_CODE_EXPERIMENTAL_WORKSPACES = originalWorkspaces
+        Flag._2MCODE_EXPERIMENTAL_WORKSPACES = originalWorkspaces
         await resetDatabase()
       }),
     )
@@ -72,11 +72,11 @@ describe("instance HttpApi", () => {
 
   it.live("emits a sync fence header for fixed-workspace mutations", () =>
     Effect.gen(function* () {
-      const originalWorkspaceID = Flag.2M_CODE_WORKSPACE_ID
-      Flag.2M_CODE_WORKSPACE_ID = WorkspaceID.ascending()
+      const originalWorkspaceID = Flag._2MCODE_WORKSPACE_ID
+      Flag._2MCODE_WORKSPACE_ID = WorkspaceID.ascending()
       yield* Effect.addFinalizer(() =>
         Effect.sync(() => {
-          Flag.2M_CODE_WORKSPACE_ID = originalWorkspaceID
+          Flag._2MCODE_WORKSPACE_ID = originalWorkspaceID
         }),
       )
 
@@ -94,11 +94,11 @@ describe("instance HttpApi", () => {
 
   it.live("does not emit sync fence headers for fixed-workspace reads or no-op mutations", () =>
     Effect.gen(function* () {
-      const originalWorkspaceID = Flag.2M_CODE_WORKSPACE_ID
-      Flag.2M_CODE_WORKSPACE_ID = WorkspaceID.ascending()
+      const originalWorkspaceID = Flag._2MCODE_WORKSPACE_ID
+      Flag._2MCODE_WORKSPACE_ID = WorkspaceID.ascending()
       yield* Effect.addFinalizer(() =>
         Effect.sync(() => {
-          Flag.2M_CODE_WORKSPACE_ID = originalWorkspaceID
+          Flag._2MCODE_WORKSPACE_ID = originalWorkspaceID
         }),
       )
 

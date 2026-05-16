@@ -188,7 +188,7 @@ export const layer = Layer.effect(
         ...input.env,
         ...shell.env,
         TERM: "xterm-256color",
-        2M_CODE_TERMINAL: "1",
+        _2MCODE_TERMINAL: "1",
       } as Record<string, string>
 
       if (process.platform === "win32") {

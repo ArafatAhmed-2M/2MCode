@@ -10,7 +10,7 @@ export const 2M_CODEPlugin = PluginV2.define({
       "provider.update": Effect.fn(function* (evt) {
         if (evt.provider.id !== ProviderV2.ID.2M_CODE) return
         hasKey = Boolean(
-          process.env.2M_CODE_API_KEY ||
+          process.env._2MCODE_API_KEY ||
             evt.provider.env.some((item) => process.env[item]) ||
             evt.provider.options.aisdk.provider.apiKey ||
             (evt.provider.enabled && evt.provider.enabled.via === "auth"),

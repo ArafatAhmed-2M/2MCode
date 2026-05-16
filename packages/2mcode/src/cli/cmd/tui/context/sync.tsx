@@ -489,7 +489,7 @@ export const { use: useSync, provider: SyncProvider } = createSimpleContext({
         return store.status
       },
       get ready() {
-        if (process.env.2M_CODE_FAST_BOOT) return true
+        if (process.env._2MCODE_FAST_BOOT) return true
         return store.status !== "loading"
       },
       get path() {

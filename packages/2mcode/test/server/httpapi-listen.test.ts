@@ -11,38 +11,38 @@ import { disposeAllInstances, tmpdir } from "../fixture/fixture"
 void Log.init({ print: false })
 
 const original = {
-  2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
-  2M_CODE_SERVER_USERNAME: Flag.2M_CODE_SERVER_USERNAME,
-  envPassword: process.env.2M_CODE_SERVER_PASSWORD,
-  envUsername: process.env.2M_CODE_SERVER_USERNAME,
+  _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
+  _2MCODE_SERVER_USERNAME: Flag._2MCODE_SERVER_USERNAME,
+  envPassword: process.env._2MCODE_SERVER_PASSWORD,
+  envUsername: process.env._2MCODE_SERVER_USERNAME,
 }
 const auth = { username: "2M_CODE", password: "listen-secret" }
 const testPty = process.platform === "win32" ? test.skip : test
 
 afterEach(async () => {
-  Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
-  Flag.2M_CODE_SERVER_USERNAME = original.2M_CODE_SERVER_USERNAME
-  if (original.envPassword === undefined) delete process.env.2M_CODE_SERVER_PASSWORD
-  else process.env.2M_CODE_SERVER_PASSWORD = original.envPassword
-  if (original.envUsername === undefined) delete process.env.2M_CODE_SERVER_USERNAME
-  else process.env.2M_CODE_SERVER_USERNAME = original.envUsername
+  Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
+  Flag._2MCODE_SERVER_USERNAME = original._2MCODE_SERVER_USERNAME
+  if (original.envPassword === undefined) delete process.env._2MCODE_SERVER_PASSWORD
+  else process.env._2MCODE_SERVER_PASSWORD = original.envPassword
+  if (original.envUsername === undefined) delete process.env._2MCODE_SERVER_USERNAME
+  else process.env._2MCODE_SERVER_USERNAME = original.envUsername
   await disposeAllInstances()
   await resetDatabase()
 })
 
 async function startListener() {
-  Flag.2M_CODE_SERVER_PASSWORD = auth.password
-  Flag.2M_CODE_SERVER_USERNAME = auth.username
-  process.env.2M_CODE_SERVER_PASSWORD = auth.password
-  process.env.2M_CODE_SERVER_USERNAME = auth.username
+  Flag._2MCODE_SERVER_PASSWORD = auth.password
+  Flag._2MCODE_SERVER_USERNAME = auth.username
+  process.env._2MCODE_SERVER_PASSWORD = auth.password
+  process.env._2MCODE_SERVER_USERNAME = auth.username
   return Server.listen({ hostname: "127.0.0.1", port: 0 })
 }
 
 async function startNoAuthListener() {
-  Flag.2M_CODE_SERVER_PASSWORD = undefined
-  Flag.2M_CODE_SERVER_USERNAME = auth.username
-  delete process.env.2M_CODE_SERVER_PASSWORD
-  process.env.2M_CODE_SERVER_USERNAME = auth.username
+  Flag._2MCODE_SERVER_PASSWORD = undefined
+  Flag._2MCODE_SERVER_USERNAME = auth.username
+  delete process.env._2MCODE_SERVER_PASSWORD
+  process.env._2MCODE_SERVER_USERNAME = auth.username
   return Server.listen({ hostname: "127.0.0.1", port: 0 })
 }
 

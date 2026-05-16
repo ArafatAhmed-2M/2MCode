@@ -15,7 +15,7 @@ import { EffectBridge } from "@/effect/bridge"
 import { init } from "#db"
 import { Effect, Schema } from "effect"
 
-declare const 2M_CODE_MIGRATIONS: { sql: string; timestamp: number; name: string }[] | undefined
+declare const _2MCODE_MIGRATIONS: { sql: string; timestamp: number; name: string }[] | undefined
 
 export const NotFoundError = NamedError.create("NotFoundError", {
   message: Schema.String,
@@ -36,9 +36,9 @@ export function getChannelPath(flags: Pick<DatabaseFlags, "disableChannelDb"> = 
 }
 
 export const getPath = (flags?: Pick<DatabaseFlags, "disableChannelDb">) => {
-  if (Flag.2M_CODE_DB) {
-    if (Flag.2M_CODE_DB === ":memory:" || path.isAbsolute(Flag.2M_CODE_DB)) return Flag.2M_CODE_DB
-    return path.join(Global.Path.data, Flag.2M_CODE_DB)
+  if (Flag._2MCODE_DB) {
+    if (Flag._2MCODE_DB === ":memory:" || path.isAbsolute(Flag._2MCODE_DB)) return Flag._2MCODE_DB
+    return path.join(Global.Path.data, Flag._2MCODE_DB)
   }
   return getChannelPath(flags)
 }
@@ -110,13 +110,13 @@ export const Client = Object.assign(
 
     // Apply schema migrations
     const entries =
-      typeof 2M_CODE_MIGRATIONS !== "undefined"
-        ? 2M_CODE_MIGRATIONS
+      typeof _2MCODE_MIGRATIONS !== "undefined"
+        ? _2MCODE_MIGRATIONS
         : migrations(path.join(import.meta.dirname, "../../migration"))
     if (entries.length > 0) {
       log.info("applying migrations", {
         count: entries.length,
-        mode: typeof 2M_CODE_MIGRATIONS !== "undefined" ? "bundled" : "dev",
+        mode: typeof _2MCODE_MIGRATIONS !== "undefined" ? "bundled" : "dev",
       })
       if (flags.skipMigrations) {
         for (const item of entries) {

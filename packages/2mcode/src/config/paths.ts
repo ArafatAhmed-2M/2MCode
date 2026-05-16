@@ -24,7 +24,7 @@ export const directories = Effect.fn("ConfigPaths.directories")(function* (direc
   const afs = yield* AppFileSystem.Service
   return unique([
     Global.Path.config,
-    ...(!Flag.2M_CODE_DISABLE_PROJECT_CONFIG
+    ...(!Flag._2MCODE_DISABLE_PROJECT_CONFIG
       ? yield* afs.up({
           targets: [".2M_CODE"],
           start: directory,
@@ -36,7 +36,7 @@ export const directories = Effect.fn("ConfigPaths.directories")(function* (direc
       start: Global.Path.home,
       stop: Global.Path.home,
     })),
-    ...(Flag.2M_CODE_CONFIG_DIR ? [Flag.2M_CODE_CONFIG_DIR] : []),
+    ...(Flag._2MCODE_CONFIG_DIR ? [Flag._2MCODE_CONFIG_DIR] : []),
   ])
 })
 

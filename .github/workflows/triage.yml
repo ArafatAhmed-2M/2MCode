@@ -24,7 +24,7 @@ jobs:
 
       - name: Triage issue
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_TITLE: ${{ github.event.issue.title }}

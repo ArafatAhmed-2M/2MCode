@@ -16,7 +16,7 @@ import * as Log from "@2mcode-ai/core/util/log"
 import { SessionShareTable } from "./share.sql"
 
 const log = Log.create({ service: "share-next" })
-const disabled = process.env["2M_CODE_DISABLE_SHARE"] === "true" || process.env["2M_CODE_DISABLE_SHARE"] === "1"
+const disabled = process.env["_2MCODE_DISABLE_SHARE"] === "true" || process.env["_2MCODE_DISABLE_SHARE"] === "1"
 
 export type Api = {
   create: string

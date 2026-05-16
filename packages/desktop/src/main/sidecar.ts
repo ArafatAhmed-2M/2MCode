@@ -101,8 +101,8 @@ async function stop() {
 
 function prepareSidecarEnv(password: string, userDataPath: string) {
   Object.assign(process.env, {
-    2M_CODE_SERVER_USERNAME: "2M_CODE",
-    2M_CODE_SERVER_PASSWORD: password,
+    _2MCODE_SERVER_USERNAME: "2M_CODE",
+    _2MCODE_SERVER_PASSWORD: password,
     XDG_STATE_HOME: process.env.XDG_STATE_HOME ?? userDataPath,
   })
 }

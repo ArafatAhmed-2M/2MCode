@@ -112,7 +112,7 @@ export const TaskTool = Tool.define(
       const runInBackground = params.background === true
       if (runInBackground && !flags.experimentalBackgroundSubagents) {
         return yield* Effect.fail(
-          new Error("Background subagents require 2M_CODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true"),
+          new Error("Background subagents require _2MCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true"),
         )
       }
 

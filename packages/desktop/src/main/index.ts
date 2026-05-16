@@ -48,7 +48,7 @@ const APP_IDS: Record<string, string> = {
   beta: "ai.2M_CODE.desktop.beta",
   prod: "ai.2M_CODE.desktop",
 }
-const TEST_ONBOARDING = process.env.2M_CODE_TEST_ONBOARDING === "1"
+const TEST_ONBOARDING = process.env._2MCODE_TEST_ONBOARDING === "1"
 
 let logger: ReturnType<typeof initLogging>
 let mainWindow: BrowserWindow | null = null
@@ -115,7 +115,7 @@ const main = Effect.gen(function* () {
     process.chdir(homedir())
   } catch {}
 
-  process.env.2M_CODE_DISABLE_EMBEDDED_WEB_UI = "true"
+  process.env._2MCODE_DISABLE_EMBEDDED_WEB_UI = "true"
 
   const appId = app.isPackaged ? APP_IDS[CHANNEL] : "ai.2M_CODE.desktop.dev"
   const onboardingTestRoot = ((): string | undefined => {
@@ -126,7 +126,7 @@ const main = Effect.gen(function* () {
     ;["data", "config", "cache", "state", "desktop", "session"].forEach((dir) =>
       mkdirSync(join(root, dir), { recursive: true }),
     )
-    process.env.2M_CODE_DB = ":memory:"
+    process.env._2MCODE_DB = ":memory:"
     process.env.XDG_DATA_HOME = join(root, "data")
     process.env.XDG_CONFIG_HOME = join(root, "config")
     process.env.XDG_CACHE_HOME = join(root, "cache")
@@ -247,7 +247,7 @@ const main = Effect.gen(function* () {
   setupAutoUpdater()
 
   const needsMigration = ((): boolean => {
-    if (process.env.2M_CODE_DB === ":memory:") return false
+    if (process.env._2MCODE_DB === ":memory:") return false
 
     const xdg = process.env.XDG_DATA_HOME
     const base = xdg && xdg.length > 0 ? xdg : join(homedir(), ".local", "share")
@@ -256,7 +256,7 @@ const main = Effect.gen(function* () {
   let overlay: BrowserWindow | null = null
 
   const port = yield* Effect.gen(function* () {
-    const fromEnv = process.env.2M_CODE_PORT
+    const fromEnv = process.env._2MCODE_PORT
     if (fromEnv) {
       const parsed = Number.parseInt(fromEnv, 10)
       if (!Number.isNaN(parsed)) return parsed

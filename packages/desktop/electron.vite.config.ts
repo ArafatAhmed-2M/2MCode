@@ -4,12 +4,12 @@ import appPlugin from "@2mcode-ai/app/vite"
 import * as fs from "node:fs/promises"
 
 const channel = (() => {
-  const raw = process.env.2M_CODE_CHANNEL
+  const raw = process.env._2MCODE_CHANNEL
   if (raw === "dev" || raw === "beta" || raw === "prod") return raw
   return "dev"
 })()
 
-const 2M_CODE_SERVER_DIST = "../2M_CODE/dist/node"
+const _2MCODE_SERVER_DIST = "../2M_CODE/dist/node"
 
 const nodePtyPkg = `@lydell/node-pty-${process.platform}-${process.arch}`
 
@@ -33,7 +33,7 @@ const sentry =
 export default defineConfig({
   main: {
     define: {
-      "import.meta.env.2M_CODE_CHANNEL": JSON.stringify(channel),
+      "import.meta.env._2MCODE_CHANNEL": JSON.stringify(channel),
     },
     build: {
       rollupOptions: {
@@ -53,15 +53,15 @@ export default defineConfig({
         name: "2M_CODE:virtual-server-module",
         enforce: "pre",
         resolveId(id) {
-          if (id === "virtual:2M_CODE-server") return this.resolve(`${2M_CODE_SERVER_DIST}/node.js`)
+          if (id === "virtual:2M_CODE-server") return this.resolve(`${_2MCODE_SERVER_DIST}/node.js`)
         },
       },
       {
         name: "2M_CODE:copy-server-assets",
         async writeBundle() {
-          for (const l of await fs.readdir(2M_CODE_SERVER_DIST)) {
+          for (const l of await fs.readdir(_2MCODE_SERVER_DIST)) {
             if (!l.endsWith(".wasm")) continue
-            await fs.writeFile(`./out/main/chunks/${l}`, await fs.readFile(`${2M_CODE_SERVER_DIST}/${l}`))
+            await fs.writeFile(`./out/main/chunks/${l}`, await fs.readFile(`${_2MCODE_SERVER_DIST}/${l}`))
           }
         },
       },

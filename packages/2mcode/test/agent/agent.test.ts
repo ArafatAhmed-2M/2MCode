@@ -608,11 +608,11 @@ description: Permission skill.
         ),
       )
 
-      const home = process.env.2M_CODE_TEST_HOME
-      process.env.2M_CODE_TEST_HOME = test.directory
+      const home = process.env._2MCODE_TEST_HOME
+      process.env._2MCODE_TEST_HOME = test.directory
       yield* Effect.addFinalizer(() =>
         Effect.sync(() => {
-          process.env.2M_CODE_TEST_HOME = home
+          process.env._2MCODE_TEST_HOME = home
         }),
       )
 

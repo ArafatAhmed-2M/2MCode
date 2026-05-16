@@ -17,8 +17,8 @@ function app(input: { password?: string; username?: string }) {
       Layer.provide(
         ConfigProvider.layer(
           ConfigProvider.fromUnknown({
-            2M_CODE_SERVER_PASSWORD: input.password,
-            2M_CODE_SERVER_USERNAME: input.username,
+            _2MCODE_SERVER_PASSWORD: input.password,
+            _2MCODE_SERVER_USERNAME: input.username,
           }),
         ),
       ),

@@ -14,17 +14,17 @@ describe("websearch provider", () => {
   })
 
   test("supports an operational override", () => {
-    const original = process.env.2M_CODE_WEBSEARCH_PROVIDER
+    const original = process.env._2MCODE_WEBSEARCH_PROVIDER
 
     try {
-      process.env.2M_CODE_WEBSEARCH_PROVIDER = "parallel"
+      process.env._2MCODE_WEBSEARCH_PROVIDER = "parallel"
       expect(selectWebSearchProvider(SESSION_ID)).toBe("parallel")
 
-      process.env.2M_CODE_WEBSEARCH_PROVIDER = "exa"
+      process.env._2MCODE_WEBSEARCH_PROVIDER = "exa"
       expect(selectWebSearchProvider(SESSION_ID)).toBe("exa")
     } finally {
-      if (original === undefined) delete process.env.2M_CODE_WEBSEARCH_PROVIDER
-      else process.env.2M_CODE_WEBSEARCH_PROVIDER = original
+      if (original === undefined) delete process.env._2MCODE_WEBSEARCH_PROVIDER
+      else process.env._2MCODE_WEBSEARCH_PROVIDER = original
     }
   })
 

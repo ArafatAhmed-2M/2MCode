@@ -547,7 +547,7 @@ describe("tool.shell permissions", () => {
           item,
           Effect.acquireUseRelease(
             Effect.sync(() => {
-              const key = "2M_CODE_TEST_MISSING"
+              const key = "_2MCODE_TEST_MISSING"
               const prev = process.env[key]
               delete process.env[key]
               return { key, prev }

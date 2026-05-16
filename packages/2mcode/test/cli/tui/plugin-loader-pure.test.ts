@@ -33,10 +33,10 @@ test("skips external tui plugins in pure mode", async () => {
     },
   })
 
-  const pure = process.env.2M_CODE_PURE
-  const meta = process.env.2M_CODE_PLUGIN_META_FILE
-  process.env.2M_CODE_PURE = "1"
-  process.env.2M_CODE_PLUGIN_META_FILE = tmp.extra.meta
+  const pure = process.env._2MCODE_PURE
+  const meta = process.env._2MCODE_PLUGIN_META_FILE
+  process.env._2MCODE_PURE = "1"
+  process.env._2MCODE_PLUGIN_META_FILE = tmp.extra.meta
 
   const config = createTuiResolvedConfig({
     plugin: [[tmp.extra.spec, { marker: tmp.extra.marker }]],
@@ -59,14 +59,14 @@ test("skips external tui plugins in pure mode", async () => {
     cwd.mockRestore()
     wait.mockRestore()
     if (pure === undefined) {
-      delete process.env.2M_CODE_PURE
+      delete process.env._2MCODE_PURE
     } else {
-      process.env.2M_CODE_PURE = pure
+      process.env._2MCODE_PURE = pure
     }
     if (meta === undefined) {
-      delete process.env.2M_CODE_PLUGIN_META_FILE
+      delete process.env._2MCODE_PLUGIN_META_FILE
     } else {
-      process.env.2M_CODE_PLUGIN_META_FILE = meta
+      process.env._2MCODE_PLUGIN_META_FILE = meta
     }
   }
 })

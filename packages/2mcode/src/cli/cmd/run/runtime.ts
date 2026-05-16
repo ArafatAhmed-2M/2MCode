@@ -414,7 +414,7 @@ async function runInteractiveRuntime(input: RunRuntimeInput): Promise<void> {
         .then(loadCatalog)
         .catch(() => {})
 
-      if (Flag.2M_CODE_SHOW_TTFD) {
+      if (Flag._2MCODE_SHOW_TTFD) {
         footer.append({
           kind: "system",
           text: `startup ${Math.max(0, Math.round(performance.now() - start))}ms`,

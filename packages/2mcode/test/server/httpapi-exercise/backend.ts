@@ -52,7 +52,7 @@ function app(modules: Runtime, options: CallOptions) {
     modules.HttpApiApp.routes.pipe(
       Layer.provide(
         ConfigProvider.layer(
-          ConfigProvider.fromUnknown({ 2M_CODE_SERVER_PASSWORD: password, 2M_CODE_SERVER_USERNAME: username }),
+          ConfigProvider.fromUnknown({ _2MCODE_SERVER_PASSWORD: password, _2MCODE_SERVER_USERNAME: username }),
         ),
       ),
     ),

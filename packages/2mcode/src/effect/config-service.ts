@@ -30,8 +30,8 @@ export type ServiceClass<Self, Id extends string, Service> = Context.ServiceClas
  * class ServerAuthConfig extends ConfigService.Service<ServerAuthConfig>()(
  *   "@2M_CODE/ServerAuthConfig",
  *   {
- *     password: Config.string("2M_CODE_SERVER_PASSWORD").pipe(Config.option),
- *     username: Config.string("2M_CODE_SERVER_USERNAME").pipe(Config.withDefault("2M_CODE")),
+ *     password: Config.string("_2MCODE_SERVER_PASSWORD").pipe(Config.option),
+ *     username: Config.string("_2MCODE_SERVER_USERNAME").pipe(Config.withDefault("2M_CODE")),
  *   },
  * ) {}
  *

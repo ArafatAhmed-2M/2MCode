@@ -89,14 +89,14 @@ scoop bucket add extras; scoop install extras/2mcode-desktop
 
 O script de instalação respeita a seguinte ordem de prioridade para o caminho de instalação:
 
-1. `$2MCODE_INSTALL_DIR` - Diretório de instalação personalizado
+1. `$_2MCODE_INSTALL_DIR` - Diretório de instalação personalizado
 2. `$XDG_BIN_DIR` - Caminho compatível com a especificação XDG Base Directory
 3. `$HOME/bin` - Diretório binário padrão do usuário (se existir ou puder ser criado)
 4. `$HOME/.2mcode/bin` - Fallback padrão
 
 ```bash
 # Exemplos
-2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+_2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
 XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 

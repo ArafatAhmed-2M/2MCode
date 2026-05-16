@@ -89,14 +89,14 @@ scoop bucket add extras; scoop install extras/2mcode-desktop
 
 Скрипт установки выбирает путь установки в следующем порядке приоритета:
 
-1. `$2MCODE_INSTALL_DIR` - Пользовательский каталог установки
+1. `$_2MCODE_INSTALL_DIR` - Пользовательский каталог установки
 2. `$XDG_BIN_DIR` - Путь, совместимый со спецификацией XDG Base Directory
 3. `$HOME/bin` - Стандартный каталог пользовательских бинарников (если существует или можно создать)
 4. `$HOME/.2mcode/bin` - Fallback по умолчанию
 
 ```bash
 # Примеры
-2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+_2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
 XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 

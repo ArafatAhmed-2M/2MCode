@@ -13,7 +13,7 @@ const locationLayer = Layer.succeed(Location.Service, Location.Service.of({ dire
 
 describe("2M_CODEPlugin", () => {
   it.effect("uses a public key and cancels paid models without credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -30,7 +30,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("keeps free models without credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -46,7 +46,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("treats output-only cost as free without credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -61,8 +61,8 @@ describe("2M_CODEPlugin", () => {
     ),
   )
 
-  it.effect("uses 2M_CODE_API_KEY as credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: "secret" }, () =>
+  it.effect("uses _2MCODE_API_KEY as credentials", () =>
+    withEnv({ _2MCODE_API_KEY: "secret" }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -79,7 +79,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("uses configured provider env vars as credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined, CUSTOM_2M_CODE_API_KEY: "secret" }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined, CUSTOM_2M_CODE_API_KEY: "secret" }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -100,7 +100,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("uses configured apiKey as credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -133,7 +133,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("uses auth-enabled providers as credentials", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)
@@ -154,7 +154,7 @@ describe("2M_CODEPlugin", () => {
   )
 
   it.effect("ignores non-2M_CODE providers and models", () =>
-    withEnv({ 2M_CODE_API_KEY: undefined }, () =>
+    withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
         yield* plugin.add(2M_CODEPlugin)

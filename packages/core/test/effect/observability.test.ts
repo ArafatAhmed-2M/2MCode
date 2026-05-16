@@ -2,14 +2,14 @@
 import { resource } from "@2mcode-ai/core/effect/observability"
 
 const otelResourceAttributes = process.env.OTEL_RESOURCE_ATTRIBUTES
-const 2M_CODEClient = process.env.2M_CODE_CLIENT
+const 2M_CODEClient = process.env._2MCODE_CLIENT
 
 afterEach(() => {
   if (otelResourceAttributes === undefined) delete process.env.OTEL_RESOURCE_ATTRIBUTES
   else process.env.OTEL_RESOURCE_ATTRIBUTES = otelResourceAttributes
 
-  if (2M_CODEClient === undefined) delete process.env.2M_CODE_CLIENT
-  else process.env.2M_CODE_CLIENT = 2M_CODEClient
+  if (2M_CODEClient === undefined) delete process.env._2MCODE_CLIENT
+  else process.env._2MCODE_CLIENT = 2M_CODEClient
 })
 
 describe("resource", () => {
@@ -33,7 +33,7 @@ describe("resource", () => {
   })
 
   test("keeps built-in attributes when env values conflict", () => {
-    process.env.2M_CODE_CLIENT = "cli"
+    process.env._2MCODE_CLIENT = "cli"
     process.env.OTEL_RESOURCE_ATTRIBUTES =
       "2M_CODE.client=web,service.instance.id=override,service.namespace=anomalyco"
 

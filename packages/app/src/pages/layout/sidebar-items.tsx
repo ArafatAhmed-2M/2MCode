@@ -17,10 +17,10 @@ import { sessionTitle } from "@/utils/session-title"
 import { sessionPermissionRequest } from "../session/composer/session-request-tree"
 import { childSessionOnPath, hasProjectPermissions } from "./helpers"
 
-const 2M_CODE_PROJECT_ID = "4b0ea68d7af9a6031a7ffda7ad66e0cb83315750"
+const _2MCODE_PROJECT_ID = "4b0ea68d7af9a6031a7ffda7ad66e0cb83315750"
 
 export function getProjectAvatarSource(id?: string, icon?: { color?: string; url?: string; override?: string }) {
-  if (id === 2M_CODE_PROJECT_ID) return "https://2M_CODE.ai/favicon.svg"
+  if (id === _2MCODE_PROJECT_ID) return "https://2M_CODE.ai/favicon.svg"
   if (icon?.override) return icon?.override
   if (icon?.color) return undefined
   return icon?.url

@@ -13,7 +13,7 @@ let lock = false
 let armed = true
 
 export function start() {
-  if (!Flag.2M_CODE_AUTO_HEAP_SNAPSHOT) return
+  if (!Flag._2MCODE_AUTO_HEAP_SNAPSHOT) return
   if (timer) return
 
   const run = async () => {

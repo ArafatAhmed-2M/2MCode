@@ -28,7 +28,7 @@ jobs:
       - name: Run 2M_CODE
         uses: anomalyco/2M_CODE/github@2c14fc5586fe0b88e5c04732d2e846769cc35671 # latest
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
-          2M_CODE_PERMISSION: '{"bash": "deny"}'
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
+          _2MCODE_PERMISSION: '{"bash": "deny"}'
         with:
           model: 2M_CODE/claude-opus-4-5

@@ -228,7 +228,7 @@ file, `disable: true` in frontmatter.
 ### Built-in agents
 
 2M_CODE ships with `build`, `plan`, `general`, `explore`, plus optionally
-`scout` (gated on `2M_CODE_EXPERIMENTAL_SCOUT`). Hidden internal agents:
+`scout` (gated on `_2MCODE_EXPERIMENTAL_SCOUT`). Hidden internal agents:
 `compaction`, `title`, `summary`. To override a built-in's fields, define the
 same key in `agent: { <name>: { ... } }`.
 
@@ -350,16 +350,16 @@ the `plan` agent's permission ruleset (`edit: deny *`).
 
 When a user's config is broken and 2M_CODE won't start, these env vars help:
 
-- `2M_CODE_DISABLE_PROJECT_CONFIG=1`: skip the project's local `2M_CODE.json`
+- `_2MCODE_DISABLE_PROJECT_CONFIG=1`: skip the project's local `2M_CODE.json`
   and start from globals only. Run from the project directory, 2M_CODE loads,
   the user edits the broken file, then they restart without the flag.
-- `2M_CODE_CONFIG=/path/to/file.json`: load an additional explicit config.
-- `2M_CODE_CONFIG_CONTENT='{"$schema":"https://2M_CODE.ai/config.json"}'`:
+- `_2MCODE_CONFIG=/path/to/file.json`: load an additional explicit config.
+- `_2MCODE_CONFIG_CONTENT='{"$schema":"https://2M_CODE.ai/config.json"}'`:
   inject inline JSON as a final local-scope merge.
-- `2M_CODE_DISABLE_DEFAULT_PLUGINS=1`: skip default plugins.
-- `2M_CODE_PURE=1`: skip external plugins entirely.
-- `2M_CODE_DISABLE_EXTERNAL_SKILLS=1`,
-  `2M_CODE_DISABLE_CLAUDE_CODE_SKILLS=1`: skip the external skill scans under
+- `_2MCODE_DISABLE_DEFAULT_PLUGINS=1`: skip default plugins.
+- `_2MCODE_PURE=1`: skip external plugins entirely.
+- `_2MCODE_DISABLE_EXTERNAL_SKILLS=1`,
+  `_2MCODE_DISABLE_CLAUDE_CODE_SKILLS=1`: skip the external skill scans under
   `~/.claude/` and `~/.agents/`.
 
 ## When proposing edits

@@ -89,14 +89,14 @@ scoop bucket add extras; scoop install extras/2mcode-desktop
 
 安裝腳本會依據以下優先順序決定安裝路徑：
 
-1. `$2MCODE_INSTALL_DIR` - 自定義安裝目錄
+1. `$_2MCODE_INSTALL_DIR` - 自定義安裝目錄
 2. `$XDG_BIN_DIR` - 符合 XDG 基礎目錄規範的路徑
 3. `$HOME/bin` - 標準使用者執行檔目錄 (若存在或可建立)
 4. `$HOME/.2mcode/bin` - 預設備用路徑
 
 ```bash
 # 範例
-2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+_2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
 XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 

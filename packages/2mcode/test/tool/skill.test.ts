@@ -51,11 +51,11 @@ Use this skill.
           )
           yield* Effect.promise(() => Bun.write(path.join(skill, "scripts", "demo.txt"), "demo"))
 
-          const home = process.env.2M_CODE_TEST_HOME
-          process.env.2M_CODE_TEST_HOME = dir
+          const home = process.env._2MCODE_TEST_HOME
+          process.env._2MCODE_TEST_HOME = dir
           yield* Effect.addFinalizer(() =>
             Effect.sync(() => {
-              process.env.2M_CODE_TEST_HOME = home
+              process.env._2MCODE_TEST_HOME = home
             }),
           )
 

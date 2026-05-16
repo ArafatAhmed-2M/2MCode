@@ -17011,7 +17011,7 @@ export const snapshot = {
   },
   "2M_CODE-go": {
     id: "2M_CODE-go",
-    env: ["2M_CODE_API_KEY"],
+    env: ["_2MCODE_API_KEY"],
     npm: "@ai-sdk/openai-compatible",
     api: "https://2M_CODE.ai/zen/go/v1",
     name: "2M_CODE Go",
@@ -35154,7 +35154,7 @@ export const snapshot = {
   },
   2M_CODE: {
     id: "2M_CODE",
-    env: ["2M_CODE_API_KEY"],
+    env: ["_2MCODE_API_KEY"],
     npm: "@ai-sdk/openai-compatible",
     api: "https://2M_CODE.ai/zen/v1",
     name: "2M_CODE Zen",

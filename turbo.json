@@ -1,7 +1,7 @@
 ﻿{
   "$schema": "https://v2-8-13.turborepo.dev/schema.json",
-  "globalEnv": ["CI", "2M_CODE_DISABLE_SHARE"],
-  "globalPassThroughEnv": ["CI", "2M_CODE_DISABLE_SHARE"],
+  "globalEnv": ["CI", "_2MCODE_DISABLE_SHARE"],
+  "globalPassThroughEnv": ["CI", "_2MCODE_DISABLE_SHARE"],
   "tasks": {
     "typecheck": {},
     "build": {

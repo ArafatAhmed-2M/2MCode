@@ -1,6 +1,6 @@
 ﻿// Dev-only JSONL event trace for direct interactive mode.
 //
-// Enable with 2M_CODE_DIRECT_TRACE=1. Writes one JSON line per event to
+// Enable with _2MCODE_DIRECT_TRACE=1. Writes one JSON line per event to
 // ~/.local/share/2M_CODE/log/direct/<timestamp>-<pid>.jsonl. Also writes
 // a latest.json pointer so you can quickly find the most recent trace.
 //
@@ -55,7 +55,7 @@ export function trace(): Trace | undefined {
     return state || undefined
   }
 
-  if (!process.env.2M_CODE_DIRECT_TRACE) {
+  if (!process.env._2MCODE_DIRECT_TRACE) {
     state = false
     return undefined
   }

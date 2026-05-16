@@ -35,7 +35,7 @@ export async function create2M_CODEServer(options?: ServerOptions) {
   const proc = launch(`2M_CODE`, args, {
     env: {
       ...process.env,
-      2M_CODE_CONFIG_CONTENT: JSON.stringify(options.config ?? {}),
+      _2MCODE_CONFIG_CONTENT: JSON.stringify(options.config ?? {}),
     },
   })
   let clear = () => {}
@@ -119,7 +119,7 @@ export function create2M_CODETui(options?: TuiOptions) {
     stdio: "inherit",
     env: {
       ...process.env,
-      2M_CODE_CONFIG_CONTENT: JSON.stringify(options?.config ?? {}),
+      _2MCODE_CONFIG_CONTENT: JSON.stringify(options?.config ?? {}),
     },
   })
 

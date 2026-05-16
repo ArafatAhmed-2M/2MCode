@@ -1,4 +1,4 @@
-<p align="center">
+﻿<p align="center">
 
 ```
 ██████╗ ███╗   ███╗     ██████╗ ██████╗ ██████╗ ███████╗
@@ -83,14 +83,14 @@ paru -S 2mcode-bin
 
 The install script uses the following priority for the installation path:
 
-1. `$2MCODE_INSTALL_DIR` - Custom installation directory
+1. `$_2MCODE_INSTALL_DIR` - Custom installation directory
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
 3. `$HOME/bin` - Standard user binary directory
 4. `$HOME/.2mcode/bin` - Default fallback
 
 ```bash
 # Custom install dir example
-2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
+_2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
 ```
 
 ### Agents

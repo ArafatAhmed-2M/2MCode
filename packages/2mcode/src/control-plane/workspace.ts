@@ -563,9 +563,9 @@ export const layer = Layer.effect(
       })
 
       const env = {
-        2M_CODE_AUTH_CONTENT: JSON.stringify(yield* auth.all()),
-        2M_CODE_WORKSPACE_ID: config.id,
-        2M_CODE_EXPERIMENTAL_WORKSPACES: "true",
+        _2MCODE_AUTH_CONTENT: JSON.stringify(yield* auth.all()),
+        _2MCODE_WORKSPACE_ID: config.id,
+        _2MCODE_EXPERIMENTAL_WORKSPACES: "true",
         OTEL_EXPORTER_OTLP_HEADERS: process.env.OTEL_EXPORTER_OTLP_HEADERS,
         OTEL_EXPORTER_OTLP_ENDPOINT: process.env.OTEL_EXPORTER_OTLP_ENDPOINT,
         OTEL_RESOURCE_ATTRIBUTES: process.env.OTEL_RESOURCE_ATTRIBUTES,

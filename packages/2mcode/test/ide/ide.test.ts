@@ -62,20 +62,20 @@ describe("ide", () => {
     expect(Ide.ide()).toBe("unknown")
   })
 
-  test("should recognize vscode-insiders 2M_CODE_CALLER", () => {
-    process.env["2M_CODE_CALLER"] = "vscode-insiders"
+  test("should recognize vscode-insiders _2MCODE_CALLER", () => {
+    process.env["_2MCODE_CALLER"] = "vscode-insiders"
 
     expect(Ide.alreadyInstalled()).toBe(true)
   })
 
-  test("should recognize vscode 2M_CODE_CALLER", () => {
-    process.env["2M_CODE_CALLER"] = "vscode"
+  test("should recognize vscode _2MCODE_CALLER", () => {
+    process.env["_2MCODE_CALLER"] = "vscode"
 
     expect(Ide.alreadyInstalled()).toBe(true)
   })
 
-  test("should return false for unknown 2M_CODE_CALLER", () => {
-    process.env["2M_CODE_CALLER"] = "unknown"
+  test("should return false for unknown _2MCODE_CALLER", () => {
+    process.env["_2MCODE_CALLER"] = "unknown"
 
     expect(Ide.alreadyInstalled()).toBe(false)
   })

@@ -207,7 +207,7 @@ Problems to reduce:
 - Importing the module creates directories.
 - Tests override `Global.Path` by mutating exported module state.
 - Most callers use `Global.Path` directly instead of the Effect service.
-- `Global.make()` still reads mutable `Flag.2M_CODE_CONFIG_DIR`.
+- `Global.make()` still reads mutable `Flag._2MCODE_CONFIG_DIR`.
 
 Next PR candidates:
 

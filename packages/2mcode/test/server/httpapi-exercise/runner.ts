@@ -252,8 +252,8 @@ function fakeLlmConfig(url: string): Partial<Config.Info> {
 
 const resetState = Effect.promise(async () => {
   const modules = await runtime()
-  Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
-  Flag.2M_CODE_SERVER_USERNAME = original.2M_CODE_SERVER_USERNAME
+  Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
+  Flag._2MCODE_SERVER_USERNAME = original._2MCODE_SERVER_USERNAME
   await modules.disposeAllInstances()
   await modules.resetDatabase()
   await Bun.sleep(25)

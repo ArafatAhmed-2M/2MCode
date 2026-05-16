@@ -46,8 +46,8 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Install 2M_CODE
         if: inputs.bump || inputs.version
@@ -58,9 +58,9 @@ jobs:
           ./script/version.ts
         env:
           GH_TOKEN: ${{ steps.committer.outputs.token }}
-          2M_CODE_BUMP: ${{ inputs.bump }}
-          2M_CODE_VERSION: ${{ inputs.version }}
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_BUMP: ${{ inputs.bump }}
+          _2MCODE_VERSION: ${{ inputs.version }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
           GH_REPO: ${{ (github.ref_name == 'beta' && 'anomalyco/2M_CODE-beta') || github.repository }}
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -83,16 +83,16 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Build
         id: build
         run: |
           ./packages/2M_CODE/script/build.ts ${{ (github.ref_name == 'beta' && '--sourcemaps') || '' }}
         env:
-          2M_CODE_VERSION: ${{ needs.version.outputs.version }}
-          2M_CODE_RELEASE: ${{ needs.version.outputs.release }}
+          _2MCODE_VERSION: ${{ needs.version.outputs.version }}
+          _2MCODE_RELEASE: ${{ needs.version.outputs.release }}
           GH_REPO: ${{ needs.version.outputs.repo }}
           GH_TOKEN: ${{ steps.committer.outputs.token }}
 
@@ -135,8 +135,8 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Azure login
         uses: azure/login@a457da9ea143d694b1b9c7c869ebb04ebe844ef5 # v2.3.0
@@ -300,16 +300,16 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Prepare
         run: bun ./scripts/prepare.ts
         working-directory: packages/desktop
         env:
-          2M_CODE_VERSION: ${{ needs.version.outputs.version }}
-          2M_CODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
-          2M_CODE_CLI_ARTIFACT: ${{ (runner.os == 'Windows' && '2M_CODE-cli-windows') || '2M_CODE-cli' }}
+          _2MCODE_VERSION: ${{ needs.version.outputs.version }}
+          _2MCODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
+          _2MCODE_CLI_ARTIFACT: ${{ (runner.os == 'Windows' && '2M_CODE-cli-windows') || '2M_CODE-cli' }}
           RUST_TARGET: ${{ matrix.settings.target }}
           GH_TOKEN: ${{ github.token }}
           GITHUB_RUN_ID: ${{ github.run_id }}
@@ -318,7 +318,7 @@ jobs:
         run: bun run build
         working-directory: packages/desktop
         env:
-          2M_CODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
+          _2MCODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_ORG: ${{ vars.SENTRY_ORG }}
           SENTRY_PROJECT: ${{ vars.WEB_SENTRY_PROJECT }}
@@ -333,7 +333,7 @@ jobs:
         working-directory: packages/desktop
         timeout-minutes: 60
         env:
-          2M_CODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
+          _2MCODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
           GH_TOKEN: ${{ steps.committer.outputs.token }}
           CSC_LINK: ${{ secrets.APPLE_CERTIFICATE }}
           CSC_KEY_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
@@ -347,7 +347,7 @@ jobs:
         working-directory: packages/desktop
         timeout-minutes: 60
         env:
-          2M_CODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
+          _2MCODE_CHANNEL: ${{ (github.ref_name == 'beta' && 'beta') || 'prod' }}
 
       - name: Create and upload macOS .app.tar.gz
         if: runner.os == 'macOS' && needs.version.outputs.release
@@ -456,8 +456,8 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Cache apt packages (AUR)
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
@@ -480,8 +480,8 @@ jobs:
 
       - run: ./script/publish.ts
         env:
-          2M_CODE_VERSION: ${{ needs.version.outputs.version }}
-          2M_CODE_RELEASE: ${{ needs.version.outputs.release }}
+          _2MCODE_VERSION: ${{ needs.version.outputs.version }}
+          _2MCODE_RELEASE: ${{ needs.version.outputs.release }}
           AUR_KEY: ${{ secrets.AUR_KEY }}
           GITHUB_TOKEN: ${{ steps.committer.outputs.token }}
           GH_REPO: ${{ needs.version.outputs.repo }}

@@ -57,7 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
       },
       env: {
         _EXTENSION_2M_CODE_PORT: port.toString(),
-        2M_CODE_CALLER: "vscode",
+        _2MCODE_CALLER: "vscode",
       },
     })
 

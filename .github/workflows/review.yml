@@ -45,9 +45,9 @@ jobs:
 
       - name: Check PR guidelines compliance
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          2M_CODE_PERMISSION: '{ "bash": {  "*": "deny", "gh*": "allow", "gh pr review*": "deny" } }'
+          _2MCODE_PERMISSION: '{ "bash": {  "*": "deny", "gh*": "allow", "gh pr review*": "deny" } }'
           PR_TITLE: ${{ steps.pr-details.outputs.title }}
         run: |
           PR_BODY=$(jq -r .body pr_data.json)

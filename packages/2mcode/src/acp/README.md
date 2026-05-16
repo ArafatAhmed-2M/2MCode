@@ -49,7 +49,7 @@ The implementation follows a clean separation of concerns:
 ACP excludes `QuestionTool` by default.
 
 ```bash
-2M_CODE_ENABLE_QUESTION_TOOL=1 2M_CODE acp
+_2MCODE_ENABLE_QUESTION_TOOL=1 2M_CODE acp
 ```
 
 Enable this only for ACP clients that support interactive question prompts.

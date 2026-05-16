@@ -27,7 +27,7 @@ const withEnv = <A, E, R>(values: Record<string, string>, effect: Effect.Effect<
 const withAuth = <A, E, R>(metadata: Record<string, string> | undefined, effect: Effect.Effect<A, E, R>) =>
   withEnv(
     {
-      2M_CODE_AUTH_CONTENT: JSON.stringify({
+      _2MCODE_AUTH_CONTENT: JSON.stringify({
         digitalocean: {
           type: "api",
           key: "sk_do_test",

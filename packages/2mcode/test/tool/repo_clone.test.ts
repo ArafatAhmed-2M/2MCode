@@ -65,15 +65,15 @@ const git = Effect.fn("RepoCloneToolTest.git")(function* (cwd: string, args: str
 const githubBase = <A, E, R>(url: string, self: Effect.Effect<A, E, R>) =>
   Effect.acquireUseRelease(
     Effect.sync(() => {
-      const previous = process.env.2M_CODE_REPO_CLONE_GITHUB_BASE_URL
-      process.env.2M_CODE_REPO_CLONE_GITHUB_BASE_URL = url
+      const previous = process.env._2MCODE_REPO_CLONE_GITHUB_BASE_URL
+      process.env._2MCODE_REPO_CLONE_GITHUB_BASE_URL = url
       return previous
     }),
     () => self,
     (previous) =>
       Effect.sync(() => {
-        if (previous) process.env.2M_CODE_REPO_CLONE_GITHUB_BASE_URL = previous
-        else delete process.env.2M_CODE_REPO_CLONE_GITHUB_BASE_URL
+        if (previous) process.env._2MCODE_REPO_CLONE_GITHUB_BASE_URL = previous
+        else delete process.env._2MCODE_REPO_CLONE_GITHUB_BASE_URL
       }),
   )
 

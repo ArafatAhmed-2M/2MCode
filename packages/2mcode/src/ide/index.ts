@@ -40,7 +40,7 @@ export function ide() {
 }
 
 export function alreadyInstalled() {
-  return process.env["2M_CODE_CALLER"] === "vscode" || process.env["2M_CODE_CALLER"] === "vscode-insiders"
+  return process.env["_2MCODE_CALLER"] === "vscode" || process.env["_2MCODE_CALLER"] === "vscode-insiders"
 }
 
 export async function install(ide: (typeof SUPPORTED_IDES)[number]["name"]) {

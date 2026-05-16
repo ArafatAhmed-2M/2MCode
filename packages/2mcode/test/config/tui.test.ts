@@ -20,8 +20,8 @@ const globalConfigFiles = ["2M_CODE.json", "2M_CODE.jsonc", "tui.json", "tui.jso
 
 const cleanState = Effect.gen(function* () {
   const fs = yield* AppFileSystem.Service
-  delete process.env.2M_CODE_CONFIG
-  delete process.env.2M_CODE_TUI_CONFIG
+  delete process.env._2MCODE_CONFIG
+  delete process.env._2MCODE_TUI_CONFIG
   yield* Effect.forEach(globalConfigFiles, (file) => fs.remove(file, { force: true }).pipe(Effect.ignore), {
     discard: true,
   })
@@ -402,7 +402,7 @@ it.instance("top-level keys in tui.json take precedence over nested tui key", ()
   ),
 )
 
-it.instance("project config takes precedence over 2M_CODE_TUI_CONFIG (matches 2M_CODE_CONFIG)", () =>
+it.instance("project config takes precedence over _2MCODE_TUI_CONFIG (matches _2MCODE_CONFIG)", () =>
   withCleanState(
     Effect.gen(function* () {
       const fs = yield* AppFileSystem.Service
@@ -412,7 +412,7 @@ it.instance("project config takes precedence over 2M_CODE_TUI_CONFIG (matches 2M
       yield* fs.writeJson(custom, { theme: "custom", diff_style: "stacked" })
 
       yield* withEnv(
-        "2M_CODE_TUI_CONFIG",
+        "_2MCODE_TUI_CONFIG",
         custom,
         Effect.gen(function* () {
           const config = yield* getTuiConfig(test.directory)
@@ -623,7 +623,7 @@ it.instance("keeps explicit configured keybind input undo on Windows", () =>
   ),
 )
 
-it.instance("2M_CODE_TUI_CONFIG provides settings when no project config exists", () =>
+it.instance("_2MCODE_TUI_CONFIG provides settings when no project config exists", () =>
   withCleanState(
     Effect.gen(function* () {
       const fs = yield* AppFileSystem.Service
@@ -632,7 +632,7 @@ it.instance("2M_CODE_TUI_CONFIG provides settings when no project config exists"
       yield* fs.writeJson(custom, { theme: "from-env", diff_style: "stacked" })
 
       yield* withEnv(
-        "2M_CODE_TUI_CONFIG",
+        "_2MCODE_TUI_CONFIG",
         custom,
         Effect.gen(function* () {
           const config = yield* getTuiConfig(test.directory)
@@ -644,7 +644,7 @@ it.instance("2M_CODE_TUI_CONFIG provides settings when no project config exists"
   ),
 )
 
-it.instance("does not derive tui path from 2M_CODE_CONFIG", () =>
+it.instance("does not derive tui path from _2MCODE_CONFIG", () =>
   withCleanState(
     Effect.gen(function* () {
       const fs = yield* AppFileSystem.Service
@@ -655,7 +655,7 @@ it.instance("does not derive tui path from 2M_CODE_CONFIG", () =>
       yield* fs.writeJson(path.join(customDir, "tui.json"), { theme: "should-not-load" })
 
       yield* withEnv(
-        "2M_CODE_CONFIG",
+        "_2MCODE_CONFIG",
         path.join(customDir, "2M_CODE.json"),
         Effect.gen(function* () {
           const config = yield* getTuiConfig(test.directory)

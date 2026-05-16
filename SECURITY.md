@@ -20,7 +20,7 @@ If you need true isolation, run 2M_CODE inside a Docker container or VM.
 
 ### Server Mode
 
-Server mode is opt-in only. When enabled, set `2M_CODE_SERVER_PASSWORD` to require HTTP Basic Auth. Without this, the server runs unauthenticated (with a warning). It is the end user's responsibility to secure the server - any functionality it provides is not a vulnerability.
+Server mode is opt-in only. When enabled, set `_2MCODE_SERVER_PASSWORD` to require HTTP Basic Auth. Without this, the server runs unauthenticated (with a warning). It is the end user's responsibility to secure the server - any functionality it provides is not a vulnerability.
 
 ### Out of Scope
 

@@ -22,20 +22,20 @@ describe("RuntimeFlags", () => {
       const flags = yield* readFlags.pipe(
         Effect.provide(
           fromConfig({
-            2M_CODE_PURE: "true",
-            2M_CODE_DISABLE_DEFAULT_PLUGINS: "true",
-            2M_CODE_DISABLE_CHANNEL_DB: "true",
-            2M_CODE_AUTO_SHARE: "true",
-            2M_CODE_DISABLE_EMBEDDED_WEB_UI: "true",
-            2M_CODE_DISABLE_EXTERNAL_SKILLS: "true",
-            2M_CODE_DISABLE_LSP_DOWNLOAD: "true",
-            2M_CODE_SKIP_MIGRATIONS: "true",
-            2M_CODE_EXPERIMENTAL: "true",
-            2M_CODE_ENABLE_EXA: "true",
-            2M_CODE_ENABLE_PARALLEL: "true",
-            2M_CODE_ENABLE_EXPERIMENTAL_MODELS: "true",
-            2M_CODE_ENABLE_QUESTION_TOOL: "true",
-            2M_CODE_CLIENT: "desktop",
+            _2MCODE_PURE: "true",
+            _2MCODE_DISABLE_DEFAULT_PLUGINS: "true",
+            _2MCODE_DISABLE_CHANNEL_DB: "true",
+            _2MCODE_AUTO_SHARE: "true",
+            _2MCODE_DISABLE_EMBEDDED_WEB_UI: "true",
+            _2MCODE_DISABLE_EXTERNAL_SKILLS: "true",
+            _2MCODE_DISABLE_LSP_DOWNLOAD: "true",
+            _2MCODE_SKIP_MIGRATIONS: "true",
+            _2MCODE_EXPERIMENTAL: "true",
+            _2MCODE_ENABLE_EXA: "true",
+            _2MCODE_ENABLE_PARALLEL: "true",
+            _2MCODE_ENABLE_EXPERIMENTAL_MODELS: "true",
+            _2MCODE_ENABLE_QUESTION_TOOL: "true",
+            _2MCODE_CLIENT: "desktop",
           }),
         ),
       )
@@ -66,12 +66,12 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("defaultLayer parses 2M_CODE_EXPERIMENTAL_LSP_TY", () =>
+  it.effect("defaultLayer parses _2MCODE_EXPERIMENTAL_LSP_TY", () =>
     Effect.gen(function* () {
       const flags = yield* readFlags.pipe(
         Effect.provide(
           fromConfig({
-            2M_CODE_EXPERIMENTAL_LSP_TY: "true",
+            _2MCODE_EXPERIMENTAL_LSP_TY: "true",
           }),
         ),
       )
@@ -122,9 +122,9 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("disableExternalSkills reads 2M_CODE_DISABLE_EXTERNAL_SKILLS", () =>
+  it.effect("disableExternalSkills reads _2MCODE_DISABLE_EXTERNAL_SKILLS", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_EXTERNAL_SKILLS: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_EXTERNAL_SKILLS: "true" })))
 
       expect(flags.disableExternalSkills).toBe(true)
     }),
@@ -138,9 +138,9 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("disableLspDownload reads 2M_CODE_DISABLE_LSP_DOWNLOAD", () =>
+  it.effect("disableLspDownload reads _2MCODE_DISABLE_LSP_DOWNLOAD", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_LSP_DOWNLOAD: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_LSP_DOWNLOAD: "true" })))
 
       expect(flags.disableLspDownload).toBe(true)
     }),
@@ -154,9 +154,9 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("skipMigrations reads 2M_CODE_SKIP_MIGRATIONS", () =>
+  it.effect("skipMigrations reads _2MCODE_SKIP_MIGRATIONS", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_SKIP_MIGRATIONS: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_SKIP_MIGRATIONS: "true" })))
 
       expect(flags.skipMigrations).toBe(true)
     }),
@@ -170,33 +170,33 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("disableClaudeCodePrompt reads 2M_CODE_DISABLE_CLAUDE_CODE_PROMPT", () =>
+  it.effect("disableClaudeCodePrompt reads _2MCODE_DISABLE_CLAUDE_CODE_PROMPT", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_CLAUDE_CODE_PROMPT: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_CLAUDE_CODE_PROMPT: "true" })))
 
       expect(flags.disableClaudeCodePrompt).toBe(true)
     }),
   )
 
-  it.effect("disableClaudeCodePrompt inherits 2M_CODE_DISABLE_CLAUDE_CODE", () =>
+  it.effect("disableClaudeCodePrompt inherits _2MCODE_DISABLE_CLAUDE_CODE", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_CLAUDE_CODE: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_CLAUDE_CODE: "true" })))
 
       expect(flags.disableClaudeCodePrompt).toBe(true)
     }),
   )
 
-  it.effect("experimentalIconDiscovery reads 2M_CODE_EXPERIMENTAL_ICON_DISCOVERY", () =>
+  it.effect("experimentalIconDiscovery reads _2MCODE_EXPERIMENTAL_ICON_DISCOVERY", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_EXPERIMENTAL_ICON_DISCOVERY: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_EXPERIMENTAL_ICON_DISCOVERY: "true" })))
 
       expect(flags.experimentalIconDiscovery).toBe(true)
     }),
   )
 
-  it.effect("experimentalIconDiscovery inherits 2M_CODE_EXPERIMENTAL", () =>
+  it.effect("experimentalIconDiscovery inherits _2MCODE_EXPERIMENTAL", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_EXPERIMENTAL: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_EXPERIMENTAL: "true" })))
 
       expect(flags.experimentalIconDiscovery).toBe(true)
     }),
@@ -210,12 +210,12 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("experimentalOxfmt is enabled by 2M_CODE_EXPERIMENTAL_OXFMT", () =>
+  it.effect("experimentalOxfmt is enabled by _2MCODE_EXPERIMENTAL_OXFMT", () =>
     Effect.gen(function* () {
       const flags = yield* readFlags.pipe(
         Effect.provide(
           fromConfig({
-            2M_CODE_EXPERIMENTAL_OXFMT: "true",
+            _2MCODE_EXPERIMENTAL_OXFMT: "true",
           }),
         ),
       )
@@ -224,12 +224,12 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("experimentalOxfmt inherits 2M_CODE_EXPERIMENTAL", () =>
+  it.effect("experimentalOxfmt inherits _2MCODE_EXPERIMENTAL", () =>
     Effect.gen(function* () {
       const flags = yield* readFlags.pipe(
         Effect.provide(
           fromConfig({
-            2M_CODE_EXPERIMENTAL: "true",
+            _2MCODE_EXPERIMENTAL: "true",
           }),
         ),
       )
@@ -242,19 +242,19 @@ describe("RuntimeFlags", () => {
     { name: "absent", config: {}, expected: undefined },
     {
       name: "valid positive integer",
-      config: { 2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1234" },
+      config: { _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1234" },
       expected: 1234,
     },
     {
       name: "invalid string",
-      config: { 2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "nope" },
+      config: { _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "nope" },
       expected: undefined,
     },
-    { name: "zero", config: { 2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "0" }, expected: undefined },
-    { name: "negative", config: { 2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "-1" }, expected: undefined },
+    { name: "zero", config: { _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "0" }, expected: undefined },
+    { name: "negative", config: { _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "-1" }, expected: undefined },
     {
       name: "non-integer",
-      config: { 2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1.5" },
+      config: { _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1.5" },
       expected: undefined,
     },
   ]) {
@@ -271,19 +271,19 @@ describe("RuntimeFlags", () => {
     { name: "absent", config: {}, expected: undefined },
     {
       name: "valid positive integer",
-      config: { 2M_CODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "1234" },
+      config: { _2MCODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "1234" },
       expected: 1234,
     },
     {
       name: "invalid string",
-      config: { 2M_CODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "nope" },
+      config: { _2MCODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "nope" },
       expected: undefined,
     },
-    { name: "zero", config: { 2M_CODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "0" }, expected: undefined },
-    { name: "negative", config: { 2M_CODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "-1" }, expected: undefined },
+    { name: "zero", config: { _2MCODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "0" }, expected: undefined },
+    { name: "negative", config: { _2MCODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "-1" }, expected: undefined },
     {
       name: "non-integer",
-      config: { 2M_CODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "1.5" },
+      config: { _2MCODE_EXPERIMENTAL_OUTPUT_TOKEN_MAX: "1.5" },
       expected: undefined,
     },
   ]) {
@@ -303,15 +303,15 @@ describe("RuntimeFlags", () => {
         Effect.provide(
           ConfigProvider.layer(
             ConfigProvider.fromUnknown({
-              2M_CODE_PURE: "true",
-              2M_CODE_DISABLE_DEFAULT_PLUGINS: "true",
-              2M_CODE_DISABLE_EXTERNAL_SKILLS: "true",
-              2M_CODE_DISABLE_LSP_DOWNLOAD: "true",
-              2M_CODE_SKIP_MIGRATIONS: "true",
-              2M_CODE_EXPERIMENTAL: "true",
-              2M_CODE_ENABLE_EXA: "true",
-              2M_CODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1234",
-              2M_CODE_CLIENT: "desktop",
+              _2MCODE_PURE: "true",
+              _2MCODE_DISABLE_DEFAULT_PLUGINS: "true",
+              _2MCODE_DISABLE_EXTERNAL_SKILLS: "true",
+              _2MCODE_DISABLE_LSP_DOWNLOAD: "true",
+              _2MCODE_SKIP_MIGRATIONS: "true",
+              _2MCODE_EXPERIMENTAL: "true",
+              _2MCODE_ENABLE_EXA: "true",
+              _2MCODE_EXPERIMENTAL_BASH_DEFAULT_TIMEOUT_MS: "1234",
+              _2MCODE_CLIENT: "desktop",
             }),
           ),
         ),
@@ -343,17 +343,17 @@ describe("RuntimeFlags", () => {
     }),
   )
 
-  it.effect("disableClaudeCodeSkills reads 2M_CODE_DISABLE_CLAUDE_CODE_SKILLS", () =>
+  it.effect("disableClaudeCodeSkills reads _2MCODE_DISABLE_CLAUDE_CODE_SKILLS", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_CLAUDE_CODE_SKILLS: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_CLAUDE_CODE_SKILLS: "true" })))
 
       expect(flags.disableClaudeCodeSkills).toBe(true)
     }),
   )
 
-  it.effect("disableClaudeCodeSkills inherits 2M_CODE_DISABLE_CLAUDE_CODE", () =>
+  it.effect("disableClaudeCodeSkills inherits _2MCODE_DISABLE_CLAUDE_CODE", () =>
     Effect.gen(function* () {
-      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ 2M_CODE_DISABLE_CLAUDE_CODE: "true" })))
+      const flags = yield* readFlags.pipe(Effect.provide(fromConfig({ _2MCODE_DISABLE_CLAUDE_CODE: "true" })))
 
       expect(flags.disableClaudeCodeSkills).toBe(true)
     }),

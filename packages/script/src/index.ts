@@ -18,21 +18,21 @@ if (!semver.satisfies(process.versions.bun, expectedBunVersionRange)) {
 }
 
 const env = {
-  _2M_CODE_CHANNEL: process.env["_2M_CODE_CHANNEL"],
-  2M_CODE_BUMP: process.env["2M_CODE_BUMP"],
-  _2M_CODE_VERSION: process.env["_2M_CODE_VERSION"],
-  2M_CODE_RELEASE: process.env["2M_CODE_RELEASE"],
+  _2MCODE_CHANNEL: process.env["_2MCODE_CHANNEL"],
+  _2MCODE_BUMP: process.env["_2MCODE_BUMP"],
+  _2MCODE_VERSION: process.env["_2MCODE_VERSION"],
+  _2MCODE_RELEASE: process.env["_2MCODE_RELEASE"],
 }
 const CHANNEL = await (async () => {
-  if (env._2M_CODE_CHANNEL) return env._2M_CODE_CHANNEL
-  if (env.2M_CODE_BUMP) return "latest"
-  if (env._2M_CODE_VERSION && !env._2M_CODE_VERSION.startsWith("0.0.0-")) return "latest"
+  if (env._2MCODE_CHANNEL) return env._2MCODE_CHANNEL
+  if (env._2MCODE_BUMP) return "latest"
+  if (env._2MCODE_VERSION && !env._2MCODE_VERSION.startsWith("0.0.0-")) return "latest"
   return await $`git branch --show-current`.text().then((x) => x.trim())
 })()
 const IS_PREVIEW = CHANNEL !== "latest"
 
 const VERSION = await (async () => {
-  if (env._2M_CODE_VERSION) return env._2M_CODE_VERSION
+  if (env._2MCODE_VERSION) return env._2MCODE_VERSION
   if (IS_PREVIEW) return `0.0.0-${CHANNEL}-${new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "")}`
   const version = await fetch("https://registry.npmjs.org/2M_CODE-ai/latest")
     .then((res) => {
@@ -41,7 +41,7 @@ const VERSION = await (async () => {
     })
     .then((data: any) => data.version)
   const [major, minor, patch] = version.split(".").map((x: string) => Number(x) || 0)
-  const t = env.2M_CODE_BUMP?.toLowerCase()
+  const t = env._2MCODE_BUMP?.toLowerCase()
   if (t === "major") return `${major + 1}.0.0`
   if (t === "minor") return `${major}.${minor + 1}.0`
   return `${major}.${minor}.${patch + 1}`
@@ -68,7 +68,7 @@ export const Script = {
     return IS_PREVIEW
   },
   get release(): boolean {
-    return !!env.2M_CODE_RELEASE
+    return !!env._2MCODE_RELEASE
   },
   get team() {
     return team

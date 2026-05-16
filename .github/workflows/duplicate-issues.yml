@@ -24,9 +24,9 @@ jobs:
 
       - name: Check duplicates and compliance
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          2M_CODE_PERMISSION: |
+          _2MCODE_PERMISSION: |
             {
               "bash": {
                 "*": "deny",
@@ -136,9 +136,9 @@ jobs:
 
       - name: Recheck compliance
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          2M_CODE_PERMISSION: |
+          _2MCODE_PERMISSION: |
             {
               "bash": {
                 "*": "deny",

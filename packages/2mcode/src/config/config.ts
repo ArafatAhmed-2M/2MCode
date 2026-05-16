@@ -406,7 +406,7 @@ export const layer = Layer.effect(
       let result: Info = {}
       // Seed the default global config with the schema for editor completion, but avoid writing when the user
       // explicitly routes config through env-provided paths or content.
-      if (!Flag.2M_CODE_CONFIG && !Flag.2M_CODE_CONFIG_DIR && !Flag.2M_CODE_CONFIG_CONTENT) {
+      if (!Flag._2MCODE_CONFIG && !Flag._2MCODE_CONFIG_DIR && !Flag._2MCODE_CONFIG_CONTENT) {
         const file = globalConfigFile()
         if (!existsSync(file)) {
           yield* fs
@@ -479,7 +479,7 @@ export const layer = Layer.effect(
 
         const pluginScopeForSource = Effect.fnUntraced(function* (source: string) {
           if (source.startsWith("http://") || source.startsWith("https://")) return "global"
-          if (source === "2M_CODE_CONFIG_CONTENT") return "local"
+          if (source === "_2MCODE_CONFIG_CONTENT") return "local"
           if (containsPath(source, ctx)) return "local"
           return "global"
         })
@@ -555,12 +555,12 @@ export const layer = Layer.effect(
         const global = yield* getGlobal()
         yield* merge(Global.Path.config, global, "global")
 
-        if (Flag.2M_CODE_CONFIG) {
-          yield* merge(Flag.2M_CODE_CONFIG, yield* loadFile(Flag.2M_CODE_CONFIG))
-          log.debug("loaded custom config", { path: Flag.2M_CODE_CONFIG })
+        if (Flag._2MCODE_CONFIG) {
+          yield* merge(Flag._2MCODE_CONFIG, yield* loadFile(Flag._2MCODE_CONFIG))
+          log.debug("loaded custom config", { path: Flag._2MCODE_CONFIG })
         }
 
-        if (!Flag.2M_CODE_DISABLE_PROJECT_CONFIG) {
+        if (!Flag._2MCODE_DISABLE_PROJECT_CONFIG) {
           for (const file of yield* ConfigPaths.files("2M_CODE", ctx.directory, ctx.worktree).pipe(Effect.orDie)) {
             yield* merge(file, yield* loadFile(file), "local")
           }
@@ -572,14 +572,14 @@ export const layer = Layer.effect(
 
         const directories = yield* ConfigPaths.directories(ctx.directory, ctx.worktree)
 
-        if (Flag.2M_CODE_CONFIG_DIR) {
-          log.debug("loading config from 2M_CODE_CONFIG_DIR", { path: Flag.2M_CODE_CONFIG_DIR })
+        if (Flag._2MCODE_CONFIG_DIR) {
+          log.debug("loading config from _2MCODE_CONFIG_DIR", { path: Flag._2MCODE_CONFIG_DIR })
         }
 
         const deps: Fiber.Fiber<void, never>[] = []
 
         for (const dir of directories) {
-          if (dir.endsWith(".2M_CODE") || dir === Flag.2M_CODE_CONFIG_DIR) {
+          if (dir.endsWith(".2M_CODE") || dir === Flag._2MCODE_CONFIG_DIR) {
             for (const file of ["2M_CODE.json", "2M_CODE.jsonc"]) {
               const source = path.join(dir, file)
               log.debug(`loading config from ${source}`)
@@ -624,14 +624,14 @@ export const layer = Layer.effect(
           yield* mergePluginOrigins(dir, list)
         }
 
-        if (process.env.2M_CODE_CONFIG_CONTENT) {
-          const source = "2M_CODE_CONFIG_CONTENT"
-          const next = yield* loadConfig(process.env.2M_CODE_CONFIG_CONTENT, {
+        if (process.env._2MCODE_CONFIG_CONTENT) {
+          const source = "_2MCODE_CONFIG_CONTENT"
+          const next = yield* loadConfig(process.env._2MCODE_CONFIG_CONTENT, {
             dir: ctx.directory,
             source,
           })
           yield* merge(source, next, "local")
-          log.debug("loaded custom config from 2M_CODE_CONFIG_CONTENT")
+          log.debug("loaded custom config from _2MCODE_CONFIG_CONTENT")
         }
 
         const activeAccount = Option.getOrUndefined(
@@ -647,8 +647,8 @@ export const layer = Layer.effect(
               { concurrency: 2 },
             )
             if (Option.isSome(tokenOpt)) {
-              process.env["2M_CODE_CONSOLE_TOKEN"] = tokenOpt.value
-              yield* env.set("2M_CODE_CONSOLE_TOKEN", tokenOpt.value)
+              process.env["_2MCODE_CONSOLE_TOKEN"] = tokenOpt.value
+              yield* env.set("_2MCODE_CONSOLE_TOKEN", tokenOpt.value)
             }
 
             if (Option.isSome(configOpt)) {
@@ -702,8 +702,8 @@ export const layer = Layer.effect(
           })
         }
 
-        if (Flag.2M_CODE_PERMISSION) {
-          result.permission = mergeDeep(result.permission ?? {}, JSON.parse(Flag.2M_CODE_PERMISSION))
+        if (Flag._2MCODE_PERMISSION) {
+          result.permission = mergeDeep(result.permission ?? {}, JSON.parse(Flag._2MCODE_PERMISSION))
         }
 
         if (result.tools) {
@@ -725,10 +725,10 @@ export const layer = Layer.effect(
           result.share = "auto"
         }
 
-        if (Flag.2M_CODE_DISABLE_AUTOCOMPACT) {
+        if (Flag._2MCODE_DISABLE_AUTOCOMPACT) {
           result.compaction = { ...result.compaction, auto: false }
         }
-        if (Flag.2M_CODE_DISABLE_PRUNE) {
+        if (Flag._2MCODE_DISABLE_PRUNE) {
           result.compaction = { ...result.compaction, prune: false }
         }
 

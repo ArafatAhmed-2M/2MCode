@@ -90,7 +90,7 @@ const cli = yargs(args)
   })
   .middleware(async (opts) => {
     if (opts.pure) {
-      process.env.2M_CODE_PURE = "1"
+      process.env._2MCODE_PURE = "1"
     }
 
     await Log.init({
@@ -107,7 +107,7 @@ const cli = yargs(args)
 
     process.env.AGENT = "1"
     process.env.2M_CODE = "1"
-    process.env.2M_CODE_PID = String(process.pid)
+    process.env._2MCODE_PID = String(process.pid)
 
     Log.Default.info("2M_CODE", {
       version: InstallationVersion,

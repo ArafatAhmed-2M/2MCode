@@ -303,8 +303,8 @@ export default function Share(props: {
             <h1 data-component="header-title">{store.info?.title}</h1>
             <div data-component="header-details">
               <ul data-component="header-stats">
-                <li title={props.messages.2M_CODE_version} data-slot="item">
-                  <div data-slot="icon" title={props.messages.2M_CODE_name}>
+                <li title={props.messages._2MCODE_version} data-slot="item">
+                  <div data-slot="icon" title={props.messages._2MCODE_name}>
                     <Icon2M_CODE width={16} height={16} />
                   </div>
                   <Show when={store.info?.version} fallback="v0.0.1">

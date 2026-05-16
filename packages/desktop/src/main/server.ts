@@ -59,9 +59,9 @@ export function preferAppEnv(userDataPath: string) {
   const shell = process.platform === "win32" ? null : getUserShell()
   Object.assign(process.env, {
     ...(shell ? loadShellEnv(shell) : null),
-    2M_CODE_EXPERIMENTAL_ICON_DISCOVERY: "true",
-    2M_CODE_EXPERIMENTAL_FILEWATCHER: "true",
-    2M_CODE_CLIENT: "desktop",
+    _2MCODE_EXPERIMENTAL_ICON_DISCOVERY: "true",
+    _2MCODE_EXPERIMENTAL_FILEWATCHER: "true",
+    _2MCODE_CLIENT: "desktop",
     XDG_STATE_HOME: process.env.XDG_STATE_HOME ?? userDataPath,
   })
 }

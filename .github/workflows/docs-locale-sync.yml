@@ -29,8 +29,8 @@ jobs:
         id: committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Compute changed English docs
         id: changes
@@ -55,8 +55,8 @@ jobs:
       - name: Sync locale docs with 2M_CODE
         if: steps.changes.outputs.has_changes == 'true'
         env:
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
-          2M_CODE_CONFIG_CONTENT: |
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
+          _2MCODE_CONFIG_CONTENT: |
             {
               "permission": {
                 "*": "deny",

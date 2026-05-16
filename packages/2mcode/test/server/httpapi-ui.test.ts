@@ -25,18 +25,18 @@ void Log.init({ print: false })
 const testStateLayer = Layer.effectDiscard(
   Effect.gen(function* () {
     const original = {
-      2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
-      2M_CODE_SERVER_USERNAME: Flag.2M_CODE_SERVER_USERNAME,
-      envPassword: process.env.2M_CODE_SERVER_PASSWORD,
-      envUsername: process.env.2M_CODE_SERVER_USERNAME,
+      _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
+      _2MCODE_SERVER_USERNAME: Flag._2MCODE_SERVER_USERNAME,
+      envPassword: process.env._2MCODE_SERVER_PASSWORD,
+      envUsername: process.env._2MCODE_SERVER_USERNAME,
     }
 
     yield* Effect.addFinalizer(() =>
       Effect.sync(() => {
-        Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
-        Flag.2M_CODE_SERVER_USERNAME = original.2M_CODE_SERVER_USERNAME
-        restoreEnv("2M_CODE_SERVER_PASSWORD", original.envPassword)
-        restoreEnv("2M_CODE_SERVER_USERNAME", original.envUsername)
+        Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
+        Flag._2MCODE_SERVER_USERNAME = original._2MCODE_SERVER_USERNAME
+        restoreEnv("_2MCODE_SERVER_PASSWORD", original.envPassword)
+        restoreEnv("_2MCODE_SERVER_USERNAME", original.envUsername)
       }),
     )
   }),
@@ -58,8 +58,8 @@ function app(input?: { password?: string; username?: string }) {
       Layer.provide(
         ConfigProvider.layer(
           ConfigProvider.fromUnknown({
-            2M_CODE_SERVER_PASSWORD: input?.password,
-            2M_CODE_SERVER_USERNAME: input?.username,
+            _2MCODE_SERVER_PASSWORD: input?.password,
+            _2MCODE_SERVER_USERNAME: input?.username,
           }),
         ),
       ),
@@ -105,8 +105,8 @@ function uiApp(input?: {
         HttpServer.layerServices,
         ConfigProvider.layer(
           ConfigProvider.fromUnknown({
-            2M_CODE_SERVER_PASSWORD: input?.password,
-            2M_CODE_SERVER_USERNAME: input?.username,
+            _2MCODE_SERVER_PASSWORD: input?.password,
+            _2MCODE_SERVER_USERNAME: input?.username,
           }),
         ),
       ]),

@@ -13,13 +13,13 @@ import { testEffect } from "../lib/effect"
 const testStateLayer = Layer.effectDiscard(
   Effect.gen(function* () {
     const original = {
-      2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
+      _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
     }
-    Flag.2M_CODE_SERVER_PASSWORD = "secret"
+    Flag._2MCODE_SERVER_PASSWORD = "secret"
     yield* Effect.promise(() => resetDatabase())
     yield* Effect.addFinalizer(() =>
       Effect.promise(async () => {
-        Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
+        Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
         await resetDatabase()
       }),
     )
@@ -64,7 +64,7 @@ describe("HttpApi CORS", () => {
     Effect.gen(function* () {
       const handler = HttpRouter.toWebHandler(
         HttpApiApp.createRoutes().pipe(
-          Layer.provide(ConfigProvider.layer(ConfigProvider.fromUnknown({ 2M_CODE_SERVER_PASSWORD: "secret" }))),
+          Layer.provide(ConfigProvider.layer(ConfigProvider.fromUnknown({ _2MCODE_SERVER_PASSWORD: "secret" }))),
         ),
         { disableLogger: true },
       ).handler

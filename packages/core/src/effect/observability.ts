@@ -45,7 +45,7 @@ export function resource(): { serviceName: string; serviceVersion: string; attri
     attributes: {
       ...attributes,
       "deployment.environment.name": InstallationChannel,
-      "2M_CODE.client": Flag.2M_CODE_CLIENT,
+      "2M_CODE.client": Flag._2MCODE_CLIENT,
       "2M_CODE.process_role": processMetadata.processRole,
       "2M_CODE.run_id": processMetadata.runID,
       "service.instance.id": processID,

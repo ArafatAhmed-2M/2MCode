@@ -18,8 +18,8 @@ ORANGE='\033[38;5;214m'
 MUTED='\033[0;2m'
 NC='\033[0m'
 
-2M_CODE_DIR="${2M_CODE_DIR:-$HOME/.2M_CODE}"
-2M_CODE_SRC="${2M_CODE_SRC:-$HOME/.2M_CODE-src}"
+_2MCODE_DIR="${_2MCODE_DIR:-$HOME/.2M_CODE}"
+_2MCODE_SRC="${_2MCODE_SRC:-$HOME/.2M_CODE-src}"
 FORK_REPO="${FORK_REPO:-https://github.com/claudianus/2M_CODE.git}"
 FORK_BRANCH="${FORK_BRANCH:-fix-zhipuai-coding-plan-thinking}"
 
@@ -39,18 +39,18 @@ need git
 need bun
 
 # ── 1. Clone or update fork ────────────────────────────────────────────
-if [ -d "$2M_CODE_SRC/.git" ]; then
-  info "Updating existing source at $2M_CODE_SRC ..."
-  git -C "$2M_CODE_SRC" fetch origin "$FORK_BRANCH"
-  git -C "$2M_CODE_SRC" checkout "$FORK_BRANCH"
-  git -C "$2M_CODE_SRC" reset --hard "origin/$FORK_BRANCH"
+if [ -d "$_2MCODE_SRC/.git" ]; then
+  info "Updating existing source at $_2MCODE_SRC ..."
+  git -C "$_2MCODE_SRC" fetch origin "$FORK_BRANCH"
+  git -C "$_2MCODE_SRC" checkout "$FORK_BRANCH"
+  git -C "$_2MCODE_SRC" reset --hard "origin/$FORK_BRANCH"
 else
-  info "Cloning fork (shallow) to $2M_CODE_SRC ..."
-  git clone --depth 1 --branch "$FORK_BRANCH" "$FORK_REPO" "$2M_CODE_SRC"
+  info "Cloning fork (shallow) to $_2MCODE_SRC ..."
+  git clone --depth 1 --branch "$FORK_BRANCH" "$FORK_REPO" "$_2MCODE_SRC"
 fi
 
 # ── 2. Verify the IME fix is present in source ────────────────────────
-PROMPT_FILE="$2M_CODE_SRC/packages/2M_CODE/src/cli/cmd/tui/component/prompt/index.tsx"
+PROMPT_FILE="$_2MCODE_SRC/packages/2M_CODE/src/cli/cmd/tui/component/prompt/index.tsx"
 if [ ! -f "$PROMPT_FILE" ]; then
   err "Prompt file not found: $PROMPT_FILE"
   exit 1
@@ -72,16 +72,16 @@ fi
 
 # ── 3. Install dependencies ────────────────────────────────────────────
 info "Installing dependencies (this may take a minute) ..."
-cd "$2M_CODE_SRC"
+cd "$_2MCODE_SRC"
 bun install --frozen-lockfile 2>/dev/null || bun install
 
 # ── 4. Build (current platform only) ──────────────────────────────────
 info "Building 2M_CODE for current platform ..."
-cd "$2M_CODE_SRC/packages/2M_CODE"
+cd "$_2MCODE_SRC/packages/2M_CODE"
 bun run build --single
 
 # ── 5. Install binary ──────────────────────────────────────────────────
-mkdir -p "$2M_CODE_DIR/bin"
+mkdir -p "$_2MCODE_DIR/bin"
 
 PLATFORM=$(uname -s | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -m)
@@ -90,23 +90,23 @@ ARCH=$(uname -m)
 [ "$PLATFORM" = "darwin" ] && true
 [ "$PLATFORM" = "linux" ] && true
 
-BUILT_BINARY="$2M_CODE_SRC/packages/2M_CODE/dist/2M_CODE-${PLATFORM}-${ARCH}/bin/2M_CODE"
+BUILT_BINARY="$_2MCODE_SRC/packages/2M_CODE/dist/2M_CODE-${PLATFORM}-${ARCH}/bin/2M_CODE"
 
 if [ ! -f "$BUILT_BINARY" ]; then
-  BUILT_BINARY=$(find "$2M_CODE_SRC/packages/2M_CODE/dist" -name "2M_CODE" -type f -executable 2>/dev/null | head -1)
+  BUILT_BINARY=$(find "$_2MCODE_SRC/packages/2M_CODE/dist" -name "2M_CODE" -type f -executable 2>/dev/null | head -1)
 fi
 
 if [ -f "$BUILT_BINARY" ]; then
-  if [ -f "$2M_CODE_DIR/bin/2M_CODE" ]; then
-    cp "$2M_CODE_DIR/bin/2M_CODE" "$2M_CODE_DIR/bin/2M_CODE.bak.$(date +%Y%m%d%H%M%S)"
+  if [ -f "$_2MCODE_DIR/bin/2M_CODE" ]; then
+    cp "$_2MCODE_DIR/bin/2M_CODE" "$_2MCODE_DIR/bin/2M_CODE.bak.$(date +%Y%m%d%H%M%S)"
   fi
-  cp "$BUILT_BINARY" "$2M_CODE_DIR/bin/2M_CODE"
-  chmod +x "$2M_CODE_DIR/bin/2M_CODE"
-  ok "Installed to $2M_CODE_DIR/bin/2M_CODE"
+  cp "$BUILT_BINARY" "$_2MCODE_DIR/bin/2M_CODE"
+  chmod +x "$_2MCODE_DIR/bin/2M_CODE"
+  ok "Installed to $_2MCODE_DIR/bin/2M_CODE"
 else
   err "Build failed - binary not found in dist/"
   info "Try running manually:"
-  echo "  cd $2M_CODE_SRC/packages/2M_CODE && bun run build --single"
+  echo "  cd $_2MCODE_SRC/packages/2M_CODE && bun run build --single"
   exit 1
 fi
 

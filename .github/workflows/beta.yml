@@ -24,8 +24,8 @@ jobs:
         id: setup-git-committer
         uses: ./.github/actions/setup-git-committer
         with:
-          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
-          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars._2MCODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets._2MCODE_APP_SECRET }}
 
       - name: Install 2M_CODE
         run: bun i -g 2M_CODE-ai
@@ -33,5 +33,5 @@ jobs:
       - name: Sync beta branch
         env:
           GH_TOKEN: ${{ steps.setup-git-committer.outputs.token }}
-          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
+          _2MCODE_API_KEY: ${{ secrets._2MCODE_API_KEY }}
         run: bun script/beta.ts

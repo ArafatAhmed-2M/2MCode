@@ -18,8 +18,8 @@ const describeWatcher = FileWatcher.hasNativeBinding() && !process.env.CI ? desc
 
 const watcherConfigLayer = ConfigProvider.layer(
   ConfigProvider.fromUnknown({
-    2M_CODE_EXPERIMENTAL_FILEWATCHER: "true",
-    2M_CODE_EXPERIMENTAL_DISABLE_FILEWATCHER: "false",
+    _2MCODE_EXPERIMENTAL_FILEWATCHER: "true",
+    _2MCODE_EXPERIMENTAL_DISABLE_FILEWATCHER: "false",
   }),
 )
 

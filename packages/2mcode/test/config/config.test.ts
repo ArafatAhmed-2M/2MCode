@@ -103,7 +103,7 @@ const ready = (ctx: InstanceContext) =>
   )
 
 // Get managed config directory from environment (set in preload.ts)
-const managedConfigDir = process.env.2M_CODE_TEST_MANAGED_CONFIG_DIR!
+const managedConfigDir = process.env._2MCODE_TEST_MANAGED_CONFIG_DIR!
 
 beforeEach(async () => {
   await clear(true)
@@ -184,13 +184,13 @@ test("creates global jsonc config with schema when no global configs exist", asy
   }
 })
 
-test("does not create global config when 2M_CODE_CONFIG_DIR is set", async () => {
+test("does not create global config when _2MCODE_CONFIG_DIR is set", async () => {
   await using tmp = await tmpdir()
   await using custom = await tmpdir()
   const prevConfig = Global.Path.config
-  const prevEnv = process.env.2M_CODE_CONFIG_DIR
+  const prevEnv = process.env._2MCODE_CONFIG_DIR
   ;(Global.Path as { config: string }).config = tmp.path
-  process.env.2M_CODE_CONFIG_DIR = custom.path
+  process.env._2MCODE_CONFIG_DIR = custom.path
   await clear(true)
 
   try {
@@ -204,8 +204,8 @@ test("does not create global config when 2M_CODE_CONFIG_DIR is set", async () =>
     expect(await Filesystem.exists(path.join(tmp.path, "2M_CODE.jsonc"))).toBe(false)
   } finally {
     ;(Global.Path as { config: string }).config = prevConfig
-    if (prevEnv === undefined) delete process.env.2M_CODE_CONFIG_DIR
-    else process.env.2M_CODE_CONFIG_DIR = prevEnv
+    if (prevEnv === undefined) delete process.env._2MCODE_CONFIG_DIR
+    else process.env._2MCODE_CONFIG_DIR = prevEnv
     await clear(true)
   }
 })
@@ -525,7 +525,7 @@ test("preserves env variables when adding $schema to config", async () => {
 })
 
 test("resolves env templates in account config with account token", async () => {
-  const originalControlToken = process.env["2M_CODE_CONSOLE_TOKEN"]
+  const originalControlToken = process.env["_2MCODE_CONSOLE_TOKEN"]
 
   const fakeAccount = Layer.mock(Account.Service)({
     active: () =>
@@ -555,7 +555,7 @@ test("resolves env templates in account config with account token", async () => 
     config: () =>
       Effect.succeed(
         Option.some({
-          provider: { 2M_CODE: { options: { apiKey: "{env:2M_CODE_CONSOLE_TOKEN}" } } },
+          provider: { 2M_CODE: { options: { apiKey: "{env:_2MCODE_CONSOLE_TOKEN}" } } },
         }),
       ),
     token: () => Effect.succeed(Option.some(AccessToken.make("st_test_token"))),
@@ -582,9 +582,9 @@ test("resolves env templates in account config with account token", async () => 
     ).pipe(Effect.scoped, Effect.provide(layer), Effect.runPromise)
   } finally {
     if (originalControlToken !== undefined) {
-      process.env["2M_CODE_CONSOLE_TOKEN"] = originalControlToken
+      process.env["_2MCODE_CONSOLE_TOKEN"] = originalControlToken
     } else {
-      delete process.env["2M_CODE_CONSOLE_TOKEN"]
+      delete process.env["_2MCODE_CONSOLE_TOKEN"]
     }
   }
 })
@@ -1027,7 +1027,7 @@ test("gets config directories", async () => {
   })
 })
 
-test("does not try to install dependencies in read-only 2M_CODE_CONFIG_DIR", async () => {
+test("does not try to install dependencies in read-only _2MCODE_CONFIG_DIR", async () => {
   if (process.platform === "win32") return
 
   await using tmp = await tmpdir<string>({
@@ -1044,8 +1044,8 @@ test("does not try to install dependencies in read-only 2M_CODE_CONFIG_DIR", asy
     },
   })
 
-  const prev = process.env.2M_CODE_CONFIG_DIR
-  process.env.2M_CODE_CONFIG_DIR = tmp.extra
+  const prev = process.env._2MCODE_CONFIG_DIR
+  process.env._2MCODE_CONFIG_DIR = tmp.extra
 
   try {
     await withTestInstance({
@@ -1055,12 +1055,12 @@ test("does not try to install dependencies in read-only 2M_CODE_CONFIG_DIR", asy
       },
     })
   } finally {
-    if (prev === undefined) delete process.env.2M_CODE_CONFIG_DIR
-    else process.env.2M_CODE_CONFIG_DIR = prev
+    if (prev === undefined) delete process.env._2MCODE_CONFIG_DIR
+    else process.env._2MCODE_CONFIG_DIR = prev
   }
 })
 
-test("installs dependencies in writable 2M_CODE_CONFIG_DIR", async () => {
+test("installs dependencies in writable _2MCODE_CONFIG_DIR", async () => {
   await using tmp = await tmpdir<string>({
     init: async (dir) => {
       const cfg = path.join(dir, "configdir")
@@ -1069,8 +1069,8 @@ test("installs dependencies in writable 2M_CODE_CONFIG_DIR", async () => {
     },
   })
 
-  const prev = process.env.2M_CODE_CONFIG_DIR
-  process.env.2M_CODE_CONFIG_DIR = tmp.extra
+  const prev = process.env._2MCODE_CONFIG_DIR
+  process.env._2MCODE_CONFIG_DIR = tmp.extra
 
   const testLayer = Config.layer.pipe(
     Layer.provide(testFlock),
@@ -1107,8 +1107,8 @@ test("installs dependencies in writable 2M_CODE_CONFIG_DIR", async () => {
     expect(await Filesystem.exists(path.join(tmp.extra, ".gitignore"))).toBe(true)
     expect(await Filesystem.readText(path.join(tmp.extra, ".gitignore"))).toContain("package-lock.json")
   } finally {
-    if (prev === undefined) delete process.env.2M_CODE_CONFIG_DIR
-    else process.env.2M_CODE_CONFIG_DIR = prev
+    if (prev === undefined) delete process.env._2MCODE_CONFIG_DIR
+    else process.env._2MCODE_CONFIG_DIR = prev
   }
 })
 
@@ -1510,7 +1510,7 @@ test("migrates legacy write tool to edit permission", async () => {
 })
 
 // Managed settings tests
-// Note: preload.ts sets 2M_CODE_TEST_MANAGED_CONFIG which Global.Path.managedConfig uses
+// Note: preload.ts sets _2MCODE_TEST_MANAGED_CONFIG which Global.Path.managedConfig uses
 
 test("managed settings override user settings", async () => {
   await using tmp = await tmpdir({
@@ -2275,10 +2275,10 @@ describe("deduplicatePluginOrigins", () => {
   })
 })
 
-describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
+describe("_2MCODE_DISABLE_PROJECT_CONFIG", () => {
   test("skips project config files when flag is set", async () => {
-    const originalEnv = process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
-    process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = "true"
+    const originalEnv = process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
+    process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = "true"
 
     try {
       await using tmp = await tmpdir({
@@ -2305,16 +2305,16 @@ describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
       })
     } finally {
       if (originalEnv === undefined) {
-        delete process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
+        delete process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
       } else {
-        process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = originalEnv
+        process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = originalEnv
       }
     }
   })
 
   test("skips project .2M_CODE/ directories when flag is set", async () => {
-    const originalEnv = process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
-    process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = "true"
+    const originalEnv = process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
+    process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = "true"
 
     try {
       await using tmp = await tmpdir({
@@ -2336,16 +2336,16 @@ describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
       })
     } finally {
       if (originalEnv === undefined) {
-        delete process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
+        delete process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
       } else {
-        process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = originalEnv
+        process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = originalEnv
       }
     }
   })
 
   test("still loads global config when flag is set", async () => {
-    const originalEnv = process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
-    process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = "true"
+    const originalEnv = process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
+    process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = "true"
 
     try {
       await using tmp = await tmpdir()
@@ -2360,21 +2360,21 @@ describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
       })
     } finally {
       if (originalEnv === undefined) {
-        delete process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
+        delete process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
       } else {
-        process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = originalEnv
+        process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = originalEnv
       }
     }
   })
 
   test("skips relative instructions with warning when flag is set but no config dir", async () => {
-    const originalDisable = process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
-    const originalConfigDir = process.env["2M_CODE_CONFIG_DIR"]
+    const originalDisable = process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
+    const originalConfigDir = process.env["_2MCODE_CONFIG_DIR"]
 
     try {
       // Ensure no config dir is set
-      delete process.env["2M_CODE_CONFIG_DIR"]
-      process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = "true"
+      delete process.env["_2MCODE_CONFIG_DIR"]
+      process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = "true"
 
       await using tmp = await tmpdir({
         init: async (dir) => {
@@ -2405,21 +2405,21 @@ describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
       })
     } finally {
       if (originalDisable === undefined) {
-        delete process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
+        delete process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
       } else {
-        process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = originalDisable
+        process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = originalDisable
       }
       if (originalConfigDir === undefined) {
-        delete process.env["2M_CODE_CONFIG_DIR"]
+        delete process.env["_2MCODE_CONFIG_DIR"]
       } else {
-        process.env["2M_CODE_CONFIG_DIR"] = originalConfigDir
+        process.env["_2MCODE_CONFIG_DIR"] = originalConfigDir
       }
     }
   })
 
-  test("2M_CODE_CONFIG_DIR still works when flag is set", async () => {
-    const originalDisable = process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
-    const originalConfigDir = process.env["2M_CODE_CONFIG_DIR"]
+  test("_2MCODE_CONFIG_DIR still works when flag is set", async () => {
+    const originalDisable = process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
+    const originalConfigDir = process.env["_2MCODE_CONFIG_DIR"]
 
     try {
       await using configDirTmp = await tmpdir({
@@ -2448,38 +2448,38 @@ describe("2M_CODE_DISABLE_PROJECT_CONFIG", () => {
         },
       })
 
-      process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = "true"
-      process.env["2M_CODE_CONFIG_DIR"] = configDirTmp.path
+      process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = "true"
+      process.env["_2MCODE_CONFIG_DIR"] = configDirTmp.path
 
       await withTestInstance({
         directory: projectTmp.path,
         fn: async (ctx) => {
           const config = await load(ctx)
-          // Should load from 2M_CODE_CONFIG_DIR, not project
+          // Should load from _2MCODE_CONFIG_DIR, not project
           expect(config.model).toBe("configdir/model")
         },
       })
     } finally {
       if (originalDisable === undefined) {
-        delete process.env["2M_CODE_DISABLE_PROJECT_CONFIG"]
+        delete process.env["_2MCODE_DISABLE_PROJECT_CONFIG"]
       } else {
-        process.env["2M_CODE_DISABLE_PROJECT_CONFIG"] = originalDisable
+        process.env["_2MCODE_DISABLE_PROJECT_CONFIG"] = originalDisable
       }
       if (originalConfigDir === undefined) {
-        delete process.env["2M_CODE_CONFIG_DIR"]
+        delete process.env["_2MCODE_CONFIG_DIR"]
       } else {
-        process.env["2M_CODE_CONFIG_DIR"] = originalConfigDir
+        process.env["_2MCODE_CONFIG_DIR"] = originalConfigDir
       }
     }
   })
 })
 
-describe("2M_CODE_CONFIG_CONTENT token substitution", () => {
-  test("substitutes {env:} tokens in 2M_CODE_CONFIG_CONTENT", async () => {
-    const originalEnv = process.env["2M_CODE_CONFIG_CONTENT"]
+describe("_2MCODE_CONFIG_CONTENT token substitution", () => {
+  test("substitutes {env:} tokens in _2MCODE_CONFIG_CONTENT", async () => {
+    const originalEnv = process.env["_2MCODE_CONFIG_CONTENT"]
     const originalTestVar = process.env["TEST_CONFIG_VAR"]
     process.env["TEST_CONFIG_VAR"] = "test_api_key_12345"
-    process.env["2M_CODE_CONFIG_CONTENT"] = JSON.stringify({
+    process.env["_2MCODE_CONFIG_CONTENT"] = JSON.stringify({
       $schema: "https://2M_CODE.ai/config.json",
       username: "{env:TEST_CONFIG_VAR}",
     })
@@ -2495,9 +2495,9 @@ describe("2M_CODE_CONFIG_CONTENT token substitution", () => {
       })
     } finally {
       if (originalEnv !== undefined) {
-        process.env["2M_CODE_CONFIG_CONTENT"] = originalEnv
+        process.env["_2MCODE_CONFIG_CONTENT"] = originalEnv
       } else {
-        delete process.env["2M_CODE_CONFIG_CONTENT"]
+        delete process.env["_2MCODE_CONFIG_CONTENT"]
       }
       if (originalTestVar !== undefined) {
         process.env["TEST_CONFIG_VAR"] = originalTestVar
@@ -2507,14 +2507,14 @@ describe("2M_CODE_CONFIG_CONTENT token substitution", () => {
     }
   })
 
-  test("substitutes {file:} tokens in 2M_CODE_CONFIG_CONTENT", async () => {
-    const originalEnv = process.env["2M_CODE_CONFIG_CONTENT"]
+  test("substitutes {file:} tokens in _2MCODE_CONFIG_CONTENT", async () => {
+    const originalEnv = process.env["_2MCODE_CONFIG_CONTENT"]
 
     try {
       await using tmp = await tmpdir({
         init: async (dir) => {
           await Filesystem.write(path.join(dir, "api_key.txt"), "secret_key_from_file")
-          process.env["2M_CODE_CONFIG_CONTENT"] = JSON.stringify({
+          process.env["_2MCODE_CONFIG_CONTENT"] = JSON.stringify({
             $schema: "https://2M_CODE.ai/config.json",
             username: "{file:./api_key.txt}",
           })
@@ -2529,9 +2529,9 @@ describe("2M_CODE_CONFIG_CONTENT token substitution", () => {
       })
     } finally {
       if (originalEnv !== undefined) {
-        process.env["2M_CODE_CONFIG_CONTENT"] = originalEnv
+        process.env["_2MCODE_CONFIG_CONTENT"] = originalEnv
       } else {
-        delete process.env["2M_CODE_CONFIG_CONTENT"]
+        delete process.env["_2MCODE_CONFIG_CONTENT"]
       }
     }
   })

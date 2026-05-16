@@ -1,12 +1,12 @@
-﻿export const 2M_CODE_RUN_ID = "2M_CODE_RUN_ID"
-export const 2M_CODE_PROCESS_ROLE = "2M_CODE_PROCESS_ROLE"
+﻿export const _2MCODE_RUN_ID = "_2MCODE_RUN_ID"
+export const _2MCODE_PROCESS_ROLE = "_2MCODE_PROCESS_ROLE"
 
 export function ensureRunID() {
-  return (process.env[2M_CODE_RUN_ID] ??= crypto.randomUUID())
+  return (process.env[_2MCODE_RUN_ID] ??= crypto.randomUUID())
 }
 
 export function ensureProcessRole(fallback: "main" | "worker") {
-  return (process.env[2M_CODE_PROCESS_ROLE] ??= fallback)
+  return (process.env[_2MCODE_PROCESS_ROLE] ??= fallback)
 }
 
 export function ensureProcessMetadata(fallback: "main" | "worker") {

@@ -34,8 +34,8 @@ const it = testEffect(
 )
 
 const original = {
-  2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
-  2M_CODE_SERVER_USERNAME: Flag.2M_CODE_SERVER_USERNAME,
+  _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
+  _2MCODE_SERVER_USERNAME: Flag._2MCODE_SERVER_USERNAME,
 }
 
 type ServerPath = "default" | "raw"
@@ -48,8 +48,8 @@ type TestServices = AppFileSystem.Service | ChildProcessSpawner.ChildProcessSpaw
 type TestScope = Scope.Scope | TestServices
 
 function app(serverPath: ServerPath, input?: { password?: string; username?: string }) {
-  Flag.2M_CODE_SERVER_PASSWORD = input?.password
-  Flag.2M_CODE_SERVER_USERNAME = input?.username
+  Flag._2MCODE_SERVER_PASSWORD = input?.password
+  Flag._2MCODE_SERVER_USERNAME = input?.username
   if (serverPath === "default") return Server.Default().app
 
   const handler = HttpRouter.toWebHandler(
@@ -57,8 +57,8 @@ function app(serverPath: ServerPath, input?: { password?: string; username?: str
       Layer.provide(
         ConfigProvider.layer(
           ConfigProvider.fromUnknown({
-            2M_CODE_SERVER_PASSWORD: input?.password,
-            2M_CODE_SERVER_USERNAME: input?.username,
+            _2MCODE_SERVER_PASSWORD: input?.password,
+            _2MCODE_SERVER_USERNAME: input?.username,
           }),
         ),
       ),
@@ -360,8 +360,8 @@ function seedMessage(directory: string, sessionID: string) {
 }
 
 afterEach(async () => {
-  Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
-  Flag.2M_CODE_SERVER_USERNAME = original.2M_CODE_SERVER_USERNAME
+  Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
+  Flag._2MCODE_SERVER_USERNAME = original._2MCODE_SERVER_USERNAME
   await disposeAllInstances()
   await resetDatabase()
 })

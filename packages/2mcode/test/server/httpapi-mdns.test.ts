@@ -29,22 +29,22 @@ void mock.module("bonjour-service", () => ({
 const { Server } = await import("../../src/server/server")
 
 const original = {
-  2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
-  2M_CODE_SERVER_USERNAME: Flag.2M_CODE_SERVER_USERNAME,
+  _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
+  _2MCODE_SERVER_USERNAME: Flag._2MCODE_SERVER_USERNAME,
 }
 
 afterEach(async () => {
   events.length = 0
-  Flag.2M_CODE_SERVER_PASSWORD = original.2M_CODE_SERVER_PASSWORD
-  Flag.2M_CODE_SERVER_USERNAME = original.2M_CODE_SERVER_USERNAME
+  Flag._2MCODE_SERVER_PASSWORD = original._2MCODE_SERVER_PASSWORD
+  Flag._2MCODE_SERVER_USERNAME = original._2MCODE_SERVER_USERNAME
   await disposeAllInstances()
   await resetDatabase()
 })
 
 describe("HttpApi Server.listen mDNS", () => {
   test("skips publish for loopback hostnames", async () => {
-    Flag.2M_CODE_SERVER_PASSWORD = "mdns-secret"
-    Flag.2M_CODE_SERVER_USERNAME = "2M_CODE"
+    Flag._2MCODE_SERVER_PASSWORD = "mdns-secret"
+    Flag._2MCODE_SERVER_USERNAME = "2M_CODE"
     const listener = await Server.listen({ hostname: "127.0.0.1", port: 0, mdns: true })
     try {
       expect(events.filter((e) => e.kind === "publish")).toEqual([])
@@ -55,8 +55,8 @@ describe("HttpApi Server.listen mDNS", () => {
   })
 
   test("publishes for non-loopback hostnames and unpublishes on stop", async () => {
-    Flag.2M_CODE_SERVER_PASSWORD = "mdns-secret"
-    Flag.2M_CODE_SERVER_USERNAME = "2M_CODE"
+    Flag._2MCODE_SERVER_PASSWORD = "mdns-secret"
+    Flag._2MCODE_SERVER_USERNAME = "2M_CODE"
     const listener = await Server.listen({ hostname: "0.0.0.0", port: 0, mdns: true })
     try {
       const published = events.filter((e) => e.kind === "publish")
@@ -71,8 +71,8 @@ describe("HttpApi Server.listen mDNS", () => {
   })
 
   test("scope finalizer unpublishes even if stop() is not called for force-close", async () => {
-    Flag.2M_CODE_SERVER_PASSWORD = "mdns-secret"
-    Flag.2M_CODE_SERVER_USERNAME = "2M_CODE"
+    Flag._2MCODE_SERVER_PASSWORD = "mdns-secret"
+    Flag._2MCODE_SERVER_USERNAME = "2M_CODE"
     const listener = await Server.listen({ hostname: "0.0.0.0", port: 0, mdns: true })
     expect(events.filter((e) => e.kind === "publish").length).toBe(1)
     // Plain (graceful) stop without close=true should still unpublish.

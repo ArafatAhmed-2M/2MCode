@@ -55,9 +55,9 @@ export const layer = Layer.effect(
     const decode = Schema.decodeUnknownOption(Info)
 
     const all = Effect.fn("Auth.all")(function* () {
-      if (process.env.2M_CODE_AUTH_CONTENT) {
+      if (process.env._2MCODE_AUTH_CONTENT) {
         try {
-          return JSON.parse(process.env.2M_CODE_AUTH_CONTENT)
+          return JSON.parse(process.env._2MCODE_AUTH_CONTENT)
         } catch (err) {}
       }
 

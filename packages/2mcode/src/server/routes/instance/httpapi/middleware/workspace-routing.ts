@@ -60,7 +60,7 @@ function requestURL(request: HttpServerRequest.HttpServerRequest): URL {
 }
 
 function configuredWorkspaceID(): WorkspaceID | undefined {
-  return Flag.2M_CODE_WORKSPACE_ID ? WorkspaceID.make(Flag.2M_CODE_WORKSPACE_ID) : undefined
+  return Flag._2MCODE_WORKSPACE_ID ? WorkspaceID.make(Flag._2MCODE_WORKSPACE_ID) : undefined
 }
 
 function selectedWorkspaceID(url: URL, sessionWorkspaceID?: WorkspaceID): WorkspaceID | undefined {

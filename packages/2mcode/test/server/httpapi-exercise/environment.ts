@@ -2,28 +2,28 @@
 import { Effect } from "effect"
 import path from "path"
 
-const preserveExerciseGlobalRoot = !!process.env.2M_CODE_HTTPAPI_EXERCISE_GLOBAL
+const preserveExerciseGlobalRoot = !!process.env._2MCODE_HTTPAPI_EXERCISE_GLOBAL
 export const exerciseGlobalRoot =
-  process.env.2M_CODE_HTTPAPI_EXERCISE_GLOBAL ??
+  process.env._2MCODE_HTTPAPI_EXERCISE_GLOBAL ??
   path.join(process.env.TMPDIR ?? "/tmp", `2M_CODE-httpapi-global-${process.pid}`)
 process.env.XDG_DATA_HOME = path.join(exerciseGlobalRoot, "data")
 process.env.XDG_CONFIG_HOME = path.join(exerciseGlobalRoot, "config")
 process.env.XDG_STATE_HOME = path.join(exerciseGlobalRoot, "state")
 process.env.XDG_CACHE_HOME = path.join(exerciseGlobalRoot, "cache")
-process.env.2M_CODE_DISABLE_SHARE = "true"
+process.env._2MCODE_DISABLE_SHARE = "true"
 export const exerciseConfigDirectory = path.join(exerciseGlobalRoot, "config", "2M_CODE")
 export const exerciseDataDirectory = path.join(exerciseGlobalRoot, "data", "2M_CODE")
 
-const preserveExerciseDatabase = !!process.env.2M_CODE_HTTPAPI_EXERCISE_DB
+const preserveExerciseDatabase = !!process.env._2MCODE_HTTPAPI_EXERCISE_DB
 export const exerciseDatabasePath =
-  process.env.2M_CODE_HTTPAPI_EXERCISE_DB ??
+  process.env._2MCODE_HTTPAPI_EXERCISE_DB ??
   path.join(process.env.TMPDIR ?? "/tmp", `2M_CODE-httpapi-exercise-${process.pid}.db`)
-process.env.2M_CODE_DB = exerciseDatabasePath
-Flag.2M_CODE_DB = exerciseDatabasePath
+process.env._2MCODE_DB = exerciseDatabasePath
+Flag._2MCODE_DB = exerciseDatabasePath
 
 export const original = {
-  2M_CODE_SERVER_PASSWORD: Flag.2M_CODE_SERVER_PASSWORD,
-  2M_CODE_SERVER_USERNAME: Flag.2M_CODE_SERVER_USERNAME,
+  _2MCODE_SERVER_PASSWORD: Flag._2MCODE_SERVER_PASSWORD,
+  _2MCODE_SERVER_USERNAME: Flag._2MCODE_SERVER_USERNAME,
 }
 
 export const cleanupExercisePaths = Effect.promise(async () => {

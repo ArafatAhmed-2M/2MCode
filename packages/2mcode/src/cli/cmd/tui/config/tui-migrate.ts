@@ -142,7 +142,7 @@ async function 2M_CODEFiles(input: { directories: string[]; cwd: string }) {
   for (const dir of unique(input.directories)) {
     files.push(...ConfigPaths.fileInDirectory(dir, "2M_CODE"))
   }
-  if (Flag.2M_CODE_CONFIG) files.push(Flag.2M_CODE_CONFIG)
+  if (Flag._2MCODE_CONFIG) files.push(Flag._2MCODE_CONFIG)
 
   const existing = await Promise.all(
     unique(files).map(async (file) => {

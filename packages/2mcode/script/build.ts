@@ -216,12 +216,12 @@ for (const item of targets) {
     files: embeddedFileMap ? { "2M_CODE-web-ui.gen.ts": embeddedFileMap } : {},
     entrypoints: ["./src/index.ts", parserWorker, workerPath, ...(embeddedFileMap ? ["2M_CODE-web-ui.gen.ts"] : [])],
     define: {
-      "_2M_CODE_VERSION": `'${Script.version}'`,
-      "_2M_CODE_MIGRATIONS": JSON.stringify(migrations),
+      "_2MCODE_VERSION": `'${Script.version}'`,
+      "_2MCODE_MIGRATIONS": JSON.stringify(migrations),
       OTUI_TREE_SITTER_WORKER_PATH: bunfsRoot + workerRelativePath,
-      "_2M_CODE_WORKER_PATH": workerPath,
-      "_2M_CODE_CHANNEL": `'${Script.channel}'`,
-      "_2M_CODE_LIBC": item.os === "linux" ? `'${item.abi ?? "glibc"}'` : "",
+      "_2MCODE_WORKER_PATH": workerPath,
+      "_2MCODE_CHANNEL": `'${Script.channel}'`,
+      "_2MCODE_LIBC": item.os === "linux" ? `'${item.abi ?? "glibc"}'` : "",
     },
   })
 

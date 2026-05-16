@@ -15,15 +15,15 @@ import { win32DisableProcessedInput, win32InstallCtrlCGuard } from "./win32"
 import { writeHeapSnapshot } from "v8"
 import { TuiConfig } from "./config/tui"
 import {
-  2M_CODE_PROCESS_ROLE,
-  2M_CODE_RUN_ID,
+  _2MCODE_PROCESS_ROLE,
+  _2MCODE_RUN_ID,
   ensureRunID,
   sanitizedProcessEnv,
 } from "@2mcode-ai/core/util/2M_CODE-process"
 import { validateSession } from "./validate-session"
 
 declare global {
-  const 2M_CODE_WORKER_PATH: string
+  const _2MCODE_WORKER_PATH: string
 }
 
 type RpcClient = ReturnType<typeof Rpc.client<typeof rpc>>
@@ -57,7 +57,7 @@ function createEventSource(client: RpcClient): EventSource {
 }
 
 async function target() {
-  if (typeof 2M_CODE_WORKER_PATH !== "undefined") return 2M_CODE_WORKER_PATH
+  if (typeof _2MCODE_WORKER_PATH !== "undefined") return _2MCODE_WORKER_PATH
   const dist = new URL("./cli/cmd/tui/worker.js", import.meta.url)
   if (await Filesystem.exists(fileURLToPath(dist))) return dist
   return new URL("./worker.ts", import.meta.url)
@@ -139,8 +139,8 @@ export const TuiThreadCommand = cmd({
       }
       const cwd = Filesystem.resolve(process.cwd())
       const env = sanitizedProcessEnv({
-        [2M_CODE_PROCESS_ROLE]: "worker",
-        [2M_CODE_RUN_ID]: ensureRunID(),
+        [_2MCODE_PROCESS_ROLE]: "worker",
+        [_2MCODE_RUN_ID]: ensureRunID(),
       })
 
       const worker = new Worker(file, {

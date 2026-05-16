@@ -21,7 +21,7 @@ const log = Log.create({ service: "skill" })
 const CLAUDE_EXTERNAL_DIR = ".claude"
 const AGENTS_EXTERNAL_DIR = ".agents"
 const EXTERNAL_SKILL_PATTERN = "skills/**/SKILL.md"
-const 2M_CODE_SKILL_PATTERN = "{skill,skills}/**/SKILL.md"
+const _2MCODE_SKILL_PATTERN = "{skill,skills}/**/SKILL.md"
 const SKILL_PATTERN = "**/SKILL.md"
 
 // Built-in skill that ships with 2M_CODE. The model's intuition for what an
@@ -194,7 +194,7 @@ const discoverSkills = Effect.fnUntraced(function* (
 
   const configDirs = yield* config.directories()
   for (const dir of configDirs) {
-    yield* scan(state, dir, 2M_CODE_SKILL_PATTERN)
+    yield* scan(state, dir, _2MCODE_SKILL_PATTERN)
   }
 
   const cfg = yield* config.get()

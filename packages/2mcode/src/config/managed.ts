@@ -33,7 +33,7 @@ function systemManagedConfigDir(): string {
 }
 
 export function managedConfigDir() {
-  return process.env.2M_CODE_TEST_MANAGED_CONFIG_DIR || systemManagedConfigDir()
+  return process.env._2MCODE_TEST_MANAGED_CONFIG_DIR || systemManagedConfigDir()
 }
 
 export function parseManagedPlist(json: string): string {
