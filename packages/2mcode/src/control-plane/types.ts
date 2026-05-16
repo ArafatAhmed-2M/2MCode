@@ -2,7 +2,7 @@
 import { ProjectID } from "@/project/schema"
 import type { InstanceContext } from "@/project/instance-context"
 import { WorkspaceID } from "./schema"
-import type { DeepMutable } from "@2M_CODE-ai/core/schema"
+import type { DeepMutable } from "@2mcode-ai/core/schema"
 
 export const WorkspaceInfo = Schema.Struct({
   id: WorkspaceID,

@@ -1,11 +1,11 @@
 ﻿import { describe, expect } from "bun:test"
 import { DateTime, Effect, Fiber, Layer, Option, Stream } from "effect"
-import { Catalog } from "@2M_CODE-ai/core/catalog"
-import { EventV2 } from "@2M_CODE-ai/core/event"
-import { Location } from "@2M_CODE-ai/core/location"
-import { ModelV2 } from "@2M_CODE-ai/core/model"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { ProviderV2 } from "@2M_CODE-ai/core/provider"
+import { Catalog } from "@2mcode-ai/core/catalog"
+import { EventV2 } from "@2mcode-ai/core/event"
+import { Location } from "@2mcode-ai/core/location"
+import { ModelV2 } from "@2mcode-ai/core/model"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { ProviderV2 } from "@2mcode-ai/core/provider"
 import { testEffect } from "./lib/effect"
 
 const locationLayer = Layer.succeed(Location.Service, Location.Service.of({ directory: "test" }))

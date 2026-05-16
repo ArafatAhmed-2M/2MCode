@@ -7,7 +7,7 @@
  * `messages.data!` while the SDK leaves `data` undefined on error.
  */
 import { describe, expect, test } from "bun:test"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { tmpdir } from "../../../fixture/fixture"
 import { directory, json, mount } from "./sync-fixture"
 

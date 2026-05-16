@@ -1,9 +1,9 @@
-﻿import * as Log from "@2M_CODE-ai/core/util/log"
+﻿import * as Log from "@2mcode-ai/core/util/log"
 import path from "path"
-import { Global } from "@2M_CODE-ai/core/global"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { Global } from "@2mcode-ai/core/global"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect, Exit, Layer, Option, RcMap, Schema, Context, TxReentrantLock } from "effect"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
 import { Git } from "@/git"
 
 const log = Log.create({ service: "storage" })

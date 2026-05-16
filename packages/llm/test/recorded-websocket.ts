@@ -1,4 +1,4 @@
-﻿import { Cassette, makeWebSocketExecutor, type RecordReplayMode } from "@2M_CODE-ai/http-recorder"
+﻿import { Cassette, makeWebSocketExecutor, type RecordReplayMode } from "@2mcode-ai/http-recorder"
 import { Effect, Layer } from "effect"
 import { WebSocketExecutor } from "../src/route"
 import type { Service as WebSocketExecutorService } from "../src/route/transport/websocket"

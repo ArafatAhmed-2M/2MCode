@@ -1,5 +1,5 @@
 ﻿import { Schema } from "effect"
-import { PositiveInt } from "@2M_CODE-ai/core/schema"
+import { PositiveInt } from "@2mcode-ai/core/schema"
 
 export const Server = Schema.Struct({
   port: Schema.optional(PositiveInt).annotate({

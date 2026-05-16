@@ -18,7 +18,7 @@ El SDK 2M_CODE JS/TS proporciona un cliente con seguridad de tipos para interact
 Instale el SDK desde npm:
 
 ```bash
-npm install @2M_CODE-ai/sdk
+npm install @2mcode-ai/sdk
 ```
 
 ---
@@ -28,7 +28,7 @@ npm install @2M_CODE-ai/sdk
 Cree una instancia de 2M_CODE:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const { client } = await create2M_CODE()
 ```
@@ -52,7 +52,7 @@ Esto inicia tanto un servidor como un cliente.
 Puede pasar un objeto de configuración para personalizar el comportamiento. La instancia aún recoge su `2M_CODE.json`, pero puede anular o agregar configuración en línea:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const 2M_CODE = await create2M_CODE({
   hostname: "127.0.0.1",
@@ -72,7 +72,7 @@ console.log(`Server running at ${2M_CODE.server.url}`)
 Si ya tiene una instancia en ejecución de 2M_CODE, puede crear una instancia de cliente para conectarse a ella:
 
 ```javascript
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk"
+import { create2M_CODEClient } from "@2mcode-ai/sdk"
 
 const client = create2M_CODEClient({
   baseUrl: "http://localhost:4096",
@@ -96,7 +96,7 @@ const client = create2M_CODEClient({
 El SDK incluye definiciones TypeScript para todos los tipos API. Importarlos directamente:
 
 ```typescript
-import type { Session, Message, Part } from "@2M_CODE-ai/sdk"
+import type { Session, Message, Part } from "@2mcode-ai/sdk"
 ```
 
 Todos los tipos se generan a partir de la especificación OpenAPI del servidor y están disponibles en el <a href={typesUrl}>archivo de tipos</a>.

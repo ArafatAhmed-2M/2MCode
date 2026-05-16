@@ -1,6 +1,6 @@
 ﻿import { Auth } from "@/auth"
 import { ProviderID } from "@/provider/schema"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Effect } from "effect"
 import { HttpApiBuilder } from "effect/unstable/httpapi"
 import { RootHttpApi } from "../api"

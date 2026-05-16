@@ -1,6 +1,6 @@
 ﻿import { SessionID } from "@/session/schema"
-import { SessionMessage } from "@2M_CODE-ai/core/session-message"
-import { Prompt } from "@2M_CODE-ai/core/session-prompt"
+import { SessionMessage } from "@2mcode-ai/core/session-message"
+import { Prompt } from "@2mcode-ai/core/session-prompt"
 import { SessionV2 } from "@/v2/session"
 import { Schema } from "effect"
 import { HttpApiEndpoint, HttpApiError, HttpApiGroup, HttpApiSchema, OpenApi } from "effect/unstable/httpapi"

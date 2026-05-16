@@ -4,7 +4,7 @@ import { pathToFileURL } from "url"
 import { tmpdir, withTestInstance } from "../fixture/fixture"
 import { LSPClient } from "@/lsp/client"
 import * as LSPServer from "@/lsp/server"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 
 function spawnFakeServer() {
   const { spawn } = require("child_process")

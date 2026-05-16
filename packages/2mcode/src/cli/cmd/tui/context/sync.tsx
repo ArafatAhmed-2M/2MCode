@@ -17,18 +17,18 @@
   ProviderListResponse,
   ProviderAuthMethod,
   VcsInfo,
-} from "@2M_CODE-ai/sdk/v2"
+} from "@2mcode-ai/sdk/v2"
 import { createStore, produce, reconcile } from "solid-js/store"
 import { useProject } from "@tui/context/project"
 import { useEvent } from "@tui/context/event"
 import { useSDK } from "@tui/context/sdk"
-import { Binary } from "@2M_CODE-ai/core/util/binary"
+import { Binary } from "@2mcode-ai/core/util/binary"
 import { createSimpleContext } from "./helper"
 import type { Snapshot } from "@/snapshot"
 import { useExit } from "./exit"
 import { useArgs } from "./args"
 import { batch, onMount } from "solid-js"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { emptyConsoleState, type ConsoleState } from "@/config/console-state"
 import path from "path"
 import { useKV } from "./kv"

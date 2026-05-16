@@ -1,6 +1,6 @@
-﻿import { Global } from "@2M_CODE-ai/core/global"
+﻿import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
-import { Flock } from "@2M_CODE-ai/core/util/flock"
+import { Flock } from "@2mcode-ai/core/util/flock"
 import { rename, rm } from "fs/promises"
 import { createSignal, type Setter } from "solid-js"
 import { createStore, unwrap } from "solid-js/store"

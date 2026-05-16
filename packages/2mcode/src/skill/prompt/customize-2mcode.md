@@ -255,7 +255,7 @@ function, not a plain object literal, and the function returns an object
 (return `{}` if there is nothing to register).
 
 ```ts
-import type { Plugin } from "@2M_CODE-ai/plugin"
+import type { Plugin } from "@2mcode-ai/plugin"
 
 export default (async ({ client, project, directory, $ }) => {
   return {

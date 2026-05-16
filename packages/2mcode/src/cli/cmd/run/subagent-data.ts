@@ -1,4 +1,4 @@
-﻿import type { Event, Message, Part, PermissionRequest, QuestionRequest, ToolPart } from "@2M_CODE-ai/sdk/v2"
+﻿import type { Event, Message, Part, PermissionRequest, QuestionRequest, ToolPart } from "@2mcode-ai/sdk/v2"
 import * as Locale from "@/util/locale"
 import {
   bootstrapSessionData,

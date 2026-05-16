@@ -2,7 +2,7 @@
 import { UI } from "../ui"
 import * as prompts from "@clack/prompts"
 import { Installation } from "../../installation"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import fs from "fs/promises"
 import path from "path"
 import os from "os"

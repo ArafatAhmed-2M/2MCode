@@ -1,5 +1,5 @@
-﻿import { and, Database, inArray, sql } from "@2M_CODE-ai/console-core/drizzle/index.js"
-import { ModelTpsRateLimitTable } from "@2M_CODE-ai/console-core/schema/ip.sql.js"
+﻿import { and, Database, inArray, sql } from "@2mcode-ai/console-core/drizzle/index.js"
+import { ModelTpsRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 import { UsageInfo } from "./provider/provider"
 
 export function createModelTpsLimiter(providers: { id: string; model: string; tpsGoal?: number }[]) {

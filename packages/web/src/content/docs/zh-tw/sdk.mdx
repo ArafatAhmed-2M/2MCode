@@ -18,7 +18,7 @@ export const typesUrl = `${config.github}/blob/dev/packages/sdk/js/src/gen/types
 從 npm 安裝 SDK：
 
 ```bash
-npm install @2M_CODE-ai/sdk
+npm install @2mcode-ai/sdk
 ```
 
 ---
@@ -28,7 +28,7 @@ npm install @2M_CODE-ai/sdk
 建立一個 2M_CODE 實例：
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const { client } = await create2M_CODE()
 ```
@@ -52,7 +52,7 @@ const { client } = await create2M_CODE()
 您可以傳入一個設定物件來自訂行為。實例仍然會讀取您的 `2M_CODE.json`，但您可以透過內嵌方式覆寫或新增設定：
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const 2M_CODE = await create2M_CODE({
   hostname: "127.0.0.1",
@@ -72,7 +72,7 @@ console.log(`Server running at ${2M_CODE.server.url}`)
 如果您已經有一個正在執行的 2M_CODE 實例，可以建立一個用戶端實例來連線：
 
 ```javascript
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk"
+import { create2M_CODEClient } from "@2mcode-ai/sdk"
 
 const client = create2M_CODEClient({
   baseUrl: "http://localhost:4096",
@@ -96,7 +96,7 @@ const client = create2M_CODEClient({
 SDK 包含所有 API 型別的 TypeScript 定義。您可以直接匯入它們：
 
 ```typescript
-import type { Session, Message, Part } from "@2M_CODE-ai/sdk"
+import type { Session, Message, Part } from "@2mcode-ai/sdk"
 ```
 
 所有型別均根據伺服器的 OpenAPI 規範產生，可在<a href={typesUrl}>型別檔案</a>中查看。

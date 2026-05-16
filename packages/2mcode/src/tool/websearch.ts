@@ -3,8 +3,8 @@ import { HttpClient } from "effect/unstable/http"
 import * as Tool from "./tool"
 import * as McpWebSearch from "./mcp-websearch"
 import DESCRIPTION from "./websearch.txt"
-import { checksum } from "@2M_CODE-ai/core/util/encode"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { checksum } from "@2mcode-ai/core/util/encode"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { RuntimeFlags } from "@/effect/runtime-flags"
 
 export const Parameters = Schema.Struct({

@@ -2,13 +2,13 @@
 import { ChildProcess, ChildProcessSpawner } from "effect/unstable/process"
 import { formatPatch, structuredPatch } from "diff"
 import path from "path"
-import { AppProcess } from "@2M_CODE-ai/core/process"
+import { AppProcess } from "@2mcode-ai/core/process"
 import { InstanceState } from "@/effect/instance-state"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
-import { Hash } from "@2M_CODE-ai/core/util/hash"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
+import { Hash } from "@2mcode-ai/core/util/hash"
 import { Config } from "@/config/config"
-import { Global } from "@2M_CODE-ai/core/global"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { Global } from "@2mcode-ai/core/global"
+import * as Log from "@2mcode-ai/core/util/log"
 
 export const Patch = Schema.Struct({
   hash: Schema.String,

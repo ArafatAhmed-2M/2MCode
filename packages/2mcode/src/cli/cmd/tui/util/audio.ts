@@ -1,5 +1,5 @@
 ﻿import { Audio, type AudioErrorContext, type AudioPlayOptions, type AudioSound, type AudioVoice } from "@opentui/core"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 
 const log = Log.create({ service: "tui.audio" })
 

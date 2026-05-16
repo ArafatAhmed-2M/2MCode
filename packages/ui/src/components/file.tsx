@@ -1,4 +1,4 @@
-﻿import { sampledChecksum } from "@2M_CODE-ai/core/util/encode"
+﻿import { sampledChecksum } from "@2mcode-ai/core/util/encode"
 import {
   DEFAULT_VIRTUAL_FILE_METRICS,
   type DiffLineAnnotation,

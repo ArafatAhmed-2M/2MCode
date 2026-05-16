@@ -18,7 +18,7 @@ export const typesUrl = `${config.github}/blob/dev/packages/sdk/js/src/gen/types
 SDK'yı npm'den yükleyin:
 
 ```bash
-npm install @2M_CODE-ai/sdk
+npm install @2mcode-ai/sdk
 ```
 
 ---
@@ -28,7 +28,7 @@ npm install @2M_CODE-ai/sdk
 Bir 2M_CODE örneği oluşturun:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const { client } = await create2M_CODE()
 ```
@@ -52,7 +52,7 @@ Bu, hem bir sunucu hem de bir istemci başlatır
 Davranışı özelleştirmek için bir yapılandırma nesnesi iletebilirsiniz. Örnek yine de `2M_CODE.json` dosyanızı alır, ancak yapılandırmayı satır içi olarak geçersiz kılabilir veya ekleyebilirsiniz:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const 2M_CODE = await create2M_CODE({
   hostname: "127.0.0.1",
@@ -72,7 +72,7 @@ console.log(`Server running at ${2M_CODE.server.url}`)
 Halihazırda çalışan bir 2M_CODE örneğiniz varsa, ona bağlanmak için bir istemci örneği oluşturabilirsiniz:
 
 ```javascript
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk"
+import { create2M_CODEClient } from "@2mcode-ai/sdk"
 
 const client = create2M_CODEClient({
   baseUrl: "http://localhost:4096",
@@ -96,7 +96,7 @@ const client = create2M_CODEClient({
 SDK, tüm API türleri için TypeScript tanımlarını içerir. Bunları doğrudan içe aktarın:
 
 ```typescript
-import type { Session, Message, Part } from "@2M_CODE-ai/sdk"
+import type { Session, Message, Part } from "@2mcode-ai/sdk"
 ```
 
 Tüm tipler, sunucunun OpenAPI spesifikasyonundan oluşturulur ve <a href={typesUrl}>tipler dosyasında</a> mevcuttur.

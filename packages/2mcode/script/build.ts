@@ -14,7 +14,7 @@ process.chdir(dir)
 
 await import("./generate.ts")
 
-import { Script } from "@2M_CODE-ai/script"
+import { Script } from "@2mcode-ai/script"
 import pkg from "../package.json"
 
 // Load migrations from migration directories

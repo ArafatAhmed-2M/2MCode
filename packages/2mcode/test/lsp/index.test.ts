@@ -5,7 +5,7 @@ import { Config } from "@/config/config"
 import { RuntimeFlags } from "@/effect/runtime-flags"
 import { LSP } from "@/lsp/lsp"
 import * as LSPServer from "@/lsp/server"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { provideTmpdirInstance } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"
 

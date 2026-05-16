@@ -1,10 +1,10 @@
-﻿import { Database, eq, and, sql, inArray } from "@2M_CODE-ai/console-core/drizzle/index.js"
-import { IpRateLimitTable } from "@2M_CODE-ai/console-core/schema/ip.sql.js"
+﻿import { Database, eq, and, sql, inArray } from "@2mcode-ai/console-core/drizzle/index.js"
+import { IpRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 import { FreeUsageLimitError } from "./error"
 import { logger } from "./logger"
 import { i18n } from "~/i18n"
 import { localeFromRequest } from "~/lib/language"
-import { Subscription } from "@2M_CODE-ai/console-core/subscription.js"
+import { Subscription } from "@2mcode-ai/console-core/subscription.js"
 
 export function createRateLimiter(modelId: string, rateLimit: number | undefined, rawIp: string, request: Request) {
   const dict = i18n(localeFromRequest(request))

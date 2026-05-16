@@ -1,7 +1,7 @@
 ﻿import { Schema } from "effect"
 
 import { Identifier } from "@/id/id"
-import { withStatics } from "@2M_CODE-ai/core/schema"
+import { withStatics } from "@2mcode-ai/core/schema"
 
 const workspaceIdSchema = Schema.String.check(Schema.isStartsWith("wrk")).pipe(Schema.brand("WorkspaceID"))
 

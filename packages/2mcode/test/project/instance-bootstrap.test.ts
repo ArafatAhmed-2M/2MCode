@@ -2,7 +2,7 @@
 import { existsSync } from "node:fs"
 import path from "node:path"
 import { pathToFileURL } from "node:url"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { Cause, Effect, Exit, Fiber, Layer } from "effect"
 import { bootstrap as cliBootstrap } from "../../src/cli/bootstrap"
 import { InstanceLayer } from "../../src/project/instance-layer"

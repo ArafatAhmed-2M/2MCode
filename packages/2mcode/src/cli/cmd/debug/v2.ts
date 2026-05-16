@@ -1,8 +1,8 @@
 ﻿import { EOL } from "os"
 import { Effect, Layer, Option } from "effect"
-import { Catalog } from "@2M_CODE-ai/core/catalog"
-import { LocationServiceMap } from "@2M_CODE-ai/core/location-layer"
-import { PluginBoot } from "@2M_CODE-ai/core/plugin/boot"
+import { Catalog } from "@2mcode-ai/core/catalog"
+import { LocationServiceMap } from "@2mcode-ai/core/location-layer"
+import { PluginBoot } from "@2mcode-ai/core/plugin/boot"
 import { effectCmd } from "../../effect-cmd"
 
 const Runtime = Layer.mergeAll(LocationServiceMap.layer)

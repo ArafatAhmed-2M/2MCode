@@ -33,10 +33,10 @@
   type Usage,
 } from "@agentclientprotocol/sdk"
 
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { pathToFileURL } from "url"
 import { Filesystem } from "@/util/filesystem"
-import { Hash } from "@2M_CODE-ai/core/util/hash"
+import { Hash } from "@2mcode-ai/core/util/hash"
 import { ACPSessionManager } from "./session"
 import type { ACPConfig } from "./types"
 import { ACPRuntime } from "./runtime"
@@ -49,9 +49,9 @@ import { ConfigMCP } from "@/config/mcp"
 import { Todo } from "@/session/todo"
 import { Result, Schema } from "effect"
 import { LoadAPIKeyError } from "ai"
-import type { AssistantMessage, Event, 2M_CODEClient, SessionMessageResponse, ToolPart } from "@2M_CODE-ai/sdk/v2"
+import type { AssistantMessage, Event, 2M_CODEClient, SessionMessageResponse, ToolPart } from "@2mcode-ai/sdk/v2"
 import { applyPatch } from "diff"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { ShellID } from "@/tool/shell/id"
 
 type ModeOption = { id: string; name: string; description?: string }

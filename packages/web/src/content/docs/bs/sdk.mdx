@@ -18,7 +18,7 @@ Koristite ga za izradu integracija i programsko upravljanje 2M_CODE-om.
 Instalirajte SDK sa npm-a:
 
 ```bash
-npm install @2M_CODE-ai/sdk
+npm install @2mcode-ai/sdk
 ```
 
 ---
@@ -28,7 +28,7 @@ npm install @2M_CODE-ai/sdk
 Kreirajte instancu 2M_CODE:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const { client } = await create2M_CODE()
 ```
@@ -52,7 +52,7 @@ Ovo pokrece i server i klijent
 Mozete proslijediti konfiguracijski objekat za prilagodavanje ponasanja. Instanca i dalje ucitava `2M_CODE.json`, ali konfiguraciju mozete nadjacati ili dodati inline:
 
 ```javascript
-import { create2M_CODE } from "@2M_CODE-ai/sdk"
+import { create2M_CODE } from "@2mcode-ai/sdk"
 
 const 2M_CODE = await create2M_CODE({
   hostname: "127.0.0.1",
@@ -72,7 +72,7 @@ console.log(`Server running at ${2M_CODE.server.url}`)
 Ako vec imate pokrenutu 2M_CODE instancu, mozete napraviti klijentsku instancu i povezati se na nju:
 
 ```javascript
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk"
+import { create2M_CODEClient } from "@2mcode-ai/sdk"
 
 const client = create2M_CODEClient({
   baseUrl: "http://localhost:4096",
@@ -96,7 +96,7 @@ const client = create2M_CODEClient({
 SDK ukljucuje TypeScript definicije za sve API tipove. Uvezite ih direktno:
 
 ```typescript
-import type { Session, Message, Part } from "@2M_CODE-ai/sdk"
+import type { Session, Message, Part } from "@2mcode-ai/sdk"
 ```
 
 Svi tipovi su generisani iz OpenAPI specifikacije servera i dostupni u <a href={typesUrl}>types datoteci</a>.

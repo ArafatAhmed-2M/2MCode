@@ -8,18 +8,18 @@
   TuiAttentionSoundName,
   TuiAttentionSoundPack,
   TuiAttentionSoundPackInfo,
-} from "@2M_CODE-ai/plugin/tui"
+} from "@2mcode-ai/plugin/tui"
 import stripAnsi from "strip-ansi"
 import type { TuiConfig } from "./config/tui"
 import { isAttentionSoundName } from "./config/tui-schema"
 import * as TuiAudio from "@tui/util/audio"
-import defaultSoundPath from "@2M_CODE-ai/ui/audio/bip-bop-01.mp3" with { type: "file" }
-import questionSoundPath from "@2M_CODE-ai/ui/audio/bip-bop-03.mp3" with { type: "file" }
-import permissionSoundPath from "@2M_CODE-ai/ui/audio/staplebops-06.mp3" with { type: "file" }
-import errorSoundPath from "@2M_CODE-ai/ui/audio/nope-03.mp3" with { type: "file" }
-import doneSoundPath from "@2M_CODE-ai/ui/audio/bip-bop-01.mp3" with { type: "file" }
-import subagentDoneSoundPath from "@2M_CODE-ai/ui/audio/yup-01.mp3" with { type: "file" }
-import * as Log from "@2M_CODE-ai/core/util/log"
+import defaultSoundPath from "@2mcode-ai/ui/audio/bip-bop-01.mp3" with { type: "file" }
+import questionSoundPath from "@2mcode-ai/ui/audio/bip-bop-03.mp3" with { type: "file" }
+import permissionSoundPath from "@2mcode-ai/ui/audio/staplebops-06.mp3" with { type: "file" }
+import errorSoundPath from "@2mcode-ai/ui/audio/nope-03.mp3" with { type: "file" }
+import doneSoundPath from "@2mcode-ai/ui/audio/bip-bop-01.mp3" with { type: "file" }
+import subagentDoneSoundPath from "@2mcode-ai/ui/audio/yup-01.mp3" with { type: "file" }
+import * as Log from "@2mcode-ai/core/util/log"
 
 type FocusState = "unknown" | "focused" | "blurred"
 

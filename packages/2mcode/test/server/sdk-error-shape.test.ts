@@ -8,9 +8,9 @@
  * extracted from the response body, plus `.status` and `.body` attached.
  */
 import { afterEach, describe, expect, test } from "bun:test"
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk/v2"
+import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
 import { Server } from "../../src/server/server"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { disposeAllInstances, tmpdir } from "../fixture/fixture"
 import { resetDatabase } from "../fixture/db"
 

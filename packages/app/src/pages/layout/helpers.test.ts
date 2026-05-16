@@ -6,7 +6,7 @@ import {
   parseDeepLink,
   parseNewSessionDeepLink,
 } from "./deep-links"
-import { type Session } from "@2M_CODE-ai/sdk/v2/client"
+import { type Session } from "@2mcode-ai/sdk/v2/client"
 import {
   childSessionOnPath,
   displayName,

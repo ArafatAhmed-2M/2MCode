@@ -1,5 +1,5 @@
 ﻿import { AwsClient } from "aws4fetch"
-import { lazy } from "@2M_CODE-ai/core/util/lazy"
+import { lazy } from "@2mcode-ai/core/util/lazy"
 
 export namespace Storage {
   export interface Adapter {

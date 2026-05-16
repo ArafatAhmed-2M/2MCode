@@ -1,6 +1,6 @@
 ﻿import { describe, expect } from "bun:test"
 import path from "path"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { ConfigProvider, Deferred, Effect, Layer, Option } from "effect"
 import { TestInstance, provideInstance } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"

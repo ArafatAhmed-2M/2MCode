@@ -1,6 +1,6 @@
 ﻿import path from "path"
 import { createContext, useContext, type ParentProps } from "solid-js"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 
 const context = createContext<{
   path: () => string

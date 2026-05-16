@@ -1,10 +1,10 @@
 ﻿import { Effect, Fiber, Layer, ManagedRuntime } from "effect"
 import * as Context from "effect/Context"
 import { InstanceRef, WorkspaceRef } from "./instance-ref"
-import * as Observability from "@2M_CODE-ai/core/effect/observability"
+import * as Observability from "@2mcode-ai/core/effect/observability"
 import { WorkspaceContext } from "@/control-plane/workspace-context"
 import type { InstanceContext } from "@/project/instance-context"
-import { memoMap } from "@2M_CODE-ai/core/effect/memo-map"
+import { memoMap } from "@2mcode-ai/core/effect/memo-map"
 
 type Refs = {
   instance?: InstanceContext

@@ -1,5 +1,5 @@
-﻿import type { Event } from "@2M_CODE-ai/sdk/v2/client"
-import { createSimpleContext } from "@2M_CODE-ai/ui/context"
+﻿import type { Event } from "@2mcode-ai/sdk/v2/client"
+import { createSimpleContext } from "@2mcode-ai/ui/context"
 import { createGlobalEmitter } from "@solid-primitives/event-bus"
 import { type Accessor, createEffect, createMemo, onCleanup } from "solid-js"
 import { useGlobalSDK } from "./global-sdk"

@@ -1,7 +1,7 @@
 ﻿import { Effect, Schema } from "effect"
 import * as path from "path"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
+import * as Log from "@2mcode-ai/core/util/log"
 import * as Bom from "../util/bom"
 
 const log = Log.create({ service: "patch" })

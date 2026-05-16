@@ -1,4 +1,4 @@
-﻿import type { Agent, Project, ProviderListResponse } from "@2M_CODE-ai/sdk/v2/client"
+﻿import type { Agent, Project, ProviderListResponse } from "@2mcode-ai/sdk/v2/client"
 export { pathKey as directoryKey, type PathKey as DirectoryKey } from "@/utils/path-key"
 
 export const cmp = (a: string, b: string) => (a < b ? -1 : a > b ? 1 : 0)

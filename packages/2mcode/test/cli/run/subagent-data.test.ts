@@ -1,5 +1,5 @@
 ﻿import { describe, expect, test } from "bun:test"
-import type { Event } from "@2M_CODE-ai/sdk/v2"
+import type { Event } from "@2mcode-ai/sdk/v2"
 import { entryBody } from "@/cli/cmd/run/entry.body"
 import {
   bootstrapSubagentCalls,

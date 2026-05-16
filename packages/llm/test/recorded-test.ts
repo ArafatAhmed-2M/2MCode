@@ -1,5 +1,5 @@
 ﻿import { NodeFileSystem } from "@effect/platform-node"
-import { HttpRecorder } from "@2M_CODE-ai/http-recorder"
+import { HttpRecorder } from "@2mcode-ai/http-recorder"
 import { Layer } from "effect"
 import { FetchHttpClient } from "effect/unstable/http"
 import * as path from "node:path"

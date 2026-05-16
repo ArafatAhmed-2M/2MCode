@@ -6,7 +6,7 @@
   SessionStatus,
   SnapshotFileDiff,
   Todo,
-} from "@2M_CODE-ai/sdk/v2/client"
+} from "@2mcode-ai/sdk/v2/client"
 
 export const SESSION_CACHE_LIMIT = 40
 

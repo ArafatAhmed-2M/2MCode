@@ -1,5 +1,5 @@
-﻿import { getFilename } from "@2M_CODE-ai/core/util/path"
-import { type AgentPartInput, type FilePartInput, type Part, type TextPartInput } from "@2M_CODE-ai/sdk/v2/client"
+﻿import { getFilename } from "@2mcode-ai/core/util/path"
+import { type AgentPartInput, type FilePartInput, type Part, type TextPartInput } from "@2mcode-ai/sdk/v2/client"
 import type { FileSelection } from "@/context/file"
 import { encodeFilePath } from "@/context/file/path"
 import type { AgentPart, FileAttachmentPart, ImageAttachmentPart, Prompt } from "@/context/prompt"

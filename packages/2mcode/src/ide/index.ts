@@ -1,7 +1,7 @@
 ﻿import { BusEvent } from "@/bus/bus-event"
 import { Schema } from "effect"
-import { NamedError } from "@2M_CODE-ai/core/util/error"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { NamedError } from "@2mcode-ai/core/util/error"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Process } from "@/util/process"
 
 const SUPPORTED_IDES = [

@@ -1,8 +1,8 @@
 ﻿import path from "path"
 import { writeHeapSnapshot } from "node:v8"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import { Global } from "@2M_CODE-ai/core/global"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Global } from "@2mcode-ai/core/global"
+import * as Log from "@2mcode-ai/core/util/log"
 
 const log = Log.create({ service: "heap" })
 const MINUTE = 60_000

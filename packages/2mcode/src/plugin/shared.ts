@@ -4,7 +4,7 @@ import npa from "npm-package-arg"
 import semver from "semver"
 import { Filesystem } from "@/util/filesystem"
 import { isRecord } from "@/util/record"
-import { Npm } from "@2M_CODE-ai/core/npm"
+import { Npm } from "@2mcode-ai/core/npm"
 
 // Old npm package names for plugins that are now built-in
 export const DEPRECATED_PLUGIN_PACKAGES = ["2M_CODE-openai-codex-auth", "2M_CODE-copilot-auth"]

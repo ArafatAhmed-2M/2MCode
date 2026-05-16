@@ -1,12 +1,12 @@
-﻿import { TextField } from "@2M_CODE-ai/ui/text-field"
+﻿import { TextField } from "@2mcode-ai/ui/text-field"
 import * as Sentry from "@sentry/solid"
-import { Logo } from "@2M_CODE-ai/ui/logo"
-import { Button } from "@2M_CODE-ai/ui/button"
+import { Logo } from "@2mcode-ai/ui/logo"
+import { Button } from "@2mcode-ai/ui/button"
 import { Component, createSignal, Show } from "solid-js"
 import { createStore } from "solid-js/store"
 import { usePlatform } from "@/context/platform"
 import { useLanguage } from "@/context/language"
-import { Icon } from "@2M_CODE-ai/ui/icon"
+import { Icon } from "@2mcode-ai/ui/icon"
 
 export type InitError = {
   name: string

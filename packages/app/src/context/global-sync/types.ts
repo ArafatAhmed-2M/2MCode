@@ -15,7 +15,7 @@
   SnapshotFileDiff,
   Todo,
   VcsInfo,
-} from "@2M_CODE-ai/sdk/v2/client"
+} from "@2mcode-ai/sdk/v2/client"
 import type { Accessor } from "solid-js"
 import type { SetStoreFunction, Store } from "solid-js/store"
 

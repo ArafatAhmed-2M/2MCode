@@ -7,7 +7,7 @@ import { KVProvider, useKV } from "../../../../src/cli/cmd/tui/context/kv"
 import { ProjectProvider, useProject } from "../../../../src/cli/cmd/tui/context/project"
 import { SDKProvider, type EventSource } from "../../../../src/cli/cmd/tui/context/sdk"
 import { SyncProvider, useSync } from "../../../../src/cli/cmd/tui/context/sync"
-import type { GlobalEvent } from "@2M_CODE-ai/sdk/v2"
+import type { GlobalEvent } from "@2mcode-ai/sdk/v2"
 
 export const worktree = "/tmp/2M_CODE"
 export const directory = `${worktree}/packages/2M_CODE`

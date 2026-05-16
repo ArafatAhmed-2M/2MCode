@@ -1,5 +1,5 @@
 ﻿import fs from "fs/promises"
-import { Flock } from "@2M_CODE-ai/core/util/flock"
+import { Flock } from "@2mcode-ai/core/util/flock"
 
 type Msg = {
   key: string

@@ -1,7 +1,7 @@
 ﻿// @ts-nocheck
 
-import { 2M_CODE } from "@2M_CODE-ai/core"
-import { ReadTool } from "@2M_CODE-ai/core/tools"
+import { 2M_CODE } from "@2mcode-ai/core"
+import { ReadTool } from "@2mcode-ai/core/tools"
 
 const 2M_CODE = 2M_CODE.make({})
 

@@ -1,4 +1,4 @@
-﻿import { Glob } from "@2M_CODE-ai/core/util/glob"
+﻿import { Glob } from "@2mcode-ai/core/util/glob"
 import { Schema } from "effect"
 import { pathToFileURL } from "url"
 import { isPathPluginSpec, parsePluginSpecifier, resolvePathPluginTarget } from "@/plugin/shared"

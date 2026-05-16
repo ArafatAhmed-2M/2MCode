@@ -1,11 +1,11 @@
 ﻿import { expect, test } from "bun:test"
 import * as DateTime from "effect/DateTime"
 import { SessionID } from "../../src/session/schema"
-import { EventV2 } from "@2M_CODE-ai/core/event"
-import { ModelV2 } from "@2M_CODE-ai/core/model"
-import { ProviderV2 } from "@2M_CODE-ai/core/provider"
-import { SessionEvent } from "@2M_CODE-ai/core/session-event"
-import { SessionMessageUpdater } from "@2M_CODE-ai/core/session-message-updater"
+import { EventV2 } from "@2mcode-ai/core/event"
+import { ModelV2 } from "@2mcode-ai/core/model"
+import { ProviderV2 } from "@2mcode-ai/core/provider"
+import { SessionEvent } from "@2mcode-ai/core/session-event"
+import { SessionMessageUpdater } from "@2mcode-ai/core/session-message-updater"
 
 test("step snapshots carry over to assistant messages", () => {
   const state: SessionMessageUpdater.MemoryState = { messages: [] }

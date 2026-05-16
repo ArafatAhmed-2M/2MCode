@@ -1,6 +1,6 @@
 ﻿import { ProviderAuth } from "@/provider/auth"
 import { Config } from "@/config/config"
-import { ModelsDev } from "@2M_CODE-ai/core/models"
+import { ModelsDev } from "@2mcode-ai/core/models"
 import { Provider } from "@/provider/provider"
 import { ProviderID } from "@/provider/schema"
 import { mapValues } from "remeda"

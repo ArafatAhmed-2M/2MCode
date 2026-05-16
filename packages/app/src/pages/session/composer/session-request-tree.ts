@@ -1,4 +1,4 @@
-﻿import type { PermissionRequest, QuestionRequest, Session } from "@2M_CODE-ai/sdk/v2/client"
+﻿import type { PermissionRequest, QuestionRequest, Session } from "@2mcode-ai/sdk/v2/client"
 
 function sessionTreeRequest<T>(
   session: Session[],

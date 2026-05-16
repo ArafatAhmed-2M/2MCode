@@ -13,7 +13,7 @@
 //         → OpenTUI split-footer renderer writes to terminal
 import type { KeyEvent, Renderable } from "@opentui/core"
 import type { Binding } from "@opentui/keymap"
-import type { 2M_CODEClient, PermissionRequest, QuestionRequest, ToolPart } from "@2M_CODE-ai/sdk/v2"
+import type { 2M_CODEClient, PermissionRequest, QuestionRequest, ToolPart } from "@2mcode-ai/sdk/v2"
 
 export type RunFilePart = {
   type: "file"

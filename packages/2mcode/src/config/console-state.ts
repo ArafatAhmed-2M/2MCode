@@ -1,5 +1,5 @@
 ﻿import { Schema } from "effect"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
 
 export class ConsoleState extends Schema.Class<ConsoleState>("ConsoleState")({
   consoleManagedProviders: Schema.mutable(Schema.Array(Schema.String)),

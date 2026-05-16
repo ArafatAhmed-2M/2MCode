@@ -2,7 +2,7 @@
 import { Effect } from "effect"
 import { Server } from "../../src/server/server"
 import { Session as SessionNs } from "@/session/session"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { disposeAllInstances, TestInstance } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"
 

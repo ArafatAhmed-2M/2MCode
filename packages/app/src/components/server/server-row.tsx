@@ -1,4 +1,4 @@
-﻿import { Tooltip } from "@2M_CODE-ai/ui/tooltip"
+﻿import { Tooltip } from "@2mcode-ai/ui/tooltip"
 import { createResizeObserver } from "@solid-primitives/resize-observer"
 import {
   children,

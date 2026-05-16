@@ -63,18 +63,18 @@ beforeAll(async () => {
     useParams: () => params,
   }))
 
-  mock.module("@2M_CODE-ai/sdk/v2/client", () => ({
+  mock.module("@2mcode-ai/sdk/v2/client", () => ({
     create2M_CODEClient: (input: { directory: string }) => {
       createdClients.push(input.directory)
       return clientFor(input.directory)
     },
   }))
 
-  mock.module("@2M_CODE-ai/ui/toast", () => ({
+  mock.module("@2mcode-ai/ui/toast", () => ({
     showToast: () => 0,
   }))
 
-  mock.module("@2M_CODE-ai/core/util/encode", () => ({
+  mock.module("@2mcode-ai/core/util/encode", () => ({
     base64Encode: (value: string) => value,
   }))
 

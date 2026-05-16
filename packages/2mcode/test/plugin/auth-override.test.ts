@@ -2,7 +2,7 @@
 import path from "path"
 import { pathToFileURL } from "url"
 import { Effect, Layer } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { provideInstance, TestInstance, tmpdirScoped } from "../fixture/fixture"
 import { ProviderAuth } from "@/provider/auth"
 import { ProviderID } from "../../src/provider/schema"
@@ -12,7 +12,7 @@ import { Auth } from "@/auth"
 import { Bus } from "@/bus"
 import { TestConfig } from "../fixture/config"
 import { testEffect } from "../lib/effect"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 
 const it = testEffect(Layer.mergeAll(CrossSpawnSpawner.defaultLayer, AppFileSystem.defaultLayer))
 

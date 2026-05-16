@@ -3,7 +3,7 @@
 import type { KeyEvent, Renderable } from "@opentui/core"
 import type { Binding } from "@opentui/keymap"
 import type { BindingCommandMap, BindingConfig, BindingDefaults } from "@opentui/keymap/extras"
-import type { DeepMutable } from "@2M_CODE-ai/core/schema"
+import type { DeepMutable } from "@2mcode-ai/core/schema"
 import { Schema } from "effect"
 
 const KeyStroke = Schema.Struct({

@@ -1,8 +1,8 @@
-﻿import { create2M_CODEClient } from "@2M_CODE-ai/sdk/v2"
-import type { GlobalEvent } from "@2M_CODE-ai/sdk/v2"
+﻿import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import type { GlobalEvent } from "@2mcode-ai/sdk/v2"
 import { createSimpleContext } from "./helper"
 import { createGlobalEmitter } from "@solid-primitives/event-bus"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { batch, onCleanup, onMount } from "solid-js"
 
 export type EventSource = {

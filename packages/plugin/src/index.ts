@@ -9,8 +9,8 @@
   Message,
   Part,
   Config as SDKConfig,
-} from "@2M_CODE-ai/sdk"
-import type { Provider as ProviderV2, Model as ModelV2, Auth } from "@2M_CODE-ai/sdk/v2"
+} from "@2mcode-ai/sdk"
+import type { Provider as ProviderV2, Model as ModelV2, Auth } from "@2mcode-ai/sdk/v2"
 
 import type { BunShell } from "./shell.js"
 import { type ToolDefinition } from "./tool.js"

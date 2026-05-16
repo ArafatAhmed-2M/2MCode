@@ -1,4 +1,4 @@
-﻿import { ProviderV2 } from "@2M_CODE-ai/core/provider"
+﻿import { ProviderV2 } from "@2mcode-ai/core/provider"
 import { Schema } from "effect"
 import { HttpApiEndpoint, HttpApiGroup, OpenApi } from "effect/unstable/httpapi"
 import { ApiNotFoundError } from "../../errors"

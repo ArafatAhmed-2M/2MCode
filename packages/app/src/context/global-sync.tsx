@@ -6,9 +6,9 @@
   ProviderAuthResponse,
   ProviderListResponse,
   Todo,
-} from "@2M_CODE-ai/sdk/v2/client"
-import { showToast } from "@2M_CODE-ai/ui/toast"
-import { getFilename } from "@2M_CODE-ai/core/util/path"
+} from "@2mcode-ai/sdk/v2/client"
+import { showToast } from "@2mcode-ai/ui/toast"
+import { getFilename } from "@2mcode-ai/core/util/path"
 import { batch, createContext, getOwner, onCleanup, onMount, type ParentProps, untrack, useContext } from "solid-js"
 import { createStore, produce, reconcile } from "solid-js/store"
 import { useLanguage } from "@/context/language"

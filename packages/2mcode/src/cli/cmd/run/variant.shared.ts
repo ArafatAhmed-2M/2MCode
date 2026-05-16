@@ -7,10 +7,10 @@
 // so your last-used variant sticks. Cycling (ctrl+t) updates both the active
 // variant and the persisted file.
 import path from "path"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Context, Effect, Layer } from "effect"
 import { makeRuntime } from "@/effect/run-service"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { isRecord } from "@/util/record"
 import { createSession, sessionVariant, type RunSession, type SessionMessages } from "./session.shared"
 import type { RunInput, RunProvider } from "./types"

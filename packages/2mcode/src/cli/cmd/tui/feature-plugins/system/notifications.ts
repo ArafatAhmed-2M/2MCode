@@ -1,5 +1,5 @@
-﻿import type { Event } from "@2M_CODE-ai/sdk/v2"
-import type { TuiAttentionSoundName, TuiPlugin, TuiPluginApi } from "@2M_CODE-ai/plugin/tui"
+﻿import type { Event } from "@2mcode-ai/sdk/v2"
+import type { TuiAttentionSoundName, TuiPlugin, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import type { InternalTuiPlugin } from "../../plugin/internal"
 
 const id = "internal:notifications"

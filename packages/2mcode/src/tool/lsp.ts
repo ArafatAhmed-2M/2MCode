@@ -6,7 +6,7 @@ import DESCRIPTION from "./lsp.txt"
 import { InstanceState } from "@/effect/instance-state"
 import { pathToFileURL } from "url"
 import { assertExternalDirectoryEffect } from "./external-directory"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 const operations = [
   "goToDefinition",

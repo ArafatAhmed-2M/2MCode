@@ -1,8 +1,8 @@
 ﻿import { describe, expect, mock } from "bun:test"
 import { Effect, Layer } from "effect"
-import { AISDK } from "@2M_CODE-ai/core/aisdk"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { DeepInfraPlugin } from "@2M_CODE-ai/core/plugin/provider/deepinfra"
+import { AISDK } from "@2mcode-ai/core/aisdk"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { DeepInfraPlugin } from "@2mcode-ai/core/plugin/provider/deepinfra"
 import { testEffect } from "../lib/effect"
 import { it, model } from "./provider-helper"
 

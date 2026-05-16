@@ -1,9 +1,9 @@
 ﻿import { describe, expect, mock } from "bun:test"
 import { Effect, Layer } from "effect"
-import { AuthV2 } from "@2M_CODE-ai/core/auth"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { AuthPlugin } from "@2M_CODE-ai/core/plugin/auth"
-import { GitLabPlugin } from "@2M_CODE-ai/core/plugin/provider/gitlab"
+import { AuthV2 } from "@2mcode-ai/core/auth"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { AuthPlugin } from "@2mcode-ai/core/plugin/auth"
+import { GitLabPlugin } from "@2mcode-ai/core/plugin/provider/gitlab"
 import { testEffect } from "../lib/effect"
 import { it, model, npmLayer, provider, withEnv } from "./provider-helper"
 

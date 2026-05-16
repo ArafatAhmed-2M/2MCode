@@ -1,10 +1,10 @@
 ﻿import path from "path"
 import { fileURLToPath } from "url"
 
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
-import { Flock } from "@2M_CODE-ai/core/util/flock"
+import { Flock } from "@2mcode-ai/core/util/flock"
 
 import { parsePluginSpecifier, pluginSource } from "./shared"
 

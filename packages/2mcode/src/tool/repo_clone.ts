@@ -1,5 +1,5 @@
 ﻿import { Effect, Schema } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Git } from "@/git"
 import DESCRIPTION from "./repo_clone.txt"
 import * as Tool from "./tool"

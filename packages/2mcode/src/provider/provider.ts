@@ -3,26 +3,26 @@ import fuzzysort from "fuzzysort"
 import { Config } from "@/config/config"
 import { mapValues, mergeDeep, omit, pickBy, sortBy } from "remeda"
 import { NoSuchModelError, type Provider as SDK } from "ai"
-import * as Log from "@2M_CODE-ai/core/util/log"
-import { Npm } from "@2M_CODE-ai/core/npm"
-import { Hash } from "@2M_CODE-ai/core/util/hash"
+import * as Log from "@2mcode-ai/core/util/log"
+import { Npm } from "@2mcode-ai/core/npm"
+import { Hash } from "@2mcode-ai/core/util/hash"
 import { Plugin } from "../plugin"
 import { type LanguageModelV3 } from "@ai-sdk/provider"
-import * as ModelsDev from "@2M_CODE-ai/core/models"
+import * as ModelsDev from "@2mcode-ai/core/models"
 import { Auth } from "../auth"
 import { Env } from "../env"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { iife } from "@/util/iife"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import path from "path"
 import { pathToFileURL } from "url"
 import { Effect, Layer, Context, Schema, Types } from "effect"
 import { EffectBridge } from "@/effect/bridge"
 import { InstanceState } from "@/effect/instance-state"
 import { EffectPromise } from "@/effect/promise"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { isRecord } from "@/util/record"
-import { optionalOmitUndefined } from "@2M_CODE-ai/core/schema"
+import { optionalOmitUndefined } from "@2mcode-ai/core/schema"
 import * as ProviderTransform from "./transform"
 import { ModelID, ProviderID } from "./schema"
 import { ModelStatus } from "./model-status"
@@ -112,7 +112,7 @@ const BUNDLED_PROVIDERS: Record<string, () => Promise<(opts: any) => BundledSDK>
   "@ai-sdk/alibaba": () => import("@ai-sdk/alibaba").then((m) => m.createAlibaba),
   "gitlab-ai-provider": () => import("gitlab-ai-provider").then((m) => m.createGitLab),
   "@ai-sdk/github-copilot": () =>
-    import("@2M_CODE-ai/core/github-copilot/copilot-provider").then((m) => m.createOpenaiCompatible),
+    import("@2mcode-ai/core/github-copilot/copilot-provider").then((m) => m.createOpenaiCompatible),
   "venice-ai-sdk-provider": () => import("venice-ai-sdk-provider").then((m) => m.createVenice),
 }
 

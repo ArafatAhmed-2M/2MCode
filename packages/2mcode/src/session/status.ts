@@ -2,7 +2,7 @@
 import { Bus } from "@/bus"
 import { InstanceState } from "@/effect/instance-state"
 import { SessionID } from "./schema"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
 import { Effect, Layer, Context, Schema } from "effect"
 
 export const Info = Schema.Union([

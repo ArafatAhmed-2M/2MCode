@@ -3,14 +3,14 @@ import { Bus } from "@/bus"
 import { Config } from "@/config/config"
 import { InstanceState } from "@/effect/instance-state"
 import { EffectBridge } from "@/effect/bridge"
-import { lazy } from "@2M_CODE-ai/core/util/lazy"
+import { lazy } from "@2mcode-ai/core/util/lazy"
 import { Plugin } from "@/plugin"
 import { Shell } from "@/shell/shell"
 import type { Proc } from "#pty"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { PtyID } from "./schema"
 import { Effect, Layer, Context, Schema, Types } from "effect"
-import { NonNegativeInt, PositiveInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt, PositiveInt } from "@2mcode-ai/core/schema"
 
 const log = Log.create({ service: "pty" })
 

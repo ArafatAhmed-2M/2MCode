@@ -1,7 +1,7 @@
 ﻿import { Schema } from "effect"
 import { SessionID } from "./schema"
 import { ModelID, ProviderID } from "../provider/schema"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
 import { MessageError } from "./message-error"
 import { AuthError, OutputLengthError } from "./message-error"
 export { AuthError, OutputLengthError } from "./message-error"

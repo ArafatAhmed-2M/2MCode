@@ -2,7 +2,7 @@
 import { UI } from "../ui"
 import * as prompts from "@clack/prompts"
 import { Installation } from "../../installation"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 
 export const UpgradeCommand = {
   command: "upgrade [target]",

@@ -1,9 +1,9 @@
 ﻿/** @jsxImportSource @opentui/solid */
 import { describe, expect, test } from "bun:test"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { tmpdir } from "../../../fixture/fixture"
 import { mount, wait } from "./sync-fixture"
-import type { GlobalEvent } from "@2M_CODE-ai/sdk/v2"
+import type { GlobalEvent } from "@2mcode-ai/sdk/v2"
 
 function branchEvent(branch: string, workspace?: string): GlobalEvent {
   return {

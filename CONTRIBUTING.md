@@ -74,7 +74,7 @@ Replace `<platform>` with your platform (e.g., `darwin-arm64`, `linux-x64`).
   - `packages/2M_CODE/src/cli/cmd/tui/`: The TUI code, written in SolidJS with [opentui](https://github.com/sst/opentui)
   - `packages/app`: The shared web UI components, written in SolidJS
   - `packages/desktop`: The native desktop app, built with Electron (wraps `packages/app`)
-  - `packages/plugin`: Source for `@2M_CODE-ai/plugin`
+  - `packages/plugin`: Source for `@2mcode-ai/plugin`
 
 ### Understanding bun dev vs 2M_CODE
 

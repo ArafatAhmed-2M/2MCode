@@ -1,7 +1,7 @@
 ﻿import path from "path"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { Effect, Layer, Context, Option, Schema } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 export const Tokens = Schema.Struct({
   accessToken: Schema.mutableKey(Schema.String),

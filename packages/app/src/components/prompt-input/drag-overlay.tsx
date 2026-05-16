@@ -1,5 +1,5 @@
 ﻿import { Component, Show } from "solid-js"
-import { Icon } from "@2M_CODE-ai/ui/icon"
+import { Icon } from "@2mcode-ai/ui/icon"
 
 type PromptDragOverlayProps = {
   type: "image" | "@mention" | null

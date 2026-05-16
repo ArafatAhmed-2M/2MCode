@@ -1,9 +1,9 @@
 ﻿export * as ConfigCommand from "./command"
 
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Cause, Exit, Schema } from "effect"
-import { NamedError } from "@2M_CODE-ai/core/util/error"
-import { Glob } from "@2M_CODE-ai/core/util/glob"
+import { NamedError } from "@2mcode-ai/core/util/error"
+import { Glob } from "@2mcode-ai/core/util/glob"
 import { Bus } from "@/bus"
 import { configEntryNameFromPath } from "./entry-name"
 import { InvalidError } from "./error"

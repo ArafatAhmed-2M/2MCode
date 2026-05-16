@@ -1,5 +1,5 @@
 ﻿import { App } from "@slack/bolt"
-import { create2M_CODE, type ToolPart } from "@2M_CODE-ai/sdk"
+import { create2M_CODE, type ToolPart } from "@2mcode-ai/sdk"
 
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,

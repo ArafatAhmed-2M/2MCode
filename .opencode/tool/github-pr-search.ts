@@ -1,5 +1,5 @@
 ﻿/// <reference path="../env.d.ts" />
-import { tool } from "@2M_CODE-ai/plugin"
+import { tool } from "@2mcode-ai/plugin"
 async function githubFetch(endpoint: string, options: RequestInit = {}) {
   const response = await fetch(`https://api.github.com${endpoint}`, {
     ...options,

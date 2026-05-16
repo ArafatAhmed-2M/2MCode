@@ -1,6 +1,6 @@
 ﻿import yargs from "yargs"
 import { TuiThreadCommand } from "./cli/cmd/tui/thread"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { hideBin } from "yargs/helpers"
 import { Log } from "./node"
 

@@ -2,7 +2,7 @@
 import { Schema } from "effect"
 import { ConfigProvider } from "@/config/provider"
 import { CatalogModelStatus, ModelStatus } from "@/provider/model-status"
-import { ModelsDev } from "@2M_CODE-ai/core/models"
+import { ModelsDev } from "@2mcode-ai/core/models"
 import { Provider } from "@/provider/provider"
 
 describe("provider model status schemas", () => {

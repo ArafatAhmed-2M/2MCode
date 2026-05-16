@@ -5,7 +5,7 @@ import { Session } from "@/session/session"
 import { MessageV2 } from "@/session/message-v2"
 import { SessionID } from "@/session/schema"
 import { SessionStatus } from "@/session/status"
-import { PositiveInt } from "@2M_CODE-ai/core/schema"
+import { PositiveInt } from "@2mcode-ai/core/schema"
 import { RuntimeFlags } from "@/effect/runtime-flags"
 import { Effect, Option, Schema } from "effect"
 

@@ -2,7 +2,7 @@
 import { Effect } from "effect"
 
 import { ConfigPaths } from "@/config/paths"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { installPlugin, patchPluginConfig, readPluginManifest } from "../../plugin/install"
 import { resolvePluginTarget } from "../../plugin/shared"
 import { errorMessage } from "../../util/error"

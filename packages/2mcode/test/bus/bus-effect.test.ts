@@ -2,7 +2,7 @@
 import { Deferred, Effect, Fiber, Latch, Layer, Schema, Stream } from "effect"
 import { Bus } from "../../src/bus"
 import { BusEvent } from "../../src/bus/bus-event"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { disposeAllInstances, provideInstance, tmpdirScoped } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"
 

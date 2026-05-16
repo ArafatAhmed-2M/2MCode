@@ -3,7 +3,7 @@ import { TuiKeybind } from "./keybind"
 import { Schema } from "effect"
 import { isRecord } from "@/util/record"
 import { Filesystem } from "@/util/filesystem"
-import { TuiAttentionSoundNames, type TuiAttentionSoundName } from "@2M_CODE-ai/plugin/tui"
+import { TuiAttentionSoundNames, type TuiAttentionSoundName } from "@2mcode-ai/plugin/tui"
 
 export type TuiAttentionSoundPaths = Partial<Record<TuiAttentionSoundName, string>>
 

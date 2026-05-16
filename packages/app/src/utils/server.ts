@@ -1,4 +1,4 @@
-﻿import { create2M_CODEClient } from "@2M_CODE-ai/sdk/v2/client"
+﻿import { create2M_CODEClient } from "@2mcode-ai/sdk/v2/client"
 import type { ServerConnection } from "@/context/server"
 import { decode64 } from "@/utils/base64"
 

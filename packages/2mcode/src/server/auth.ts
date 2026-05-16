@@ -1,7 +1,7 @@
 ﻿export * as ServerAuth from "./auth"
 
 import { ConfigService } from "@/effect/config-service"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Config as EffectConfig, Context, Option, Redacted } from "effect"
 
 export type Credentials = {

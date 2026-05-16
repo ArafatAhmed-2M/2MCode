@@ -1,6 +1,6 @@
 ﻿import { Schema } from "effect"
 
-import { withStatics } from "@2M_CODE-ai/core/schema"
+import { withStatics } from "@2mcode-ai/core/schema"
 
 const providerIdSchema = Schema.String.pipe(Schema.brand("ProviderID"))
 

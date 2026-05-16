@@ -1,5 +1,5 @@
 ﻿import { afterEach, describe, expect, test } from "bun:test"
-import { resource } from "@2M_CODE-ai/core/effect/observability"
+import { resource } from "@2mcode-ai/core/effect/observability"
 
 const otelResourceAttributes = process.env.OTEL_RESOURCE_ATTRIBUTES
 const 2M_CODEClient = process.env.2M_CODE_CLIENT

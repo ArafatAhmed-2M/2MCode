@@ -1,9 +1,9 @@
 ﻿import { describe, expect } from "bun:test"
 import { Effect, Layer } from "effect"
-import { AISDK } from "@2M_CODE-ai/core/aisdk"
-import { ModelV2 } from "@2M_CODE-ai/core/model"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { GooglePlugin } from "@2M_CODE-ai/core/plugin/provider/google"
+import { AISDK } from "@2mcode-ai/core/aisdk"
+import { ModelV2 } from "@2mcode-ai/core/model"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { GooglePlugin } from "@2mcode-ai/core/plugin/provider/google"
 import { testEffect } from "../lib/effect"
 import { it, model } from "./provider-helper"
 

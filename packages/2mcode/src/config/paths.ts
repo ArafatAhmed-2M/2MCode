@@ -1,11 +1,11 @@
 ﻿export * as ConfigPaths from "./paths"
 
 import path from "path"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Global } from "@2mcode-ai/core/global"
 import { unique } from "remeda"
 import * as Effect from "effect/Effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 export const files = Effect.fn("ConfigPaths.projectFiles")(function* (
   name: string,

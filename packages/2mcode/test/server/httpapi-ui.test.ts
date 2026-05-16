@@ -1,7 +1,7 @@
 ﻿import { createHash } from "node:crypto"
 import { describe, expect } from "bun:test"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import * as Log from "@2mcode-ai/core/util/log"
 import { ConfigProvider, Effect, Layer } from "effect"
 import {
   HttpClient,
@@ -12,7 +12,7 @@ import {
   HttpServerRequest,
   HttpServerResponse,
 } from "effect/unstable/http"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { RuntimeFlags } from "../../src/effect/runtime-flags"
 import { ServerAuth } from "../../src/server/auth"
 import { authorizationRouterMiddleware } from "../../src/server/routes/instance/httpapi/middleware/authorization"

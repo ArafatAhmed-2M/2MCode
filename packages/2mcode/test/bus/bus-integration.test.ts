@@ -1,4 +1,4 @@
-﻿import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+﻿import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { afterEach, describe, expect } from "bun:test"
 import { Deferred, Effect, Layer, Schema } from "effect"
 import { Bus } from "../../src/bus"

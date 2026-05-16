@@ -1,5 +1,5 @@
 ﻿import { LocalContext } from "@/util/local-context"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import type * as Project from "./project"
 
 export interface InstanceContext {

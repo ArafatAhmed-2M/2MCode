@@ -1,10 +1,10 @@
-﻿import { Npm } from "@2M_CODE-ai/core/npm"
+﻿import { Npm } from "@2mcode-ai/core/npm"
 import type { LanguageModelV3 } from "@ai-sdk/provider"
 import { expect } from "bun:test"
 import { Effect, Layer, Option } from "effect"
-import { ModelV2 } from "@2M_CODE-ai/core/model"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { ProviderV2 } from "@2M_CODE-ai/core/provider"
+import { ModelV2 } from "@2mcode-ai/core/model"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { ProviderV2 } from "@2mcode-ai/core/provider"
 import { testEffect } from "../lib/effect"
 
 export const fixtureProvider = new URL("./fixtures/provider-factory.ts", import.meta.url).href

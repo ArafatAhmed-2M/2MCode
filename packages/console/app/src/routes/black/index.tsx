@@ -4,7 +4,7 @@ import { createMemo, createSignal, For, Match, onMount, Show, Switch } from "sol
 import { PlanIcon, plans } from "./common"
 import { useI18n } from "~/context/i18n"
 import { useLanguage } from "~/context/language"
-import { Resource } from "@2M_CODE-ai/console-resource"
+import { Resource } from "@2mcode-ai/console-resource"
 
 const getPaused = query(async () => {
   "use server"

@@ -1,7 +1,7 @@
 ﻿import { Schema } from "effect"
 
 import { Identifier } from "@/id/id"
-import { Newtype } from "@2M_CODE-ai/core/schema"
+import { Newtype } from "@2mcode-ai/core/schema"
 
 export class PermissionID extends Newtype<PermissionID>()(
   "PermissionID",

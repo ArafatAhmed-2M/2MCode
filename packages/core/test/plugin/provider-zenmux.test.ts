@@ -1,8 +1,8 @@
 ﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { ProviderPlugins } from "@2M_CODE-ai/core/plugin/provider"
-import { ZenmuxPlugin } from "@2M_CODE-ai/core/plugin/provider/zenmux"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { ProviderPlugins } from "@2mcode-ai/core/plugin/provider"
+import { ZenmuxPlugin } from "@2mcode-ai/core/plugin/provider/zenmux"
 import { expectPluginRegistered, it, provider } from "./provider-helper"
 
 describe("ZenmuxPlugin", () => {

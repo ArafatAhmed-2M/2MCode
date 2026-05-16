@@ -2,7 +2,7 @@
 import { Effect } from "effect"
 import { Provider } from "@/provider/provider"
 import { ProviderID } from "../../provider/schema"
-import { ModelsDev } from "@2M_CODE-ai/core/models"
+import { ModelsDev } from "@2mcode-ai/core/models"
 import { effectCmd, fail } from "../effect-cmd"
 import { UI } from "../ui"
 

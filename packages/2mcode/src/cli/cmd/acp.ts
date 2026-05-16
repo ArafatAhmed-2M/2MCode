@@ -1,11 +1,11 @@
-﻿import * as Log from "@2M_CODE-ai/core/util/log"
+﻿import * as Log from "@2mcode-ai/core/util/log"
 import { Effect } from "effect"
 import { effectCmd } from "../effect-cmd"
 import { AgentSideConnection, ndJsonStream } from "@agentclientprotocol/sdk"
 import { ACP } from "@/acp/agent"
 import { Server } from "@/server/server"
 import { ServerAuth } from "@/server/auth"
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk/v2"
+import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
 import { withNetworkOptions, resolveNetworkOptions } from "../network"
 
 const log = Log.create({ service: "acp-command" })

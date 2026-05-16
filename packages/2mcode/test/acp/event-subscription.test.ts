@@ -7,7 +7,7 @@ import type {
   ToolStateCompleted,
   ToolStatePending,
   ToolStateRunning,
-} from "@2M_CODE-ai/sdk/v2"
+} from "@2mcode-ai/sdk/v2"
 import { provideTestInstance, tmpdir } from "../fixture/fixture"
 
 const pollUntil = async <T>(

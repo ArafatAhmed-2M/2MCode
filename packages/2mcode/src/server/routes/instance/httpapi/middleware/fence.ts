@@ -1,4 +1,4 @@
-﻿import { Flag } from "@2M_CODE-ai/core/flag/flag"
+﻿import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Effect } from "effect"
 import { HttpRouter, HttpServerRequest, HttpServerResponse } from "effect/unstable/http"
 import * as Fence from "@/server/shared/fence"

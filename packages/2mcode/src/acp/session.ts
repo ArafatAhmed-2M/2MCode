@@ -1,7 +1,7 @@
 ﻿import { RequestError, type McpServer } from "@agentclientprotocol/sdk"
 import type { ACPSessionState } from "./types"
-import * as Log from "@2M_CODE-ai/core/util/log"
-import type { 2M_CODEClient } from "@2M_CODE-ai/sdk/v2"
+import * as Log from "@2mcode-ai/core/util/log"
+import type { 2M_CODEClient } from "@2mcode-ai/sdk/v2"
 
 const log = Log.create({ service: "acp-session-manager" })
 

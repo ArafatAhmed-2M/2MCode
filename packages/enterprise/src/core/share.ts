@@ -1,5 +1,5 @@
-﻿import { Message, Model, Part, Session, SnapshotFileDiff } from "@2M_CODE-ai/sdk/v2"
-import { iife } from "@2M_CODE-ai/core/util/iife"
+﻿import { Message, Model, Part, Session, SnapshotFileDiff } from "@2mcode-ai/sdk/v2"
+import { iife } from "@2mcode-ai/core/util/iife"
 import z from "zod"
 import { Storage } from "./storage"
 

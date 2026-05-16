@@ -1,5 +1,5 @@
 ﻿import type { WorkspaceID } from "@/control-plane/schema"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Effect, Scope } from "effect"
 
 /**

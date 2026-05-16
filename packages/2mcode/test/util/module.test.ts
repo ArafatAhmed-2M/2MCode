@@ -1,6 +1,6 @@
 ﻿import { describe, expect, test } from "bun:test"
 import path from "path"
-import { Module } from "@2M_CODE-ai/core/util/module"
+import { Module } from "@2mcode-ai/core/util/module"
 import { Filesystem } from "@/util/filesystem"
 import { tmpdir } from "../fixture/fixture"
 

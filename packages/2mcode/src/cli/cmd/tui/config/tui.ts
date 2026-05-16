@@ -8,21 +8,21 @@ import { ConfigParse } from "@/config/parse"
 import * as ConfigPaths from "@/config/paths"
 import { migrateTuiConfig } from "./tui-migrate"
 import { KeymapLeaderTimeoutDefault, resolveAttentionSoundPaths, TuiInfo } from "./tui-schema"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { isRecord } from "@/util/record"
-import { Global } from "@2M_CODE-ai/core/global"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { Global } from "@2mcode-ai/core/global"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { CurrentWorkingDirectory } from "./cwd"
 import { ConfigPlugin } from "@/config/plugin"
 import { TuiKeybind } from "./keybind"
-import { InstallationLocal, InstallationVersion } from "@2M_CODE-ai/core/installation/version"
-import { makeRuntime } from "@2M_CODE-ai/core/effect/runtime"
+import { InstallationLocal, InstallationVersion } from "@2mcode-ai/core/installation/version"
+import { makeRuntime } from "@2mcode-ai/core/effect/runtime"
 import { Filesystem } from "@/util/filesystem"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { ConfigVariable } from "@/config/variable"
-import { Npm } from "@2M_CODE-ai/core/npm"
-import type { DeepMutable } from "@2M_CODE-ai/core/schema"
-import type { TuiAttentionSoundName } from "@2M_CODE-ai/plugin/tui"
+import { Npm } from "@2mcode-ai/core/npm"
+import type { DeepMutable } from "@2mcode-ai/core/schema"
+import type { TuiAttentionSoundName } from "@2mcode-ai/plugin/tui"
 import { FormatError, FormatUnknownError } from "@/cli/error"
 
 const log = Log.create({ service: "tui.config" })
@@ -275,7 +275,7 @@ export const layer = Layer.effect(
           .install(dir, {
             add: [
               {
-                name: "@2M_CODE-ai/plugin",
+                name: "@2mcode-ai/plugin",
                 version: InstallationLocal ? undefined : InstallationVersion,
               },
             ],

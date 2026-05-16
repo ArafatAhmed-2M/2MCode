@@ -8,9 +8,9 @@ import {
 } from "jsonc-parser"
 
 import * as ConfigPaths from "@/config/paths"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
-import { Flock } from "@2M_CODE-ai/core/util/flock"
+import { Flock } from "@2mcode-ai/core/util/flock"
 import { isRecord } from "@/util/record"
 
 import { parsePluginSpecifier, readPackageThemes, readPluginPackage, resolvePluginTarget } from "./shared"

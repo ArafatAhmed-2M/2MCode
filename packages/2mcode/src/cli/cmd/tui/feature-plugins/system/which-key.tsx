@@ -4,7 +4,7 @@ import { useTerminalDimensions } from "@opentui/solid"
 import { createEffect, createMemo, createSignal, For, Show } from "solid-js"
 import { useBindings, useKeymapSelector } from "../../keymap"
 import type { ActiveKey } from "@opentui/keymap"
-import type { TuiPlugin, TuiPluginApi } from "@2M_CODE-ai/plugin/tui"
+import type { TuiPlugin, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import type { InternalTuiPlugin } from "../../plugin/internal"
 
 const command = {

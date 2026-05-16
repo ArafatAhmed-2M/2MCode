@@ -2,7 +2,7 @@
 import { Server } from "../../server/server"
 import { effectCmd } from "../effect-cmd"
 import { withNetworkOptions, resolveNetworkOptions } from "../network"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 
 export const ServeCommand = effectCmd({
   command: "serve",

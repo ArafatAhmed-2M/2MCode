@@ -1,4 +1,4 @@
-﻿import type { Provider } from "@2M_CODE-ai/sdk/v2"
+﻿import type { Provider } from "@2mcode-ai/sdk/v2"
 
 export function index(list: Provider[] | undefined) {
   return new Map((list ?? []).map((item) => [item.id, item] as const))

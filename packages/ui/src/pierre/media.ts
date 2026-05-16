@@ -1,4 +1,4 @@
-﻿import type { FileContent } from "@2M_CODE-ai/sdk/v2"
+﻿import type { FileContent } from "@2mcode-ai/sdk/v2"
 
 export type MediaKind = "image" | "audio" | "svg"
 

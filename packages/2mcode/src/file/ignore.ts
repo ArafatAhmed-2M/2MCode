@@ -1,4 +1,4 @@
-﻿import { Glob } from "@2M_CODE-ai/core/util/glob"
+﻿import { Glob } from "@2mcode-ai/core/util/glob"
 
 const FOLDERS = new Set([
   "node_modules",

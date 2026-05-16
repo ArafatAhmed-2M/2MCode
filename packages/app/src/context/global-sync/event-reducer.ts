@@ -1,4 +1,4 @@
-﻿import { Binary } from "@2M_CODE-ai/core/util/binary"
+﻿import { Binary } from "@2mcode-ai/core/util/binary"
 import { produce, reconcile, type SetStoreFunction, type Store } from "solid-js/store"
 import type {
   Message,
@@ -10,7 +10,7 @@ import type {
   SessionStatus,
   SnapshotFileDiff,
   Todo,
-} from "@2M_CODE-ai/sdk/v2/client"
+} from "@2mcode-ai/sdk/v2/client"
 import type { State, VcsCache } from "./types"
 import { trimSessions } from "./session-trim"
 import { dropSessionCaches } from "./session-cache"

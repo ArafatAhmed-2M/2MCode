@@ -6,9 +6,9 @@ import { GlobalBus } from "@/bus/global"
 import { InstanceRef, WorkspaceRef } from "@/effect/instance-ref"
 import { InstanceStore } from "@/project/instance-store"
 import { SyncEvent } from "@/sync"
-import { EventV2 } from "@2M_CODE-ai/core/event"
-import "@2M_CODE-ai/core/catalog"
-import "@2M_CODE-ai/core/session-event"
+import { EventV2 } from "@2mcode-ai/core/event"
+import "@2mcode-ai/core/catalog"
+import "@2mcode-ai/core/session-event"
 import { Context, Effect, Layer, Option } from "effect"
 
 export function toSyncDefinition<D extends EventV2.Definition>(definition: D) {

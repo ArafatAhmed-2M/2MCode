@@ -2,7 +2,7 @@
 import { createStore } from "solid-js/store"
 import { DateTime } from "luxon"
 import { filter, firstBy, flat, groupBy, mapValues, pipe, uniqueBy, values } from "remeda"
-import { createSimpleContext } from "@2M_CODE-ai/ui/context"
+import { createSimpleContext } from "@2mcode-ai/ui/context"
 import { useProviders } from "@/hooks/use-providers"
 import { Persist, persisted } from "@/utils/persist"
 

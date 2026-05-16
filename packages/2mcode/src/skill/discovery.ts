@@ -2,9 +2,9 @@
 import { Effect, Layer, Path, Schema, Context } from "effect"
 import { FetchHttpClient, HttpClient, HttpClientRequest, HttpClientResponse } from "effect/unstable/http"
 import { withTransientReadRetry } from "@/util/effect-http-client"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
-import { Global } from "@2M_CODE-ai/core/global"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
+import { Global } from "@2mcode-ai/core/global"
+import * as Log from "@2mcode-ai/core/util/log"
 
 const skillConcurrency = 4
 const fileConcurrency = 8

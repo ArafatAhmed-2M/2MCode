@@ -3,8 +3,8 @@ import { Effect, Layer, Stream } from "effect"
 import { HttpClient, HttpClientRequest, HttpClientResponse } from "effect/unstable/http"
 import { ChildProcess, ChildProcessSpawner } from "effect/unstable/process"
 import { Installation } from "../../src/installation"
-import { InstallationChannel } from "@2M_CODE-ai/core/installation/version"
-import { AppProcess } from "@2M_CODE-ai/core/process"
+import { InstallationChannel } from "@2mcode-ai/core/installation/version"
+import { AppProcess } from "@2mcode-ai/core/process"
 import { testEffect } from "../lib/effect"
 
 const encoder = new TextEncoder()

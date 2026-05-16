@@ -1,5 +1,5 @@
 ﻿import { describe, expect, test } from "bun:test"
-import type { QuestionRequest } from "@2M_CODE-ai/sdk/v2"
+import type { QuestionRequest } from "@2mcode-ai/sdk/v2"
 import {
   createQuestionBodyState,
   questionConfirm,

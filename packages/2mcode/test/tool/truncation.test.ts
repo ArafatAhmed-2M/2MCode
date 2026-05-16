@@ -1,6 +1,6 @@
 ﻿import { describe, test, expect } from "bun:test"
 import { NodeFileSystem } from "@effect/platform-node"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect, FileSystem, Layer } from "effect"
 import { Truncate } from "@/tool/truncate"
 import { Config } from "@/config/config"

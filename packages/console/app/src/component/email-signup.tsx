@@ -1,5 +1,5 @@
 ﻿import { action, useSubmission } from "@solidjs/router"
-import { Resource } from "@2M_CODE-ai/console-resource"
+import { Resource } from "@2mcode-ai/console-resource"
 import { Show } from "solid-js"
 import { useI18n } from "~/context/i18n"
 

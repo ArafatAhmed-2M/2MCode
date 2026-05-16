@@ -2,7 +2,7 @@
 import { Effect } from "effect"
 import { effectCmd } from "../../effect-cmd"
 import { cmd } from "../cmd"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { EOL } from "os"
 
 export const LSPCommand = cmd({

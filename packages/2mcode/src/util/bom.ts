@@ -1,5 +1,5 @@
 ﻿import { Effect } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 const BOM_CODE = 0xfeff
 const BOM = String.fromCharCode(BOM_CODE)

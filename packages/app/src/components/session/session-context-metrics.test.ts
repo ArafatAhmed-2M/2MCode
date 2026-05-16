@@ -1,5 +1,5 @@
 ﻿import { describe, expect, test } from "bun:test"
-import type { Message } from "@2M_CODE-ai/sdk/v2/client"
+import type { Message } from "@2mcode-ai/sdk/v2/client"
 import { getSessionContextMetrics } from "./session-context-metrics"
 
 const assistant = (

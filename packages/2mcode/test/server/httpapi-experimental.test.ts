@@ -7,7 +7,7 @@ import { ExperimentalPaths } from "../../src/server/routes/instance/httpapi/grou
 import { Session } from "@/session/session"
 import { SessionTable } from "@/session/session.sql"
 import { Database } from "@/storage/db"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Worktree } from "../../src/worktree"
 import { resetDatabase } from "../fixture/db"
 import { disposeAllInstances, TestInstance } from "../fixture/fixture"

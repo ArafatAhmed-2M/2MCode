@@ -3,11 +3,11 @@
 // (2025-12-07) so types may be stale, but runtime calls should still work
 // for endpoints the v1 SDK was generated against.
 import { afterEach, describe, expect, test } from "bun:test"
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk"
+import { create2M_CODEClient } from "@2mcode-ai/sdk"
 import { Server } from "../../src/server/server"
 import { tmpdir, disposeAllInstances } from "../fixture/fixture"
 import { resetDatabase } from "../fixture/db"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 
 void Log.init({ print: false })
 

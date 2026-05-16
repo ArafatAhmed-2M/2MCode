@@ -1,6 +1,6 @@
 ﻿import { afterEach, describe, expect, mock, test } from "bun:test"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import * as Log from "@2mcode-ai/core/util/log"
 import { withTimeout } from "../../src/util/timeout"
 import { resetDatabase } from "../fixture/db"
 import { disposeAllInstances } from "../fixture/fixture"

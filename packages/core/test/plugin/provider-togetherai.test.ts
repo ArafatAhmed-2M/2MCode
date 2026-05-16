@@ -1,7 +1,7 @@
 ﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { TogetherAIPlugin } from "@2M_CODE-ai/core/plugin/provider/togetherai"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { TogetherAIPlugin } from "@2mcode-ai/core/plugin/provider/togetherai"
 import { fakeSelectorSdk, it, model } from "./provider-helper"
 
 describe("TogetherAIPlugin", () => {

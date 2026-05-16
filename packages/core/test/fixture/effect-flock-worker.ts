@@ -1,9 +1,9 @@
 ﻿import fs from "fs/promises"
 import os from "os"
 import { Effect, Layer } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
-import { EffectFlock } from "@2M_CODE-ai/core/util/effect-flock"
-import { Global } from "@2M_CODE-ai/core/global"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
+import { EffectFlock } from "@2mcode-ai/core/util/effect-flock"
+import { Global } from "@2mcode-ai/core/global"
 
 type Msg = {
   key: string

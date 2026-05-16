@@ -2,7 +2,7 @@
 
 import { type ParseError as JsoncParseError, parse as parseJsoncImpl, printParseErrorCode } from "jsonc-parser"
 import { Cause, Exit, Schema as EffectSchema, SchemaIssue } from "effect"
-import type { DeepMutable } from "@2M_CODE-ai/core/schema"
+import type { DeepMutable } from "@2mcode-ai/core/schema"
 import { InvalidError, JsonError } from "./error"
 
 export function jsonc(text: string, filepath: string): unknown {

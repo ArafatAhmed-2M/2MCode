@@ -1,7 +1,7 @@
-﻿import type { TuiPlugin, TuiPluginApi } from "@2M_CODE-ai/plugin/tui"
+﻿import type { TuiPlugin, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import type { InternalTuiPlugin } from "../../plugin/internal"
 import { createMemo, Show } from "solid-js"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 
 const id = "internal:sidebar-footer"
 

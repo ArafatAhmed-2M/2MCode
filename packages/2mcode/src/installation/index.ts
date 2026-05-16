@@ -3,14 +3,14 @@ import { FetchHttpClient, HttpClient, HttpClientRequest, HttpClientResponse } fr
 import { withTransientReadRetry } from "@/util/effect-http-client"
 import { errorMessage } from "@/util/error"
 import { ChildProcess } from "effect/unstable/process"
-import { AppProcess } from "@2M_CODE-ai/core/process"
+import { AppProcess } from "@2mcode-ai/core/process"
 import path from "path"
 import { BusEvent } from "@/bus/bus-event"
-import * as Log from "@2M_CODE-ai/core/util/log"
-import { makeRuntime } from "@2M_CODE-ai/core/effect/runtime"
+import * as Log from "@2mcode-ai/core/util/log"
+import { makeRuntime } from "@2mcode-ai/core/effect/runtime"
 import semver from "semver"
-import { InstallationChannel, InstallationVersion } from "@2M_CODE-ai/core/installation/version"
-import { NpmConfig } from "@2M_CODE-ai/core/npm-config"
+import { InstallationChannel, InstallationVersion } from "@2mcode-ai/core/installation/version"
+import { NpmConfig } from "@2mcode-ai/core/npm-config"
 
 const log = Log.create({ service: "installation" })
 

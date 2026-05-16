@@ -1,4 +1,4 @@
-﻿import "@2M_CODE-ai/ui/styles/tailwind"
+﻿import "@2mcode-ai/ui/styles/tailwind"
 
 import { createEffect, onCleanup, onMount } from "solid-js"
 import addonA11y from "@storybook/addon-a11y"
@@ -7,10 +7,10 @@ import { MetaProvider } from "@solidjs/meta"
 import { addons } from "storybook/preview-api"
 import { GLOBALS_UPDATED } from "storybook/internal/core-events"
 import { createJSXDecorator, definePreview } from "storybook-solidjs-vite"
-import { DialogProvider } from "@2M_CODE-ai/ui/context/dialog"
-import { MarkedProvider } from "@2M_CODE-ai/ui/context/marked"
-import { ThemeProvider, useTheme, type ColorScheme } from "@2M_CODE-ai/ui/theme"
-import { Font } from "@2M_CODE-ai/ui/font"
+import { DialogProvider } from "@2mcode-ai/ui/context/dialog"
+import { MarkedProvider } from "@2mcode-ai/ui/context/marked"
+import { ThemeProvider, useTheme, type ColorScheme } from "@2mcode-ai/ui/theme"
+import { Font } from "@2mcode-ai/ui/font"
 
 function resolveScheme(value: unknown): ColorScheme {
   if (value === "light" || value === "dark" || value === "system") return value

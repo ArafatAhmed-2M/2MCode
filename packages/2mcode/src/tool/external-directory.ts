@@ -1,10 +1,10 @@
 ﻿import path from "path"
 import { Effect } from "effect"
-import * as EffectLogger from "@2M_CODE-ai/core/effect/logger"
+import * as EffectLogger from "@2mcode-ai/core/effect/logger"
 import { InstanceState } from "@/effect/instance-state"
 import type * as Tool from "./tool"
 import { containsPath } from "../project/instance-context"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 type Kind = "file" | "directory"
 

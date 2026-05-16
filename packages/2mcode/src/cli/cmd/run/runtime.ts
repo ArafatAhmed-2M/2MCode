@@ -12,8 +12,8 @@
 //   3. starts the stream transport (SDK event subscription), lazily for fresh
 //      local sessions,
 //   4. runs the prompt queue until the footer closes.
-import { create2M_CODEClient } from "@2M_CODE-ai/sdk/v2"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
+import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { createRunDemo } from "./demo"
 import { resolveDiffStyle, resolveFooterKeybinds, resolveModelInfo, resolveSessionInfo } from "./runtime.boot"
 import { createRuntimeLifecycle } from "./runtime.lifecycle"

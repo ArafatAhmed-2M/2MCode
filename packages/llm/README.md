@@ -1,11 +1,11 @@
-﻿# @2M_CODE-ai/llm
+﻿# @2mcode-ai/llm
 
 Schema-first LLM core for 2M_CODE. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code.
 
 ```ts
 import { Effect } from "effect"
-import { LLM, LLMClient } from "@2M_CODE-ai/llm"
-import { OpenAI } from "@2M_CODE-ai/llm/providers"
+import { LLM, LLMClient } from "@2mcode-ai/llm"
+import { OpenAI } from "@2mcode-ai/llm/providers"
 
 const model = OpenAI.model("gpt-4o-mini", { apiKey: process.env.OPENAI_API_KEY })
 
@@ -95,7 +95,7 @@ Normalized cache usage is read back into `response.usage.cacheReadInputTokens` a
 Each provider exports a `model(...)` helper that records identity, protocol, capabilities, auth, and defaults.
 
 ```ts
-import { Anthropic } from "@2M_CODE-ai/llm/providers"
+import { Anthropic } from "@2mcode-ai/llm/providers"
 
 const model = Anthropic.model("claude-sonnet-4-6", {
   apiKey: process.env.ANTHROPIC_API_KEY,

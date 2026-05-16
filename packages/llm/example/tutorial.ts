@@ -1,7 +1,7 @@
 ﻿import { Config, Effect, Formatter, Layer, Schema, Stream } from "effect"
-import { LLM, LLMClient, Provider, ProviderID, Tool, type ProviderModelOptions } from "@2M_CODE-ai/llm"
-import { Route, Auth, Endpoint, Framing, Protocol, RequestExecutor } from "@2M_CODE-ai/llm/route"
-import { OpenAI } from "@2M_CODE-ai/llm/providers"
+import { LLM, LLMClient, Provider, ProviderID, Tool, type ProviderModelOptions } from "@2mcode-ai/llm"
+import { Route, Auth, Endpoint, Framing, Protocol, RequestExecutor } from "@2mcode-ai/llm/route"
+import { OpenAI } from "@2mcode-ai/llm/providers"
 
 /**
  * A runnable walkthrough of the LLM package use-site API.

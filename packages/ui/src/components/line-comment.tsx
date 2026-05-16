@@ -1,5 +1,5 @@
-﻿import { useFilteredList } from "@2M_CODE-ai/ui/hooks"
-import { getDirectory, getFilename } from "@2M_CODE-ai/core/util/path"
+﻿import { useFilteredList } from "@2mcode-ai/ui/hooks"
+import { getDirectory, getFilename } from "@2mcode-ai/core/util/path"
 import { createSignal, For, onMount, Show, splitProps, type JSX } from "solid-js"
 import { Button } from "./button"
 import { FileIcon } from "./file-icon"

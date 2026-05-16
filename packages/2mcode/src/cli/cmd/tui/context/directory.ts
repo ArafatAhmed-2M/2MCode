@@ -1,7 +1,7 @@
 ﻿import { createMemo } from "solid-js"
 import { useProject } from "./project"
 import { useSync } from "./sync"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 
 export function useDirectory() {
   const project = useProject()

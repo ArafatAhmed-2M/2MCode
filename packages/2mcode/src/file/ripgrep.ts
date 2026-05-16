@@ -1,17 +1,17 @@
 ﻿import path from "path"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Cause, Context, Effect, Fiber, Layer, Queue, Schema, Stream } from "effect"
 import type { PlatformError } from "effect/PlatformError"
 import { FetchHttpClient, HttpClient, HttpClientRequest } from "effect/unstable/http"
 import { ChildProcess } from "effect/unstable/process"
 import { ChildProcessSpawner } from "effect/unstable/process/ChildProcessSpawner"
 
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
-import { Global } from "@2M_CODE-ai/core/global"
-import * as Log from "@2M_CODE-ai/core/util/log"
-import { sanitizedProcessEnv } from "@2M_CODE-ai/core/util/2M_CODE-process"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
+import { Global } from "@2mcode-ai/core/global"
+import * as Log from "@2mcode-ai/core/util/log"
+import { sanitizedProcessEnv } from "@2mcode-ai/core/util/2M_CODE-process"
 import { which } from "@/util/which"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
 
 const log = Log.create({ service: "ripgrep" })
 const VERSION = "15.1.0"

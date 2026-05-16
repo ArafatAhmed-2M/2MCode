@@ -9,10 +9,10 @@
   QuestionRequest,
   Session,
   Todo,
-} from "@2M_CODE-ai/sdk/v2/client"
-import { showToast } from "@2M_CODE-ai/ui/toast"
-import { getFilename } from "@2M_CODE-ai/core/util/path"
-import { retry } from "@2M_CODE-ai/core/util/retry"
+} from "@2mcode-ai/sdk/v2/client"
+import { showToast } from "@2mcode-ai/ui/toast"
+import { getFilename } from "@2mcode-ai/core/util/path"
+import { retry } from "@2mcode-ai/core/util/retry"
 import { batch } from "solid-js"
 import { reconcile, type SetStoreFunction, type Store } from "solid-js/store"
 import type { State, VcsCache } from "./types"

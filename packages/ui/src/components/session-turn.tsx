@@ -3,13 +3,13 @@
   type SnapshotFileDiff,
   Message as MessageType,
   Part as PartType,
-} from "@2M_CODE-ai/sdk/v2/client"
-import type { SessionStatus } from "@2M_CODE-ai/sdk/v2"
+} from "@2mcode-ai/sdk/v2/client"
+import type { SessionStatus } from "@2mcode-ai/sdk/v2"
 import { useData } from "../context"
 import { useFileComponent } from "../context/file"
 
-import { Binary } from "@2M_CODE-ai/core/util/binary"
-import { getDirectory, getFilename } from "@2M_CODE-ai/core/util/path"
+import { Binary } from "@2mcode-ai/core/util/binary"
+import { getDirectory, getFilename } from "@2mcode-ai/core/util/path"
 import { createEffect, createMemo, createSignal, For, on, ParentProps, Show } from "solid-js"
 import { createStore } from "solid-js/store"
 import { Dynamic } from "solid-js/web"

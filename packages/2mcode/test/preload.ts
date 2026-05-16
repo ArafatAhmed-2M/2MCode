@@ -80,7 +80,7 @@ delete process.env["2M_CODE_SERVER_USERNAME"]
 process.env["2M_CODE_DB"] = ":memory:"
 
 // Now safe to import from src/
-const { Log } = await import("@2M_CODE-ai/core/util/log")
+const { Log } = await import("@2mcode-ai/core/util/log")
 const { initProjectors } = await import("../src/server/projectors")
 
 void Log.init({

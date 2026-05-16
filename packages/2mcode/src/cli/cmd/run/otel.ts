@@ -1,7 +1,7 @@
 ﻿import { INVALID_SPAN_CONTEXT, context, trace, SpanStatusCode, type Span } from "@opentelemetry/api"
 import { Effect, ManagedRuntime } from "effect"
-import { memoMap } from "@2M_CODE-ai/core/effect/memo-map"
-import { Observability } from "@2M_CODE-ai/core/effect/observability"
+import { memoMap } from "@2mcode-ai/core/effect/memo-map"
+import { Observability } from "@2mcode-ai/core/effect/observability"
 
 type AttributeValue = string | number | boolean | undefined
 

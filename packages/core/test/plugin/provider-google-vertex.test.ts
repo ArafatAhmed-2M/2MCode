@@ -1,7 +1,7 @@
 ﻿import { describe, expect, mock } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@2M_CODE-ai/core/plugin"
-import { GoogleVertexPlugin } from "@2M_CODE-ai/core/plugin/provider/google-vertex"
+import { PluginV2 } from "@2mcode-ai/core/plugin"
+import { GoogleVertexPlugin } from "@2mcode-ai/core/plugin/provider/google-vertex"
 import { fakeSelectorSdk, it, model, provider, withEnv } from "./provider-helper"
 
 const vertexOptions: Record<string, any>[] = []

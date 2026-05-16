@@ -3,7 +3,7 @@
 import { WorkspaceID } from "@/control-plane/schema"
 import { InstanceRef, WorkspaceRef } from "@/effect/instance-ref"
 import { PtyID } from "@/pty/schema"
-import { PositiveInt } from "@2M_CODE-ai/core/schema"
+import { PositiveInt } from "@2mcode-ai/core/schema"
 import { Cache, Context, Duration, Effect, Layer, Schema } from "effect"
 
 const DEFAULT_TTL = Duration.seconds(60)

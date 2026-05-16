@@ -2,7 +2,7 @@
 import { fn } from "./util/fn"
 import { centsToMicroCents } from "./util/price"
 import { getWeekBounds, getMonthlyBounds } from "./util/date"
-import { Resource } from "@2M_CODE-ai/console-resource"
+import { Resource } from "@2mcode-ai/console-resource"
 
 export namespace Subscription {
   const LimitsSchema = z.object({

@@ -1,4 +1,4 @@
-﻿import { base64Decode } from "@2M_CODE-ai/core/util/encode"
+﻿import { base64Decode } from "@2mcode-ai/core/util/encode"
 
 export function decode64(value: string | undefined) {
   if (value === undefined) return

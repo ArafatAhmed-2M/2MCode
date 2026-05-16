@@ -1,5 +1,5 @@
-﻿import { NamedError } from "@2M_CODE-ai/core/util/error"
-import * as Log from "@2M_CODE-ai/core/util/log"
+﻿import { NamedError } from "@2mcode-ai/core/util/error"
+import * as Log from "@2mcode-ai/core/util/log"
 import { ConfigError } from "@/config/error"
 import { Cause, Effect } from "effect"
 import { HttpRouter, HttpServerError, HttpServerRespondable, HttpServerResponse } from "effect/unstable/http"

@@ -1,4 +1,4 @@
-﻿import { NamedError } from "@2M_CODE-ai/core/util/error"
+﻿import { NamedError } from "@2mcode-ai/core/util/error"
 import { errorFormat } from "@/util/error"
 import { isRecord } from "@/util/record"
 

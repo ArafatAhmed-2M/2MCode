@@ -1,5 +1,5 @@
 ﻿import path from "path"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
 import { onMount } from "solid-js"
 import { createStore } from "solid-js/store"

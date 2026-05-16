@@ -1,8 +1,8 @@
 ﻿import { Schema } from "effect"
 
 import { Identifier } from "@/id/id"
-import { Session as CoreSession } from "@2M_CODE-ai/core/session"
-import { withStatics } from "@2M_CODE-ai/core/schema"
+import { Session as CoreSession } from "@2mcode-ai/core/session"
+import { withStatics } from "@2mcode-ai/core/schema"
 
 export const SessionID = CoreSession.ID
 export type SessionID = Schema.Schema.Type<typeof SessionID>

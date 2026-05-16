@@ -3,7 +3,7 @@
 import { existsSync } from "fs"
 import os from "os"
 import path from "path"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Process } from "@/util/process"
 import { warn } from "console"
 

@@ -1,8 +1,8 @@
 ﻿import path from "path"
 import { Effect, Layer, Record, Result, Schema, Context } from "effect"
-import { NonNegativeInt } from "@2M_CODE-ai/core/schema"
-import { Global } from "@2M_CODE-ai/core/global"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { NonNegativeInt } from "@2mcode-ai/core/schema"
+import { Global } from "@2mcode-ai/core/global"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 export const OAUTH_DUMMY_KEY = "2M_CODE-oauth-dummy-key"
 

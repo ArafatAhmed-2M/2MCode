@@ -1,5 +1,5 @@
 ﻿import { afterEach, describe, expect, mock, spyOn, test } from "bun:test"
-import { 2M_CODEClient, type GlobalEvent } from "@2M_CODE-ai/sdk/v2"
+import { 2M_CODEClient, type GlobalEvent } from "@2mcode-ai/sdk/v2"
 import { createSessionTransport } from "@/cli/cmd/run/stream.transport"
 import type { FooterApi, FooterEvent, RunFilePart, StreamCommit } from "@/cli/cmd/run/types"
 

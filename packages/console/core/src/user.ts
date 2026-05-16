@@ -138,7 +138,7 @@ export namespace User {
             .then((rows) => rows[0]),
         )
 
-        const { InviteEmail } = await import("@2M_CODE-ai/console-mail/InviteEmail.jsx")
+        const { InviteEmail } = await import("@2mcode-ai/console-mail/InviteEmail.jsx")
         await AWS.sendEmail({
           to: email,
           subject: `You've been invited to join the ${emailInfo.workspaceName} workspace on 2M_CODE`,

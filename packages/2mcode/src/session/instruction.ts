@@ -4,10 +4,10 @@ import { FetchHttpClient, HttpClient, HttpClientRequest } from "effect/unstable/
 import { Config } from "@/config/config"
 import { InstanceState } from "@/effect/instance-state"
 import { RuntimeFlags } from "@/effect/runtime-flags"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { withTransientReadRetry } from "@/util/effect-http-client"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import type { MessageV2 } from "./message-v2"
 import type { MessageID } from "./schema"
 

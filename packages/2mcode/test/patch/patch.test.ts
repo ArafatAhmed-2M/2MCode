@@ -4,7 +4,7 @@ import * as fs from "fs/promises"
 import * as path from "path"
 import { tmpdir } from "os"
 import { Patch } from "../../src/patch"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { testEffect } from "../lib/effect"
 
 const it = testEffect(AppFileSystem.defaultLayer)

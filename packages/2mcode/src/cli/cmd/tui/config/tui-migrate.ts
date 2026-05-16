@@ -3,10 +3,10 @@ import { type ParseError as JsoncParseError, applyEdits, modify, parse as parseJ
 import { unique } from "remeda"
 import { Option, Schema } from "effect"
 import { DiffStyle, ScrollAcceleration, ScrollSpeed } from "./tui-schema"
-import { Flag } from "@2M_CODE-ai/core/flag/flag"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import * as ConfigPaths from "@/config/paths"
 
 const log = Log.create({ service: "tui.migrate" })

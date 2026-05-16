@@ -6,7 +6,7 @@ import { tmpdir } from "../../fixture/fixture"
 import { createTuiPluginApi } from "../../fixture/tui-plugin"
 import { createTuiResolvedConfig } from "../../fixture/tui-runtime"
 import { TuiConfig } from "../../../src/cli/cmd/tui/config/tui"
-import { Npm } from "@2M_CODE-ai/core/npm"
+import { Npm } from "@2mcode-ai/core/npm"
 
 const { TuiPluginRuntime } = await import("../../../src/cli/cmd/tui/plugin/runtime")
 

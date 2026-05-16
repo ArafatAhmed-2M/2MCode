@@ -1,6 +1,6 @@
 ﻿import { GlobalBus } from "@/bus/global"
 import { InstanceStore } from "@/project/instance-store"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Effect } from "effect"
 import { Event } from "./event"
 

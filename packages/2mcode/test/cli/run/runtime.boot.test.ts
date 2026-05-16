@@ -1,5 +1,5 @@
 ﻿import { afterEach, describe, expect, mock, spyOn, test } from "bun:test"
-import { 2M_CODEClient, type Provider } from "@2M_CODE-ai/sdk/v2"
+import { 2M_CODEClient, type Provider } from "@2mcode-ai/sdk/v2"
 import { TuiConfig, type Resolved } from "@/cli/cmd/tui/config/tui"
 import { formatBindings } from "@/cli/cmd/run/keymap.shared"
 import { resolveDiffStyle, resolveFooterKeybinds, resolveModelInfo } from "@/cli/cmd/run/runtime.boot"

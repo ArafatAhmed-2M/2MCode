@@ -2,7 +2,7 @@
 import { Effect, Layer } from "effect"
 import { Session } from "@/session/session"
 import { SessionPrompt } from "../../src/session/prompt"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { MessageV2 } from "../../src/session/message-v2"
 import { testEffect } from "../lib/effect"
 

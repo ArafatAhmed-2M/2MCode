@@ -1,4 +1,4 @@
-﻿import type { Hooks, PluginInput } from "@2M_CODE-ai/plugin"
+﻿import type { Hooks, PluginInput } from "@2mcode-ai/plugin"
 
 export async function CloudflareWorkersAuthPlugin(_input: PluginInput): Promise<Hooks> {
   const prompts = !process.env.CLOUDFLARE_ACCOUNT_ID

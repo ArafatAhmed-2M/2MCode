@@ -2,7 +2,7 @@
 import fs from "fs/promises"
 import os from "os"
 import path from "path"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 
 describe("global paths", () => {
   test("tmp path is under the system temp directory", () => {

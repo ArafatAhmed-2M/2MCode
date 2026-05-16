@@ -1,6 +1,6 @@
 ﻿import path from "path"
 import { fileURLToPath } from "url"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 
 export type Reference = {
   host: string

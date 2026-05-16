@@ -1,7 +1,7 @@
 ﻿import { BusEvent } from "@/bus/bus-event"
 import { InstanceState } from "@/effect/instance-state"
 
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Git } from "@/git"
 import { Effect, Layer, Context, Schema, Scope } from "effect"
 import * as Stream from "effect/Stream"
@@ -9,12 +9,12 @@ import { formatPatch, structuredPatch } from "diff"
 import fuzzysort from "fuzzysort"
 import ignore from "ignore"
 import path from "path"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { containsPath } from "../project/instance-context"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import { Protected } from "./protected"
 import { Ripgrep } from "./ripgrep"
-import { NonNegativeInt, type DeepMutable } from "@2M_CODE-ai/core/schema"
+import { NonNegativeInt, type DeepMutable } from "@2mcode-ai/core/schema"
 
 export const Info = Schema.Struct({
   path: Schema.String,

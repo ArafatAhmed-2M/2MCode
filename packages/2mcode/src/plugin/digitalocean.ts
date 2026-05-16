@@ -1,7 +1,7 @@
-﻿import type { Hooks, PluginInput } from "@2M_CODE-ai/plugin"
-import type { Model } from "@2M_CODE-ai/sdk/v2"
-import * as Log from "@2M_CODE-ai/core/util/log"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+﻿import type { Hooks, PluginInput } from "@2mcode-ai/plugin"
+import type { Model } from "@2mcode-ai/sdk/v2"
+import * as Log from "@2mcode-ai/core/util/log"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { createServer } from "http"
 
 const log = Log.create({ service: "plugin.digitalocean" })

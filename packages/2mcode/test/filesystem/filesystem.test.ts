@@ -1,7 +1,7 @@
 ﻿import { describe, test, expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import { NodeFileSystem } from "@effect/platform-node"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { testEffect } from "../lib/effect"
 import path from "path"
 

@@ -3,10 +3,10 @@ import { mkdir, unlink } from "fs/promises"
 import path from "path"
 
 import { disposeAllInstances, tmpdir, withTestInstance } from "../fixture/fixture"
-import { Global } from "@2M_CODE-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import type { InstanceContext } from "../../src/project/instance-context"
 import { Plugin } from "../../src/plugin/index"
-import { ModelsDev } from "@2M_CODE-ai/core/models"
+import { ModelsDev } from "@2mcode-ai/core/models"
 import { Provider } from "@/provider/provider"
 import { ProviderID, ModelID } from "../../src/provider/schema"
 import { Filesystem } from "@/util/filesystem"
@@ -16,7 +16,7 @@ import { AppRuntime } from "../../src/effect/app-runtime"
 import { InstanceRef } from "../../src/effect/instance-ref"
 import { makeRuntime } from "../../src/effect/run-service"
 import { testEffect } from "../lib/effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Config } from "@/config/config"
 import { Auth } from "@/auth"
 import { RuntimeFlags } from "@/effect/runtime-flags"
@@ -100,7 +100,7 @@ async function markPluginDependenciesReady(dir: string) {
   await mkdir(path.join(dir, "node_modules"), { recursive: true })
   await Bun.write(
     path.join(dir, "package-lock.json"),
-    JSON.stringify({ packages: { "": { dependencies: { "@2M_CODE-ai/plugin": "0.0.0" } } } }),
+    JSON.stringify({ packages: { "": { dependencies: { "@2mcode-ai/plugin": "0.0.0" } } } }),
   )
 }
 

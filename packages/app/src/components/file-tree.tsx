@@ -1,8 +1,8 @@
 ﻿import { useFile } from "@/context/file"
 import { encodeFilePath } from "@/context/file/path"
-import { Collapsible } from "@2M_CODE-ai/ui/collapsible"
-import { FileIcon } from "@2M_CODE-ai/ui/file-icon"
-import { Icon } from "@2M_CODE-ai/ui/icon"
+import { Collapsible } from "@2mcode-ai/ui/collapsible"
+import { FileIcon } from "@2mcode-ai/ui/file-icon"
+import { Icon } from "@2mcode-ai/ui/icon"
 import {
   createEffect,
   createMemo,
@@ -17,7 +17,7 @@ import {
   type ParentProps,
 } from "solid-js"
 import { Dynamic } from "solid-js/web"
-import type { FileNode } from "@2M_CODE-ai/sdk/v2"
+import type { FileNode } from "@2mcode-ai/sdk/v2"
 
 const MAX_DEPTH = 128
 

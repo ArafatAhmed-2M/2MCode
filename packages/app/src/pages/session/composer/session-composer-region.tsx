@@ -1,7 +1,7 @@
 ﻿import { Show, createEffect, createMemo, onCleanup } from "solid-js"
 import { createStore } from "solid-js/store"
 import { useNavigate } from "@solidjs/router"
-import { useSpring } from "@2M_CODE-ai/ui/motion-spring"
+import { useSpring } from "@2mcode-ai/ui/motion-spring"
 import { useLayout } from "@/context/layout"
 import { PromptInput } from "@/components/prompt-input"
 import { useLanguage } from "@/context/language"

@@ -10,7 +10,7 @@
 // import { tmpdir, withTestInstance } from "../fixture/fixture"
 // import { Provider } from "@/provider/provider"
 // import { Env } from "../../src/env"
-// import { Global } from "@2M_CODE-ai/core/global"
+// import { Global } from "@2mcode-ai/core/global"
 // import { GitLabWorkflowLanguageModel } from "gitlab-ai-provider"
 
 // test("GitLab Duo: loads provider with API key from environment", async () => {

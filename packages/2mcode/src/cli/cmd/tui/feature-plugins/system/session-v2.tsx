@@ -1,4 +1,4 @@
-﻿import type { TuiPlugin, TuiPluginApi } from "@2M_CODE-ai/plugin/tui"
+﻿import type { TuiPlugin, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import type { InternalTuiPlugin } from "../../plugin/internal"
 import { useSyncV2 } from "@tui/context/sync-v2"
 import { SplitBorder } from "@tui/component/border"
@@ -28,7 +28,7 @@ import type {
   SessionMessageUser,
   ToolFileContent,
   ToolTextContent,
-} from "@2M_CODE-ai/sdk/v2"
+} from "@2mcode-ai/sdk/v2"
 import { createEffect, createMemo, createSignal, For, Match, Show, Switch } from "solid-js"
 
 const id = "internal:session-v2-debug"

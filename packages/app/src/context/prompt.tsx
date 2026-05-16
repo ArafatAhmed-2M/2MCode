@@ -1,5 +1,5 @@
-﻿import { createSimpleContext } from "@2M_CODE-ai/ui/context"
-import { checksum } from "@2M_CODE-ai/core/util/encode"
+﻿import { createSimpleContext } from "@2mcode-ai/ui/context"
+import { checksum } from "@2mcode-ai/core/util/encode"
 import { useParams } from "@solidjs/router"
 import { batch, createMemo, createRoot, getOwner, onCleanup } from "solid-js"
 import { createStore, type SetStoreFunction } from "solid-js/store"

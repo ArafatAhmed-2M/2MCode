@@ -2,7 +2,7 @@
 import { Schema } from "effect"
 import { Effect, Option } from "effect"
 import { InstanceState } from "@/effect/instance-state"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Ripgrep } from "../file/ripgrep"
 import { assertExternalDirectoryEffect } from "./external-directory"
 import DESCRIPTION from "./grep.txt"

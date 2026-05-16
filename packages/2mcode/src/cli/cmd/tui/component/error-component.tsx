@@ -2,7 +2,7 @@
 import { useKeyboard, useRenderer, useTerminalDimensions } from "@opentui/solid"
 import * as Clipboard from "@tui/util/clipboard"
 import { createSignal } from "solid-js"
-import { InstallationVersion } from "@2M_CODE-ai/core/installation/version"
+import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { win32FlushInputBuffer } from "../win32"
 import { getScrollAcceleration } from "../util/scroll"
 

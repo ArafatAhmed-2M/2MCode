@@ -1,4 +1,4 @@
-﻿import type { Session as SDKSession, Message, Part } from "@2M_CODE-ai/sdk/v2"
+﻿import type { Session as SDKSession, Message, Part } from "@2mcode-ai/sdk/v2"
 import { Session } from "@/session/session"
 import { MessageV2 } from "../../session/message-v2"
 import { CliError, effectCmd } from "../effect-cmd"
@@ -7,7 +7,7 @@ import { SessionTable, MessageTable, PartTable } from "../../session/session.sql
 import { InstanceRef } from "@/effect/instance-ref"
 import { ShareNext } from "@/share/share-next"
 import { EOL } from "os"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect, Schema } from "effect"
 
 const decodeMessageInfo = Schema.decodeUnknownSync(MessageV2.Info)

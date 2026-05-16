@@ -1,6 +1,6 @@
 ﻿import { FetchHttpClient } from "effect/unstable/http"
 import { Layer } from "effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Auth } from "../../src/auth"
 import { Workspace } from "../../src/control-plane/workspace"
 import { RuntimeFlags } from "../../src/effect/runtime-flags"

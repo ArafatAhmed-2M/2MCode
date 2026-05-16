@@ -1,5 +1,5 @@
 ﻿#!/usr/bin/env bun
-import { Script } from "@2M_CODE-ai/script"
+import { Script } from "@2mcode-ai/script"
 import { $ } from "bun"
 import { fileURLToPath } from "url"
 

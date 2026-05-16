@@ -1,5 +1,5 @@
 ﻿import { afterEach, expect } from "bun:test"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect } from "effect"
 import { fileURLToPath } from "url"
 import { InstanceRef } from "../../src/effect/instance-ref"

@@ -1,4 +1,4 @@
-﻿import type { Workspace } from "@2M_CODE-ai/sdk/v2"
+﻿import type { Workspace } from "@2mcode-ai/sdk/v2"
 import { useDialog } from "@tui/ui/dialog"
 import { DialogSelect, type DialogSelectOption } from "@tui/ui/dialog-select"
 import { useSync } from "@tui/context/sync"

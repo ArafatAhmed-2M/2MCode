@@ -1,5 +1,5 @@
-﻿import { Database, eq } from "@2M_CODE-ai/console-core/drizzle/index.js"
-import { ModelStickyProviderTable } from "@2M_CODE-ai/console-core/schema/ip.sql.js"
+﻿import { Database, eq } from "@2mcode-ai/console-core/drizzle/index.js"
+import { ModelStickyProviderTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 
 export function createStickyTracker(modelId: string, stickyProvider: "strict" | "prefer" | undefined, session: string) {
   if (!stickyProvider) return

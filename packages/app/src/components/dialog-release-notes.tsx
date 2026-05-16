@@ -1,7 +1,7 @@
 ﻿import { createSignal } from "solid-js"
-import { Dialog } from "@2M_CODE-ai/ui/dialog"
-import { Button } from "@2M_CODE-ai/ui/button"
-import { useDialog } from "@2M_CODE-ai/ui/context/dialog"
+import { Dialog } from "@2mcode-ai/ui/dialog"
+import { Button } from "@2mcode-ai/ui/button"
+import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { useLanguage } from "@/context/language"
 import { useSettings } from "@/context/settings"
 

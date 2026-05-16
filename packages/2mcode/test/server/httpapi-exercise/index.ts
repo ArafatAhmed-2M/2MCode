@@ -36,7 +36,7 @@ import { runScenario } from "./runner"
 import { runtime } from "./runtime"
 import { type Scenario } from "./types"
 
-void (await import("@2M_CODE-ai/core/util/log")).init({ print: false })
+void (await import("@2mcode-ai/core/util/log")).init({ print: false })
 
 function cursor(input: Record<string, unknown>) {
   return Buffer.from(JSON.stringify(input)).toString("base64url")

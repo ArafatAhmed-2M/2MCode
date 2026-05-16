@@ -1,4 +1,4 @@
-﻿import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+﻿import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect, Stream } from "effect"
 import { HttpBody, HttpClient, HttpClientRequest, HttpServerRequest, HttpServerResponse } from "effect/unstable/http"
 import { createHash } from "node:crypto"

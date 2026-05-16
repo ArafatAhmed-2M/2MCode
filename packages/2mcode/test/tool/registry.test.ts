@@ -3,13 +3,13 @@ import path from "path"
 import fs from "fs/promises"
 import { fileURLToPath, pathToFileURL } from "url"
 import { Effect, Layer, Result, Schema } from "effect"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { ToolRegistry } from "@/tool/registry"
 import { Tool } from "@/tool/tool"
 import { disposeAllInstances, TestInstance } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"
 import { TestConfig } from "../fixture/config"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Plugin } from "@/plugin"
 import { Question } from "@/question"
 import { Todo } from "@/session/todo"
@@ -270,7 +270,7 @@ describe("tool.registry", () => {
         const test = yield* TestInstance
         const 2M_CODE = path.join(test.directory, ".2M_CODE")
         const customTools = path.join(2M_CODE, "tools")
-        const plugin = path.join(2M_CODE, "node_modules", "@2M_CODE-ai", "plugin")
+        const plugin = path.join(2M_CODE, "node_modules", "@2mcode-ai", "plugin")
         yield* Effect.promise(() => fs.mkdir(path.join(plugin, "dist"), { recursive: true }))
         yield* Effect.promise(() => fs.mkdir(customTools, { recursive: true }))
         yield* Effect.promise(() =>
@@ -282,7 +282,7 @@ describe("tool.registry", () => {
         yield* Effect.promise(() =>
           Bun.write(
             path.join(plugin, "package.json"),
-            JSON.stringify({ name: "@2M_CODE-ai/plugin", type: "module", exports: { ".": "./dist/index.js" } }),
+            JSON.stringify({ name: "@2mcode-ai/plugin", type: "module", exports: { ".": "./dist/index.js" } }),
           ),
         )
         yield* Effect.promise(() =>
@@ -302,7 +302,7 @@ describe("tool.registry", () => {
           Bun.write(
             path.join(customTools, "addition.ts"),
             [
-              'import { tool } from "@2M_CODE-ai/plugin"',
+              'import { tool } from "@2mcode-ai/plugin"',
               "export default tool({",
               "  description: 'Use this tool to add two numbers and return their sum.',",
               "  args: {",
@@ -419,7 +419,7 @@ describe("tool.registry", () => {
           JSON.stringify({
             name: "custom-tools",
             dependencies: {
-              "@2M_CODE-ai/plugin": "^0.0.0",
+              "@2mcode-ai/plugin": "^0.0.0",
               cowsay: "^1.6.0",
             },
           }),
@@ -434,7 +434,7 @@ describe("tool.registry", () => {
             packages: {
               "": {
                 dependencies: {
-                  "@2M_CODE-ai/plugin": "^0.0.0",
+                  "@2mcode-ai/plugin": "^0.0.0",
                   cowsay: "^1.6.0",
                 },
               },

@@ -1,5 +1,5 @@
 ﻿import { Effect, ScopedCache, Scope } from "effect"
-import * as EffectLogger from "@2M_CODE-ai/core/effect/logger"
+import * as EffectLogger from "@2mcode-ai/core/effect/logger"
 import type { InstanceContext } from "@/project/instance-context"
 import { InstanceRef, WorkspaceRef } from "./instance-ref"
 import { registerDisposer } from "./instance-registry"

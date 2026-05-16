@@ -1,5 +1,5 @@
 ﻿import type { APIEvent } from "@solidjs/start/server"
-import { Resource } from "@2M_CODE-ai/console-resource"
+import { Resource } from "@2mcode-ai/console-resource"
 import { cookie, docs, localeFromRequest, tag } from "~/lib/language"
 
 async function handler(evt: APIEvent) {

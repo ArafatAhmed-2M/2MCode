@@ -5,10 +5,10 @@ import path from "path"
 import os from "os"
 import { Cause, Effect, Exit, Layer } from "effect"
 import { testEffect } from "../lib/effect"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
-import { EffectFlock } from "@2M_CODE-ai/core/util/effect-flock"
-import { Global } from "@2M_CODE-ai/core/global"
-import { Hash } from "@2M_CODE-ai/core/util/hash"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
+import { EffectFlock } from "@2mcode-ai/core/util/effect-flock"
+import { Global } from "@2mcode-ai/core/global"
+import { Hash } from "@2mcode-ai/core/util/hash"
 
 function lock(dir: string, key: string) {
   return path.join(dir, Hash.fast(key) + ".lock")

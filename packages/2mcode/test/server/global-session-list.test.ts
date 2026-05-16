@@ -2,8 +2,8 @@
 import { Deferred, Effect, Layer } from "effect"
 import { Project } from "@/project/project"
 import { Session as SessionNs } from "@/session/session"
-import { CrossSpawnSpawner } from "@2M_CODE-ai/core/cross-spawn-spawner"
-import * as Log from "@2M_CODE-ai/core/util/log"
+import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
+import * as Log from "@2mcode-ai/core/util/log"
 import { provideInstance, TestInstance, tmpdirScoped } from "../fixture/fixture"
 import { testEffect } from "../lib/effect"
 

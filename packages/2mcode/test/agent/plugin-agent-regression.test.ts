@@ -1,5 +1,5 @@
 ﻿import { expect } from "bun:test"
-import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Effect, Layer } from "effect"
 import path from "path"
 import { pathToFileURL } from "url"

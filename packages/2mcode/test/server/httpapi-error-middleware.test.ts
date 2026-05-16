@@ -1,5 +1,5 @@
 ﻿import { NodeHttpServer, NodeServices } from "@effect/platform-node"
-import { NamedError } from "@2M_CODE-ai/core/util/error"
+import { NamedError } from "@2mcode-ai/core/util/error"
 import { describe, expect } from "bun:test"
 import { ConfigError } from "../../src/config/error"
 import { Effect, Layer } from "effect"
