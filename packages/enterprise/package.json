@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/enterprise",
+  "name": "@2mcode-ai/enterprise",
   "version": "1.15.0",
   "private": true,
   "type": "module",
@@ -8,13 +8,13 @@
     "typecheck": "tsgo --noEmit",
     "dev": "vite dev",
     "build": "vite build",
-    "build:cloudflare": "2M_CODE_DEPLOYMENT_TARGET=cloudflare vite build",
+    "build:cloudflare": "2MCODE_DEPLOYMENT_TARGET=cloudflare vite build",
     "start": "vite start",
     "shell-prod": "sst shell --target Teams --stage production"
   },
   "dependencies": {
-    "@2M_CODE-ai/core": "workspace:*",
-    "@2M_CODE-ai/ui": "workspace:*",
+    "@2mcode-ai/core": "workspace:*",
+    "@2mcode-ai/ui": "workspace:*",
     "aws4fetch": "^1.0.20",
     "@pierre/diffs": "catalog:",
     "@solidjs/router": "catalog:",

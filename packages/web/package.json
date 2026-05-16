@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/web",
+  "name": "@2mcode-ai/web",
   "type": "module",
   "license": "MIT",
   "version": "1.15.0",
@@ -36,7 +36,7 @@
     "vscode-languageserver-types": "3.17.5"
   },
   "devDependencies": {
-    "2M_CODE": "workspace:*",
+    "2mcode": "workspace:*",
     "@types/node": "catalog:",
     "@astrojs/check": "0.9.6",
     "typescript": "catalog:"

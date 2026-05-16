@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@2M_CODE-ai/console-resource",
+  "name": "@2mcode-ai/console-resource",
   "license": "MIT",
   "dependencies": {
     "@cloudflare/workers-types": "catalog:"

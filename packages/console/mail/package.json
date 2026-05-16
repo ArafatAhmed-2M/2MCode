@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/console-mail",
+  "name": "@2mcode-ai/console-mail",
   "version": "1.15.0",
   "dependencies": {
     "@jsx-email/all": "2.2.3",

@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/ui",
+  "name": "@2mcode-ai/ui",
   "version": "1.15.0",
   "type": "module",
   "license": "MIT",
@@ -45,8 +45,8 @@
   },
   "dependencies": {
     "@kobalte/core": "catalog:",
-    "@2M_CODE-ai/sdk": "workspace:*",
-    "@2M_CODE-ai/core": "workspace:*",
+    "@2mcode-ai/sdk": "workspace:*",
+    "@2mcode-ai/core": "workspace:*",
     "@pierre/diffs": "catalog:",
     "@shikijs/transformers": "3.9.2",
     "@solid-primitives/bounds": "0.1.3",

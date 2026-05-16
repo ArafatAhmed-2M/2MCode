@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/slack",
+  "name": "@2mcode-ai/slack",
   "version": "1.15.0",
   "type": "module",
   "license": "MIT",
@@ -8,7 +8,7 @@
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
-    "@2M_CODE-ai/sdk": "workspace:*",
+    "@2mcode-ai/sdk": "workspace:*",
     "@slack/bolt": "^3.17.1"
   },
   "devDependencies": {

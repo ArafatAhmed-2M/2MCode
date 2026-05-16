@@ -1,5 +1,5 @@
 ﻿{
-  "name": "@2M_CODE-ai/desktop",
+  "name": "@2mcode-ai/desktop",
   "private": true,
   "version": "1.15.0",
   "type": "module",
@@ -36,8 +36,8 @@
   "devDependencies": {
     "@actions/artifact": "4.0.0",
     "@lydell/node-pty": "catalog:",
-    "@2M_CODE-ai/app": "workspace:*",
-    "@2M_CODE-ai/ui": "workspace:*",
+    "@2mcode-ai/app": "workspace:*",
+    "@2mcode-ai/ui": "workspace:*",
     "@sentry/solid": "catalog:",
     "@sentry/vite-plugin": "catalog:",
     "@solid-primitives/i18n": "2.2.1",
