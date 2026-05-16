@@ -1,9 +1,9 @@
-name: containers
+﻿name: containers
 
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - packages/containers/**
       - .github/workflows/containers.yml

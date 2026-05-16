@@ -3,7 +3,7 @@
 on:
   push:
     branches:
-      - dev
+      - main
     paths:
       - packages/web/src/content/docs/*.mdx
 
