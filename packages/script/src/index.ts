@@ -18,21 +18,21 @@ if (!semver.satisfies(process.versions.bun, expectedBunVersionRange)) {
 }
 
 const env = {
-  2M_CODE_CHANNEL: process.env["2M_CODE_CHANNEL"],
+  _2M_CODE_CHANNEL: process.env["_2M_CODE_CHANNEL"],
   2M_CODE_BUMP: process.env["2M_CODE_BUMP"],
-  2M_CODE_VERSION: process.env["2M_CODE_VERSION"],
+  _2M_CODE_VERSION: process.env["_2M_CODE_VERSION"],
   2M_CODE_RELEASE: process.env["2M_CODE_RELEASE"],
 }
 const CHANNEL = await (async () => {
-  if (env.2M_CODE_CHANNEL) return env.2M_CODE_CHANNEL
+  if (env._2M_CODE_CHANNEL) return env._2M_CODE_CHANNEL
   if (env.2M_CODE_BUMP) return "latest"
-  if (env.2M_CODE_VERSION && !env.2M_CODE_VERSION.startsWith("0.0.0-")) return "latest"
+  if (env._2M_CODE_VERSION && !env._2M_CODE_VERSION.startsWith("0.0.0-")) return "latest"
   return await $`git branch --show-current`.text().then((x) => x.trim())
 })()
 const IS_PREVIEW = CHANNEL !== "latest"
 
 const VERSION = await (async () => {
-  if (env.2M_CODE_VERSION) return env.2M_CODE_VERSION
+  if (env._2M_CODE_VERSION) return env._2M_CODE_VERSION
   if (IS_PREVIEW) return `0.0.0-${CHANNEL}-${new Date().toISOString().slice(0, 16).replace(/[-:T]/g, "")}`
   const version = await fetch("https://registry.npmjs.org/2M_CODE-ai/latest")
     .then((res) => {

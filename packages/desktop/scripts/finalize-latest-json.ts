@@ -19,8 +19,8 @@ if (!repo) throw new Error("GH_REPO is required")
 const releaseId = process.env.2M_CODE_RELEASE
 if (!releaseId) throw new Error("2M_CODE_RELEASE is required")
 
-const version = process.env.2M_CODE_VERSION
-if (!version) throw new Error("2M_CODE_VERSION is required")
+const version = process.env._2M_CODE_VERSION
+if (!version) throw new Error("_2M_CODE_VERSION is required")
 
 const dir = process.env.LATEST_YML_DIR
 if (!dir) throw new Error("LATEST_YML_DIR is required")
