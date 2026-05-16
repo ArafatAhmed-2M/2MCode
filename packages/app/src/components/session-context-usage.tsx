@@ -1,4 +1,4 @@
-﻿import { Match, Show, Switch, createMemo } from "solid-js"
+import { Match, Show, Switch, createMemo } from "solid-js"
 import { Tooltip, type TooltipProps } from "@2mcode-ai/ui/tooltip"
 import { ProgressCircle } from "@2mcode-ai/ui/progress-circle"
 import { Button } from "@2mcode-ai/ui/button"

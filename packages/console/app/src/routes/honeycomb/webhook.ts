@@ -1,4 +1,4 @@
-﻿import type { APIEvent } from "@solidjs/start/server"
+import type { APIEvent } from "@solidjs/start/server"
 import { z } from "zod"
 import { Resource } from "@2mcode-ai/console-resource"
 import { safeEqual } from "@2mcode-ai/console-core/util/crypto.js"

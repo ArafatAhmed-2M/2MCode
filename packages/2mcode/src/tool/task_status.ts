@@ -1,4 +1,4 @@
-﻿import * as Tool from "./tool"
+import * as Tool from "./tool"
 import DESCRIPTION from "./task_status.txt"
 import { BackgroundJob } from "@/background/job"
 import { Session } from "@/session/session"

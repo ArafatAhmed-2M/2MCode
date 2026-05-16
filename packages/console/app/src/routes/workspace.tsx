@@ -1,4 +1,4 @@
-﻿import { query, createAsync, RouteSectionProps, useParams, A } from "@solidjs/router"
+import { query, createAsync, RouteSectionProps, useParams, A } from "@solidjs/router"
 import "./workspace.css"
 import { IconWorkspaceLogo } from "../component/icon"
 import { WorkspacePicker } from "./workspace-picker"

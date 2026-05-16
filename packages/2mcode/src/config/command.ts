@@ -1,4 +1,4 @@
-﻿export * as ConfigCommand from "./command"
+export * as ConfigCommand from "./command"
 
 import * as Log from "@2mcode-ai/core/util/log"
 import { Cause, Exit, Schema } from "effect"

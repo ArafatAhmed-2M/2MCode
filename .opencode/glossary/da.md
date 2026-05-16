@@ -1,4 +1,4 @@
-﻿# da Glossary
+# da Glossary
 
 ## Sources
 

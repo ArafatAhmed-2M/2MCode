@@ -1,4 +1,4 @@
-﻿import { Effect, Layer, Context, Schema } from "effect"
+import { Effect, Layer, Context, Schema } from "effect"
 import { ChildProcess } from "effect/unstable/process"
 import { AppProcess } from "@2mcode-ai/core/process"
 import { InstanceState } from "@/effect/instance-state"

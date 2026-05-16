@@ -1,4 +1,4 @@
-﻿import { Config, Effect, Formatter, Layer, Schema, Stream } from "effect"
+import { Config, Effect, Formatter, Layer, Schema, Stream } from "effect"
 import { LLM, LLMClient, Provider, ProviderID, Tool, type ProviderModelOptions } from "@2mcode-ai/llm"
 import { Route, Auth, Endpoint, Framing, Protocol, RequestExecutor } from "@2mcode-ai/llm/route"
 import { OpenAI } from "@2mcode-ai/llm/providers"

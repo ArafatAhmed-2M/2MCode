@@ -1,4 +1,4 @@
-﻿import { NamedError } from "@2mcode-ai/core/util/error"
+import { NamedError } from "@2mcode-ai/core/util/error"
 import * as Log from "@2mcode-ai/core/util/log"
 import { ConfigError } from "@/config/error"
 import { Cause, Effect } from "effect"

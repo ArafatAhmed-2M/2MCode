@@ -1,4 +1,4 @@
-﻿import windowState from "electron-window-state"
+import windowState from "electron-window-state"
 import { app, BrowserWindow, net, nativeImage, nativeTheme, protocol } from "electron"
 import { dirname, isAbsolute, join, relative, resolve } from "node:path"
 import { fileURLToPath, pathToFileURL } from "node:url"

@@ -1,4 +1,4 @@
-﻿import type { McpServer } from "@agentclientprotocol/sdk"
+import type { McpServer } from "@agentclientprotocol/sdk"
 import type { 2M_CODEClient } from "@2mcode-ai/sdk/v2"
 import type { ProviderID, ModelID } from "../provider/schema"
 

@@ -1,4 +1,4 @@
-﻿interface ImportMetaEnv {
+interface ImportMetaEnv {
   readonly VITE_2M_CODE_SERVER_HOST: string
   readonly VITE_2M_CODE_SERVER_PORT: string
   readonly VITE_2M_CODE_CHANNEL?: "dev" | "beta" | "prod"

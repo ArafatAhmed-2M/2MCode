@@ -1,4 +1,4 @@
-﻿import { test, expect, describe, mock, afterEach, beforeEach } from "bun:test"
+import { test, expect, describe, mock, afterEach, beforeEach } from "bun:test"
 import { Effect, Layer, Option } from "effect"
 import { NodeFileSystem, NodePath } from "@effect/platform-node"
 import { Config } from "@/config/config"

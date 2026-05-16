@@ -1,4 +1,4 @@
-﻿import { Context, Effect, Layer, Option, PubSub, Schema, Stream } from "effect"
+import { Context, Effect, Layer, Option, PubSub, Schema, Stream } from "effect"
 import { Location } from "./location"
 import { withStatics } from "./schema"
 import { Identifier } from "./util/identifier"

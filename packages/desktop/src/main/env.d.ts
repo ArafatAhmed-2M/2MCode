@@ -1,4 +1,4 @@
-﻿interface ImportMetaEnv {
+interface ImportMetaEnv {
   readonly _2MCODE_CHANNEL: string
 }
 

@@ -1,4 +1,4 @@
-﻿# HTTP Route Patterns
+# HTTP Route Patterns
 
 Current guidance for `packages/2M_CODE/src/server/routes/instance/httpapi`.
 

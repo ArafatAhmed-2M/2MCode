@@ -1,4 +1,4 @@
-﻿import { createEffect, onCleanup } from "solid-js"
+import { createEffect, onCleanup } from "solid-js"
 import { createStore } from "solid-js/store"
 import { createSimpleContext } from "@2mcode-ai/ui/context"
 import { useDialog } from "@2mcode-ai/ui/context/dialog"

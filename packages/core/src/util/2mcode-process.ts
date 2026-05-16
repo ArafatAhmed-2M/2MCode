@@ -1,4 +1,4 @@
-﻿export const _2MCODE_RUN_ID = "_2MCODE_RUN_ID"
+export const _2MCODE_RUN_ID = "_2MCODE_RUN_ID"
 export const _2MCODE_PROCESS_ROLE = "_2MCODE_PROCESS_ROLE"
 
 export function ensureRunID() {

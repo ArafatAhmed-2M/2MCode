@@ -1,4 +1,4 @@
-﻿import { Schema } from "effect"
+import { Schema } from "effect"
 import { NamedError } from "@2mcode-ai/core/util/error"
 
 export const OutputLengthError = NamedError.create("MessageOutputLengthError", {})

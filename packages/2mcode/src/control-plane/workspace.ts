@@ -1,4 +1,4 @@
-﻿import { Context, Effect, FiberMap, Iterable, Layer, Schema, Stream } from "effect"
+import { Context, Effect, FiberMap, Iterable, Layer, Schema, Stream } from "effect"
 import { FetchHttpClient, HttpBody, HttpClient, HttpClientError, HttpClientRequest } from "effect/unstable/http"
 import { Database } from "@/storage/db"
 import { asc } from "drizzle-orm"

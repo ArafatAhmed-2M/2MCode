@@ -1,4 +1,4 @@
-﻿import { Npm } from "@2mcode-ai/core/npm"
+import { Npm } from "@2mcode-ai/core/npm"
 import { describe, expect } from "bun:test"
 import { Cause, Effect, Layer, Option } from "effect"
 import fs from "fs/promises"

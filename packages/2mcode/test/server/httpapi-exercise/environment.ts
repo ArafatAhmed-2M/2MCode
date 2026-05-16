@@ -1,4 +1,4 @@
-﻿import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Effect } from "effect"
 import path from "path"
 

@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { DateTime, Effect, Layer, Option } from "effect"
 import { Catalog } from "@2mcode-ai/core/catalog"
 import { Location } from "@2mcode-ai/core/location"

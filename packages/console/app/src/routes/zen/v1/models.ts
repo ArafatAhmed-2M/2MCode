@@ -1,4 +1,4 @@
-﻿import type { APIEvent } from "@solidjs/start/server"
+import type { APIEvent } from "@solidjs/start/server"
 import { ZenData } from "@2mcode-ai/console-core/model.js"
 import { and, Database, eq, isNull } from "@2mcode-ai/console-core/drizzle/index.js"
 import { KeyTable } from "@2mcode-ai/console-core/schema/key.sql.js"

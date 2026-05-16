@@ -1,4 +1,4 @@
-﻿# Unported Provider Logic Checklist
+# Unported Provider Logic Checklist
 
 This tracks legacy provider behavior from `packages/2M_CODE/src/provider/provider.ts` that still needs to be ported into the v2 provider plugins under `packages/2M_CODE/src/v2/plugin/provider/`. Keep entries checked only when v2 has equivalent behavior or when the item is intentionally skipped.
 

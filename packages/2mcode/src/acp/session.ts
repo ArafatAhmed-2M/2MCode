@@ -1,4 +1,4 @@
-﻿import { RequestError, type McpServer } from "@agentclientprotocol/sdk"
+import { RequestError, type McpServer } from "@agentclientprotocol/sdk"
 import type { ACPSessionState } from "./types"
 import * as Log from "@2mcode-ai/core/util/log"
 import type { 2M_CODEClient } from "@2mcode-ai/sdk/v2"

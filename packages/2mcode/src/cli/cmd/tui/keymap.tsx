@@ -1,4 +1,4 @@
-﻿import { type CliRenderer } from "@opentui/core"
+import { type CliRenderer } from "@opentui/core"
 import * as addons from "@opentui/keymap/addons/opentui"
 import { stringifyKeyStroke } from "@opentui/keymap"
 import {

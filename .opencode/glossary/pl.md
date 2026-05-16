@@ -1,4 +1,4 @@
-﻿# pl Glossary
+# pl Glossary
 
 ## Sources
 

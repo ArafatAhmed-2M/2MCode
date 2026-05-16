@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect } from "bun:test"
+import { afterEach, describe, expect } from "bun:test"
 import { Effect, Layer, Option } from "effect"
 import { FetchHttpClient } from "effect/unstable/http"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"

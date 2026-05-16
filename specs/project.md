@@ -1,4 +1,4 @@
-﻿## project
+## project
 
 The goal is to let a single instance of 2M_CODE run sessions for multiple projects and different worktrees per project.
 

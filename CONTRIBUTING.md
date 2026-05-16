@@ -1,4 +1,4 @@
-﻿# Contributing to 2M_CODE
+# Contributing to 2M_CODE
 
 We want to make it easy for you to contribute to 2M_CODE. Here are the most common type of changes that get merged:
 

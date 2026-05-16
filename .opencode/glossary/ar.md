@@ -1,4 +1,4 @@
-﻿# ar Glossary
+# ar Glossary
 
 ## Sources
 

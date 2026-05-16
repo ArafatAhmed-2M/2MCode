@@ -1,4 +1,4 @@
-﻿# ko Glossary
+# ko Glossary
 
 ## Sources
 

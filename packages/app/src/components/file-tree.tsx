@@ -1,4 +1,4 @@
-﻿import { useFile } from "@/context/file"
+import { useFile } from "@/context/file"
 import { encodeFilePath } from "@/context/file/path"
 import { Collapsible } from "@2mcode-ai/ui/collapsible"
 import { FileIcon } from "@2mcode-ai/ui/file-icon"

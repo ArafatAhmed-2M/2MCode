@@ -1,4 +1,4 @@
-﻿import { Bus } from "@/bus"
+import { Bus } from "@/bus"
 import { Config } from "@/config/config"
 import { AppRuntime } from "@/effect/app-runtime"
 import { Flag } from "@2mcode-ai/core/flag/flag"

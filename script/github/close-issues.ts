@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bun
+#!/usr/bin/env bun
 
 const repo = "anomalyco/2M_CODE"
 const days = 60

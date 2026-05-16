@@ -1,4 +1,4 @@
-﻿import type { SnapshotFileDiff, VcsFileDiff } from "@2mcode-ai/sdk/v2"
+import type { SnapshotFileDiff, VcsFileDiff } from "@2mcode-ai/sdk/v2"
 import type { Message } from "@2mcode-ai/sdk/v2/client"
 
 type Diff = SnapshotFileDiff | VcsFileDiff

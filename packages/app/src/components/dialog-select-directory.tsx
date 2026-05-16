@@ -1,4 +1,4 @@
-﻿import { useDialog } from "@2mcode-ai/ui/context/dialog"
+import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { Dialog } from "@2mcode-ai/ui/dialog"
 import { FileIcon } from "@2mcode-ai/ui/file-icon"
 import { List } from "@2mcode-ai/ui/list"

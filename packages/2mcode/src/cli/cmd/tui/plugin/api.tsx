@@ -1,4 +1,4 @@
-﻿import type { TuiDialogSelectOption, TuiPluginApi, TuiRouteDefinition, TuiSlotProps } from "@2mcode-ai/plugin/tui"
+import type { TuiDialogSelectOption, TuiPluginApi, TuiRouteDefinition, TuiSlotProps } from "@2mcode-ai/plugin/tui"
 import type { useEvent } from "@tui/context/event"
 import type { useRoute } from "@tui/context/route"
 import type { useSDK } from "@tui/context/sdk"

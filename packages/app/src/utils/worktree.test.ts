@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import { Worktree } from "./worktree"
 
 const dir = (name: string) => `/tmp/2M_CODE-worktree-${name}-${crypto.randomUUID()}`

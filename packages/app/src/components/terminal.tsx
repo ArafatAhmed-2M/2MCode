@@ -1,4 +1,4 @@
-﻿import { withAlpha } from "@2mcode-ai/ui/theme/color"
+import { withAlpha } from "@2mcode-ai/ui/theme/color"
 import { useTheme } from "@2mcode-ai/ui/theme/context"
 import { resolveThemeVariant } from "@2mcode-ai/ui/theme/resolve"
 import type { HexColor } from "@2mcode-ai/ui/theme/types"

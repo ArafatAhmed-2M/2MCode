@@ -1,4 +1,4 @@
-﻿import { eq } from "drizzle-orm"
+import { eq } from "drizzle-orm"
 import { Effect, Layer, Option, Schema, Context } from "effect"
 
 import { Database } from "@/storage/db"

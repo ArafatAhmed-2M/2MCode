@@ -1,4 +1,4 @@
-﻿import { ProviderAuth } from "@/provider/auth"
+import { ProviderAuth } from "@/provider/auth"
 import { Config } from "@/config/config"
 import { ModelsDev } from "@2mcode-ai/core/models"
 import { Provider } from "@/provider/provider"

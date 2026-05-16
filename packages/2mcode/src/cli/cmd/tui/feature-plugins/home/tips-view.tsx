@@ -1,4 +1,4 @@
-﻿import type { TuiPluginApi } from "@2mcode-ai/plugin/tui"
+import type { TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import { createMemo, For, type Accessor } from "solid-js"
 import { DEFAULT_THEMES, useTheme } from "@tui/context/theme"
 import { useCommandShortcut } from "../../keymap"

@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   Event,
   create2M_CODEClient,
   Project,

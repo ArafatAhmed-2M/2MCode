@@ -1,4 +1,4 @@
-﻿import { getFilename } from "@2mcode-ai/core/util/path"
+import { getFilename } from "@2mcode-ai/core/util/path"
 import { type AgentPartInput, type FilePartInput, type Part, type TextPartInput } from "@2mcode-ai/sdk/v2/client"
 import type { FileSelection } from "@/context/file"
 import { encodeFilePath } from "@/context/file/path"

@@ -1,4 +1,4 @@
-﻿import { SessionID } from "@/session/schema"
+import { SessionID } from "@/session/schema"
 import { SessionMessage } from "@2mcode-ai/core/session-message"
 import { Prompt } from "@2mcode-ai/core/session-prompt"
 import { SessionV2 } from "@/v2/session"

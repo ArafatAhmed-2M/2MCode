@@ -1,4 +1,4 @@
-﻿import type { Todo } from "@2mcode-ai/sdk/v2"
+import type { Todo } from "@2mcode-ai/sdk/v2"
 import { AnimatedNumber } from "@2mcode-ai/ui/animated-number"
 import { Checkbox } from "@2mcode-ai/ui/checkbox"
 import { DockTray } from "@2mcode-ai/ui/dock-surface"

@@ -1,4 +1,4 @@
-﻿---
+---
 mode: primary
 hidden: true
 model: 2M_CODE/claude-haiku-4-5

@@ -1,4 +1,4 @@
-﻿import { Database, eq, and, sql } from "@2mcode-ai/console-core/drizzle/index.js"
+import { Database, eq, and, sql } from "@2mcode-ai/console-core/drizzle/index.js"
 import { KeyRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 import { RateLimitError } from "./error"
 import { i18n } from "~/i18n"

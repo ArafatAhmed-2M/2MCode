@@ -1,4 +1,4 @@
-﻿import { Npm } from "@2mcode-ai/core/npm"
+import { Npm } from "@2mcode-ai/core/npm"
 import type { LanguageModelV3 } from "@ai-sdk/provider"
 import { expect } from "bun:test"
 import { Effect, Layer, Option } from "effect"

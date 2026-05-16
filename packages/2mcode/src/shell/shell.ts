@@ -1,4 +1,4 @@
-﻿import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { lazy } from "@/util/lazy"
 import { Filesystem } from "@/util/filesystem"
 import { which } from "@/util/which"

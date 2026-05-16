@@ -1,4 +1,4 @@
-﻿# 2M_CODE database guide
+# 2M_CODE database guide
 
 ## Database
 

@@ -1,4 +1,4 @@
-﻿import { Resource } from "@2mcode-ai/console-resource"
+import { Resource } from "@2mcode-ai/console-resource"
 import { Actor } from "@2mcode-ai/console-core/actor.js"
 import { action, json, query } from "@solidjs/router"
 import { withActor } from "~/context/auth.withActor"

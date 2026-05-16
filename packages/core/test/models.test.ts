@@ -1,4 +1,4 @@
-﻿import { describe, expect, beforeAll, beforeEach, afterAll } from "bun:test"
+import { describe, expect, beforeAll, beforeEach, afterAll } from "bun:test"
 import { Effect, Layer, Ref } from "effect"
 import { HttpClient, HttpClientResponse } from "effect/unstable/http"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

@@ -1,4 +1,4 @@
-﻿import { Effect, Schema } from "effect"
+import { Effect, Schema } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Git } from "@/git"
 import DESCRIPTION from "./repo_clone.txt"

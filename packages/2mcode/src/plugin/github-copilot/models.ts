@@ -1,4 +1,4 @@
-﻿import type { Model } from "@2mcode-ai/sdk/v2"
+import type { Model } from "@2mcode-ai/sdk/v2"
 import { Schema } from "effect"
 
 export const schema = Schema.Struct({

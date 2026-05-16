@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   AgentPart,
   2M_CODEClient,
   Event,

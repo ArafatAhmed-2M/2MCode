@@ -1,4 +1,4 @@
-﻿import { Schema } from "effect"
+import { Schema } from "effect"
 
 export { CatalogModelStatus } from "@2mcode-ai/core/models"
 

@@ -1,4 +1,4 @@
-﻿export async function GET() {
+export async function GET() {
   const response = await fetch(
     "https://raw.githubusercontent.com/anomalyco/2M_CODE/refs/heads/dev/packages/sdk/openapi.json",
   )

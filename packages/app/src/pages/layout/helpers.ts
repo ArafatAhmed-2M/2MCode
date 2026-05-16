@@ -1,4 +1,4 @@
-﻿import { getFilename } from "@2mcode-ai/core/util/path"
+import { getFilename } from "@2mcode-ai/core/util/path"
 import { type Session } from "@2mcode-ai/sdk/v2/client"
 import { pathKey } from "@/utils/path-key"
 

@@ -1,4 +1,4 @@
-﻿import { AwsClient } from "aws4fetch"
+import { AwsClient } from "aws4fetch"
 import { lazy } from "@2mcode-ai/core/util/lazy"
 
 export namespace Storage {

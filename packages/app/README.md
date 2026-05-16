@@ -1,4 +1,4 @@
-﻿## Usage
+## Usage
 
 Dependencies for these templates are managed with [pnpm](https://pnpm.io) using `pnpm up -Lri`.
 

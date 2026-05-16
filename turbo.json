@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://v2-8-13.turborepo.dev/schema.json",
   "globalEnv": ["CI", "_2MCODE_DISABLE_SHARE"],
   "globalPassThroughEnv": ["CI", "_2MCODE_DISABLE_SHARE"],

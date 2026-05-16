@@ -1,4 +1,4 @@
-﻿import type { AssistantMessage, Part, Provider, UserMessage } from "@2mcode-ai/sdk/v2"
+import type { AssistantMessage, Part, Provider, UserMessage } from "@2mcode-ai/sdk/v2"
 import { Locale } from "@/util/locale"
 import * as Model from "./model"
 

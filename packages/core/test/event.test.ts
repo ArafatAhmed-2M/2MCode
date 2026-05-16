@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { Effect, Fiber, Layer, Schema, Stream } from "effect"
 import { EventV2 } from "@2mcode-ai/core/event"
 import { Location } from "@2mcode-ai/core/location"

@@ -1,4 +1,4 @@
-﻿# bs Glossary
+# bs Glossary
 
 ## Sources
 

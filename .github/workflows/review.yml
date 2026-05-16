@@ -1,4 +1,4 @@
-﻿name: review
+name: review
 
 on:
   issue_comment:

@@ -1,4 +1,4 @@
-﻿---
+---
 description: "Bump AI sdk dependencies minor / patch versions only"
 ---
 

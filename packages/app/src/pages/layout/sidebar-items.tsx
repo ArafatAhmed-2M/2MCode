@@ -1,4 +1,4 @@
-﻿import type { Session } from "@2mcode-ai/sdk/v2/client"
+import type { Session } from "@2mcode-ai/sdk/v2/client"
 import { Avatar } from "@2mcode-ai/ui/avatar"
 import { Icon } from "@2mcode-ai/ui/icon"
 import { IconButton } from "@2mcode-ai/ui/icon-button"

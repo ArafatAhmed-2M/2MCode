@@ -1,4 +1,4 @@
-﻿# 2M_CODE GitHub Action
+# 2M_CODE GitHub Action
 
 A GitHub Action that integrates [2M_CODE](https://2M_CODE.ai) directly into your GitHub workflow.
 

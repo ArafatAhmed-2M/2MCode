@@ -1,4 +1,4 @@
-﻿name: "Setup Git Committer"
+name: "Setup Git Committer"
 description: "Create app token and configure git user"
 inputs:
   2M_CODE-app-id:

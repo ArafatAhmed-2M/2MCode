@@ -1,4 +1,4 @@
-﻿import type { APIEvent } from "@solidjs/start/server"
+import type { APIEvent } from "@solidjs/start/server"
 import { ZenData } from "@2mcode-ai/console-core/model.js"
 import { buildModelsResponse, buildOptionsResponse } from "../../util/modelsHandler"
 

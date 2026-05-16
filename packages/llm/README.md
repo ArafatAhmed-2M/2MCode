@@ -1,4 +1,4 @@
-﻿# @2mcode-ai/llm
+# @2mcode-ai/llm
 
 Schema-first LLM core for 2M_CODE. One typed request, response, event, and tool language; provider quirks live in adapters, not in calling code.
 

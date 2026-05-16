@@ -1,4 +1,4 @@
-﻿export const domain = (() => {
+export const domain = (() => {
   if ($app.stage === "production") return "2M_CODE.ai"
   if ($app.stage === "dev") return "dev.2M_CODE.ai"
   return `${$app.stage}.dev.2M_CODE.ai`

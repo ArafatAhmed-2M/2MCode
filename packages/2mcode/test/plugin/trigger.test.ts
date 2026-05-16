@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { Effect, Layer, Option } from "effect"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

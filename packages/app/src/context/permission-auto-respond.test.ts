@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import type { PermissionRequest, Session } from "@2mcode-ai/sdk/v2/client"
 import { base64Encode } from "@2mcode-ai/core/util/encode"
 import { autoRespondsPermission, isDirectoryAutoAccepting } from "./permission-auto-respond"

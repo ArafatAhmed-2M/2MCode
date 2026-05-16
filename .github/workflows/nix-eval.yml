@@ -1,4 +1,4 @@
-﻿name: nix-eval
+name: nix-eval
 
 on:
   push:

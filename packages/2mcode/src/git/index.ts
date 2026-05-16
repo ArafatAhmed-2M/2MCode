@@ -1,4 +1,4 @@
-﻿import { AppProcess } from "@2mcode-ai/core/process"
+import { AppProcess } from "@2mcode-ai/core/process"
 import { Effect, Layer, Context, Stream } from "effect"
 import { ChildProcess } from "effect/unstable/process"
 

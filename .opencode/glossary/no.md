@@ -1,4 +1,4 @@
-﻿# no Glossary
+# no Glossary
 
 ## Sources
 

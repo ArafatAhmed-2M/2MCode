@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import type { Agent } from "@2mcode-ai/sdk/v2/client"
 import { directoryKey, normalizeAgentList } from "./utils"
 

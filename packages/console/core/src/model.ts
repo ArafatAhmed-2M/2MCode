@@ -1,4 +1,4 @@
-﻿import { z } from "zod"
+import { z } from "zod"
 import { eq, and } from "drizzle-orm"
 import { Database } from "./drizzle"
 import { ModelTable } from "./schema/model.sql"

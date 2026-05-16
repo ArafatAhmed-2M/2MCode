@@ -1,4 +1,4 @@
-﻿import "@/index.css"
+import "@/index.css"
 import * as Sentry from "@sentry/solid"
 import { I18nProvider } from "@2mcode-ai/ui/context"
 import { DialogProvider } from "@2mcode-ai/ui/context/dialog"

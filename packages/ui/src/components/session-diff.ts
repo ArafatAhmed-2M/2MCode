@@ -1,4 +1,4 @@
-﻿import { parseDiffFromFile, parsePatchFiles, type FileDiffMetadata } from "@pierre/diffs"
+import { parseDiffFromFile, parsePatchFiles, type FileDiffMetadata } from "@pierre/diffs"
 import { formatPatch, parsePatch, structuredPatch } from "diff"
 import type { SnapshotFileDiff, VcsFileDiff } from "@2mcode-ai/sdk/v2"
 

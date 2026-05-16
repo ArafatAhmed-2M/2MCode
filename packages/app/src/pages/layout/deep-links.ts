@@ -1,4 +1,4 @@
-﻿export const deepLinkEvent = "2M_CODE:deep-link"
+export const deepLinkEvent = "2M_CODE:deep-link"
 
 const parseUrl = (input: string) => {
   if (!input.startsWith("2M_CODE://")) return

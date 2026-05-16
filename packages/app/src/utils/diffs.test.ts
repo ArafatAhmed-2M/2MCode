@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import type { SnapshotFileDiff } from "@2mcode-ai/sdk/v2"
 import type { Message } from "@2mcode-ai/sdk/v2/client"
 import { diffs, message } from "./diffs"

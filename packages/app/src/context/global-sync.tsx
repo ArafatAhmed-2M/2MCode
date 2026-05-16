@@ -1,4 +1,4 @@
-﻿import type {
+import type {
   Config,
   2M_CODEClient,
   Path,

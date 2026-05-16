@@ -1,4 +1,4 @@
-﻿import { For, Show, createEffect, createMemo } from "solid-js"
+import { For, Show, createEffect, createMemo } from "solid-js"
 import { createStore } from "solid-js/store"
 import { Button } from "@2mcode-ai/ui/button"
 import { DockTray } from "@2mcode-ai/ui/dock-surface"

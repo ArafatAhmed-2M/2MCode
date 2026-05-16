@@ -1,4 +1,4 @@
-﻿{
+{
   description = "2M_CODE development flake";
 
   inputs = {

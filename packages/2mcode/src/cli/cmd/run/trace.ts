@@ -1,4 +1,4 @@
-﻿// Dev-only JSONL event trace for direct interactive mode.
+// Dev-only JSONL event trace for direct interactive mode.
 //
 // Enable with _2MCODE_DIRECT_TRACE=1. Writes one JSON line per event to
 // ~/.local/share/2M_CODE/log/direct/<timestamp>-<pid>.jsonl. Also writes

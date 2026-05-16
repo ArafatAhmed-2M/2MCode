@@ -1,4 +1,4 @@
-﻿import { BusEvent } from "@/bus/bus-event"
+import { BusEvent } from "@/bus/bus-event"
 import { Bus } from "@/bus"
 import * as Log from "@2mcode-ai/core/util/log"
 import * as LSPClient from "./client"

@@ -1,4 +1,4 @@
-﻿import { Component, Show } from "solid-js"
+import { Component, Show } from "solid-js"
 import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { popularProviders, useProviders } from "@/hooks/use-providers"
 import { Dialog } from "@2mcode-ai/ui/dialog"

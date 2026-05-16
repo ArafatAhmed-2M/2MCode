@@ -1,4 +1,4 @@
-﻿import { Global } from "@2mcode-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { Flag } from "@2mcode-ai/core/flag/flag"
 import os from "os"

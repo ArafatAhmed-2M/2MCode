@@ -1,4 +1,4 @@
-﻿import { getRequestEvent } from "solid-js/web"
+import { getRequestEvent } from "solid-js/web"
 import { and, Database, eq, inArray, isNull, sql } from "@2mcode-ai/console-core/drizzle/index.js"
 import { UserTable } from "@2mcode-ai/console-core/schema/user.sql.js"
 import { redirect } from "@solidjs/router"

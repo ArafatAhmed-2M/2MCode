@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import os from "os"
 import { SessionID, MessageID, PartID } from "./schema"
 import { MessageV2 } from "./message-v2"

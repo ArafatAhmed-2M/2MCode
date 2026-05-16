@@ -1,4 +1,4 @@
-﻿import { App } from "@slack/bolt"
+import { App } from "@slack/bolt"
 import { create2M_CODE, type ToolPart } from "@2mcode-ai/sdk"
 
 const app = new App({

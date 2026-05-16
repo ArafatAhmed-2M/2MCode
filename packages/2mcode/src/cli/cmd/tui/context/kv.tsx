@@ -1,4 +1,4 @@
-﻿import { Global } from "@2mcode-ai/core/global"
+import { Global } from "@2mcode-ai/core/global"
 import { Filesystem } from "@/util/filesystem"
 import { Flock } from "@2mcode-ai/core/util/flock"
 import { rename, rm } from "fs/promises"

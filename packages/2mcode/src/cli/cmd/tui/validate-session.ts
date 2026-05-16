@@ -1,4 +1,4 @@
-﻿import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
 import { SessionID } from "@/session/schema"
 import { Schema } from "effect"
 

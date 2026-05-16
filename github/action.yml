@@ -1,4 +1,4 @@
-﻿name: "2M_CODE GitHub Action"
+name: "2M_CODE GitHub Action"
 description: "Run 2M_CODE in GitHub Actions workflows"
 branding:
   icon: "code"

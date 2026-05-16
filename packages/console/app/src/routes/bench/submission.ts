@@ -1,4 +1,4 @@
-﻿import type { APIEvent } from "@solidjs/start/server"
+import type { APIEvent } from "@solidjs/start/server"
 import { Database } from "@2mcode-ai/console-core/drizzle/index.js"
 import { BenchmarkTable } from "@2mcode-ai/console-core/schema/benchmark.sql.js"
 import { Identifier } from "@2mcode-ai/console-core/identifier.js"

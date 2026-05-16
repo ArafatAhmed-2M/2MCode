@@ -1,4 +1,4 @@
-﻿import type { APIEvent } from "@solidjs/start/server"
+import type { APIEvent } from "@solidjs/start/server"
 import { AWS } from "@2mcode-ai/console-core/aws.js"
 import { Resource } from "@2mcode-ai/console-resource"
 import { i18n } from "~/i18n"

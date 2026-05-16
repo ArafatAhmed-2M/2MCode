@@ -1,4 +1,4 @@
-﻿import { BusEvent } from "@/bus/bus-event"
+import { BusEvent } from "@/bus/bus-event"
 import { InstanceState } from "@/effect/instance-state"
 
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

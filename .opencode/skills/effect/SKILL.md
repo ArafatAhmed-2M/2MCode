@@ -1,4 +1,4 @@
-﻿---
+---
 name: effect
 description: Work with Effect v4 / effect-smol TypeScript code in this repo
 ---

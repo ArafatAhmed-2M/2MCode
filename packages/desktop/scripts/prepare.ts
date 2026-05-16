@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bun
+#!/usr/bin/env bun
 import { Script } from "@2mcode-ai/script"
 
 await import("./prebuild")

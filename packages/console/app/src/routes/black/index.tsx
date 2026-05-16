@@ -1,4 +1,4 @@
-﻿import { A, createAsync, query, useSearchParams } from "@solidjs/router"
+import { A, createAsync, query, useSearchParams } from "@solidjs/router"
 import { Title } from "@solidjs/meta"
 import { createMemo, createSignal, For, Match, onMount, Show, Switch } from "solid-js"
 import { PlanIcon, plans } from "./common"

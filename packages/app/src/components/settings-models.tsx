@@ -1,4 +1,4 @@
-﻿import { useFilteredList } from "@2mcode-ai/ui/hooks"
+import { useFilteredList } from "@2mcode-ai/ui/hooks"
 import { ProviderIcon } from "@2mcode-ai/ui/provider-icon"
 import { Switch } from "@2mcode-ai/ui/switch"
 import { Icon } from "@2mcode-ai/ui/icon"

@@ -1,4 +1,4 @@
-﻿import { createSimpleContext } from "@2mcode-ai/ui/context"
+import { createSimpleContext } from "@2mcode-ai/ui/context"
 import { base64Encode } from "@2mcode-ai/core/util/encode"
 import { useParams } from "@solidjs/router"
 import { batch, createEffect, createMemo } from "solid-js"

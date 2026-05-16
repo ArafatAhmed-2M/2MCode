@@ -1,4 +1,4 @@
-﻿import { createMemo, For, Match, Switch } from "solid-js"
+import { createMemo, For, Match, Switch } from "solid-js"
 import { Button } from "@2mcode-ai/ui/button"
 import { Logo } from "@2mcode-ai/ui/logo"
 import { useLayout } from "@/context/layout"

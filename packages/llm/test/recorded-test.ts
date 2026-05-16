@@ -1,4 +1,4 @@
-﻿import { NodeFileSystem } from "@effect/platform-node"
+import { NodeFileSystem } from "@effect/platform-node"
 import { HttpRecorder } from "@2mcode-ai/http-recorder"
 import { Layer } from "effect"
 import { FetchHttpClient } from "effect/unstable/http"

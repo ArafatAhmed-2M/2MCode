@@ -1,4 +1,4 @@
-﻿# @2mcode-ai/slack
+# @2mcode-ai/slack
 
 Slack bot integration for 2M_CODE that creates threaded conversations.
 

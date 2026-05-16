@@ -1,4 +1,4 @@
-﻿import { createMemo } from "solid-js"
+import { createMemo } from "solid-js"
 import { useProject } from "./project"
 import { useSync } from "./sync"
 import { Global } from "@2mcode-ai/core/global"

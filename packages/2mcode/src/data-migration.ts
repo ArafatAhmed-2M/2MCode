@@ -1,4 +1,4 @@
-﻿import { Context, Effect, Layer } from "effect"
+import { Context, Effect, Layer } from "effect"
 import { Database } from "./storage/db"
 import { DataMigrationTable } from "./data-migration.sql"
 import * as Log from "@2mcode-ai/core/util/log"

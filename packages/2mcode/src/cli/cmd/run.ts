@@ -1,4 +1,4 @@
-﻿// CLI entry point for `2M_CODE run`.
+// CLI entry point for `2M_CODE run`.
 //
 // Handles three modes:
 //   1. Non-interactive (default): sends a single prompt, streams events to

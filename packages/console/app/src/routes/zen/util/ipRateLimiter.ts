@@ -1,4 +1,4 @@
-﻿import { Database, eq, and, sql, inArray } from "@2mcode-ai/console-core/drizzle/index.js"
+import { Database, eq, and, sql, inArray } from "@2mcode-ai/console-core/drizzle/index.js"
 import { IpRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 import { FreeUsageLimitError } from "./error"
 import { logger } from "./logger"

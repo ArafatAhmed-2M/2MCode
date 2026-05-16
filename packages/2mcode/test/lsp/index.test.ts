@@ -1,4 +1,4 @@
-﻿import { describe, expect, spyOn } from "bun:test"
+import { describe, expect, spyOn } from "bun:test"
 import path from "path"
 import { Effect, Layer } from "effect"
 import { Config } from "@/config/config"

@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, test } from "bun:test"
+import { afterEach, describe, expect, test } from "bun:test"
 import net from "node:net"
 import { Flag } from "@2mcode-ai/core/flag/flag"
 import * as Log from "@2mcode-ai/core/util/log"

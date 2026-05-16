@@ -1,4 +1,4 @@
-﻿import { create2M_CODEClient, create2M_CODEServer } from "@2mcode-ai/sdk"
+import { create2M_CODEClient, create2M_CODEServer } from "@2mcode-ai/sdk"
 import { pathToFileURL } from "bun"
 
 const server = await create2M_CODEServer()

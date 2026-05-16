@@ -1,4 +1,4 @@
-﻿export async function buildOptionsResponse() {
+export async function buildOptionsResponse() {
   return new Response(null, {
     status: 200,
     headers: {

@@ -1,4 +1,4 @@
-﻿import { Router } from "@solidjs/router"
+import { Router } from "@solidjs/router"
 import { FileRoutes } from "@solidjs/start/router"
 import { Font } from "@2mcode-ai/ui/font"
 import { MetaProvider } from "@solidjs/meta"

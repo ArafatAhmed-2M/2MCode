@@ -1,4 +1,4 @@
-﻿import { and, Database, inArray } from "@2mcode-ai/console-core/drizzle/index.js"
+import { and, Database, inArray } from "@2mcode-ai/console-core/drizzle/index.js"
 import { ModelTpsRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 
 type Result = Record<string, { interval: number; qualify: number; unqualify: number }[]>

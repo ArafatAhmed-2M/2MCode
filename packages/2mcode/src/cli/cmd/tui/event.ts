@@ -1,4 +1,4 @@
-﻿import { BusEvent } from "@/bus/bus-event"
+import { BusEvent } from "@/bus/bus-event"
 import { SessionID } from "@/session/schema"
 import { PositiveInt } from "@2mcode-ai/core/schema"
 import { Effect, Schema } from "effect"

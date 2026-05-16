@@ -1,4 +1,4 @@
-﻿import { marked } from "marked"
+import { marked } from "marked"
 import markedKatex from "marked-katex-extension"
 import markedShiki from "marked-shiki"
 import katex from "katex"

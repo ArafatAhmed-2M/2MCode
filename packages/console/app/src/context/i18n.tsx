@@ -1,4 +1,4 @@
-﻿import { createMemo } from "solid-js"
+import { createMemo } from "solid-js"
 import { createSimpleContext } from "@2mcode-ai/ui/context"
 import { i18n, type Key } from "~/i18n"
 import { useLanguage } from "~/context/language"

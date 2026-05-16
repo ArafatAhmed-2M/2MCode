@@ -1,4 +1,4 @@
-﻿import { BusEvent } from "@/bus/bus-event"
+import { BusEvent } from "@/bus/bus-event"
 import { Schema } from "effect"
 import { NamedError } from "@2mcode-ai/core/util/error"
 import * as Log from "@2mcode-ai/core/util/log"

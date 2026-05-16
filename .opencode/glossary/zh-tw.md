@@ -1,4 +1,4 @@
-﻿# zh-tw Glossary
+# zh-tw Glossary
 
 ## Sources
 

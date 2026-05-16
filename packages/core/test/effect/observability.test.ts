@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, test } from "bun:test"
+import { afterEach, describe, expect, test } from "bun:test"
 import { resource } from "@2mcode-ai/core/effect/observability"
 
 const otelResourceAttributes = process.env.OTEL_RESOURCE_ATTRIBUTES

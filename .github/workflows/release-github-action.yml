@@ -1,4 +1,4 @@
-﻿name: release-github-action
+name: release-github-action
 
 on:
   push:

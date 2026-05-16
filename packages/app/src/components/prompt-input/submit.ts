@@ -1,4 +1,4 @@
-﻿import type { Message, Session } from "@2mcode-ai/sdk/v2/client"
+import type { Message, Session } from "@2mcode-ai/sdk/v2/client"
 import { showToast } from "@2mcode-ai/ui/toast"
 import { base64Encode } from "@2mcode-ai/core/util/encode"
 import { Binary } from "@2mcode-ai/core/util/binary"

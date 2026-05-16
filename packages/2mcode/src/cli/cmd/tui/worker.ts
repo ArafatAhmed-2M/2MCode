@@ -1,4 +1,4 @@
-﻿import { Installation } from "@/installation"
+import { Installation } from "@/installation"
 import { Server } from "@/server/server"
 import * as Log from "@2mcode-ai/core/util/log"
 import { InstanceRuntime } from "@/project/instance-runtime"

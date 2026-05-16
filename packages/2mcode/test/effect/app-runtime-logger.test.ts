@@ -1,4 +1,4 @@
-﻿import { expect } from "bun:test"
+import { expect } from "bun:test"
 import { Context, Deferred, Effect, Fiber, Layer, Logger } from "effect"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { AppLayer } from "../../src/effect/app-runtime"

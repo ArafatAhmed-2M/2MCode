@@ -1,4 +1,4 @@
-﻿# Effect Guide
+# Effect Guide
 
 How we write Effect code in `packages/2M_CODE`. The companion roadmap is
 [`todo.md`](./todo.md).

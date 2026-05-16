@@ -1,4 +1,4 @@
-﻿import { describe, expect, mock } from "bun:test"
+import { describe, expect, mock } from "bun:test"
 import { Effect, Layer } from "effect"
 import { AISDK } from "@2mcode-ai/core/aisdk"
 import { PluginV2 } from "@2mcode-ai/core/plugin"

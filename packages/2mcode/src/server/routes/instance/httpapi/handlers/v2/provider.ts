@@ -1,4 +1,4 @@
-﻿import { Catalog } from "@2mcode-ai/core/catalog"
+import { Catalog } from "@2mcode-ai/core/catalog"
 import { PluginBoot } from "@2mcode-ai/core/plugin/boot"
 import { Effect } from "effect"
 import { HttpApiBuilder } from "effect/unstable/httpapi"

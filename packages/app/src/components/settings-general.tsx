@@ -1,4 +1,4 @@
-﻿import { Component, Show, createMemo, createResource, onMount, type JSX } from "solid-js"
+import { Component, Show, createMemo, createResource, onMount, type JSX } from "solid-js"
 import { createStore } from "solid-js/store"
 import { Button } from "@2mcode-ai/ui/button"
 import { Icon } from "@2mcode-ai/ui/icon"

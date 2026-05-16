@@ -1,4 +1,4 @@
-﻿import { ProviderHelper, CommonRequest, CommonResponse, CommonChunk } from "./provider"
+import { ProviderHelper, CommonRequest, CommonResponse, CommonChunk } from "./provider"
 
 type Usage = {
   prompt_tokens?: number

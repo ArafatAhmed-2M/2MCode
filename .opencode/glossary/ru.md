@@ -1,4 +1,4 @@
-﻿# ru Glossary
+# ru Glossary
 
 ## Sources
 

@@ -1,4 +1,4 @@
-﻿import { Config } from "@/config/config"
+import { Config } from "@/config/config"
 import { Provider } from "@/provider/provider"
 import { ModelID, ProviderID } from "../provider/schema"
 import { generateObject, streamObject, type ModelMessage } from "ai"

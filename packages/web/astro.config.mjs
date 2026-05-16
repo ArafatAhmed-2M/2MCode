@@ -1,4 +1,4 @@
-﻿// @ts-check
+// @ts-check
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
 import solidJs from "@astrojs/solid-js"

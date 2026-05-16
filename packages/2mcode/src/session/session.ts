@@ -1,4 +1,4 @@
-﻿import { Slug } from "@2mcode-ai/core/util/slug"
+import { Slug } from "@2mcode-ai/core/util/slug"
 import path from "path"
 import { BackgroundJob } from "@/background/job"
 import { BusEvent } from "@/bus/bus-event"

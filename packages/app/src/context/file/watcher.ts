@@ -1,4 +1,4 @@
-﻿import type { FileNode } from "@2mcode-ai/sdk/v2"
+import type { FileNode } from "@2mcode-ai/sdk/v2"
 
 type WatcherEvent = {
   type: string

@@ -1,4 +1,4 @@
-﻿import { GlobalBus } from "@/bus/global"
+import { GlobalBus } from "@/bus/global"
 import { WorkspaceContext } from "@/control-plane/workspace-context"
 import { InstanceRef } from "@/effect/instance-ref"
 import { disposeInstance as runDisposers } from "@/effect/instance-registry"

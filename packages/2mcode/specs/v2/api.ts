@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 
 import { 2M_CODE } from "@2mcode-ai/core"
 import { ReadTool } from "@2mcode-ai/core/tools"

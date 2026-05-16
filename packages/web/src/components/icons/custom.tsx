@@ -1,4 +1,4 @@
-﻿import { type JSX } from "solid-js"
+import { type JSX } from "solid-js"
 
 // https://icones.js.org/collection/ri?s=openai&icon=ri:openai-fill
 export function IconOpenAI(props: JSX.SvgSVGAttributes<SVGSVGElement>) {

@@ -1,4 +1,4 @@
-﻿import { useGlobalSync } from "@/context/global-sync"
+import { useGlobalSync } from "@/context/global-sync"
 import { decode64 } from "@/utils/base64"
 import { useParams } from "@solidjs/router"
 import { createMemo } from "solid-js"

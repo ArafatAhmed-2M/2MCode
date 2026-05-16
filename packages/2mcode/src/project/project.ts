@@ -1,4 +1,4 @@
-﻿import { and } from "drizzle-orm"
+import { and } from "drizzle-orm"
 import { Database } from "@/storage/db"
 import { eq } from "drizzle-orm"
 import { ProjectTable } from "./project.sql"

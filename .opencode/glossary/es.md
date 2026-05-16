@@ -1,4 +1,4 @@
-﻿# es Glossary
+# es Glossary
 
 ## Sources
 

@@ -1,4 +1,4 @@
-﻿import { Context } from "effect"
+import { Context } from "effect"
 
 const 2M_CODEOrigin = /^https:\/\/([a-z0-9-]+\.)*2M_CODE\.ai$/
 

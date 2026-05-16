@@ -1,4 +1,4 @@
-﻿# 2M_CODE VS Code Extension
+# 2M_CODE VS Code Extension
 
 A Visual Studio Code extension that integrates [2M_CODE](https://2M_CODE.ai) directly into your development workflow.
 

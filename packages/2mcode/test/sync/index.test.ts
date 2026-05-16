@@ -1,4 +1,4 @@
-﻿import { describe, expect, beforeEach, afterAll } from "bun:test"
+import { describe, expect, beforeEach, afterAll } from "bun:test"
 import { provideTmpdirInstance } from "../fixture/fixture"
 import { Effect, Layer, Schema } from "effect"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"

@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import { Auth } from "../../src/auth"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"

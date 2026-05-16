@@ -1,4 +1,4 @@
-﻿import { Effect, Schema } from "effect"
+import { Effect, Schema } from "effect"
 import * as path from "path"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import * as Log from "@2mcode-ai/core/util/log"

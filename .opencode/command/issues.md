@@ -1,4 +1,4 @@
-﻿---
+---
 description: "find issue(s) on github"
 model: 2M_CODE/claude-haiku-4-5
 ---

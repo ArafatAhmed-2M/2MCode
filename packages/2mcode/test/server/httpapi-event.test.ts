@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect, test } from "bun:test"
+import { afterEach, describe, expect, test } from "bun:test"
 import { Bus } from "../../src/bus"
 import { AppRuntime } from "../../src/effect/app-runtime"
 import { InstanceRef } from "../../src/effect/instance-ref"

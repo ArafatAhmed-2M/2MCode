@@ -1,4 +1,4 @@
-﻿import { DataProvider } from "@2mcode-ai/ui/context"
+import { DataProvider } from "@2mcode-ai/ui/context"
 import { showToast } from "@2mcode-ai/ui/toast"
 import { base64Encode } from "@2mcode-ai/core/util/encode"
 import { useLocation, useNavigate, useParams } from "@solidjs/router"

@@ -1,4 +1,4 @@
-﻿import { drizzle } from "drizzle-orm/planetscale-serverless"
+import { drizzle } from "drizzle-orm/planetscale-serverless"
 import { Resource } from "@2mcode-ai/console-resource"
 export * from "drizzle-orm"
 import { Client } from "@planetscale/database"

@@ -1,4 +1,4 @@
-﻿import * as Tool from "./tool"
+import * as Tool from "./tool"
 import DESCRIPTION from "./task.txt"
 import { ToolJsonSchema } from "./json-schema"
 import { BackgroundJob } from "@/background/job"

@@ -1,4 +1,4 @@
-﻿import { Menu, shell } from "electron"
+import { Menu, shell } from "electron"
 
 import { UPDATER_ENABLED } from "./constants"
 import { createMainWindow } from "./windows"

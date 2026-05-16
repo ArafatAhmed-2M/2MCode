@@ -1,4 +1,4 @@
-﻿import { Catalog } from "@2mcode-ai/core/catalog"
+import { Catalog } from "@2mcode-ai/core/catalog"
 import { Location } from "@2mcode-ai/core/location"
 import { LocationServiceMap } from "@2mcode-ai/core/location-layer"
 import { PluginBoot } from "@2mcode-ai/core/plugin/boot"

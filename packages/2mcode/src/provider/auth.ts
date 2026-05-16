@@ -1,4 +1,4 @@
-﻿import type { AuthOAuthResult, Hooks } from "@2mcode-ai/plugin"
+import type { AuthOAuthResult, Hooks } from "@2mcode-ai/plugin"
 import { Auth } from "@/auth"
 import { InstanceState } from "@/effect/instance-state"
 import { optionalOmitUndefined } from "@2mcode-ai/core/schema"

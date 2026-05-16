@@ -1,4 +1,4 @@
-﻿import { z } from "zod"
+import { z } from "zod"
 import { Resource } from "@2mcode-ai/console-resource"
 import { AwsClient } from "aws4fetch"
 import { fn } from "./util/fn"

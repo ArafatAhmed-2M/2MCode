@@ -1,4 +1,4 @@
-﻿import * as Log from "@2mcode-ai/core/util/log"
+import * as Log from "@2mcode-ai/core/util/log"
 import path from "path"
 import { Global } from "@2mcode-ai/core/global"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

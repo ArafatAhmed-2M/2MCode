@@ -1,4 +1,4 @@
-﻿import type { Project, UserMessage } from "@2mcode-ai/sdk/v2"
+import type { Project, UserMessage } from "@2mcode-ai/sdk/v2"
 import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { createQuery, skipToken, useMutation, useQueryClient } from "@tanstack/solid-query"
 import {

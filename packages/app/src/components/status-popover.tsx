@@ -1,4 +1,4 @@
-﻿import { Button } from "@2mcode-ai/ui/button"
+import { Button } from "@2mcode-ai/ui/button"
 import { Icon } from "@2mcode-ai/ui/icon"
 import { Popover } from "@2mcode-ai/ui/popover"
 import { Suspense, createMemo, createSignal, lazy, Show } from "solid-js"

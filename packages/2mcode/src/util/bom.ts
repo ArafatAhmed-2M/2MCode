@@ -1,4 +1,4 @@
-﻿import { Effect } from "effect"
+import { Effect } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 
 const BOM_CODE = 0xfeff

@@ -1,4 +1,4 @@
-﻿# th Glossary
+# th Glossary
 
 ## Sources
 

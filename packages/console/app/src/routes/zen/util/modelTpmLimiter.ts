@@ -1,4 +1,4 @@
-﻿import { and, Database, eq, inArray, sql } from "@2mcode-ai/console-core/drizzle/index.js"
+import { and, Database, eq, inArray, sql } from "@2mcode-ai/console-core/drizzle/index.js"
 import { ModelTpmRateLimitTable } from "@2mcode-ai/console-core/schema/ip.sql.js"
 import { UsageInfo } from "./provider/provider"
 

@@ -1,4 +1,4 @@
-﻿import { Schema } from "effect"
+import { Schema } from "effect"
 import DESCRIPTION from "./shell.txt"
 import { PositiveInt } from "@2mcode-ai/core/schema"
 import { Global } from "@2mcode-ai/core/global"

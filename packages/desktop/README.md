@@ -1,4 +1,4 @@
-﻿# 2M_CODE Desktop
+# 2M_CODE Desktop
 
 The 2M_CODE Desktop app, built with Electron.
 

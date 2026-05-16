@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import path from "path"
 import { Effect } from "effect"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"

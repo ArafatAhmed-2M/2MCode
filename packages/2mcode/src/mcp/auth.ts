@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import { Global } from "@2mcode-ai/core/global"
 import { Effect, Layer, Context, Option, Schema } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

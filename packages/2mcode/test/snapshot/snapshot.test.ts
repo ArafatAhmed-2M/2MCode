@@ -1,4 +1,4 @@
-﻿import { afterEach, expect } from "bun:test"
+import { afterEach, expect } from "bun:test"
 import { $ } from "bun"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

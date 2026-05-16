@@ -1,4 +1,4 @@
-﻿// Legacy `api.command` bridge for v1 plugins; remove in v2.
+// Legacy `api.command` bridge for v1 plugins; remove in v2.
 import type { TuiCommand, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import { TuiKeybind } from "../config/keybind"
 import type { DialogContext } from "../ui/dialog"

@@ -1,4 +1,4 @@
-﻿import { Cause, Context, Effect, Layer, Schema, Stream } from "effect"
+import { Cause, Context, Effect, Layer, Schema, Stream } from "effect"
 import type { Auth as AuthDef } from "./auth"
 import type { Endpoint } from "./endpoint"
 import { RequestExecutor } from "./executor"

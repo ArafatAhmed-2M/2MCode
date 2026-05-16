@@ -1,4 +1,4 @@
-﻿<!--
+<!--
   Built-in skill. Name and description are registered in code at
   packages/2M_CODE/src/skill/index.ts (see CUSTOMIZE_2M_CODE_SKILL_NAME
   and CUSTOMIZE_2M_CODE_SKILL_DESCRIPTION). The body below becomes the

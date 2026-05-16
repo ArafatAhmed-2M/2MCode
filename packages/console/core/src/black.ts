@@ -1,4 +1,4 @@
-﻿import { z } from "zod"
+import { z } from "zod"
 import { fn } from "./util/fn"
 import { Resource } from "@2mcode-ai/console-resource"
 import { BlackPlans } from "./schema/billing.sql"

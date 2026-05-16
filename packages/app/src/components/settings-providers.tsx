@@ -1,4 +1,4 @@
-﻿import { Button } from "@2mcode-ai/ui/button"
+import { Button } from "@2mcode-ai/ui/button"
 import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { ProviderIcon } from "@2mcode-ai/ui/provider-icon"
 import { Tag } from "@2mcode-ai/ui/tag"

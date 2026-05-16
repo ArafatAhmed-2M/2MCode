@@ -1,4 +1,4 @@
-﻿name: duplicate-issues
+name: duplicate-issues
 
 on:
   issues:

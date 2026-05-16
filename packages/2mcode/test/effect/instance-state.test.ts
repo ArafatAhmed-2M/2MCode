@@ -1,4 +1,4 @@
-﻿import { expect } from "bun:test"
+import { expect } from "bun:test"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { $ } from "bun"
 import { Context, Deferred, Duration, Effect, Exit, Fiber, Layer } from "effect"

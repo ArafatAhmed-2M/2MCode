@@ -1,4 +1,4 @@
-﻿name: nix-hashes
+name: nix-hashes
 
 permissions:
   contents: write

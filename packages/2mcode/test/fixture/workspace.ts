@@ -1,4 +1,4 @@
-﻿import { FetchHttpClient } from "effect/unstable/http"
+import { FetchHttpClient } from "effect/unstable/http"
 import { Layer } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Auth } from "../../src/auth"

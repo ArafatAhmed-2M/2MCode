@@ -1,4 +1,4 @@
-﻿import { Auth } from "@/auth"
+import { Auth } from "@/auth"
 import { ProviderID } from "@/provider/schema"
 import * as Log from "@2mcode-ai/core/util/log"
 import { Effect } from "effect"

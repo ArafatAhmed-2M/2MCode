@@ -1,4 +1,4 @@
-﻿import { Route } from "../route/client"
+import { Route } from "../route/client"
 import type { ModelInput } from "../llm"
 import { Provider } from "../provider"
 import { ProviderID, type ModelID } from "../schema"

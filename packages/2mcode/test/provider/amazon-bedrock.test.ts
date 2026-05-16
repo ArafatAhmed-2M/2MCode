@@ -1,4 +1,4 @@
-﻿import { afterEach, test, expect, describe } from "bun:test"
+import { afterEach, test, expect, describe } from "bun:test"
 import path from "path"
 import { unlink } from "fs/promises"
 

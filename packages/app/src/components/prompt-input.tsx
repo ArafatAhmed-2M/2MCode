@@ -1,4 +1,4 @@
-﻿import { useFilteredList } from "@2mcode-ai/ui/hooks"
+import { useFilteredList } from "@2mcode-ai/ui/hooks"
 import { useSpring } from "@2mcode-ai/ui/motion-spring"
 import { createEffect, on, Component, Show, onCleanup, createMemo, createSignal, createResource } from "solid-js"
 import { createStore } from "solid-js/store"

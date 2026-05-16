@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Cause, Context, Effect, Fiber, Layer, Queue, Schema, Stream } from "effect"
 import type { PlatformError } from "effect/PlatformError"

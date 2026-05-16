@@ -1,4 +1,4 @@
-﻿import { OpenApi } from "effect/unstable/httpapi"
+import { OpenApi } from "effect/unstable/httpapi"
 import { 2M_CODEHttpApi } from "./api"
 import { QueryBooleanOpenApi } from "./groups/query"
 

@@ -1,4 +1,4 @@
-﻿import { and, desc, eq } from "@/storage/db"
+import { and, desc, eq } from "@/storage/db"
 import type { Database } from "@/storage/db"
 import { SessionMessage } from "@2mcode-ai/core/session-message"
 import { SessionMessageUpdater } from "@2mcode-ai/core/session-message-updater"

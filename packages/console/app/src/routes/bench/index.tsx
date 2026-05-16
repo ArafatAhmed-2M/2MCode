@@ -1,4 +1,4 @@
-﻿import { Title } from "@solidjs/meta"
+import { Title } from "@solidjs/meta"
 import { A, createAsync, query } from "@solidjs/router"
 import { createMemo, For, Show } from "solid-js"
 import { Database, desc } from "@2mcode-ai/console-core/drizzle/index.js"

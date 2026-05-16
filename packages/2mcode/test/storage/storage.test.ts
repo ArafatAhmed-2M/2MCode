@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import path from "path"
 import { Effect, Exit, Layer } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"

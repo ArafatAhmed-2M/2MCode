@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import { AuthV2 } from "@2mcode-ai/core/auth"
 import { ModelV2 } from "@2mcode-ai/core/model"

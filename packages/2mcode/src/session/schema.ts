@@ -1,4 +1,4 @@
-﻿import { Schema } from "effect"
+import { Schema } from "effect"
 
 import { Identifier } from "@/id/id"
 import { Session as CoreSession } from "@2mcode-ai/core/session"

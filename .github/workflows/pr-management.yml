@@ -1,4 +1,4 @@
-﻿name: pr-management
+name: pr-management
 
 on:
   pull_request_target:

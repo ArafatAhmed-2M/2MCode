@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import { Effect } from "effect"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { Flock } from "@2mcode-ai/core/util/flock"

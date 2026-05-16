@@ -1,4 +1,4 @@
-﻿import "./index.css"
+import "./index.css"
 import { createAsync, query } from "@solidjs/router"
 import { Title, Meta } from "@solidjs/meta"
 import { For, createMemo, createSignal, onCleanup, onMount } from "solid-js"

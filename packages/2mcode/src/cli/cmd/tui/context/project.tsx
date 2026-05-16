@@ -1,4 +1,4 @@
-﻿import { batch } from "solid-js"
+import { batch } from "solid-js"
 import type { Path, Workspace } from "@2mcode-ai/sdk/v2"
 import { createStore, reconcile } from "solid-js/store"
 import { createSimpleContext } from "./helper"

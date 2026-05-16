@@ -1,4 +1,4 @@
-﻿import { TextField } from "@2mcode-ai/ui/text-field"
+import { TextField } from "@2mcode-ai/ui/text-field"
 import * as Sentry from "@sentry/solid"
 import { Logo } from "@2mcode-ai/ui/logo"
 import { Button } from "@2mcode-ai/ui/button"

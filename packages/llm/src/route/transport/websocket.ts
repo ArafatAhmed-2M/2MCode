@@ -1,4 +1,4 @@
-﻿import { Cause, Context, Effect, Queue, Stream } from "effect"
+import { Cause, Context, Effect, Queue, Stream } from "effect"
 import { Headers } from "effect/unstable/http"
 import { Auth, type Auth as AuthDef } from "../auth"
 import type { Endpoint } from "../endpoint"

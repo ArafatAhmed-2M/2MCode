@@ -1,4 +1,4 @@
-﻿import { Cause, Deferred, Effect, Exit, Layer, Context, Scope } from "effect"
+import { Cause, Deferred, Effect, Exit, Layer, Context, Scope } from "effect"
 import * as Stream from "effect/Stream"
 import { Agent } from "@/agent/agent"
 import { Bus } from "@/bus"

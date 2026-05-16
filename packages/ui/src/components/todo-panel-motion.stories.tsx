@@ -1,4 +1,4 @@
-﻿// @ts-nocheck
+// @ts-nocheck
 import { createEffect, createMemo, onCleanup } from "solid-js"
 import { createStore } from "solid-js/store"
 import type { Todo } from "@2mcode-ai/sdk/v2"

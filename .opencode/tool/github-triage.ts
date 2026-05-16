@@ -1,4 +1,4 @@
-﻿/// <reference path="../env.d.ts" />
+/// <reference path="../env.d.ts" />
 import { tool } from "@2mcode-ai/plugin"
 
 const TEAM = {

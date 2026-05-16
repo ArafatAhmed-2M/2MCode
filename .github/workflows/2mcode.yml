@@ -1,4 +1,4 @@
-﻿name: 2M_CODE
+name: 2M_CODE
 
 on:
   issue_comment:

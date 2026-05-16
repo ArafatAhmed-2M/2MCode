@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import { writeHeapSnapshot } from "node:v8"
 import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Global } from "@2mcode-ai/core/global"

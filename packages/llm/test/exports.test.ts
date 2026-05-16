@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import { LLM, LLMClient, Provider } from "@2mcode-ai/llm"
 import { Route, Protocol } from "@2mcode-ai/llm/route"
 import { Provider as ProviderSubpath } from "@2mcode-ai/llm/provider"

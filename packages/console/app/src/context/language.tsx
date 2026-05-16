@@ -1,4 +1,4 @@
-﻿import { createEffect } from "solid-js"
+import { createEffect } from "solid-js"
 import { createStore } from "solid-js/store"
 import { getRequestEvent } from "solid-js/web"
 import { createSimpleContext } from "@2mcode-ai/ui/context"

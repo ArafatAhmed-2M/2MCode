@@ -1,4 +1,4 @@
-﻿# Test Fixtures Guide
+# Test Fixtures Guide
 
 ## Temporary Directory Fixture
 

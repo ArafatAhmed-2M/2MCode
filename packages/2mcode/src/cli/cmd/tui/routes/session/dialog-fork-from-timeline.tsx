@@ -1,4 +1,4 @@
-﻿import { createMemo, onMount } from "solid-js"
+import { createMemo, onMount } from "solid-js"
 import { useSync } from "@tui/context/sync"
 import { DialogSelect, type DialogSelectOption } from "@tui/ui/dialog-select"
 import type { TextPart } from "@2mcode-ai/sdk/v2"

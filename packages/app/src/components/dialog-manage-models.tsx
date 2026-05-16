@@ -1,4 +1,4 @@
-﻿import { Dialog } from "@2mcode-ai/ui/dialog"
+import { Dialog } from "@2mcode-ai/ui/dialog"
 import { List } from "@2mcode-ai/ui/list"
 import { Switch } from "@2mcode-ai/ui/switch"
 import { Tooltip } from "@2mcode-ai/ui/tooltip"

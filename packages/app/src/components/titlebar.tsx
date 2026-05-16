@@ -1,4 +1,4 @@
-﻿import { createEffect, createMemo, Show, untrack } from "solid-js"
+import { createEffect, createMemo, Show, untrack } from "solid-js"
 import { createStore } from "solid-js/store"
 import { useLocation, useNavigate, useParams } from "@solidjs/router"
 import { IconButton } from "@2mcode-ai/ui/icon-button"

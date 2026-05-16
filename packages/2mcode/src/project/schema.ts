@@ -1,4 +1,4 @@
-﻿import { Schema } from "effect"
+import { Schema } from "effect"
 
 import { withStatics } from "@2mcode-ai/core/schema"
 

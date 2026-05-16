@@ -1,4 +1,4 @@
-﻿import { expect } from "bun:test"
+import { expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { Config } from "@/config/config"

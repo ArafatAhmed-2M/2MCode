@@ -1,4 +1,4 @@
-﻿import { describe, expect, test } from "bun:test"
+import { describe, expect, test } from "bun:test"
 import Notifications from "@/cli/cmd/tui/feature-plugins/system/notifications"
 import type { Event, PermissionRequest, QuestionRequest, Session } from "@2mcode-ai/sdk/v2"
 import type { TuiAttentionNotifyInput } from "@2mcode-ai/plugin/tui"

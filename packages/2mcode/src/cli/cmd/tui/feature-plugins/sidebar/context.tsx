@@ -1,4 +1,4 @@
-﻿import type { AssistantMessage } from "@2mcode-ai/sdk/v2"
+import type { AssistantMessage } from "@2mcode-ai/sdk/v2"
 import type { TuiPlugin, TuiPluginApi } from "@2mcode-ai/plugin/tui"
 import type { InternalTuiPlugin } from "../../plugin/internal"
 import { createMemo } from "solid-js"

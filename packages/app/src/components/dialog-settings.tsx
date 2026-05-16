@@ -1,4 +1,4 @@
-﻿import { Component } from "solid-js"
+import { Component } from "solid-js"
 import { Dialog } from "@2mcode-ai/ui/dialog"
 import { Tabs } from "@2mcode-ai/ui/tabs"
 import { Icon } from "@2mcode-ai/ui/icon"

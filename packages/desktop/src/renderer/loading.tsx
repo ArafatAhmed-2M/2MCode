@@ -1,4 +1,4 @@
-﻿import { MetaProvider } from "@solidjs/meta"
+import { MetaProvider } from "@solidjs/meta"
 import { render } from "solid-js/web"
 import "@2mcode-ai/app/index.css"
 import { Font } from "@2mcode-ai/ui/font"

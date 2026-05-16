@@ -1,4 +1,4 @@
-﻿import { Show, createEffect, createMemo, onCleanup } from "solid-js"
+import { Show, createEffect, createMemo, onCleanup } from "solid-js"
 import { createStore } from "solid-js/store"
 import { useNavigate } from "@solidjs/router"
 import { useSpring } from "@2mcode-ai/ui/motion-spring"

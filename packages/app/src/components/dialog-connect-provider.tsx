@@ -1,4 +1,4 @@
-﻿import type { ProviderAuthAuthorization, ProviderAuthMethod } from "@2mcode-ai/sdk/v2/client"
+import type { ProviderAuthAuthorization, ProviderAuthMethod } from "@2mcode-ai/sdk/v2/client"
 import { Button } from "@2mcode-ai/ui/button"
 import { useDialog } from "@2mcode-ai/ui/context/dialog"
 import { Dialog } from "@2mcode-ai/ui/dialog"

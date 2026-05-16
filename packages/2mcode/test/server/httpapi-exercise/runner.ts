@@ -1,4 +1,4 @@
-﻿import { Flag } from "@2mcode-ai/core/flag/flag"
+import { Flag } from "@2mcode-ai/core/flag/flag"
 import { Cause, Duration, Effect } from "effect"
 import { TestLLMServer } from "../../lib/llm-server"
 import type { Config } from "../../../src/config/config"

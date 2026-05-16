@@ -1,4 +1,4 @@
-﻿declare global {
+declare global {
   const _2MCODE_VERSION: string
   const _2MCODE_CHANNEL: string
 }

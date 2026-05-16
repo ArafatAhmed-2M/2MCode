@@ -1,4 +1,4 @@
-﻿import {
+import {
   BoxRenderable,
   RGBA,
   TextareaRenderable,

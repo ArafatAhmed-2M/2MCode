@@ -1,4 +1,4 @@
-﻿import { Npm } from "@2mcode-ai/core/npm"
+import { Npm } from "@2mcode-ai/core/npm"
 import type { InstanceContext } from "../project/instance-context"
 import { Filesystem } from "@/util/filesystem"
 import { Process } from "@/util/process"

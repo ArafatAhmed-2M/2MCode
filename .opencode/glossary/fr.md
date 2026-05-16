@@ -1,4 +1,4 @@
-﻿# fr Glossary
+# fr Glossary
 
 ## Sources
 

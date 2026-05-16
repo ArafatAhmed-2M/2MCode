@@ -1,4 +1,4 @@
-﻿import { afterEach, describe, expect } from "bun:test"
+import { afterEach, describe, expect } from "bun:test"
 import { Effect, Schema } from "effect"
 import { OpenApi } from "effect/unstable/httpapi"
 import { Flag } from "@2mcode-ai/core/flag/flag"

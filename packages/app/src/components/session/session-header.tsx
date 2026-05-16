@@ -1,4 +1,4 @@
-﻿import { AppIcon } from "@2mcode-ai/ui/app-icon"
+import { AppIcon } from "@2mcode-ai/ui/app-icon"
 import { Button } from "@2mcode-ai/ui/button"
 import { DropdownMenu } from "@2mcode-ai/ui/dropdown-menu"
 import { Icon } from "@2mcode-ai/ui/icon"

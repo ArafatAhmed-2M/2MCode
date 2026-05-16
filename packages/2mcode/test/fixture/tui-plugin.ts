@@ -1,4 +1,4 @@
-﻿import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
 import { RGBA, type CliRenderer } from "@opentui/core"
 import type { HostPluginApi } from "../../src/cli/cmd/tui/plugin/slots"
 import { createTuiResolvedConfig } from "./tui-runtime"

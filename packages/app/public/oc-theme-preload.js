@@ -1,4 +1,4 @@
-﻿;(function () {
+;(function () {
   var key = "2M_CODE-theme-id"
   var themeId = localStorage.getItem(key) || "oc-2"
 

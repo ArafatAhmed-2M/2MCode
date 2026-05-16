@@ -1,4 +1,4 @@
-﻿import path from "path"
+import path from "path"
 import { describe, expect, test } from "bun:test"
 import { Effect } from "effect"
 import { NpmConfig } from "@2mcode-ai/core/npm-config"

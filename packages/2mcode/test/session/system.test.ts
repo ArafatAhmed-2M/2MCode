@@ -1,4 +1,4 @@
-﻿import { describe, expect } from "bun:test"
+import { describe, expect } from "bun:test"
 import { Effect, Layer } from "effect"
 import type { Agent } from "../../src/agent/agent"
 import { NamedError } from "@2mcode-ai/core/util/error"

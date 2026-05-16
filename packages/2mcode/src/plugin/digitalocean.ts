@@ -1,4 +1,4 @@
-﻿import type { Hooks, PluginInput } from "@2mcode-ai/plugin"
+import type { Hooks, PluginInput } from "@2mcode-ai/plugin"
 import type { Model } from "@2mcode-ai/sdk/v2"
 import * as Log from "@2mcode-ai/core/util/log"
 import { InstallationVersion } from "@2mcode-ai/core/installation/version"

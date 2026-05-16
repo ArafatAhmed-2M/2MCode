@@ -1,4 +1,4 @@
-﻿import type { AssistantMessage, Message } from "@2mcode-ai/sdk/v2/client"
+import type { AssistantMessage, Message } from "@2mcode-ai/sdk/v2/client"
 
 type Provider = {
   id: string

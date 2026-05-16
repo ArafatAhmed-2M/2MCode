@@ -1,4 +1,4 @@
-﻿import type { Stripe } from "stripe"
+import type { Stripe } from "stripe"
 import { Billing } from "@2mcode-ai/console-core/billing.js"
 import type { APIEvent } from "@solidjs/start/server"
 import { and, Database, eq, sql } from "@2mcode-ai/console-core/drizzle/index.js"

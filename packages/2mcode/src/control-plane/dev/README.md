@@ -1,4 +1,4 @@
-﻿This is a plugin to simulate a remote environment locally. Add this to `.2M_CODE/2M_CODE.jsonc`:
+This is a plugin to simulate a remote environment locally. Add this to `.2M_CODE/2M_CODE.jsonc`:
 
 ```json
   "plugin": ["../packages/2M_CODE/src/control-plane/dev/debug-workspace-plugin.ts"],

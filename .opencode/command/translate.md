@@ -1,4 +1,4 @@
-﻿---
+---
 description: translate English to other languages
 model: 2M_CODE/claude-opus-4-7
 ---

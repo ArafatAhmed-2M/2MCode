@@ -1,4 +1,4 @@
-﻿Launch a new agent to handle complex, multistep tasks autonomously.
+Launch a new agent to handle complex, multistep tasks autonomously.
 
 When using the Task tool, you must specify a subagent_type parameter to select which agent type to use.
 
