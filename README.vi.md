@@ -12,9 +12,9 @@
 </p>
 <p align="center">Trợ lý lập trình AI mã nguồn mở.</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # Các trình quản lý gói (Package managers)
-npm i -g 2M_CODE-ai@latest        # hoặc bun/pnpm/yarn
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS và Linux (khuyên dùng, luôn cập nhật)
-brew install 2M_CODE              # macOS và Linux (công thức brew chính thức, ít cập nhật hơn)
-sudo pacman -S 2M_CODE            # Arch Linux (Bản ổn định)
+npm i -g 2mcode-ai@latest        # hoặc bun/pnpm/yarn
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS và Linux (khuyên dùng, luôn cập nhật)
+brew install 2M Code              # macOS và Linux (công thức brew chính thức, ít cập nhật hơn)
+sudo pacman -S 2M Code            # Arch Linux (Bản ổn định)
 paru -S 2M_CODE-bin               # Arch Linux (Bản mới nhất từ AUR)
-mise use -g 2M_CODE               # Mọi hệ điều hành
-nix run nixpkgs#2M_CODE           # hoặc github:anomalyco/2M_CODE cho nhánh dev mới nhất
+mise use -g 2M Code               # Mọi hệ điều hành
+nix run nixpkgs#2M Code           # hoặc github:anomalyco/2M Code cho nhánh dev mới nhất
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # hoặc github:anomalyco/2M_CODE cho nhánh d
 
 ### Ứng dụng Desktop (BETA)
 
-2M_CODE cũng có sẵn dưới dạng ứng dụng desktop. Tải trực tiếp từ [trang releases](https://github.com/ArafatAhmed-2M/2mcode/releases) hoặc [2M_CODE.ai/download](https://2M_CODE.ai/download).
+2M Code cũng có sẵn dưới dạng ứng dụng desktop. Tải trực tiếp từ [trang releases](https://github.com/ArafatAhmed-2M/2mcode/releases) hoặc [2MCode.ai/download](https://2MCode.ai/download).
 
 | Nền tảng              | Tải xuống                          |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`, `.rpm`, hoặc AppImage      |
 
 ```bash
 # macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### Thư mục cài đặt
 
 Tập lệnh cài đặt tuân theo thứ tự ưu tiên sau cho đường dẫn cài đặt:
 
-1. `$2M_CODE_INSTALL_DIR` - Thư mục cài đặt tùy chỉnh
+1. `$2MCODE_INSTALL_DIR` - Thư mục cài đặt tùy chỉnh
 2. `$XDG_BIN_DIR` - Đường dẫn tuân thủ XDG Base Directory Specification
 3. `$HOME/bin` - Thư mục nhị phân tiêu chuẩn của người dùng (nếu tồn tại hoặc có thể tạo)
-4. `$HOME/.2M_CODE/bin` - Mặc định dự phòng
+4. `$HOME/.2mcode/bin` - Mặc định dự phòng
 
 ```bash
 # Ví dụ
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### Agents (Đại diện)
 
-2M_CODE bao gồm hai agent được tích hợp sẵn mà bạn có thể chuyển đổi bằng phím `Tab`.
+2M Code bao gồm hai agent được tích hợp sẵn mà bạn có thể chuyển đổi bằng phím `Tab`.
 
 - **build** - Agent mặc định, có toàn quyền truy cập cho công việc lập trình
 - **plan** - Agent chỉ đọc dùng để phân tích và khám phá mã nguồn
@@ -113,32 +113,32 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 Ngoài ra còn có một subagent **general** dùng cho các tìm kiếm phức tạp và tác vụ nhiều bước.
 Agent này được sử dụng nội bộ và có thể gọi bằng cách dùng `@general` trong tin nhắn.
 
-Tìm hiểu thêm về [agents](https://2M_CODE.ai/docs/agents).
+Tìm hiểu thêm về [agents](https://2MCode.ai/docs/agents).
 
 ### Tài liệu
 
-Để biết thêm thông tin về cách cấu hình 2M_CODE, [**hãy truy cập tài liệu của chúng tôi**](https://2M_CODE.ai/docs).
+Để biết thêm thông tin về cách cấu hình 2M Code, [**hãy truy cập tài liệu của chúng tôi**](https://2MCode.ai/docs).
 
 ### Đóng góp
 
-Nếu bạn muốn đóng góp cho 2M_CODE, vui lòng đọc [tài liệu hướng dẫn đóng góp](./CONTRIBUTING.md) trước khi gửi pull request.
+Nếu bạn muốn đóng góp cho 2M Code, vui lòng đọc [tài liệu hướng dẫn đóng góp](./CONTRIBUTING.md) trước khi gửi pull request.
 
-### Xây dựng trên nền tảng 2M_CODE
+### Xây dựng trên nền tảng 2M Code
 
-Nếu bạn đang làm việc trên một dự án liên quan đến 2M_CODE và sử dụng "2M_CODE" như một phần của tên dự án, ví dụ "2M_CODE-dashboard" hoặc "2M_CODE-mobile", vui lòng thêm một ghi chú vào README của bạn để làm rõ rằng dự án đó không được xây dựng bởi đội ngũ 2M_CODE và không liên kết với chúng tôi dưới bất kỳ hình thức nào.
+Nếu bạn đang làm việc trên một dự án liên quan đến 2M Code và sử dụng "2M Code" như một phần của tên dự án, ví dụ "2M_CODE-dashboard" hoặc "2M_CODE-mobile", vui lòng thêm một ghi chú vào README của bạn để làm rõ rằng dự án đó không được xây dựng bởi đội ngũ 2M Code và không liên kết với chúng tôi dưới bất kỳ hình thức nào.
 
 ### Các câu hỏi thường gặp (FAQ)
 
-#### 2M_CODE khác biệt thế nào so với Claude Code?
+#### 2M Code khác biệt thế nào so với Claude Code?
 
 Về mặt tính năng, nó rất giống Claude Code. Dưới đây là những điểm khác biệt chính:
 
 - 100% mã nguồn mở
-- Không bị ràng buộc với bất kỳ nhà cung cấp nào. Mặc dù chúng tôi khuyên dùng các mô hình được cung cấp qua [2M_CODE Zen](https://2M_CODE.ai/zen), 2M_CODE có thể được sử dụng với Claude, OpenAI, Google, hoặc thậm chí các mô hình chạy cục bộ. Khi các mô hình phát triển, khoảng cách giữa chúng sẽ thu hẹp lại và giá cả sẽ giảm, vì vậy việc không phụ thuộc vào nhà cung cấp là rất quan trọng.
+- Không bị ràng buộc với bất kỳ nhà cung cấp nào. Mặc dù chúng tôi khuyên dùng các mô hình được cung cấp qua [2M Code Zen](https://2MCode.ai/zen), 2M Code có thể được sử dụng với Claude, OpenAI, Google, hoặc thậm chí các mô hình chạy cục bộ. Khi các mô hình phát triển, khoảng cách giữa chúng sẽ thu hẹp lại và giá cả sẽ giảm, vì vậy việc không phụ thuộc vào nhà cung cấp là rất quan trọng.
 - Hỗ trợ LSP ngay từ đầu
-- Tập trung vào TUI (Giao diện người dùng dòng lệnh). 2M_CODE được xây dựng bởi những người dùng neovim và đội ngũ tạo ra [terminal.shop](https://terminal.shop); chúng tôi sẽ đẩy giới hạn của những gì có thể làm được trên terminal lên mức tối đa.
-- Kiến trúc client/server. Chẳng hạn, điều này cho phép 2M_CODE chạy trên máy tính của bạn trong khi bạn điều khiển nó từ xa qua một ứng dụng di động, nghĩa là frontend TUI chỉ là một trong những client có thể dùng.
+- Tập trung vào TUI (Giao diện người dùng dòng lệnh). 2M Code được xây dựng bởi những người dùng neovim và đội ngũ tạo ra [terminal.shop](https://terminal.shop); chúng tôi sẽ đẩy giới hạn của những gì có thể làm được trên terminal lên mức tối đa.
+- Kiến trúc client/server. Chẳng hạn, điều này cho phép 2M Code chạy trên máy tính của bạn trong khi bạn điều khiển nó từ xa qua một ứng dụng di động, nghĩa là frontend TUI chỉ là một trong những client có thể dùng.
 
 ---
 
-**Tham gia cộng đồng của chúng tôi** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**Tham gia cộng đồng của chúng tôi** [Discord](https://discord.gg/2M Code) | [X.com](https://x.com/2M Code)

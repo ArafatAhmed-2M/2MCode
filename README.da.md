@@ -12,9 +12,9 @@
 </p>
 <p align="center">Den open source AI-kodeagent.</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # Pakkehåndteringer
-npm i -g 2M_CODE-ai@latest        # eller bun/pnpm/yarn
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS og Linux (anbefalet, altid up to date)
-brew install 2M_CODE              # macOS og Linux (officiel brew formula, opdateres sjældnere)
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
+npm i -g 2mcode-ai@latest        # eller bun/pnpm/yarn
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS og Linux (anbefalet, altid up to date)
+brew install 2M Code              # macOS og Linux (officiel brew formula, opdateres sjældnere)
+sudo pacman -S 2M Code            # Arch Linux (Stable)
 paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # alle OS
-nix run nixpkgs#2M_CODE           # eller github:anomalyco/2M_CODE for nyeste dev-branch
+mise use -g 2M Code               # alle OS
+nix run nixpkgs#2M Code           # eller github:anomalyco/2M Code for nyeste dev-branch
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # eller github:anomalyco/2M_CODE for nyeste de
 
 ### Desktop-app (BETA)
 
-2M_CODE findes også som desktop-app. Download direkte fra [releases-siden](https://github.com/ArafatAhmed-2M/2mcode/releases) eller [2M_CODE.ai/download](https://2M_CODE.ai/download).
+2M Code findes også som desktop-app. Download direkte fra [releases-siden](https://github.com/ArafatAhmed-2M/2mcode/releases) eller [2MCode.ai/download](https://2MCode.ai/download).
 
 | Platform              | Download                           |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`, `.rpm`, eller AppImage     |
 
 ```bash
 # macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### Installationsmappe
 
 Installationsscriptet bruger følgende prioriteringsrækkefølge for installationsstien:
 
-1. `$2M_CODE_INSTALL_DIR` - Tilpasset installationsmappe
+1. `$2MCODE_INSTALL_DIR` - Tilpasset installationsmappe
 2. `$XDG_BIN_DIR` - Sti der følger XDG Base Directory Specification
 3. `$HOME/bin` - Standard bruger-bin-mappe (hvis den findes eller kan oprettes)
-4. `$HOME/.2M_CODE/bin` - Standard fallback
+4. `$HOME/.2mcode/bin` - Standard fallback
 
 ```bash
 # Eksempler
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### Agents
 
-2M_CODE har to indbyggede agents, som du kan skifte mellem med `Tab`-tasten.
+2M Code har to indbyggede agents, som du kan skifte mellem med `Tab`-tasten.
 
 - **build** - Standard, agent med fuld adgang til udviklingsarbejde
 - **plan** - Skrivebeskyttet agent til analyse og kodeudforskning
@@ -113,19 +113,19 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 Derudover findes der en **general**-subagent til komplekse søgninger og flertrinsopgaver.
 Den bruges internt og kan kaldes via `@general` i beskeder.
 
-Læs mere om [agents](https://2M_CODE.ai/docs/agents).
+Læs mere om [agents](https://2MCode.ai/docs/agents).
 
 ### Dokumentation
 
-For mere info om konfiguration af 2M_CODE, [**se vores docs**](https://2M_CODE.ai/docs).
+For mere info om konfiguration af 2M Code, [**se vores docs**](https://2MCode.ai/docs).
 
 ### Bidrag
 
-Hvis du vil bidrage til 2M_CODE, så læs vores [contributing docs](./CONTRIBUTING.md) før du sender en pull request.
+Hvis du vil bidrage til 2M Code, så læs vores [contributing docs](./CONTRIBUTING.md) før du sender en pull request.
 
-### Bygget på 2M_CODE
+### Bygget på 2M Code
 
-Hvis du arbejder på et projekt der er relateret til 2M_CODE og bruger "2M_CODE" som en del af navnet; f.eks. "2M_CODE-dashboard" eller "2M_CODE-mobile", så tilføj en note i din README, der tydeliggør at projektet ikke er bygget af 2M_CODE-teamet og ikke er tilknyttet os på nogen måde.
+Hvis du arbejder på et projekt der er relateret til 2M Code og bruger "2M Code" som en del af navnet; f.eks. "2M_CODE-dashboard" eller "2M_CODE-mobile", så tilføj en note i din README, der tydeliggør at projektet ikke er bygget af 2M_CODE-teamet og ikke er tilknyttet os på nogen måde.
 
 ### FAQ
 
@@ -134,11 +134,11 @@ Hvis du arbejder på et projekt der er relateret til 2M_CODE og bruger "2M_CODE"
 Det minder meget om Claude Code i forhold til funktionalitet. Her er de vigtigste forskelle:
 
 - 100% open source
-- Ikke låst til en udbyder. Selvom vi anbefaler modellerne via [2M_CODE Zen](https://2M_CODE.ai/zen); kan 2M_CODE bruges med Claude, OpenAI, Google eller endda lokale modeller. Efterhånden som modeller udvikler sig vil forskellene mindskes og priserne falde, så det er vigtigt at være provider-agnostic.
+- Ikke låst til en udbyder. Selvom vi anbefaler modellerne via [2M Code Zen](https://2MCode.ai/zen); kan 2M Code bruges med Claude, OpenAI, Google eller endda lokale modeller. Efterhånden som modeller udvikler sig vil forskellene mindskes og priserne falde, så det er vigtigt at være provider-agnostic.
 - LSP-support out of the box
-- Fokus på TUI. 2M_CODE er bygget af neovim-brugere og skaberne af [terminal.shop](https://terminal.shop); vi vil skubbe grænserne for hvad der er muligt i terminalen.
-- Klient/server-arkitektur. Det kan f.eks. lade 2M_CODE køre på din computer, mens du styrer den eksternt fra en mobilapp. Det betyder at TUI-frontend'en kun er en af de mulige clients.
+- Fokus på TUI. 2M Code er bygget af neovim-brugere og skaberne af [terminal.shop](https://terminal.shop); vi vil skubbe grænserne for hvad der er muligt i terminalen.
+- Klient/server-arkitektur. Det kan f.eks. lade 2M Code køre på din computer, mens du styrer den eksternt fra en mobilapp. Det betyder at TUI-frontend'en kun er en af de mulige clients.
 
 ---
 
-**Bliv en del af vores community** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**Bliv en del af vores community** [Discord](https://discord.gg/2M Code) | [X.com](https://x.com/2M Code)

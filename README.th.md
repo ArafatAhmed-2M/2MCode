@@ -12,9 +12,9 @@
 </p>
 <p align="center">เอเจนต์การเขียนโค้ดด้วย AI แบบโอเพนซอร์ส</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="สถานะการสร้าง" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="สถานะการสร้าง" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # ตัวจัดการแพ็กเกจ
-npm i -g 2M_CODE-ai@latest        # หรือ bun/pnpm/yarn
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS และ Linux (แนะนำ อัปเดตเสมอ)
-brew install 2M_CODE              # macOS และ Linux (brew formula อย่างเป็นทางการ อัปเดตน้อยกว่า)
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
+npm i -g 2mcode-ai@latest        # หรือ bun/pnpm/yarn
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS และ Linux (แนะนำ อัปเดตเสมอ)
+brew install 2M Code              # macOS และ Linux (brew formula อย่างเป็นทางการ อัปเดตน้อยกว่า)
+sudo pacman -S 2M Code            # Arch Linux (Stable)
 paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # ระบบปฏิบัติการใดก็ได้
-nix run nixpkgs#2M_CODE           # หรือ github:anomalyco/2M_CODE สำหรับสาขาพัฒนาล่าสุด
+mise use -g 2M Code               # ระบบปฏิบัติการใดก็ได้
+nix run nixpkgs#2M Code           # หรือ github:anomalyco/2M Code สำหรับสาขาพัฒนาล่าสุด
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # หรือ github:anomalyco/2M_CODE สำ
 
 ### แอปพลิเคชันเดสก์ท็อป (เบต้า)
 
-2M_CODE มีให้ใช้งานเป็นแอปพลิเคชันเดสก์ท็อป ดาวน์โหลดโดยตรงจาก [หน้ารุ่น](https://github.com/ArafatAhmed-2M/2mcode/releases) หรือ [2M_CODE.ai/download](https://2M_CODE.ai/download)
+2M Code มีให้ใช้งานเป็นแอปพลิเคชันเดสก์ท็อป ดาวน์โหลดโดยตรงจาก [หน้ารุ่น](https://github.com/ArafatAhmed-2M/2mcode/releases) หรือ [2MCode.ai/download](https://2MCode.ai/download)
 
 | แพลตฟอร์ม             | ดาวน์โหลด                          |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`, `.rpm`, หรือ AppImage      |
 
 ```bash
 # macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### ไดเรกทอรีการติดตั้ง
 
 สคริปต์การติดตั้งจะใช้ลำดับความสำคัญตามเส้นทางการติดตั้ง:
 
-1. `$2M_CODE_INSTALL_DIR` - ไดเรกทอรีการติดตั้งที่กำหนดเอง
+1. `$2MCODE_INSTALL_DIR` - ไดเรกทอรีการติดตั้งที่กำหนดเอง
 2. `$XDG_BIN_DIR` - เส้นทางที่สอดคล้องกับ XDG Base Directory Specification
 3. `$HOME/bin` - ไดเรกทอรีไบนารีผู้ใช้มาตรฐาน (หากมีอยู่หรือสามารถสร้างได้)
-4. `$HOME/.2M_CODE/bin` - ค่าสำรองเริ่มต้น
+4. `$HOME/.2mcode/bin` - ค่าสำรองเริ่มต้น
 
 ```bash
 # ตัวอย่าง
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### เอเจนต์
 
-2M_CODE รวมเอเจนต์ในตัวสองตัวที่คุณสามารถสลับได้ด้วยปุ่ม `Tab`
+2M Code รวมเอเจนต์ในตัวสองตัวที่คุณสามารถสลับได้ด้วยปุ่ม `Tab`
 
 - **build** - เอเจนต์เริ่มต้น มีสิทธิ์เข้าถึงแบบเต็มสำหรับงานพัฒนา
 - **plan** - เอเจนต์อ่านอย่างเดียวสำหรับการวิเคราะห์และการสำรวจโค้ด
@@ -113,19 +113,19 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 นอกจากนี้ยังมีเอเจนต์ย่อย **general** สำหรับการค้นหาที่ซับซ้อนและงานหลายขั้นตอน
 ใช้ภายในและสามารถเรียกใช้ได้โดยใช้ `@general` ในข้อความ
 
-เรียนรู้เพิ่มเติมเกี่ยวกับ [เอเจนต์](https://2M_CODE.ai/docs/agents)
+เรียนรู้เพิ่มเติมเกี่ยวกับ [เอเจนต์](https://2MCode.ai/docs/agents)
 
 ### เอกสารประกอบ
 
-สำหรับข้อมูลเพิ่มเติมเกี่ยวกับวิธีกำหนดค่า 2M_CODE [**ไปที่เอกสารของเรา**](https://2M_CODE.ai/docs)
+สำหรับข้อมูลเพิ่มเติมเกี่ยวกับวิธีกำหนดค่า 2M Code [**ไปที่เอกสารของเรา**](https://2MCode.ai/docs)
 
 ### การมีส่วนร่วม
 
-หากคุณสนใจที่จะมีส่วนร่วมใน 2M_CODE โปรดอ่าน [เอกสารการมีส่วนร่วม](./CONTRIBUTING.md) ก่อนส่ง Pull Request
+หากคุณสนใจที่จะมีส่วนร่วมใน 2M Code โปรดอ่าน [เอกสารการมีส่วนร่วม](./CONTRIBUTING.md) ก่อนส่ง Pull Request
 
-### การสร้างบน 2M_CODE
+### การสร้างบน 2M Code
 
-หากคุณทำงานในโปรเจกต์ที่เกี่ยวข้องกับ 2M_CODE และใช้ "2M_CODE" เป็นส่วนหนึ่งของชื่อ เช่น "2M_CODE-dashboard" หรือ "2M_CODE-mobile" โปรดเพิ่มหมายเหตุใน README ของคุณเพื่อชี้แจงว่าไม่ได้สร้างโดยทีม 2M_CODE และไม่ได้เกี่ยวข้องกับเราในทางใด
+หากคุณทำงานในโปรเจกต์ที่เกี่ยวข้องกับ 2M Code และใช้ "2M Code" เป็นส่วนหนึ่งของชื่อ เช่น "2M_CODE-dashboard" หรือ "2M_CODE-mobile" โปรดเพิ่มหมายเหตุใน README ของคุณเพื่อชี้แจงว่าไม่ได้สร้างโดยทีม 2M Code และไม่ได้เกี่ยวข้องกับเราในทางใด
 
 ### คำถามที่พบบ่อย
 
@@ -134,11 +134,11 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 คล้ายกับ Claude Code มากในแง่ความสามารถ นี่คือความแตกต่างหลัก:
 
 - โอเพนซอร์ส 100%
-- ไม่ผูกมัดกับผู้ให้บริการใดๆ แม้ว่าเราจะแนะนำโมเดลที่เราจัดหาให้ผ่าน [2M_CODE Zen](https://2M_CODE.ai/zen) 2M_CODE สามารถใช้กับ Claude, OpenAI, Google หรือแม้กระทั่งโมเดลในเครื่องได้ เมื่อโมเดลพัฒนาช่องว่างระหว่างพวกมันจะปิดลงและราคาจะลดลง ดังนั้นการไม่ผูกมัดกับผู้ให้บริการจึงสำคัญ
+- ไม่ผูกมัดกับผู้ให้บริการใดๆ แม้ว่าเราจะแนะนำโมเดลที่เราจัดหาให้ผ่าน [2M Code Zen](https://2MCode.ai/zen) 2M Code สามารถใช้กับ Claude, OpenAI, Google หรือแม้กระทั่งโมเดลในเครื่องได้ เมื่อโมเดลพัฒนาช่องว่างระหว่างพวกมันจะปิดลงและราคาจะลดลง ดังนั้นการไม่ผูกมัดกับผู้ให้บริการจึงสำคัญ
 - รองรับ LSP ใช้งานได้ทันทีหลังการติดตั้งโดยไม่ต้องปรับแต่งหรือเปลี่ยนแปลงฟังก์ชันการทำงานใด ๆ
-- เน้นที่ TUI 2M_CODE สร้างโดยผู้ใช้ neovim และผู้สร้าง [terminal.shop](https://terminal.shop) เราจะผลักดันขีดจำกัดของสิ่งที่เป็นไปได้ในเทอร์มินัล
-- สถาปัตยกรรมไคลเอนต์/เซิร์ฟเวอร์ ตัวอย่างเช่น อาจอนุญาตให้ 2M_CODE ทำงานบนคอมพิวเตอร์ของคุณ ในขณะที่คุณสามารถขับเคลื่อนจากระยะไกลผ่านแอปมือถือ หมายความว่า TUI frontend เป็นหนึ่งในไคลเอนต์ที่เป็นไปได้เท่านั้น
+- เน้นที่ TUI 2M Code สร้างโดยผู้ใช้ neovim และผู้สร้าง [terminal.shop](https://terminal.shop) เราจะผลักดันขีดจำกัดของสิ่งที่เป็นไปได้ในเทอร์มินัล
+- สถาปัตยกรรมไคลเอนต์/เซิร์ฟเวอร์ ตัวอย่างเช่น อาจอนุญาตให้ 2M Code ทำงานบนคอมพิวเตอร์ของคุณ ในขณะที่คุณสามารถขับเคลื่อนจากระยะไกลผ่านแอปมือถือ หมายความว่า TUI frontend เป็นหนึ่งในไคลเอนต์ที่เป็นไปได้เท่านั้น
 
 ---
 
-**ร่วมชุมชนของเรา** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**ร่วมชุมชนของเรา** [Discord](https://discord.gg/2M Code) | [X.com](https://x.com/2M Code)

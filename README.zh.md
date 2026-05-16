@@ -12,9 +12,9 @@
 </p>
 <p align="center">开源的 AI Coding Agent。</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # 直接安装 (YOLO)
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # 软件包管理器
-npm i -g 2M_CODE-ai@latest        # 也可使用 bun/pnpm/yarn
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS 和 Linux（推荐，始终保持最新）
-brew install 2M_CODE              # macOS 和 Linux（官方 brew formula，更新频率较低）
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
+npm i -g 2mcode-ai@latest        # 也可使用 bun/pnpm/yarn
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS 和 Linux（推荐，始终保持最新）
+brew install 2M Code              # macOS 和 Linux（官方 brew formula，更新频率较低）
+sudo pacman -S 2M Code            # Arch Linux (Stable)
 paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # 任意系统
-nix run nixpkgs#2M_CODE           # 或用 github:anomalyco/2M_CODE 获取最新 dev 分支
+mise use -g 2M Code               # 任意系统
+nix run nixpkgs#2M Code           # 或用 github:anomalyco/2M Code 获取最新 dev 分支
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # 或用 github:anomalyco/2M_CODE 获取最新
 
 ### 桌面应用程序 (BETA)
 
-2M_CODE 也提供桌面版应用。可直接从 [发布页 (releases page)](https://github.com/ArafatAhmed-2M/2mcode/releases) 或 [2M_CODE.ai/download](https://2M_CODE.ai/download) 下载。
+2M Code 也提供桌面版应用。可直接从 [发布页 (releases page)](https://github.com/ArafatAhmed-2M/2mcode/releases) 或 [2MCode.ai/download](https://2MCode.ai/download) 下载。
 
 | 平台                  | 下载文件                           |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`、`.rpm` 或 AppImage         |
 
 ```bash
 # macOS (Homebrew Cask)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### 安装目录
 
 安装脚本按照以下优先级决定安装路径：
 
-1. `$2M_CODE_INSTALL_DIR` - 自定义安装目录
+1. `$2MCODE_INSTALL_DIR` - 自定义安装目录
 2. `$XDG_BIN_DIR` - 符合 XDG 基础目录规范的路径
 3. `$HOME/bin` - 如果存在或可创建的用户二进制目录
-4. `$HOME/.2M_CODE/bin` - 默认备用路径
+4. `$HOME/.2mcode/bin` - 默认备用路径
 
 ```bash
 # 示例
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### Agents
 
-2M_CODE 内置两种 Agent，可用 `Tab` 键快速切换：
+2M Code 内置两种 Agent，可用 `Tab` 键快速切换：
 
 - **build** - 默认模式，具备完整权限，适合开发工作
 - **plan** - 只读模式，适合代码分析与探索
@@ -112,19 +112,19 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 
 另外还包含一个 **general** 子 Agent，用于复杂搜索和多步任务，内部使用，也可在消息中输入 `@general` 调用。
 
-了解更多 [Agents](https://2M_CODE.ai/docs/agents) 相关信息。
+了解更多 [Agents](https://2MCode.ai/docs/agents) 相关信息。
 
 ### 文档
 
-更多配置说明请查看我们的 [**官方文档**](https://2M_CODE.ai/docs)。
+更多配置说明请查看我们的 [**官方文档**](https://2MCode.ai/docs)。
 
 ### 参与贡献
 
 如有兴趣贡献代码，请在提交 PR 前阅读 [贡献指南 (Contributing Docs)](./CONTRIBUTING.md)。
 
-### 基于 2M_CODE 进行开发
+### 基于 2M Code 进行开发
 
-如果你在项目名中使用了 “2M_CODE”（如 “2M_CODE-dashboard” 或 “2M_CODE-mobile”），请在 README 里注明该项目不是 2M_CODE 团队官方开发，且不存在隶属关系。
+如果你在项目名中使用了 “2M Code”（如 “2M_CODE-dashboard” 或 “2M_CODE-mobile”），请在 README 里注明该项目不是 2M Code 团队官方开发，且不存在隶属关系。
 
 ### 常见问题 (FAQ)
 
@@ -133,11 +133,11 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 功能上很相似，关键差异：
 
 - 100% 开源。
-- 不绑定特定提供商。推荐使用 [2M_CODE Zen](https://2M_CODE.ai/zen) 的模型，但也可搭配 Claude、OpenAI、Google 甚至本地模型。模型迭代会缩小差异、降低成本，因此保持 provider-agnostic 很重要。
+- 不绑定特定提供商。推荐使用 [2M Code Zen](https://2MCode.ai/zen) 的模型，但也可搭配 Claude、OpenAI、Google 甚至本地模型。模型迭代会缩小差异、降低成本，因此保持 provider-agnostic 很重要。
 - 内置 LSP 支持。
-- 聚焦终端界面 (TUI)。2M_CODE 由 Neovim 爱好者和 [terminal.shop](https://terminal.shop) 的创建者打造，会持续探索终端的极限。
+- 聚焦终端界面 (TUI)。2M Code 由 Neovim 爱好者和 [terminal.shop](https://terminal.shop) 的创建者打造，会持续探索终端的极限。
 - 客户端/服务器架构。可在本机运行，同时用移动设备远程驱动。TUI 只是众多潜在客户端之一。
 
 ---
 
-**加入我们的社区** [飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=738j8655-cd59-4633-a30a-1124e0096789&qr_code=true) | [X.com](https://x.com/2M_CODE)
+**加入我们的社区** [飞书](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=738j8655-cd59-4633-a30a-1124e0096789&qr_code=true) | [X.com](https://x.com/2M Code)

@@ -12,9 +12,9 @@
 </p>
 <p align="center">オープンソースのAIコーディングエージェント。</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # パッケージマネージャー
-npm i -g 2M_CODE-ai@latest        # bun/pnpm/yarn でもOK
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS と Linux（推奨。常に最新）
-brew install 2M_CODE              # macOS と Linux（公式 brew formula。更新頻度は低め）
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
+npm i -g 2mcode-ai@latest        # bun/pnpm/yarn でもOK
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS と Linux（推奨。常に最新）
+brew install 2M Code              # macOS と Linux（公式 brew formula。更新頻度は低め）
+sudo pacman -S 2M Code            # Arch Linux (Stable)
 paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # どのOSでも
-nix run nixpkgs#2M_CODE           # または github:anomalyco/2M_CODE で最新 dev ブランチ
+mise use -g 2M Code               # どのOSでも
+nix run nixpkgs#2M Code           # または github:anomalyco/2M Code で最新 dev ブランチ
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # または github:anomalyco/2M_CODE で最新
 
 ### デスクトップアプリ (BETA)
 
-2M_CODE はデスクトップアプリとしても利用できます。[releases page](https://github.com/ArafatAhmed-2M/2mcode/releases) から直接ダウンロードするか、[2M_CODE.ai/download](https://2M_CODE.ai/download) を利用してください。
+2M Code はデスクトップアプリとしても利用できます。[releases page](https://github.com/ArafatAhmed-2M/2mcode/releases) から直接ダウンロードするか、[2MCode.ai/download](https://2MCode.ai/download) を利用してください。
 
 | プラットフォーム      | ダウンロード                       |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`、`.rpm`、または AppImage    |
 
 ```bash
 # macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### インストールディレクトリ
 
 インストールスクリプトは、インストール先パスを次の優先順位で決定します。
 
-1. `$2M_CODE_INSTALL_DIR` - カスタムのインストールディレクトリ
+1. `$2MCODE_INSTALL_DIR` - カスタムのインストールディレクトリ
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification に準拠したパス
 3. `$HOME/bin` - 標準のユーザー用バイナリディレクトリ（存在する場合、または作成できる場合）
-4. `$HOME/.2M_CODE/bin` - デフォルトのフォールバック
+4. `$HOME/.2mcode/bin` - デフォルトのフォールバック
 
 ```bash
 # 例
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### Agents
 
-2M_CODE には組み込みの Agent が2つあり、`Tab` キーで切り替えられます。
+2M Code には組み込みの Agent が2つあり、`Tab` キーで切り替えられます。
 
 - **build** - デフォルト。開発向けのフルアクセス Agent
 - **plan** - 分析とコード探索向けの読み取り専用 Agent
@@ -113,19 +113,19 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 また、複雑な検索やマルチステップのタスク向けに **general** サブ Agent も含まれています。
 内部的に使用されており、メッセージで `@general` と入力して呼び出せます。
 
-[agents](https://2M_CODE.ai/docs/agents) の詳細はこちら。
+[agents](https://2MCode.ai/docs/agents) の詳細はこちら。
 
 ### ドキュメント
 
-2M_CODE の設定については [**ドキュメント**](https://2M_CODE.ai/docs) を参照してください。
+2M Code の設定については [**ドキュメント**](https://2MCode.ai/docs) を参照してください。
 
 ### コントリビュート
 
-2M_CODE に貢献したい場合は、Pull Request を送る前に [contributing docs](./CONTRIBUTING.md) を読んでください。
+2M Code に貢献したい場合は、Pull Request を送る前に [contributing docs](./CONTRIBUTING.md) を読んでください。
 
-### 2M_CODE の上に構築する
+### 2M Code の上に構築する
 
-2M_CODE に関連するプロジェクトで、名前に "2M_CODE"（例: "2M_CODE-dashboard" や "2M_CODE-mobile"）を含める場合は、そのプロジェクトが 2M_CODE チームによって作られたものではなく、いかなる形でも関係がないことを README に明記してください。
+2M Code に関連するプロジェクトで、名前に "2M Code"（例: "2M_CODE-dashboard" や "2M_CODE-mobile"）を含める場合は、そのプロジェクトが 2M Code チームによって作られたものではなく、いかなる形でも関係がないことを README に明記してください。
 
 ### FAQ
 
@@ -134,11 +134,11 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 機能面では Claude Code と非常に似ています。主な違いは次のとおりです。
 
 - 100% オープンソース
-- 特定のプロバイダーに依存しません。[2M_CODE Zen](https://2M_CODE.ai/zen) で提供しているモデルを推奨しますが、2M_CODE は Claude、OpenAI、Google、またはローカルモデルでも利用できます。モデルが進化すると差は縮まり価格も下がるため、provider-agnostic であることが重要です。
+- 特定のプロバイダーに依存しません。[2M Code Zen](https://2MCode.ai/zen) で提供しているモデルを推奨しますが、2M Code は Claude、OpenAI、Google、またはローカルモデルでも利用できます。モデルが進化すると差は縮まり価格も下がるため、provider-agnostic であることが重要です。
 - そのまま使える LSP サポート
-- TUI にフォーカス。2M_CODE は neovim ユーザーと [terminal.shop](https://terminal.shop) の制作者によって作られており、ターミナルで可能なことの限界を押し広げます。
-- クライアント/サーバー構成。例えば 2M_CODE をあなたのPCで動かし、モバイルアプリからリモート操作できます。TUI フロントエンドは複数あるクライアントの1つにすぎません。
+- TUI にフォーカス。2M Code は neovim ユーザーと [terminal.shop](https://terminal.shop) の制作者によって作られており、ターミナルで可能なことの限界を押し広げます。
+- クライアント/サーバー構成。例えば 2M Code をあなたのPCで動かし、モバイルアプリからリモート操作できます。TUI フロントエンドは複数あるクライアントの1つにすぎません。
 
 ---
 
-**コミュニティに参加** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**コミュニティに参加** [Discord](https://discord.gg/2M Code) | [X.com](https://x.com/2M Code)

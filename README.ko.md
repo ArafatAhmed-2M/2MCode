@@ -12,9 +12,9 @@
 </p>
 <p align="center">오픈 소스 AI 코딩 에이전트.</p>
 <p align="center">
-  <a href="https://2M_CODE.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
-  <a href="https://www.npmjs.com/package/2M_CODE-ai"><img alt="npm" src="https://img.shields.io/npm/v/2M_CODE-ai?style=flat-square" /></a>
-  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M_CODE/publish.yml?style=flat-square&branch=dev" /></a>
+  <a href="https://2MCode.ai/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://www.npmjs.com/package/2mcode-ai"><img alt="npm" src="https://img.shields.io/npm/v/2mcode-ai?style=flat-square" /></a>
+  <a href="https://github.com/ArafatAhmed-2M/2mcode/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/anomalyco/2M Code/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
   <a href="README.vi.md">Tiếng Việt</a>
 </p>
 
-[![2M_CODE Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2M_CODE.ai)
+[![2M Code Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://2MCode.ai)
 
 ---
 
@@ -50,18 +50,18 @@
 
 ```bash
 # YOLO
-curl -fsSL https://2M_CODE.ai/install | bash
+curl -fsSL https://2MCode.ai/install | bash
 
 # 패키지 매니저
-npm i -g 2M_CODE-ai@latest        # bun/pnpm/yarn 도 가능
-scoop install 2M_CODE             # Windows
-choco install 2M_CODE             # Windows
-brew install anomalyco/tap/2M_CODE # macOS 및 Linux (권장, 항상 최신)
-brew install 2M_CODE              # macOS 및 Linux (공식 brew formula, 업데이트 빈도 낮음)
-sudo pacman -S 2M_CODE            # Arch Linux (Stable)
+npm i -g 2mcode-ai@latest        # bun/pnpm/yarn 도 가능
+scoop install 2M Code             # Windows
+choco install 2M Code             # Windows
+brew install anomalyco/tap/2M Code # macOS 및 Linux (권장, 항상 최신)
+brew install 2M Code              # macOS 및 Linux (공식 brew formula, 업데이트 빈도 낮음)
+sudo pacman -S 2M Code            # Arch Linux (Stable)
 paru -S 2M_CODE-bin               # Arch Linux (Latest from AUR)
-mise use -g 2M_CODE               # 어떤 OS든
-nix run nixpkgs#2M_CODE           # 또는 github:anomalyco/2M_CODE 로 최신 dev 브랜치
+mise use -g 2M Code               # 어떤 OS든
+nix run nixpkgs#2M Code           # 또는 github:anomalyco/2M Code 로 최신 dev 브랜치
 ```
 
 > [!TIP]
@@ -69,40 +69,40 @@ nix run nixpkgs#2M_CODE           # 또는 github:anomalyco/2M_CODE 로 최신 d
 
 ### 데스크톱 앱 (BETA)
 
-2M_CODE 는 데스크톱 앱으로도 제공됩니다. [releases page](https://github.com/ArafatAhmed-2M/2mcode/releases) 에서 직접 다운로드하거나 [2M_CODE.ai/download](https://2M_CODE.ai/download) 를 이용하세요.
+2M Code 는 데스크톱 앱으로도 제공됩니다. [releases page](https://github.com/ArafatAhmed-2M/2mcode/releases) 에서 직접 다운로드하거나 [2MCode.ai/download](https://2MCode.ai/download) 를 이용하세요.
 
 | 플랫폼                | 다운로드                           |
 | --------------------- | ---------------------------------- |
-| macOS (Apple Silicon) | `2M_CODE-desktop-mac-arm64.dmg`   |
-| macOS (Intel)         | `2M_CODE-desktop-mac-x64.dmg`     |
-| Windows               | `2M_CODE-desktop-windows-x64.exe` |
+| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`   |
+| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`     |
+| Windows               | `2mcode-desktop-windows-x64.exe` |
 | Linux                 | `.deb`, `.rpm`, 또는 AppImage      |
 
 ```bash
 # macOS (Homebrew)
-brew install --cask 2M_CODE-desktop
+brew install --cask 2mcode-desktop
 # Windows (Scoop)
-scoop bucket add extras; scoop install extras/2M_CODE-desktop
+scoop bucket add extras; scoop install extras/2mcode-desktop
 ```
 
 #### 설치 디렉터리
 
 설치 스크립트는 설치 경로를 다음 우선순위로 결정합니다.
 
-1. `$2M_CODE_INSTALL_DIR` - 사용자 지정 설치 디렉터리
+1. `$2MCODE_INSTALL_DIR` - 사용자 지정 설치 디렉터리
 2. `$XDG_BIN_DIR` - XDG Base Directory Specification 준수 경로
 3. `$HOME/bin` - 표준 사용자 바이너리 디렉터리 (존재하거나 생성 가능할 경우)
-4. `$HOME/.2M_CODE/bin` - 기본 폴백
+4. `$HOME/.2mcode/bin` - 기본 폴백
 
 ```bash
 # 예시
-2M_CODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2M_CODE.ai/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
+2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://2MCode.ai/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2MCode.ai/install | bash
 ```
 
 ### Agents
 
-2M_CODE 에는 내장 에이전트 2개가 있으며 `Tab` 키로 전환할 수 있습니다.
+2M Code 에는 내장 에이전트 2개가 있으며 `Tab` 키로 전환할 수 있습니다.
 
 - **build** - 기본값, 개발 작업을 위한 전체 권한 에이전트
 - **plan** - 분석 및 코드 탐색을 위한 읽기 전용 에이전트
@@ -113,19 +113,19 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 또한 복잡한 검색과 여러 단계 작업을 위한 **general** 서브 에이전트가 포함되어 있습니다.
 내부적으로 사용되며, 메시지에서 `@general` 로 호출할 수 있습니다.
 
-[agents](https://2M_CODE.ai/docs/agents) 에 대해 더 알아보세요.
+[agents](https://2MCode.ai/docs/agents) 에 대해 더 알아보세요.
 
 ### 문서
 
-2M_CODE 설정에 대한 자세한 내용은 [**문서**](https://2M_CODE.ai/docs) 를 참고하세요.
+2M Code 설정에 대한 자세한 내용은 [**문서**](https://2MCode.ai/docs) 를 참고하세요.
 
 ### 기여하기
 
-2M_CODE 에 기여하고 싶다면, Pull Request 를 제출하기 전에 [contributing docs](./CONTRIBUTING.md) 를 읽어주세요.
+2M Code 에 기여하고 싶다면, Pull Request 를 제출하기 전에 [contributing docs](./CONTRIBUTING.md) 를 읽어주세요.
 
-### 2M_CODE 기반으로 만들기
+### 2M Code 기반으로 만들기
 
-2M_CODE 와 관련된 프로젝트를 진행하면서 이름에 "2M_CODE"(예: "2M_CODE-dashboard" 또는 "2M_CODE-mobile") 를 포함한다면, README 에 해당 프로젝트가 2M_CODE 팀이 만든 것이 아니며 어떤 방식으로도 우리와 제휴되어 있지 않다는 점을 명시해 주세요.
+2M Code 와 관련된 프로젝트를 진행하면서 이름에 "2M Code"(예: "2M_CODE-dashboard" 또는 "2M_CODE-mobile") 를 포함한다면, README 에 해당 프로젝트가 2M Code 팀이 만든 것이 아니며 어떤 방식으로도 우리와 제휴되어 있지 않다는 점을 명시해 주세요.
 
 ### FAQ
 
@@ -134,11 +134,11 @@ XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://2M_CODE.ai/install | bash
 기능 면에서는 Claude Code 와 매우 유사합니다. 주요 차이점은 다음과 같습니다.
 
 - 100% 오픈 소스
-- 특정 제공자에 묶여 있지 않습니다. [2M_CODE Zen](https://2M_CODE.ai/zen) 을 통해 제공하는 모델을 권장하지만, 2M_CODE 는 Claude, OpenAI, Google 또는 로컬 모델과도 사용할 수 있습니다. 모델이 발전하면서 격차는 줄고 가격은 내려가므로 provider-agnostic 인 것이 중요합니다.
+- 특정 제공자에 묶여 있지 않습니다. [2M Code Zen](https://2MCode.ai/zen) 을 통해 제공하는 모델을 권장하지만, 2M Code 는 Claude, OpenAI, Google 또는 로컬 모델과도 사용할 수 있습니다. 모델이 발전하면서 격차는 줄고 가격은 내려가므로 provider-agnostic 인 것이 중요합니다.
 - 기본으로 제공되는 LSP 지원
-- TUI 에 집중. 2M_CODE 는 neovim 사용자와 [terminal.shop](https://terminal.shop) 제작자가 만들었으며, 터미널에서 가능한 것의 한계를 밀어붙입니다.
-- 클라이언트/서버 아키텍처. 예를 들어 2M_CODE 를 내 컴퓨터에서 실행하면서 모바일 앱으로 원격 조작할 수 있습니다. 즉, TUI 프런트엔드는 가능한 여러 클라이언트 중 하나일 뿐입니다.
+- TUI 에 집중. 2M Code 는 neovim 사용자와 [terminal.shop](https://terminal.shop) 제작자가 만들었으며, 터미널에서 가능한 것의 한계를 밀어붙입니다.
+- 클라이언트/서버 아키텍처. 예를 들어 2M Code 를 내 컴퓨터에서 실행하면서 모바일 앱으로 원격 조작할 수 있습니다. 즉, TUI 프런트엔드는 가능한 여러 클라이언트 중 하나일 뿐입니다.
 
 ---
 
-**커뮤니티에 참여하기** [Discord](https://discord.gg/2M_CODE) | [X.com](https://x.com/2M_CODE)
+**커뮤니티에 참여하기** [Discord](https://discord.gg/2M Code) | [X.com](https://x.com/2M Code)
