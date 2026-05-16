@@ -1,4 +1,4 @@
-import { execFile } from "node:child_process"
+﻿import { execFile } from "node:child_process"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 import { promisify } from "node:util"
@@ -21,13 +21,13 @@ async function signWindows(configuration: { path: string }) {
 }
 
 const channel = (() => {
-  const raw = process.env.OPENCODE_CHANNEL
+  const raw = process.env.2M_CODE_CHANNEL
   if (raw === "dev" || raw === "beta" || raw === "prod") return raw
   return "dev"
 })()
 
 const getBase = (): Configuration => ({
-  artifactName: "opencode-desktop-${os}-${arch}.${ext}",
+  artifactName: "2M_CODE-desktop-${os}-${arch}.${ext}",
   directories: {
     output: "dist",
     buildResources: "resources",
@@ -54,8 +54,8 @@ const getBase = (): Configuration => ({
     sign: true,
   },
   protocols: {
-    name: "OpenCode",
-    schemes: ["opencode"],
+    name: "2M_CODE",
+    schemes: ["2M_CODE"],
   },
   win: {
     icon: `resources/icons/icon.ico`,
@@ -85,29 +85,29 @@ function getConfig() {
     case "dev": {
       return {
         ...base,
-        appId: "ai.opencode.desktop.dev",
-        productName: "OpenCode Dev",
-        rpm: { packageName: "opencode-dev" },
+        appId: "ai.2M_CODE.desktop.dev",
+        productName: "2M_CODE Dev",
+        rpm: { packageName: "2M_CODE-dev" },
       }
     }
     case "beta": {
       return {
         ...base,
-        appId: "ai.opencode.desktop.beta",
-        productName: "OpenCode Beta",
-        protocols: { name: "OpenCode Beta", schemes: ["opencode"] },
-        publish: { provider: "github", owner: "anomalyco", repo: "opencode-beta", channel: "latest" },
-        rpm: { packageName: "opencode-beta" },
+        appId: "ai.2M_CODE.desktop.beta",
+        productName: "2M_CODE Beta",
+        protocols: { name: "2M_CODE Beta", schemes: ["2M_CODE"] },
+        publish: { provider: "github", owner: "anomalyco", repo: "2M_CODE-beta", channel: "latest" },
+        rpm: { packageName: "2M_CODE-beta" },
       }
     }
     case "prod": {
       return {
         ...base,
-        appId: "ai.opencode.desktop",
-        productName: "OpenCode",
-        protocols: { name: "OpenCode", schemes: ["opencode"] },
-        publish: { provider: "github", owner: "anomalyco", repo: "opencode", channel: "latest" },
-        rpm: { packageName: "opencode" },
+        appId: "ai.2M_CODE.desktop",
+        productName: "2M_CODE",
+        protocols: { name: "2M_CODE", schemes: ["2M_CODE"] },
+        publish: { provider: "github", owner: "anomalyco", repo: "2M_CODE", channel: "latest" },
+        rpm: { packageName: "2M_CODE" },
       }
     }
   }

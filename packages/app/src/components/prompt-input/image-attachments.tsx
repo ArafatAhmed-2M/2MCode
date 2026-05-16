@@ -1,6 +1,6 @@
-import { Component, For, Show } from "solid-js"
-import { Icon } from "@opencode-ai/ui/icon"
-import { Tooltip } from "@opencode-ai/ui/tooltip"
+﻿import { Component, For, Show } from "solid-js"
+import { Icon } from "@2M_CODE-ai/ui/icon"
+import { Tooltip } from "@2M_CODE-ai/ui/tooltip"
 import type { ImageAttachmentPart } from "@/context/prompt"
 
 type PromptImageAttachmentsProps = {

@@ -1,4 +1,4 @@
-import { Context, Schema } from "effect"
+﻿import { Context, Schema } from "effect"
 
 export * as Location from "./location"
 
@@ -8,4 +8,4 @@ export const Ref = Schema.Struct({
 }).annotate({ identifier: "Location.Ref" })
 export type Ref = typeof Ref.Type
 
-export class Service extends Context.Service<Service, Ref>()("@opencode/Location") {}
+export class Service extends Context.Service<Service, Ref>()("@2M_CODE/Location") {}

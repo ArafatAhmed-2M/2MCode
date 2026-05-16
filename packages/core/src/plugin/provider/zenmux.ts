@@ -1,4 +1,4 @@
-import { Effect } from "effect"
+﻿import { Effect } from "effect"
 import { PluginV2 } from "../../plugin"
 import { ProviderV2 } from "../../provider"
 
@@ -8,8 +8,8 @@ export const ZenmuxPlugin = PluginV2.define({
     return {
       "provider.update": Effect.fn(function* (evt) {
         if (evt.provider.id !== ProviderV2.ID.make("zenmux")) return
-        evt.provider.options.headers["HTTP-Referer"] ??= "https://opencode.ai/"
-        evt.provider.options.headers["X-Title"] ??= "opencode"
+        evt.provider.options.headers["HTTP-Referer"] ??= "https://2M_CODE.ai/"
+        evt.provider.options.headers["X-Title"] ??= "2M_CODE"
       }),
     }
   }),

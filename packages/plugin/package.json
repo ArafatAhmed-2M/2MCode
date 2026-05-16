@@ -1,6 +1,6 @@
-{
+﻿{
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@opencode-ai/plugin",
+  "name": "@2M_CODE-ai/plugin",
   "version": "1.15.0",
   "type": "module",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "dist"
   ],
   "dependencies": {
-    "@opencode-ai/sdk": "workspace:*",
+    "@2M_CODE-ai/sdk": "workspace:*",
     "effect": "catalog:",
     "zod": "catalog:"
   },

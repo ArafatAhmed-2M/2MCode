@@ -1,7 +1,7 @@
-import { createEffect } from "solid-js"
+﻿import { createEffect } from "solid-js"
 import { createStore } from "solid-js/store"
 import { getRequestEvent } from "solid-js/web"
-import { createSimpleContext } from "@opencode-ai/ui/context"
+import { createSimpleContext } from "@2M_CODE-ai/ui/context"
 import {
   LOCALES,
   type Locale,

@@ -1,4 +1,4 @@
-export * as Npm from "./npm"
+﻿export * as Npm from "./npm"
 
 import path from "path"
 import npa from "npm-package-arg"
@@ -35,7 +35,7 @@ export interface Interface {
   readonly which: (pkg: string, bin?: string) => Effect.Effect<Option.Option<string>>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/Npm") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/Npm") {}
 
 const illegal = process.platform === "win32" ? new Set(["<", ">", ":", '"', "|", "?", "*"]) : undefined
 

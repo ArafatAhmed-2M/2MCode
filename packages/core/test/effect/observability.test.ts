@@ -1,15 +1,15 @@
-import { afterEach, describe, expect, test } from "bun:test"
-import { resource } from "@opencode-ai/core/effect/observability"
+﻿import { afterEach, describe, expect, test } from "bun:test"
+import { resource } from "@2M_CODE-ai/core/effect/observability"
 
 const otelResourceAttributes = process.env.OTEL_RESOURCE_ATTRIBUTES
-const opencodeClient = process.env.OPENCODE_CLIENT
+const 2M_CODEClient = process.env.2M_CODE_CLIENT
 
 afterEach(() => {
   if (otelResourceAttributes === undefined) delete process.env.OTEL_RESOURCE_ATTRIBUTES
   else process.env.OTEL_RESOURCE_ATTRIBUTES = otelResourceAttributes
 
-  if (opencodeClient === undefined) delete process.env.OPENCODE_CLIENT
-  else process.env.OPENCODE_CLIENT = opencodeClient
+  if (2M_CODEClient === undefined) delete process.env.2M_CODE_CLIENT
+  else process.env.2M_CODE_CLIENT = 2M_CODEClient
 })
 
 describe("resource", () => {
@@ -29,16 +29,16 @@ describe("resource", () => {
     process.env.OTEL_RESOURCE_ATTRIBUTES = "service.namespace=anomalyco,broken"
 
     expect(resource().attributes["service.namespace"]).toBeUndefined()
-    expect(resource().attributes["opencode.client"]).toBeDefined()
+    expect(resource().attributes["2M_CODE.client"]).toBeDefined()
   })
 
   test("keeps built-in attributes when env values conflict", () => {
-    process.env.OPENCODE_CLIENT = "cli"
+    process.env.2M_CODE_CLIENT = "cli"
     process.env.OTEL_RESOURCE_ATTRIBUTES =
-      "opencode.client=web,service.instance.id=override,service.namespace=anomalyco"
+      "2M_CODE.client=web,service.instance.id=override,service.namespace=anomalyco"
 
     expect(resource().attributes).toMatchObject({
-      "opencode.client": "cli",
+      "2M_CODE.client": "cli",
       "service.namespace": "anomalyco",
     })
     expect(resource().attributes["service.instance.id"]).not.toBe("override")

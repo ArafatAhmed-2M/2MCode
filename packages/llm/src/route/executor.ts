@@ -1,4 +1,4 @@
-import { Cause, Context, Effect, Layer, Random } from "effect"
+﻿import { Cause, Context, Effect, Layer, Random } from "effect"
 import {
   FetchHttpClient,
   Headers,
@@ -29,7 +29,7 @@ export interface Interface {
   ) => Effect.Effect<HttpClientResponse.HttpClientResponse, LLMError>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/LLM/RequestExecutor") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/LLM/RequestExecutor") {}
 
 const BODY_LIMIT = 16_384
 const MAX_RETRIES = 2

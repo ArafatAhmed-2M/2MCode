@@ -1,13 +1,13 @@
-# ko Glossary
+﻿# ko Glossary
 
 ## Sources
 
-- PR #9817: https://github.com/anomalyco/opencode/pull/9817
+- PR #9817: https://github.com/ArafatAhmed-2M/2mcode/pull/9817
 
 ## Do Not Translate (Locale Additions)
 
-- `OpenCode` (preserve casing in prose; keep `opencode` only in commands, package names, paths, or code)
-- `OpenCode CLI`
+- `2M_CODE` (preserve casing in prose; keep `2M_CODE` only in commands, package names, paths, or code)
+- `2M_CODE CLI`
 - `CLI`, `TUI`, `MCP`, `OAuth`
 - Commands, flags, file paths, and code literals (keep exactly as written)
 

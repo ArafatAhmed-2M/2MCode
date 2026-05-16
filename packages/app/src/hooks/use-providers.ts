@@ -1,11 +1,11 @@
-import { useGlobalSync } from "@/context/global-sync"
+﻿import { useGlobalSync } from "@/context/global-sync"
 import { decode64 } from "@/utils/base64"
 import { useParams } from "@solidjs/router"
 import { createMemo } from "solid-js"
 
 export const popularProviders = [
-  "opencode",
-  "opencode-go",
+  "2M_CODE",
+  "2M_CODE-go",
   "anthropic",
   "github-copilot",
   "openai",
@@ -37,7 +37,7 @@ export function useProviders() {
     paid: () => {
       const connected = new Set(providers().connected)
       return providers().all.filter(
-        (p) => connected.has(p.id) && (p.id !== "opencode" || Object.values(p.models).some((m) => m.cost?.input)),
+        (p) => connected.has(p.id) && (p.id !== "2M_CODE" || Object.values(p.models).some((m) => m.cost?.input)),
       )
     },
   }

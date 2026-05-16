@@ -1,4 +1,4 @@
-import { AlibabaPlugin } from "./alibaba"
+﻿import { AlibabaPlugin } from "./alibaba"
 import { AmazonBedrockPlugin } from "./amazon-bedrock"
 import { AnthropicPlugin } from "./anthropic"
 import { AzureCognitiveServicesPlugin, AzurePlugin } from "./azure"
@@ -20,7 +20,7 @@ import { MistralPlugin } from "./mistral"
 import { NvidiaPlugin } from "./nvidia"
 import { OpenAIPlugin } from "./openai"
 import { OpenAICompatiblePlugin } from "./openai-compatible"
-import { OpencodePlugin } from "./opencode"
+import { 2M_CODEPlugin } from "./2M_CODE"
 import { OpenRouterPlugin } from "./openrouter"
 import { PerplexityPlugin } from "./perplexity"
 import { SapAICorePlugin } from "./sap-ai-core"
@@ -52,7 +52,7 @@ export const ProviderPlugins = [
   LLMGatewayPlugin,
   MistralPlugin,
   NvidiaPlugin,
-  OpencodePlugin,
+  2M_CODEPlugin,
   OpenAICompatiblePlugin,
   OpenAIPlugin,
   OpenRouterPlugin,

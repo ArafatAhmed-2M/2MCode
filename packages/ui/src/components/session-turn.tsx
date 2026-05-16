@@ -1,15 +1,15 @@
-import {
+﻿import {
   AssistantMessage,
   type SnapshotFileDiff,
   Message as MessageType,
   Part as PartType,
-} from "@opencode-ai/sdk/v2/client"
-import type { SessionStatus } from "@opencode-ai/sdk/v2"
+} from "@2M_CODE-ai/sdk/v2/client"
+import type { SessionStatus } from "@2M_CODE-ai/sdk/v2"
 import { useData } from "../context"
 import { useFileComponent } from "../context/file"
 
-import { Binary } from "@opencode-ai/core/util/binary"
-import { getDirectory, getFilename } from "@opencode-ai/core/util/path"
+import { Binary } from "@2M_CODE-ai/core/util/binary"
+import { getDirectory, getFilename } from "@2M_CODE-ai/core/util/path"
 import { createEffect, createMemo, createSignal, For, on, ParentProps, Show } from "solid-js"
 import { createStore } from "solid-js/store"
 import { Dynamic } from "solid-js/web"

@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test"
-import type { PermissionRequest, Session } from "@opencode-ai/sdk/v2/client"
-import { base64Encode } from "@opencode-ai/core/util/encode"
+﻿import { describe, expect, test } from "bun:test"
+import type { PermissionRequest, Session } from "@2M_CODE-ai/sdk/v2/client"
+import { base64Encode } from "@2M_CODE-ai/core/util/encode"
 import { autoRespondsPermission, isDirectoryAutoAccepting } from "./permission-auto-respond"
 
 const session = (input: { id: string; parentID?: string }) =>

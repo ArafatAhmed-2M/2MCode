@@ -1,11 +1,11 @@
-import { query, createAsync, RouteSectionProps, useParams, A } from "@solidjs/router"
+﻿import { query, createAsync, RouteSectionProps, useParams, A } from "@solidjs/router"
 import "./workspace.css"
 import { IconWorkspaceLogo } from "../component/icon"
 import { WorkspacePicker } from "./workspace-picker"
 import { UserMenu } from "./user-menu"
 import { withActor } from "~/context/auth.withActor"
-import { User } from "@opencode-ai/console-core/user.js"
-import { Actor } from "@opencode-ai/console-core/actor.js"
+import { User } from "@2M_CODE-ai/console-core/user.js"
+import { Actor } from "@2M_CODE-ai/console-core/actor.js"
 import { useLanguage } from "~/context/language"
 
 const getUserEmail = query(async (workspaceID: string) => {

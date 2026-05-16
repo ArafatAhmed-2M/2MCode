@@ -1,4 +1,4 @@
-import { type JSX } from "solid-js"
+﻿import { type JSX } from "solid-js"
 
 // https://icones.js.org/collection/ri?s=openai&icon=ri:openai-fill
 export function IconOpenAI(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
@@ -36,7 +36,7 @@ export function IconGemini(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
   )
 }
 
-export function IconOpencode(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
+export function Icon2M_CODE(props: JSX.SvgSVGAttributes<SVGSVGElement>) {
   return (
     <svg {...props} viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path

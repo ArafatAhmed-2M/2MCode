@@ -1,4 +1,4 @@
-# Provider and Model Catalog
+﻿# Provider and Model Catalog
 
 ## Provider Schema
 
@@ -6,7 +6,7 @@
 export const ID = Schema.String.pipe(
   Schema.brand("ProviderV2.ID"),
   withStatics((schema) => ({
-    opencode: schema.make("opencode"),
+    2M_CODE: schema.make("2M_CODE"),
     anthropic: schema.make("anthropic"),
     openai: schema.make("openai"),
     google: schema.make("google"),

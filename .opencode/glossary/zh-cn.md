@@ -1,14 +1,14 @@
-# zh-cn Glossary
+﻿# zh-cn Glossary
 
 ## Sources
 
-- PR #13942: https://github.com/anomalyco/opencode/pull/13942
+- PR #13942: https://github.com/ArafatAhmed-2M/2mcode/pull/13942
 
 ## Do Not Translate (Locale Additions)
 
-- `OpenCode` (preserve casing in prose; keep `opencode` only when it is part of commands, package names, paths, or code)
-- `OpenCode Zen`
-- `OpenCode CLI`
+- `2M_CODE` (preserve casing in prose; keep `2M_CODE` only when it is part of commands, package names, paths, or code)
+- `2M_CODE Zen`
+- `2M_CODE CLI`
 - `CLI`, `TUI`, `MCP`, `OAuth`
 - `Model Context Protocol` (prefer the English expansion when introducing `MCP`)
 
@@ -38,5 +38,5 @@ These are preferred terms for docs/UI prose and may evolve.
 
 ## Avoid
 
-- Avoid `opencode` in prose when referring to the product name; use `OpenCode`
+- Avoid `2M_CODE` in prose when referring to the product name; use `2M_CODE`
 - Avoid mixing alternative terms for the same concept across docs when a preferred term is already established

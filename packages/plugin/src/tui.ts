@@ -1,6 +1,6 @@
-import type {
+﻿import type {
   AgentPart,
-  OpencodeClient,
+  2M_CODEClient,
   Event,
   FilePart,
   LspStatus,
@@ -15,7 +15,7 @@ import type {
   SessionStatus,
   TextPart,
   Config as SdkConfig,
-} from "@opencode-ai/sdk/v2"
+} from "@2M_CODE-ai/sdk/v2"
 import type { CliRenderer, KeyEvent, RGBA, Renderable, SlotMode } from "@opentui/core"
 import type { Binding, Keymap } from "@opentui/keymap"
 import {
@@ -609,7 +609,7 @@ export type TuiPluginApi = {
   kv: TuiKV
   state: TuiState
   theme: TuiTheme
-  client: OpencodeClient
+  client: 2M_CODEClient
   event: TuiEventBus
   renderer: CliRenderer
   slots: TuiSlots

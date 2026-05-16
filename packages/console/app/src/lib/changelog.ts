@@ -1,4 +1,4 @@
-import { query } from "@solidjs/router"
+﻿import { query } from "@solidjs/router"
 
 type Release = {
   tag_name: string
@@ -39,10 +39,10 @@ export type ChangelogData = {
 }
 
 export async function loadChangelog(): Promise<ChangelogData> {
-  const response = await fetch("https://api.github.com/repos/anomalyco/opencode/releases?per_page=20", {
+  const response = await fetch("https://api.github.com/repos/anomalyco/2M_CODE/releases?per_page=20", {
     headers: {
       Accept: "application/vnd.github.v3+json",
-      "User-Agent": "OpenCode-Console",
+      "User-Agent": "2M_CODE-Console",
     },
     cf: {
       // best-effort edge caching (ignored outside Cloudflare)

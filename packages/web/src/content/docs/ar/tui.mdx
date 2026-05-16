@@ -1,22 +1,22 @@
----
+﻿---
 title: TUI
-description: استخدام واجهة المستخدم TUI في OpenCode.
+description: استخدام واجهة المستخدم TUI في 2M_CODE.
 ---
 
 import { Tabs, TabItem } from "@astrojs/starlight/components"
 
-يوفّر OpenCode واجهة terminal تفاعلية (TUI) للعمل على مشاريعك باستخدام LLM.
+يوفّر 2M_CODE واجهة terminal تفاعلية (TUI) للعمل على مشاريعك باستخدام LLM.
 
-يؤدي تشغيل OpenCode إلى بدء واجهة TUI للدليل الحالي.
+يؤدي تشغيل 2M_CODE إلى بدء واجهة TUI للدليل الحالي.
 
 ```bash
-opencode
+2M_CODE
 ```
 
 أو يمكنك تشغيلها لدليل عمل محدد.
 
 ```bash
-opencode /path/to/project
+2M_CODE /path/to/project
 ```
 
 بعد الدخول إلى واجهة TUI، يمكنك إرسال رسالة كطلب.
@@ -57,7 +57,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ## الأوامر
 
-عند استخدام واجهة OpenCode في terminal، يمكنك كتابة `/` متبوعة باسم أمر لتنفيذ الإجراءات بسرعة. مثلا:
+عند استخدام واجهة 2M_CODE في terminal، يمكنك كتابة `/` متبوعة باسم أمر لتنفيذ الإجراءات بسرعة. مثلا:
 
 ```bash frame="none"
 /help
@@ -71,7 +71,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ### connect
 
-أضف موفّرا إلى OpenCode. يتيح لك اختيار أحد الموفّرين المتاحين وإضافة مفاتيح API الخاصة بهم.
+أضف موفّرا إلى 2M_CODE. يتيح لك اختيار أحد الموفّرين المتاحين وإضافة مفاتيح API الخاصة بهم.
 
 ```bash frame="none"
 /connect
@@ -117,7 +117,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ### exit
 
-اخرج من OpenCode. _الأسماء المستعارة_: `/quit`, `/q`
+اخرج من 2M_CODE. _الأسماء المستعارة_: `/quit`, `/q`
 
 ```bash frame="none"
 /exit
@@ -352,11 +352,11 @@ How is auth handled in @packages/functions/src/api/index.ts?
 
 ## الإعداد
 
-يمكنك تخصيص سلوك واجهة TUI عبر ملف إعدادات OpenCode.
+يمكنك تخصيص سلوك واجهة TUI عبر ملف إعدادات 2M_CODE.
 
-```json title="opencode.json"
+```json title="2M_CODE.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://2M_CODE.ai/config.json",
   "tui": {
     "scroll_speed": 3,
     "scroll_acceleration": {
@@ -372,7 +372,7 @@ How is auth handled in @packages/functions/src/api/index.ts?
 - `scroll_speed` - يتحكم في سرعة تمرير واجهة TUI عند استخدام أوامر التمرير (الحد الأدنى: `1`). القيمة الافتراضية هي `3`. **ملاحظة: يتم تجاهل هذا إذا تم ضبط `scroll_acceleration.enabled` على `true`.**
 - `diff_style` - يتحكم في عرض الفروقات (diff). القيمة `"auto"` تتكيف مع عرض terminal، و`"stacked"` تعرض عمودًا واحدًا دائمًا.
 
-استخدم `OPENCODE_TUI_CONFIG` لتحميل مسار إعدادات TUI مخصص.
+استخدم `2M_CODE_TUI_CONFIG` لتحميل مسار إعدادات TUI مخصص.
 
 ---
 

@@ -1,4 +1,4 @@
-name: beta
+﻿name: beta
 
 on:
   workflow_dispatch:
@@ -24,14 +24,14 @@ jobs:
         id: setup-git-committer
         uses: ./.github/actions/setup-git-committer
         with:
-          opencode-app-id: ${{ vars.OPENCODE_APP_ID }}
-          opencode-app-secret: ${{ secrets.OPENCODE_APP_SECRET }}
+          2M_CODE-app-id: ${{ vars.2M_CODE_APP_ID }}
+          2M_CODE-app-secret: ${{ secrets.2M_CODE_APP_SECRET }}
 
-      - name: Install OpenCode
-        run: bun i -g opencode-ai
+      - name: Install 2M_CODE
+        run: bun i -g 2M_CODE-ai
 
       - name: Sync beta branch
         env:
           GH_TOKEN: ${{ steps.setup-git-committer.outputs.token }}
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          2M_CODE_API_KEY: ${{ secrets.2M_CODE_API_KEY }}
         run: bun script/beta.ts

@@ -1,7 +1,7 @@
-import { type ChildProcess, spawnSync } from "node:child_process"
+﻿import { type ChildProcess, spawnSync } from "node:child_process"
 
-// Duplicated from `packages/opencode/src/util/process.ts` because the SDK cannot
-// import `opencode` without creating a cycle (`opencode` depends on `@opencode-ai/sdk`).
+// Duplicated from `packages/2M_CODE/src/util/process.ts` because the SDK cannot
+// import `2M_CODE` without creating a cycle (`2M_CODE` depends on `@2M_CODE-ai/sdk`).
 export function stop(proc: ChildProcess) {
   if (proc.exitCode !== null || proc.signalCode !== null) return
   if (process.platform === "win32" && proc.pid) {

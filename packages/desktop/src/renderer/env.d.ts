@@ -1,9 +1,9 @@
-import type { ElectronAPI } from "../preload/types"
+﻿import type { ElectronAPI } from "../preload/types"
 
 declare global {
   interface Window {
     api: ElectronAPI
-    __OPENCODE__?: {
+    __2M_CODE__?: {
       deepLinks?: string[]
     }
   }

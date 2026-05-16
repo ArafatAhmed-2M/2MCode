@@ -1,20 +1,20 @@
----
+﻿---
 title: Server
-description: Nutze den opencode-Server ueber HTTP.
+description: Nutze den 2M_CODE-Server ueber HTTP.
 ---
 
 import config from "../../../../config.mjs"
 export const typesUrl = `${config.github}/blob/dev/packages/sdk/js/src/gen/types.gen.ts`
 
-Der Befehl `opencode serve` startet einen headless HTTP-Server.
-Er stellt einen OpenAPI-Endpunkt bereit, den ein opencode-Client nutzen kann.
+Der Befehl `2M_CODE serve` startet einen headless HTTP-Server.
+Er stellt einen OpenAPI-Endpunkt bereit, den ein 2M_CODE-Client nutzen kann.
 
 ---
 
 ### Nutzung
 
 ```bash
-opencode serve [--port <number>] [--hostname <string>] [--cors <origin>]
+2M_CODE serve [--port <number>] [--hostname <string>] [--cors <origin>]
 ```
 
 #### Optionen
@@ -24,41 +24,41 @@ opencode serve [--port <number>] [--hostname <string>] [--cors <origin>]
 | `--port`        | Port to listen on                   | `4096`           |
 | `--hostname`    | Hostname to listen on               | `127.0.0.1`      |
 | `--mdns`        | Enable mDNS discovery               | `false`          |
-| `--mdns-domain` | Custom domain name for mDNS service | `opencode.local` |
+| `--mdns-domain` | Custom domain name for mDNS service | `2M_CODE.local` |
 | `--cors`        | Additional browser origins to allow | `[]`             |
 
 `--cors` kann mehrfach angegeben werden:
 
 ```bash
-opencode serve --cors http://localhost:5173 --cors https://app.example.com
+2M_CODE serve --cors http://localhost:5173 --cors https://app.example.com
 ```
 
 ---
 
 ### Authentifizierung
 
-Setze `OPENCODE_SERVER_PASSWORD`, um den Server mit HTTP Basic Auth zu schuetzen.
-Der Benutzername ist standardmaessig `opencode`, kann aber mit `OPENCODE_SERVER_USERNAME` ueberschrieben werden. Das gilt fuer `opencode serve` und `opencode web`.
+Setze `2M_CODE_SERVER_PASSWORD`, um den Server mit HTTP Basic Auth zu schuetzen.
+Der Benutzername ist standardmaessig `2M_CODE`, kann aber mit `2M_CODE_SERVER_USERNAME` ueberschrieben werden. Das gilt fuer `2M_CODE serve` und `2M_CODE web`.
 
 ```bash
-OPENCODE_SERVER_PASSWORD=your-password opencode serve
+2M_CODE_SERVER_PASSWORD=your-password 2M_CODE serve
 ```
 
 ---
 
 ### Funktionsweise
 
-Wenn du `opencode` startest, werden TUI und Server gestartet.
+Wenn du `2M_CODE` startest, werden TUI und Server gestartet.
 Die TUI ist dabei der Client, der mit dem Server spricht; dessen OpenAPI-3.1-Endpunkt dient auch zur Generierung des [SDK](/docs/sdk).
 
 :::tip
-Nutze den opencode-Server, um opencode programmatisch anzusteuern.
+Nutze den 2M_CODE-Server, um 2M_CODE programmatisch anzusteuern.
 :::
 
 Diese Architektur erlaubt mehrere Clients und programmatische Nutzung.
 
-Mit `opencode serve` startest du einen eigenstaendigen Server.
-Laeuft bereits eine TUI, startet `opencode serve` trotzdem eine neue Serverinstanz.
+Mit `2M_CODE serve` startest du einen eigenstaendigen Server.
+Laeuft bereits eine TUI, startet `2M_CODE serve` trotzdem eine neue Serverinstanz.
 
 ---
 
@@ -68,7 +68,7 @@ Beim TUI-Start werden Port und Hostname zufaellig gewaehlt.
 Alternativ gibst du `--hostname` und `--port` als [Flags](/docs/cli) vor und verbindest dich dann gezielt damit.
 
 Der Endpunkt [`/tui`](#tui) kann die TUI ueber den Server steuern, etwa zum Vorbelegen oder Abschicken von Prompts.
-Dieses Muster nutzen auch die OpenCode-[IDE](/docs/ide)-Plugins.
+Dieses Muster nutzen auch die 2M_CODE-[IDE](/docs/ide)-Plugins.
 
 ---
 
@@ -87,7 +87,7 @@ Nutze die Spec zum Generieren von Clients, zum Pruefen von Request/Response-Type
 
 ## APIs
 
-Der opencode-Server stellt folgende APIs bereit.
+Der 2M_CODE-Server stellt folgende APIs bereit.
 
 ---
 

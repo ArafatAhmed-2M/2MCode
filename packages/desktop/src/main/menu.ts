@@ -1,4 +1,4 @@
-import { Menu, shell } from "electron"
+﻿import { Menu, shell } from "electron"
 
 import { UPDATER_ENABLED } from "./constants"
 import { createMainWindow } from "./windows"
@@ -15,7 +15,7 @@ export function createMenu(deps: Deps) {
 
   const template: Electron.MenuItemConstructorOptions[] = [
     {
-      label: "OpenCode",
+      label: "2M_CODE",
       submenu: [
         { role: "about" },
         {
@@ -120,18 +120,18 @@ export function createMenu(deps: Deps) {
     {
       label: "Help",
       submenu: [
-        { label: "OpenCode Documentation", click: () => shell.openExternal("https://opencode.ai/docs") },
-        { label: "Support Forum", click: () => shell.openExternal("https://discord.com/invite/opencode") },
+        { label: "2M_CODE Documentation", click: () => shell.openExternal("https://2M_CODE.ai/docs") },
+        { label: "Support Forum", click: () => shell.openExternal("https://discord.com/invite/2M_CODE") },
         { type: "separator" },
         { type: "separator" },
         {
           label: "Share Feedback",
           click: () =>
-            shell.openExternal("https://github.com/anomalyco/opencode/issues/new?template=feature_request.yml"),
+            shell.openExternal("https://github.com/ArafatAhmed-2M/2mcode/issues/new?template=feature_request.yml"),
         },
         {
           label: "Report a Bug",
-          click: () => shell.openExternal("https://github.com/anomalyco/opencode/issues/new?template=bug_report.yml"),
+          click: () => shell.openExternal("https://github.com/ArafatAhmed-2M/2mcode/issues/new?template=bug_report.yml"),
         },
       ],
     },

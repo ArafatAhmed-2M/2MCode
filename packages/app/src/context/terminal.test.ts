@@ -1,4 +1,4 @@
-import { beforeAll, describe, expect, mock, test } from "bun:test"
+﻿import { beforeAll, describe, expect, mock, test } from "bun:test"
 
 type ServerKey = Parameters<typeof import("./terminal").getTerminalServerScope>[1]
 
@@ -12,7 +12,7 @@ beforeAll(async () => {
     useNavigate: () => () => undefined,
     useParams: () => ({}),
   }))
-  mock.module("@opencode-ai/ui/context", () => ({
+  mock.module("@2M_CODE-ai/ui/context", () => ({
     createSimpleContext: () => ({
       use: () => undefined,
       provider: () => undefined,

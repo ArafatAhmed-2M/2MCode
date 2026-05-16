@@ -1,4 +1,4 @@
-import type {
+﻿import type {
   Message,
   Part,
   PermissionRequest,
@@ -6,7 +6,7 @@ import type {
   SessionStatus,
   SnapshotFileDiff,
   Todo,
-} from "@opencode-ai/sdk/v2/client"
+} from "@2M_CODE-ai/sdk/v2/client"
 
 export const SESSION_CACHE_LIMIT = 40
 

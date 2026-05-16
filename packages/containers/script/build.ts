@@ -1,4 +1,4 @@
-#!/usr/bin/env bun
+﻿#!/usr/bin/env bun
 
 import { $ } from "bun"
 import path from "path"
@@ -22,11 +22,11 @@ const images = ["base", "bun-node", "rust", "tauri-linux", "publish"]
 const setup = async () => {
   if (!push) return
   const list = await $`docker buildx ls`.text()
-  if (list.includes("opencode")) {
-    await $`docker buildx use opencode`
+  if (list.includes("2M_CODE")) {
+    await $`docker buildx use 2M_CODE`
     return
   }
-  await $`docker buildx create --name opencode --use`
+  await $`docker buildx create --name 2M_CODE --use`
 }
 
 await setup()

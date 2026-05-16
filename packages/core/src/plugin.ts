@@ -1,4 +1,4 @@
-export * as PluginV2 from "./plugin"
+﻿export * as PluginV2 from "./plugin"
 
 import { createDraft, finishDraft, type Draft } from "immer"
 import type { LanguageModelV3 } from "@ai-sdk/provider"
@@ -77,7 +77,7 @@ export interface Interface {
   ) => Effect.Effect<HookInput<Name> & HookOutput<Name>>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/v2/Plugin") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/v2/Plugin") {}
 
 export const layer = Layer.effect(
   Service,
@@ -142,5 +142,5 @@ export const layer = Layer.effect(
 
 export const defaultLayer = layer
 
-// opencode
+// 2M_CODE
 // sdcok

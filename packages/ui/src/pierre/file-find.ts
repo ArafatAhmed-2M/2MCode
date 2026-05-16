@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, onMount } from "solid-js"
+﻿import { createEffect, createSignal, onCleanup, onMount } from "solid-js"
 import { makeEventListener } from "@solid-primitives/event-listener"
 import { createResizeObserver } from "@solid-primitives/resize-observer"
 import { createStore } from "solid-js/store"
@@ -79,8 +79,8 @@ function installShortcuts() {
 function clearHighlightFind() {
   const api = (globalThis as { CSS?: { highlights?: { delete: (name: string) => void } } }).CSS?.highlights
   if (!api) return
-  api.delete("opencode-find")
-  api.delete("opencode-find-current")
+  api.delete("2M_CODE-find")
+  api.delete("2M_CODE-find-current")
 }
 
 function supportsHighlights() {
@@ -296,14 +296,14 @@ export function createFileFind(opts: CreateFileFindOptions) {
     const Highlight = (globalThis as unknown as { Highlight?: any }).Highlight
     if (!api || typeof Highlight !== "function") return false
 
-    api.delete("opencode-find")
-    api.delete("opencode-find-current")
+    api.delete("2M_CODE-find")
+    api.delete("2M_CODE-find-current")
 
     const active = ranges[currentIndex]
-    if (active) api.set("opencode-find-current", new Highlight(active))
+    if (active) api.set("2M_CODE-find-current", new Highlight(active))
 
     const rest = ranges.filter((_, i) => i !== currentIndex)
-    if (rest.length > 0) api.set("opencode-find", new Highlight(...rest))
+    if (rest.length > 0) api.set("2M_CODE-find", new Highlight(...rest))
     return true
   }
 

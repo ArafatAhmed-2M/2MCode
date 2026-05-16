@@ -1,14 +1,14 @@
-import type {
+﻿import type {
   Config,
-  OpencodeClient,
+  2M_CODEClient,
   Path,
   Project,
   ProviderAuthResponse,
   ProviderListResponse,
   Todo,
-} from "@opencode-ai/sdk/v2/client"
-import { showToast } from "@opencode-ai/ui/toast"
-import { getFilename } from "@opencode-ai/core/util/path"
+} from "@2M_CODE-ai/sdk/v2/client"
+import { showToast } from "@2M_CODE-ai/ui/toast"
+import { getFilename } from "@2M_CODE-ai/core/util/path"
 import { batch, createContext, getOwner, onCleanup, onMount, type ParentProps, untrack, useContext } from "solid-js"
 import { createStore, produce, reconcile } from "solid-js/store"
 import { useLanguage } from "@/context/language"
@@ -51,19 +51,19 @@ type GlobalStore = {
   reload: undefined | "pending" | "complete"
 }
 
-export const loadMcpQuery = (directory: string, sdk: OpencodeClient) =>
+export const loadMcpQuery = (directory: string, sdk: 2M_CODEClient) =>
   queryOptions({
     queryKey: [directory, "mcp"] as const,
     queryFn: () => sdk.mcp.status().then((r) => r.data ?? {}),
   })
 
-export const loadLspQuery = (directory: string, sdk: OpencodeClient) =>
+export const loadLspQuery = (directory: string, sdk: 2M_CODEClient) =>
   queryOptions({
     queryKey: [directory, "lsp"] as const,
     queryFn: () => sdk.lsp.status().then((r) => r.data ?? []),
   })
 
-function makeQueryOptionsApi(globalSDK: () => OpencodeClient, sdkFor: (dir: PathKey) => OpencodeClient) {
+function makeQueryOptionsApi(globalSDK: () => 2M_CODEClient, sdkFor: (dir: PathKey) => 2M_CODEClient) {
   return {
     globalConfig: () => loadGlobalConfigQuery(globalSDK()),
     projects: () => loadProjectsQuery(globalSDK()),
@@ -84,7 +84,7 @@ function createGlobalSync() {
   const owner = getOwner()
   if (!owner) throw new Error("GlobalSync must be created within owner")
 
-  const sdkCache = new Map<string, OpencodeClient>()
+  const sdkCache = new Map<string, 2M_CODEClient>()
   const booting = new Map<string, Promise<void>>()
   const sessionLoads = new Map<string, Promise<void>>()
   const sessionMeta = new Map<string, { limit: number }>()

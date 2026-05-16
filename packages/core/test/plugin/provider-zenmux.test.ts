@@ -1,8 +1,8 @@
-import { describe, expect } from "bun:test"
+﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@opencode-ai/core/plugin"
-import { ProviderPlugins } from "@opencode-ai/core/plugin/provider"
-import { ZenmuxPlugin } from "@opencode-ai/core/plugin/provider/zenmux"
+import { PluginV2 } from "@2M_CODE-ai/core/plugin"
+import { ProviderPlugins } from "@2M_CODE-ai/core/plugin/provider"
+import { ZenmuxPlugin } from "@2M_CODE-ai/core/plugin/provider/zenmux"
 import { expectPluginRegistered, it, provider } from "./provider-helper"
 
 describe("ZenmuxPlugin", () => {
@@ -20,7 +20,7 @@ describe("ZenmuxPlugin", () => {
       const plugin = yield* PluginV2.Service
       yield* plugin.add(ZenmuxPlugin)
       const result = yield* plugin.trigger("provider.update", {}, { provider: provider("zenmux"), cancel: false })
-      expect(result.provider.options.headers).toEqual({ "HTTP-Referer": "https://opencode.ai/", "X-Title": "opencode" })
+      expect(result.provider.options.headers).toEqual({ "HTTP-Referer": "https://2M_CODE.ai/", "X-Title": "2M_CODE" })
       expect(Object.keys(result.provider.options.headers).sort()).toEqual(["HTTP-Referer", "X-Title"])
       expect(result.cancel).toBe(false)
     }),
@@ -43,8 +43,8 @@ describe("ZenmuxPlugin", () => {
 
       expect(result.provider.options.headers).toEqual({
         Existing: "value",
-        "HTTP-Referer": "https://opencode.ai/",
-        "X-Title": "opencode",
+        "HTTP-Referer": "https://2M_CODE.ai/",
+        "X-Title": "2M_CODE",
       })
     }),
   )

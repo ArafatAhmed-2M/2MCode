@@ -1,12 +1,12 @@
-import fs from "fs/promises"
+﻿import fs from "fs/promises"
 import path from "path"
 import { describe, expect, test } from "bun:test"
 import { NodeFileSystem } from "@effect/platform-node"
 import { Effect, Layer, Option } from "effect"
-import { AppFileSystem } from "@opencode-ai/core/filesystem"
-import { Global } from "@opencode-ai/core/global"
-import { Npm } from "@opencode-ai/core/npm"
-import { EffectFlock } from "@opencode-ai/core/util/effect-flock"
+import { AppFileSystem } from "@2M_CODE-ai/core/filesystem"
+import { Global } from "@2M_CODE-ai/core/global"
+import { Npm } from "@2M_CODE-ai/core/npm"
+import { EffectFlock } from "@2M_CODE-ai/core/util/effect-flock"
 import { tmpdir } from "./fixture/tmpdir"
 
 const win = process.platform === "win32"
@@ -30,14 +30,14 @@ const npmLayer = (cache: string) =>
 
 describe("Npm.sanitize", () => {
   test("keeps normal scoped package specs unchanged", () => {
-    expect(Npm.sanitize("@opencode/acme")).toBe("@opencode/acme")
-    expect(Npm.sanitize("@opencode/acme@1.0.0")).toBe("@opencode/acme@1.0.0")
+    expect(Npm.sanitize("@2M_CODE/acme")).toBe("@2M_CODE/acme")
+    expect(Npm.sanitize("@2M_CODE/acme@1.0.0")).toBe("@2M_CODE/acme@1.0.0")
     expect(Npm.sanitize("prettier")).toBe("prettier")
   })
 
   test("handles git https specs", () => {
-    const spec = "acme@git+https://github.com/opencode/acme.git"
-    const expected = win ? "acme@git+https_//github.com/opencode/acme.git" : spec
+    const spec = "acme@git+https://github.com/2M_CODE/acme.git"
+    const expected = win ? "acme@git+https_//github.com/2M_CODE/acme.git" : spec
     expect(Npm.sanitize(spec)).toBe(expected)
   })
 })

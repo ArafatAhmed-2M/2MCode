@@ -1,4 +1,4 @@
----
+﻿---
 import { Base64 } from "js-base64";
 import Default from '@astrojs/starlight/components/Head.astro'
 import config from '../../config.mjs'
@@ -38,7 +38,7 @@ if (isDocs) {
     truncatedDesc = encodeURIComponent(description.substring(0, 400))
   }
 
-  ogImage = `${config.socialCard}/opencode-docs/${encodedTitle}.png?desc=${truncatedDesc}`;
+  ogImage = `${config.socialCard}/2M_CODE-docs/${encodedTitle}.png?desc=${truncatedDesc}`;
 }
 ---
 

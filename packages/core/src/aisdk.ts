@@ -1,4 +1,4 @@
-export * as AISDK from "./aisdk"
+﻿export * as AISDK from "./aisdk"
 
 import type { LanguageModelV3 } from "@ai-sdk/provider"
 import { Cause, Context, Effect, Layer, Schema } from "effect"
@@ -111,7 +111,7 @@ export interface Interface {
   readonly language: (model: ModelV2.Info) => Effect.Effect<LanguageModelV3, InitError>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/v2/AISDK") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/v2/AISDK") {}
 
 export const layer = Layer.effect(
   Service,

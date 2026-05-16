@@ -1,7 +1,7 @@
-import { describe, expect } from "bun:test"
+﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@opencode-ai/core/plugin"
-import { AnthropicPlugin } from "@opencode-ai/core/plugin/provider/anthropic"
+import { PluginV2 } from "@2M_CODE-ai/core/plugin"
+import { AnthropicPlugin } from "@2M_CODE-ai/core/plugin/provider/anthropic"
 import { it, model, provider } from "./provider-helper"
 
 describe("AnthropicPlugin", () => {

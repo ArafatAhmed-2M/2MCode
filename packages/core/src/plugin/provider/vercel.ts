@@ -1,4 +1,4 @@
-import { Effect } from "effect"
+﻿import { Effect } from "effect"
 import { PluginV2 } from "../../plugin"
 import { ProviderV2 } from "../../provider"
 
@@ -8,8 +8,8 @@ export const VercelPlugin = PluginV2.define({
     return {
       "provider.update": Effect.fn(function* (evt) {
         if (evt.provider.id !== ProviderV2.ID.make("vercel")) return
-        evt.provider.options.headers["http-referer"] = "https://opencode.ai/"
-        evt.provider.options.headers["x-title"] = "opencode"
+        evt.provider.options.headers["http-referer"] = "https://2M_CODE.ai/"
+        evt.provider.options.headers["x-title"] = "2M_CODE"
       }),
       "aisdk.sdk": Effect.fn(function* (evt) {
         if (evt.package !== "@ai-sdk/vercel") return

@@ -1,7 +1,7 @@
----
+﻿---
 mode: primary
 hidden: true
-model: opencode/claude-haiku-4-5
+model: 2M_CODE/claude-haiku-4-5
 color: "#E67E22"
 tools:
   "*": false

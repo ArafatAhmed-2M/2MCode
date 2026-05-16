@@ -1,68 +1,68 @@
----
+﻿---
 title: GitLab
-description: Utilice OpenCode en problemas GitLab y solicitudes de fusión.
+description: Utilice 2M_CODE en problemas GitLab y solicitudes de fusión.
 ---
 
-OpenCode se integra con su flujo de trabajo GitLab a través de su canal de CI/CD GitLab o con GitLab Duo.
+2M_CODE se integra con su flujo de trabajo GitLab a través de su canal de CI/CD GitLab o con GitLab Duo.
 
-En ambos casos, OpenCode se ejecutará en tus corredores GitLab.
+En ambos casos, 2M_CODE se ejecutará en tus corredores GitLab.
 
 ---
 
 ## GitLab CI
 
-OpenCode funciona en una tubería GitLab normal. Puede integrarlo en una canalización como un [componente de CI](https://docs.gitlab.com/ee/ci/components/)
+2M_CODE funciona en una tubería GitLab normal. Puede integrarlo en una canalización como un [componente de CI](https://docs.gitlab.com/ee/ci/components/)
 
-Aquí estamos utilizando un componente CI/CD creado por la comunidad para OpenCode — [nagyv/gitlab-opencode](https://gitlab.com/nagyv/gitlab-opencode).
+Aquí estamos utilizando un componente CI/CD creado por la comunidad para 2M_CODE — [nagyv/gitlab-2M_CODE](https://gitlab.com/nagyv/gitlab-2M_CODE).
 
 ---
 
 ### Características
 
-- **Usar configuración personalizada por trabajo**: configure OpenCode con un directorio de configuración personalizado, por ejemplo `./config/#custom-directory` para habilitar o deshabilitar la funcionalidad por invocación de OpenCode.
-- **Configuración mínima**: el componente CI configura OpenCode en segundo plano, solo necesita crear la configuración OpenCode y el mensaje inicial.
+- **Usar configuración personalizada por trabajo**: configure 2M_CODE con un directorio de configuración personalizado, por ejemplo `./config/#custom-directory` para habilitar o deshabilitar la funcionalidad por invocación de 2M_CODE.
+- **Configuración mínima**: el componente CI configura 2M_CODE en segundo plano, solo necesita crear la configuración 2M_CODE y el mensaje inicial.
 - **Flexible**: el componente CI admite varias entradas para personalizar su comportamiento
 
 ---
 
 ### Configuración
 
-1. Guarde su OpenCode autenticación JSON como variables de entorno de CI de tipo de archivo en **Configuración** > **CI/CD** > **Variables**. Asegúrate de marcarlos como "Enmascarados y ocultos".
+1. Guarde su 2M_CODE autenticación JSON como variables de entorno de CI de tipo de archivo en **Configuración** > **CI/CD** > **Variables**. Asegúrate de marcarlos como "Enmascarados y ocultos".
 2. Agregue lo siguiente a su archivo `.gitlab-ci.yml`.
 
    ```yaml title=".gitlab-ci.yml"
    include:
-     - component: $CI_SERVER_FQDN/nagyv/gitlab-opencode/opencode@2
+     - component: $CI_SERVER_FQDN/nagyv/gitlab-2M_CODE/2M_CODE@2
        inputs:
-         config_dir: ${CI_PROJECT_DIR}/opencode-config
-         auth_json: $OPENCODE_AUTH_JSON # The variable name for your OpenCode authentication JSON
+         config_dir: ${CI_PROJECT_DIR}/2M_CODE-config
+         auth_json: $2M_CODE_AUTH_JSON # The variable name for your 2M_CODE authentication JSON
          command: optional-custom-command
          message: "Your prompt here"
    ```
 
-Para obtener más entradas y casos de uso, [consulte los documentos](https://gitlab.com/explore/catalog/nagyv/gitlab-opencode) de este componente.
+Para obtener más entradas y casos de uso, [consulte los documentos](https://gitlab.com/explore/catalog/nagyv/gitlab-2M_CODE) de este componente.
 
 ---
 
 ## GitLab Duo
 
-OpenCode se integra con su flujo de trabajo GitLab.
-Mencione `@opencode` en un comentario y OpenCode ejecutará tareas dentro de su canal de CI GitLab.
+2M_CODE se integra con su flujo de trabajo GitLab.
+Mencione `@2M_CODE` en un comentario y 2M_CODE ejecutará tareas dentro de su canal de CI GitLab.
 
 ---
 
 ### Características
 
-- **Clasificación de problemas**: Pídele a OpenCode que investigue un problema y te lo explique.
-- **Reparar e implementar**: pídale a OpenCode que solucione un problema o implemente una función.
+- **Clasificación de problemas**: Pídele a 2M_CODE que investigue un problema y te lo explique.
+- **Reparar e implementar**: pídale a 2M_CODE que solucione un problema o implemente una función.
   Creará una nueva rama y generará una solicitud de fusión con los cambios.
-- **Seguro**: OpenCode se ejecuta en tus corredores GitLab.
+- **Seguro**: 2M_CODE se ejecuta en tus corredores GitLab.
 
 ---
 
 ### Configuración
 
-OpenCode se ejecuta en su canalización de CI/CD GitLab. Esto es lo que necesitará para configurarlo:
+2M_CODE se ejecuta en su canalización de CI/CD GitLab. Esto es lo que necesitará para configurarlo:
 
 :::tip
 Consulte los [**GitLab documentos**](https://docs.gitlab.com/user/duo_agent_platform/agent_assistant/) para obtener instrucciones actualizadas.
@@ -82,19 +82,19 @@ Consulte los [**GitLab documentos**](https://docs.gitlab.com/user/duo_agent_plat
     ```yaml
     image: node:22-slim
     commands:
-      - echo "Installing opencode"
-      - npm install --global opencode-ai
+      - echo "Installing 2M_CODE"
+      - npm install --global 2M_CODE-ai
       - echo "Installing glab"
-      - export GITLAB_TOKEN=$GITLAB_TOKEN_OPENCODE
+      - export GITLAB_TOKEN=$GITLAB_TOKEN_2M_CODE
       - apt-get update --quiet && apt-get install --yes curl wget gpg git && rm --recursive --force /var/lib/apt/lists/*
       - curl --silent --show-error --location "https://raw.githubusercontent.com/upciti/wakemeops/main/assets/install_repository" | bash
       - apt-get install --yes glab
       - echo "Configuring glab"
       - echo $GITLAB_HOST
-      - echo "Creating OpenCode auth configuration"
-      - mkdir --parents ~/.local/share/opencode
+      - echo "Creating 2M_CODE auth configuration"
+      - mkdir --parents ~/.local/share/2M_CODE
       - |
-        cat > ~/.local/share/opencode/auth.json << EOF
+        cat > ~/.local/share/2M_CODE/auth.json << EOF
         {
           "anthropic": {
             "type": "api",
@@ -103,13 +103,13 @@ Consulte los [**GitLab documentos**](https://docs.gitlab.com/user/duo_agent_plat
         }
         EOF
       - echo "Configuring git"
-      - git config --global user.email "opencode@gitlab.com"
-      - git config --global user.name "OpenCode"
+      - git config --global user.email "2M_CODE@gitlab.com"
+      - git config --global user.name "2M_CODE"
       - echo "Testing glab"
       - glab issue list
-      - echo "Running OpenCode"
+      - echo "Running 2M_CODE"
       - |
-        opencode run "
+        2M_CODE run "
         You are an AI assistant helping with GitLab operations.
 
         Context: $AI_FLOW_CONTEXT
@@ -146,7 +146,7 @@ Consulte los [**GitLab documentos**](https://docs.gitlab.com/user/duo_agent_plat
         fi
     variables:
       - ANTHROPIC_API_KEY
-      - GITLAB_TOKEN_OPENCODE
+      - GITLAB_TOKEN_2M_CODE
       - GITLAB_HOST
     ```
 
@@ -158,10 +158,10 @@ Puede consultar los [GitLab CLI documentos de los agentes](https://docs.gitlab.c
 
 ### Ejemplos
 
-A continuación se muestran algunos ejemplos de cómo puede utilizar OpenCode en GitLab.
+A continuación se muestran algunos ejemplos de cómo puede utilizar 2M_CODE en GitLab.
 
 :::tip
-Puede configurarlo para utilizar una frase de activación diferente a `@opencode`.
+Puede configurarlo para utilizar una frase de activación diferente a `@2M_CODE`.
 :::
 
 - **Explica un problema**
@@ -169,27 +169,27 @@ Puede configurarlo para utilizar una frase de activación diferente a `@opencode
   Agregue este comentario en una edición GitLab.
 
   ```
-  @opencode explain this issue
+  @2M_CODE explain this issue
   ```
 
-  OpenCode leerá el problema y responderá con una explicación clara.
+  2M_CODE leerá el problema y responderá con una explicación clara.
 
 - **Solucionar un problema**
 
   En un problema GitLab, diga:
 
   ```
-  @opencode fix this
+  @2M_CODE fix this
   ```
 
-  OpenCode creará una nueva rama, implementará los cambios y abrirá una solicitud de fusión con los cambios.
+  2M_CODE creará una nueva rama, implementará los cambios y abrirá una solicitud de fusión con los cambios.
 
 - **Revisar solicitudes de fusión**
 
   Deje el siguiente comentario sobre una solicitud de fusión GitLab.
 
   ```
-  @opencode review this merge request
+  @2M_CODE review this merge request
   ```
 
-  OpenCode revisará la solicitud de fusión y brindará comentarios.
+  2M_CODE revisará la solicitud de fusión y brindará comentarios.

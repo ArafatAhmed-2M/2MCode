@@ -1,4 +1,4 @@
-import { Route } from "../route/client"
+﻿import { Route } from "../route/client"
 import type { ModelInput } from "../llm"
 import { Provider } from "../provider"
 import { ProviderID, type ModelID } from "../schema"
@@ -8,7 +8,7 @@ import { withOpenAIOptions, type OpenAIProviderOptionsInput } from "./openai-opt
 
 export const id = ProviderID.make("github-copilot")
 
-// GitHub Copilot has no canonical public URL — callers (opencode, etc.) must
+// GitHub Copilot has no canonical public URL — callers (2M_CODE, etc.) must
 // supply `baseURL` explicitly.
 export type ModelOptions = Omit<ModelInput, "id" | "provider" | "route"> & {
   readonly providerOptions?: OpenAIProviderOptionsInput

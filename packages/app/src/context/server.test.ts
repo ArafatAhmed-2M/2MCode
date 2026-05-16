@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import { resolveServerList, ServerConnection } from "./server"
 
 describe("resolveServerList", () => {
@@ -11,7 +11,7 @@ describe("resolveServerList", () => {
           authToken: true,
           http: {
             url: "https://server.example.test",
-            username: "opencode",
+            username: "2M_CODE",
             password: "secret",
           },
         },
@@ -22,7 +22,7 @@ describe("resolveServerList", () => {
     expect(list[0]?.type).toBe("http")
     expect(list[0]?.http).toEqual({
       url: "https://server.example.test",
-      username: "opencode",
+      username: "2M_CODE",
       password: "secret",
     })
     expect(list[0]?.type === "http" ? list[0].authToken : false).toBe(true)
@@ -34,7 +34,7 @@ describe("resolveServerList", () => {
       stored: [
         {
           url: "https://server.example.test",
-          username: "opencode",
+          username: "2M_CODE",
           password: "saved",
         },
       ],
@@ -45,7 +45,7 @@ describe("resolveServerList", () => {
     expect(list[0]?.type).toBe("http")
     expect(list[0]?.http).toEqual({
       url: "https://server.example.test",
-      username: "opencode",
+      username: "2M_CODE",
       password: "saved",
     })
     expect(list[0]?.type === "http" ? list[0].authToken : true).toBeUndefined()

@@ -1,10 +1,10 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import fs from "fs/promises"
 import { spawn } from "child_process"
 import path from "path"
 import os from "os"
-import { Flock } from "@opencode-ai/core/util/flock"
-import { Hash } from "@opencode-ai/core/util/hash"
+import { Flock } from "@2M_CODE-ai/core/util/flock"
+import { Hash } from "@2M_CODE-ai/core/util/hash"
 
 type Msg = {
   key: string

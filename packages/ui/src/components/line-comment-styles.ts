@@ -1,4 +1,4 @@
-export const lineCommentStyles = `
+﻿export const lineCommentStyles = `
 [data-annotation-slot] {
   padding: 12px;
   box-sizing: border-box;
@@ -278,7 +278,7 @@ export function installLineCommentStyles() {
   if (installed) return
   if (typeof document === "undefined") return
 
-  const id = "opencode-line-comment-styles"
+  const id = "2M_CODE-line-comment-styles"
   if (document.getElementById(id)) {
     installed = true
     return

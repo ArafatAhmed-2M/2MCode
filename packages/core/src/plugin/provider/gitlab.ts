@@ -1,4 +1,4 @@
-import os from "os"
+﻿import os from "os"
 import { InstallationVersion } from "../../installation/version"
 import { Effect } from "effect"
 import { PluginV2 } from "../../plugin"
@@ -19,7 +19,7 @@ export const GitLabPlugin = PluginV2.define({
               : (process.env.GITLAB_INSTANCE_URL ?? "https://gitlab.com"),
           apiKey: typeof evt.options.apiKey === "string" ? evt.options.apiKey : process.env.GITLAB_TOKEN,
           aiGatewayHeaders: {
-            "User-Agent": `opencode/${InstallationVersion} gitlab-ai-provider/${mod.VERSION} (${os.platform()} ${os.release()}; ${os.arch()})`,
+            "User-Agent": `2M_CODE/${InstallationVersion} gitlab-ai-provider/${mod.VERSION} (${os.platform()} ${os.release()}; ${os.arch()})`,
             "anthropic-beta": "context-1m-2025-08-07",
             ...evt.options.aiGatewayHeaders,
           },

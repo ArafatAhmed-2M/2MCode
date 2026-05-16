@@ -1,4 +1,4 @@
-import { describe, expect } from "bun:test"
+﻿import { describe, expect } from "bun:test"
 import { ConfigProvider, Effect, Layer, Stream } from "effect"
 import { Headers, HttpClientRequest } from "effect/unstable/http"
 import { LLM, LLMError, Message, ToolCallPart, Usage } from "../../src"
@@ -178,7 +178,7 @@ describe("OpenAI Responses route", () => {
       yield* LLMClient.generate(
         LLM.updateRequest(request, {
           model: Azure.responses("gpt-4.1-mini", {
-            baseURL: "https://opencode-test.openai.azure.com/openai/v1/",
+            baseURL: "https://2M_CODE-test.openai.azure.com/openai/v1/",
             apiKey: "azure-key",
             headers: { authorization: "Bearer stale" },
           }),

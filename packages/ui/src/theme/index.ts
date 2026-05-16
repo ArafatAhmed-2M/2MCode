@@ -1,4 +1,4 @@
-export type {
+﻿export type {
   DesktopTheme,
   ThemePaletteColors,
   ThemeSeedColors,
@@ -60,7 +60,7 @@ export {
   nordTheme,
   oneDarkTheme,
   oneDarkProTheme,
-  opencodeTheme,
+  2M_CODETheme,
   orngTheme,
   osakaJadeTheme,
   palenightTheme,

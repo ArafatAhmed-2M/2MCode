@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import { authFromToken, authTokenFromCredentials } from "./server"
 
 describe("authFromToken", () => {
@@ -6,8 +6,8 @@ describe("authFromToken", () => {
     expect(authFromToken(btoa("kit:secret"))).toEqual({ username: "kit", password: "secret" })
   })
 
-  test("defaults blank username to opencode", () => {
-    expect(authFromToken(btoa(":secret"))).toEqual({ username: "opencode", password: "secret" })
+  test("defaults blank username to 2M_CODE", () => {
+    expect(authFromToken(btoa(":secret"))).toEqual({ username: "2M_CODE", password: "secret" })
   })
 
   test("ignores malformed tokens", () => {
@@ -18,6 +18,6 @@ describe("authFromToken", () => {
 
 describe("authTokenFromCredentials", () => {
   test("encodes credentials with the default username", () => {
-    expect(authTokenFromCredentials({ password: "secret" })).toBe(btoa("opencode:secret"))
+    expect(authTokenFromCredentials({ password: "secret" })).toBe(btoa("2M_CODE:secret"))
   })
 })

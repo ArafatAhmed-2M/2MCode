@@ -1,4 +1,4 @@
-import { Context, Duration, Effect, Fiber, Layer, Schema, Stream } from "effect"
+﻿import { Context, Duration, Effect, Fiber, Layer, Schema, Stream } from "effect"
 import type { PlatformError } from "effect/PlatformError"
 import { ChildProcess } from "effect/unstable/process"
 import { ChildProcessSpawner } from "effect/unstable/process/ChildProcessSpawner"
@@ -43,7 +43,7 @@ export type Interface = ChildProcessSpawner["Service"] & {
   ) => Stream.Stream<string, AppProcessError>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/AppProcess") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/AppProcess") {}
 
 export const requireSuccess = (result: RunResult): Effect.Effect<RunResult, AppProcessError> =>
   result.exitCode === 0

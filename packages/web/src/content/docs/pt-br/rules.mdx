@@ -1,21 +1,21 @@
----
+﻿---
 title: Regras
-description: Defina instruções personalizadas para opencode.
+description: Defina instruções personalizadas para 2M_CODE.
 ---
 
-Você pode fornecer instruções personalizadas para opencode criando um arquivo `AGENTS.md`. Isso é semelhante às regras do Cursor. Ele contém instruções que serão incluídas no contexto do LLM para personalizar seu comportamento para o seu projeto específico.
+Você pode fornecer instruções personalizadas para 2M_CODE criando um arquivo `AGENTS.md`. Isso é semelhante às regras do Cursor. Ele contém instruções que serão incluídas no contexto do LLM para personalizar seu comportamento para o seu projeto específico.
 
 ---
 
 ## Inicializar
 
-Para criar um novo arquivo `AGENTS.md`, você pode executar o comando `/init` no opencode.
+Para criar um novo arquivo `AGENTS.md`, você pode executar o comando `/init` no 2M_CODE.
 
 :::tip
 Você deve commitar o arquivo `AGENTS.md` do seu projeto no Git.
 :::
 
-Isso irá escanear seu projeto e todo o seu conteúdo para entender do que se trata o projeto e gerar um arquivo `AGENTS.md` com isso. Isso ajuda o opencode a navegar melhor pelo projeto.
+Isso irá escanear seu projeto e todo o seu conteúdo para entender do que se trata o projeto e gerar um arquivo `AGENTS.md` com isso. Isso ajuda o 2M_CODE a navegar melhor pelo projeto.
 
 Se você já tiver um arquivo `AGENTS.md` existente, isso tentará adicionar a ele.
 
@@ -54,7 +54,7 @@ Estamos adicionando instruções específicas do projeto aqui e isso será compa
 
 ## Tipos
 
-O opencode também suporta a leitura do arquivo `AGENTS.md` de múltiplos locais. E isso serve a diferentes propósitos.
+O 2M_CODE também suporta a leitura do arquivo `AGENTS.md` de múltiplos locais. E isso serve a diferentes propósitos.
 
 ### Projeto
 
@@ -62,58 +62,58 @@ Coloque um `AGENTS.md` na raiz do seu projeto para regras específicas do projet
 
 ### Global
 
-Você também pode ter regras globais em um arquivo `~/.config/opencode/AGENTS.md`. Isso é aplicado em todas as sessões do opencode.
+Você também pode ter regras globais em um arquivo `~/.config/2M_CODE/AGENTS.md`. Isso é aplicado em todas as sessões do 2M_CODE.
 
 Como isso não é commitado no Git ou compartilhado com sua equipe, recomendamos usar isso para especificar quaisquer regras pessoais que o LLM deve seguir.
 
 ### Compatibilidade com Claude Code
 
-Para usuários migrando do Claude Code, o opencode suporta as convenções de arquivo do Claude Code como alternativas:
+Para usuários migrando do Claude Code, o 2M_CODE suporta as convenções de arquivo do Claude Code como alternativas:
 
 - **Regras do projeto**: `CLAUDE.md` no diretório do seu projeto (usado se não existir `AGENTS.md`)
-- **Regras globais**: `~/.claude/CLAUDE.md` (usado se não existir `~/.config/opencode/AGENTS.md`)
+- **Regras globais**: `~/.claude/CLAUDE.md` (usado se não existir `~/.config/2M_CODE/AGENTS.md`)
 - **Habilidades**: `~/.claude/skills/` — veja [Habilidades do Agente](/docs/skills/) para detalhes
 
 Para desabilitar a compatibilidade com Claude Code, defina uma dessas variáveis de ambiente:
 
 ```bash
-export OPENCODE_DISABLE_CLAUDE_CODE=1        # Disable all .claude support
-export OPENCODE_DISABLE_CLAUDE_CODE_PROMPT=1 # Disable only ~/.claude/CLAUDE.md
-export OPENCODE_DISABLE_CLAUDE_CODE_SKILLS=1 # Disable only .claude/skills
+export 2M_CODE_DISABLE_CLAUDE_CODE=1        # Disable all .claude support
+export 2M_CODE_DISABLE_CLAUDE_CODE_PROMPT=1 # Disable only ~/.claude/CLAUDE.md
+export 2M_CODE_DISABLE_CLAUDE_CODE_SKILLS=1 # Disable only .claude/skills
 ```
 
 ---
 
 ## Precedência
 
-Quando o opencode inicia, ele procura arquivos de regras nesta ordem:
+Quando o 2M_CODE inicia, ele procura arquivos de regras nesta ordem:
 
 1. **Arquivos locais** percorrendo a partir do diretório atual (`AGENTS.md`, `CLAUDE.md`)
-2. **Arquivo global** em `~/.config/opencode/AGENTS.md`
+2. **Arquivo global** em `~/.config/2M_CODE/AGENTS.md`
 3. **Arquivo Claude Code** em `~/.claude/CLAUDE.md` (a menos que desabilitado)
 
-O primeiro arquivo correspondente vence em cada categoria. Por exemplo, se você tiver tanto `AGENTS.md` quanto `CLAUDE.md`, apenas `AGENTS.md` é usado. Da mesma forma, `~/.config/opencode/AGENTS.md` tem precedência sobre `~/.claude/CLAUDE.md`.
+O primeiro arquivo correspondente vence em cada categoria. Por exemplo, se você tiver tanto `AGENTS.md` quanto `CLAUDE.md`, apenas `AGENTS.md` é usado. Da mesma forma, `~/.config/2M_CODE/AGENTS.md` tem precedência sobre `~/.claude/CLAUDE.md`.
 
 ---
 
 ## Instruções Personalizadas
 
-Você pode especificar arquivos de instrução personalizados no seu `opencode.json` ou no global `~/.config/opencode/opencode.json`. Isso permite que você e sua equipe reutilizem regras existentes em vez de ter que duplicá-las no AGENTS.md.
+Você pode especificar arquivos de instrução personalizados no seu `2M_CODE.json` ou no global `~/.config/2M_CODE/2M_CODE.json`. Isso permite que você e sua equipe reutilizem regras existentes em vez de ter que duplicá-las no AGENTS.md.
 
 Exemplo:
 
-```json title="opencode.json"
+```json title="2M_CODE.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://2M_CODE.ai/config.json",
   "instructions": ["CONTRIBUTING.md", "docs/guidelines.md", ".cursor/rules/*.md"]
 }
 ```
 
 Você também pode usar URLs remotas para carregar instruções da web.
 
-```json title="opencode.json"
+```json title="2M_CODE.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://2M_CODE.ai/config.json",
   "instructions": ["https://raw.githubusercontent.com/my-org/shared-rules/main/style.md"]
 }
 ```
@@ -126,22 +126,22 @@ Todos os arquivos de instrução são combinados com seus arquivos `AGENTS.md`.
 
 ## Referenciando Arquivos Externos
 
-Embora o opencode não analise automaticamente referências de arquivos em `AGENTS.md`, você pode alcançar funcionalidade semelhante de duas maneiras:
+Embora o 2M_CODE não analise automaticamente referências de arquivos em `AGENTS.md`, você pode alcançar funcionalidade semelhante de duas maneiras:
 
-### Usando opencode.json
+### Usando 2M_CODE.json
 
-A abordagem recomendada é usar o campo `instructions` em `opencode.json`:
+A abordagem recomendada é usar o campo `instructions` em `2M_CODE.json`:
 
-```json title="opencode.json"
+```json title="2M_CODE.json"
 {
-  "$schema": "https://opencode.ai/config.json",
+  "$schema": "https://2M_CODE.ai/config.json",
   "instructions": ["docs/development-standards.md", "test/testing-guidelines.md", "packages/*/AGENTS.md"]
 }
 ```
 
 ### Instruções Manuais em AGENTS.md
 
-Você pode ensinar o opencode a ler arquivos externos fornecendo instruções explícitas em seu `AGENTS.md`. Aqui está um exemplo prático:
+Você pode ensinar o 2M_CODE a ler arquivos externos fornecendo instruções explícitas em seu `AGENTS.md`. Aqui está um exemplo prático:
 
 ```markdown title="AGENTS.md"
 # TypeScript Project Rules
@@ -173,8 +173,8 @@ Essa abordagem permite que você:
 - Crie arquivos de regras modulares e reutilizáveis
 - Compartilhe regras entre projetos via symlinks ou submódulos do git
 - Mantenha o AGENTS.md conciso enquanto referencia diretrizes detalhadas
-- Garanta que o opencode carregue arquivos apenas quando necessário para a tarefa específica
+- Garanta que o 2M_CODE carregue arquivos apenas quando necessário para a tarefa específica
 
 :::tip
-Para monorepos ou projetos com padrões compartilhados, usar `opencode.json` com padrões glob (como `packages/*/AGENTS.md`) é mais sustentável do que instruções manuais.
+Para monorepos ou projetos com padrões compartilhados, usar `2M_CODE.json` com padrões glob (como `packages/*/AGENTS.md`) é mais sustentável do que instruções manuais.
 :::

@@ -1,7 +1,7 @@
-import { describe, expect } from "bun:test"
+﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@opencode-ai/core/plugin"
-import { AzureCognitiveServicesPlugin } from "@opencode-ai/core/plugin/provider/azure"
+import { PluginV2 } from "@2M_CODE-ai/core/plugin"
+import { AzureCognitiveServicesPlugin } from "@2M_CODE-ai/core/plugin/provider/azure"
 import { fakeSelectorSdk, it, model, provider, withEnv } from "./provider-helper"
 
 describe("AzureCognitiveServicesPlugin", () => {

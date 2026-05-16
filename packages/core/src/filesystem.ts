@@ -1,4 +1,4 @@
-import { NodeFileSystem } from "@effect/platform-node"
+﻿import { NodeFileSystem } from "@effect/platform-node"
 import { dirname, join, relative, resolve as pathResolve } from "path"
 import { realpathSync } from "fs"
 import * as NFS from "fs/promises"
@@ -37,7 +37,7 @@ export namespace AppFileSystem {
     readonly globMatch: (pattern: string, filepath: string) => boolean
   }
 
-  export class Service extends Context.Service<Service, Interface>()("@opencode/FileSystem") {}
+  export class Service extends Context.Service<Service, Interface>()("@2M_CODE/FileSystem") {}
 
   export const layer = Layer.effect(
     Service,

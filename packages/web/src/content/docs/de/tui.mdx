@@ -1,22 +1,22 @@
----
+﻿---
 title: TUI
-description: Arbeite mit OpenCode in der Terminal-Oberflaeche.
+description: Arbeite mit 2M_CODE in der Terminal-Oberflaeche.
 ---
 
 import { Tabs, TabItem } from "@astrojs/starlight/components"
 
-OpenCode bietet eine interaktive Terminaloberflaeche (TUI), um mit einem LLM an deinen Projekten zu arbeiten.
+2M_CODE bietet eine interaktive Terminaloberflaeche (TUI), um mit einem LLM an deinen Projekten zu arbeiten.
 
-Ohne weitere Argumente startet OpenCode die TUI im aktuellen Verzeichnis.
+Ohne weitere Argumente startet 2M_CODE die TUI im aktuellen Verzeichnis.
 
 ```bash
-opencode
+2M_CODE
 ```
 
 Oder du startest sie fuer ein bestimmtes Arbeitsverzeichnis.
 
 ```bash
-opencode /path/to/project
+2M_CODE /path/to/project
 ```
 
 In der TUI kannst du direkt mit einer Nachricht prompten.
@@ -58,7 +58,7 @@ Die Ausgabe landet als Tool-Ergebnis in der Unterhaltung.
 
 ## Befehle
 
-In der OpenCode-TUI kannst du `/` plus Befehlsnamen eingeben, um Aktionen schnell auszufuehren.
+In der 2M_CODE-TUI kannst du `/` plus Befehlsnamen eingeben, um Aktionen schnell auszufuehren.
 Zum Beispiel:
 
 ```bash frame="none"
@@ -74,7 +74,7 @@ Hier sind alle verfuegbaren Slash-Commands:
 
 ### connect
 
-Fuegt einen Provider zu OpenCode hinzu. Erlaubt die Auswahl aus verfuegbaren Providern und das Hinzufuegen ihrer API-Keys.
+Fuegt einen Provider zu 2M_CODE hinzu. Erlaubt die Auswahl aus verfuegbaren Providern und das Hinzufuegen ihrer API-Keys.
 
 ```bash frame="none"
 /connect
@@ -120,7 +120,7 @@ Oeffnet externen Editor zum Verfassen von Nachrichten. Nutzt den in der `EDITOR`
 
 ### exit
 
-Beendet OpenCode. _Aliase_: `/quit`, `/q`
+Beendet 2M_CODE. _Aliase_: `/quit`, `/q`
 
 ```bash frame="none"
 /exit
@@ -359,8 +359,8 @@ Du kannst das Verhalten der TUI ueber die Datei `tui.json` (oder `tui.jsonc`) an
 
 ```json title="tui.json"
 {
-  "$schema": "https://opencode.ai/tui.json",
-  "theme": "opencode",
+  "$schema": "https://2M_CODE.ai/tui.json",
+  "theme": "2M_CODE",
   "keybinds": {
     "leader": "ctrl+x"
   },
@@ -372,7 +372,7 @@ Du kannst das Verhalten der TUI ueber die Datei `tui.json` (oder `tui.jsonc`) an
 }
 ```
 
-Dies ist getrennt von `opencode.json`, welche das Server-/Runtime-Verhalten konfiguriert.
+Dies ist getrennt von `2M_CODE.json`, welche das Server-/Runtime-Verhalten konfiguriert.
 
 ### Optionen
 
@@ -382,7 +382,7 @@ Dies ist getrennt von `opencode.json`, welche das Server-/Runtime-Verhalten konf
 - `scroll_speed` - Steuert, wie schnell die TUI scrollt (Minimum: `0.001`, unterstuetzt Dezimalwerte). Standard ist `3`. **Hinweis: Wird ignoriert, wenn `scroll_acceleration.enabled` auf `true` gesetzt ist.**
 - `diff_style` - Steuert die Diff-Darstellung. `"auto"` passt sich der Terminalbreite an, `"stacked"` zeigt immer ein einspaltiges Layout.
 
-Verwende `OPENCODE_TUI_CONFIG`, um einen benutzerdefinierten TUI-Konfigurationspfad zu laden.
+Verwende `2M_CODE_TUI_CONFIG`, um einen benutzerdefinierten TUI-Konfigurationspfad zu laden.
 
 ---
 

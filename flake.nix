@@ -1,5 +1,5 @@
-{
-  description = "OpenCode development flake";
+﻿{
+  description = "2M_CODE development flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -37,16 +37,16 @@
             node_modules = final.callPackage ./nix/node_modules.nix {
               inherit rev;
             };
-            opencode = final.callPackage ./nix/opencode.nix {
+            2M_CODE = final.callPackage ./nix/2M_CODE.nix {
               inherit node_modules;
             };
             desktop = final.callPackage ./nix/desktop.nix {
-              inherit opencode;
+              inherit 2M_CODE;
             };
           in
           {
-            inherit opencode;
-            opencode-desktop = desktop;
+            inherit 2M_CODE;
+            2M_CODE-desktop = desktop;
           };
       };
 
@@ -56,16 +56,16 @@
           node_modules = pkgs.callPackage ./nix/node_modules.nix {
             inherit rev;
           };
-          opencode = pkgs.callPackage ./nix/opencode.nix {
+          2M_CODE = pkgs.callPackage ./nix/2M_CODE.nix {
             inherit node_modules;
           };
           desktop = pkgs.callPackage ./nix/desktop.nix {
-            inherit opencode;
+            inherit 2M_CODE;
           };
         in
         {
-          default = opencode;
-          inherit opencode desktop;
+          default = 2M_CODE;
+          inherit 2M_CODE desktop;
           # Updater derivation with fakeHash - build fails and reveals correct hash
           node_modules_updater = node_modules.override {
             hash = pkgs.lib.fakeHash;

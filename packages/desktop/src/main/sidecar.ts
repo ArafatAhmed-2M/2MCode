@@ -1,4 +1,4 @@
-import { drizzle } from "drizzle-orm/node-sqlite/driver"
+﻿import { drizzle } from "drizzle-orm/node-sqlite/driver"
 import * as http from "node:http"
 import * as tls from "node:tls"
 
@@ -57,7 +57,7 @@ async function start(command: StartCommand) {
     ensureLoopbackNoProxy()
     useSystemCertificates()
     useEnvProxy()
-    const { Database, JsonMigration, Log, Server } = await import("virtual:opencode-server")
+    const { Database, JsonMigration, Log, Server } = await import("virtual:2M_CODE-server")
     await Log.init({ level: "WARN" })
 
     if (command.needsMigration) {
@@ -78,7 +78,7 @@ async function start(command: StartCommand) {
     listener = await Server.listen({
       port: command.port,
       hostname: command.hostname,
-      username: "opencode",
+      username: "2M_CODE",
       password: command.password,
       cors: ["oc://renderer"],
     })
@@ -101,8 +101,8 @@ async function stop() {
 
 function prepareSidecarEnv(password: string, userDataPath: string) {
   Object.assign(process.env, {
-    OPENCODE_SERVER_USERNAME: "opencode",
-    OPENCODE_SERVER_PASSWORD: password,
+    2M_CODE_SERVER_USERNAME: "2M_CODE",
+    2M_CODE_SERVER_PASSWORD: password,
     XDG_STATE_HOME: process.env.XDG_STATE_HOME ?? userDataPath,
   })
 }

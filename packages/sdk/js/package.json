@@ -1,6 +1,6 @@
-{
+﻿{
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "@opencode-ai/sdk",
+  "name": "@2M_CODE-ai/sdk",
   "version": "1.15.0",
   "type": "module",
   "license": "MIT",

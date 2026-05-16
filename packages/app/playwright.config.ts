@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test"
+﻿import { defineConfig, devices } from "@playwright/test"
 
 const port = Number(process.env.PLAYWRIGHT_PORT ?? 3000)
 const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? `http://127.0.0.1:${port}`
@@ -31,8 +31,8 @@ export default defineConfig({
     reuseExistingServer: reuse,
     timeout: 120_000,
     env: {
-      VITE_OPENCODE_SERVER_HOST: serverHost,
-      VITE_OPENCODE_SERVER_PORT: serverPort,
+      VITE_2M_CODE_SERVER_HOST: serverHost,
+      VITE_2M_CODE_SERVER_PORT: serverPort,
     },
   },
   use: {

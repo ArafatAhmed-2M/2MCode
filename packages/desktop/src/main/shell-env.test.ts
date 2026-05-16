@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 
 import { isNushell, mergeShellEnv, parseShellEnv, resolveUserShell } from "./shell-env"
 
@@ -25,13 +25,13 @@ describe("shell env", () => {
       },
       {
         PATH: "/desktop/path",
-        OPENCODE_CLIENT: "desktop",
+        2M_CODE_CLIENT: "desktop",
       },
     )
 
     expect(env.PATH).toBe("/desktop/path")
     expect(env.HOME).toBe("/tmp/home")
-    expect(env.OPENCODE_CLIENT).toBe("desktop")
+    expect(env.2M_CODE_CLIENT).toBe("desktop")
   })
 
   test("resolveUserShell falls back to the login shell before /bin/sh", () => {

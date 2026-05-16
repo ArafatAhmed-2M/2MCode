@@ -1,10 +1,10 @@
-import { Effect, Layer, Logger } from "effect"
+﻿import { Effect, Layer, Logger } from "effect"
 import { FetchHttpClient } from "effect/unstable/http"
 import { OtlpLogger, OtlpSerialization } from "effect/unstable/observability"
 import * as EffectLogger from "./logger"
 import { Flag } from "../flag/flag"
 import { InstallationChannel, InstallationVersion } from "../installation/version"
-import { ensureProcessMetadata } from "../util/opencode-process"
+import { ensureProcessMetadata } from "../util/2M_CODE-process"
 
 const base = Flag.OTEL_EXPORTER_OTLP_ENDPOINT
 export const enabled = !!base
@@ -40,14 +40,14 @@ export function resource(): { serviceName: string; serviceVersion: string; attri
   })()
 
   return {
-    serviceName: "opencode",
+    serviceName: "2M_CODE",
     serviceVersion: InstallationVersion,
     attributes: {
       ...attributes,
       "deployment.environment.name": InstallationChannel,
-      "opencode.client": Flag.OPENCODE_CLIENT,
-      "opencode.process_role": processMetadata.processRole,
-      "opencode.run_id": processMetadata.runID,
+      "2M_CODE.client": Flag.2M_CODE_CLIENT,
+      "2M_CODE.process_role": processMetadata.processRole,
+      "2M_CODE.run_id": processMetadata.runID,
       "service.instance.id": processID,
     },
   }

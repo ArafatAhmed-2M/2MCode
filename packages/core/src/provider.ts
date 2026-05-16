@@ -1,4 +1,4 @@
-export * as ProviderV2 from "./provider"
+﻿export * as ProviderV2 from "./provider"
 
 import { withStatics } from "./schema"
 import { Schema } from "effect"
@@ -7,7 +7,7 @@ export const ID = Schema.String.pipe(
   Schema.brand("ProviderV2.ID"),
   withStatics((schema) => ({
     // Well-known providers
-    opencode: schema.make("opencode"),
+    2M_CODE: schema.make("2M_CODE"),
     anthropic: schema.make("anthropic"),
     openai: schema.make("openai"),
     google: schema.make("google"),

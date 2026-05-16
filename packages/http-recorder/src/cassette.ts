@@ -1,4 +1,4 @@
-import { Context, Effect, FileSystem, Layer, Schema } from "effect"
+﻿import { Context, Effect, FileSystem, Layer, Schema } from "effect"
 import * as fs from "node:fs"
 import * as path from "node:path"
 import { secretFindings, SecretFindingSchema, type SecretFinding } from "./redaction"
@@ -36,7 +36,7 @@ export interface Interface {
   readonly list: () => Effect.Effect<ReadonlyArray<string>>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode-ai/http-recorder/Cassette") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE-ai/http-recorder/Cassette") {}
 
 export const hasCassetteSync = (name: string, options: { readonly directory?: string } = {}) =>
   fs.existsSync(path.join(options.directory ?? DEFAULT_RECORDINGS_DIR, `${name}.json`))

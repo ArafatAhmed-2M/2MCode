@@ -1,4 +1,4 @@
-import { onMount, splitProps, type ComponentProps } from "solid-js"
+﻿import { onMount, splitProps, type ComponentProps } from "solid-js"
 
 const icons = {
   "align-right": `<path d="M12.292 6.04167L16.2503 9.99998L12.292 13.9583M2.91699 9.99998H15.6253M17.0837 3.75V16.25" stroke="currentColor" stroke-linecap="square"/>`,
@@ -105,8 +105,8 @@ const icons = {
   "arrow-undo-down": `<path d="M4.08333 11.0859L1.75 8.7526L4.08333 6.41927M2.33333 8.7526L12.5417 8.7526L12.5417 3.21094L7 3.21094" stroke="currentColor" stroke-width="1" stroke-linecap="square"/>`,
 }
 
-const spriteID = "opencode-icon-sprite"
-const symbol = (name: keyof typeof icons) => `opencode-icon-${name}`
+const spriteID = "2M_CODE-icon-sprite"
+const symbol = (name: keyof typeof icons) => `2M_CODE-icon-${name}`
 let spriteInserted = false
 
 function viewBox(name: keyof typeof icons) {

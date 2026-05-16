@@ -1,5 +1,5 @@
-#!/usr/bin/env bun
-import { Script } from "@opencode-ai/script"
+﻿#!/usr/bin/env bun
+import { Script } from "@2M_CODE-ai/script"
 import { $ } from "bun"
 import { fileURLToPath } from "url"
 

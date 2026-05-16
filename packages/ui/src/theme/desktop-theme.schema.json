@@ -1,8 +1,8 @@
-{
+﻿{
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://opencode.ai/desktop-theme.json",
-  "title": "OpenCode Desktop Theme",
-  "description": "A theme definition for the OpenCode desktop application",
+  "$id": "https://2M_CODE.ai/desktop-theme.json",
+  "title": "2M_CODE Desktop Theme",
+  "description": "A theme definition for the 2M_CODE desktop application",
   "type": "object",
   "required": ["name", "id", "light", "dark"],
   "properties": {

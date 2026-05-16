@@ -1,4 +1,4 @@
-import { Cause, Context, Effect, Layer, Schema, Stream } from "effect"
+﻿import { Cause, Context, Effect, Layer, Schema, Stream } from "effect"
 import type { Auth as AuthDef } from "./auth"
 import type { Endpoint } from "./endpoint"
 import { RequestExecutor } from "./executor"
@@ -240,7 +240,7 @@ export interface GenerateMethod {
   <T extends Tools>(options: ToolRuntime.RunOptions<T>): Effect.Effect<LLMResponse, LLMError>
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/LLMClient") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/LLMClient") {}
 
 const noRoute = (model: ModelRef) =>
   new LLMErrorClass({

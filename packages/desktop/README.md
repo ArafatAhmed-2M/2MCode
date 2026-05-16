@@ -1,6 +1,6 @@
-# OpenCode Desktop
+﻿# 2M_CODE Desktop
 
-The OpenCode Desktop app, built with Electron.
+The 2M_CODE Desktop app, built with Electron.
 
 ## Development
 

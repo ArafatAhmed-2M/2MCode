@@ -1,4 +1,4 @@
-export async function buildOptionsResponse() {
+﻿export async function buildOptionsResponse() {
   return new Response(null, {
     status: 200,
     headers: {
@@ -19,7 +19,7 @@ export async function buildModelsResponse(models: string[]) {
           id,
           object: "model",
           created: Math.floor(Date.now() / 1000),
-          owned_by: "opencode",
+          owned_by: "2M_CODE",
         })),
     }),
     {

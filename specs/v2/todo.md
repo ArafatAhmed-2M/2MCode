@@ -1,10 +1,10 @@
-# TODO
+﻿# TODO
 
 ok we need to work towards a launch of v2 so we can get out of this rebuild phase
 
 ## Post-Hono cleanup - Kit
 
-The opencode server has moved to the Effect HttpApi backend. Remaining work is
+The 2M_CODE server has moved to the Effect HttpApi backend. Remaining work is
 mostly cleanup: delete compatibility shims, shrink Zod surfaces, and simplify
 test harnesses that used to compare Hono and HttpApi behavior.
 
@@ -29,9 +29,9 @@ We need to figure out how we want server plugins to work and what hooks are usef
 Some ideas:
 
 - plugins get immer drafts so bad mutations can be thrown away
-- plugins get global "opencode" instance like in that post i showed
-- opencode instance has stuff like `opencode.session.prompt()` or
-  `opencode.tool.register({...})`
+- plugins get global "2M_CODE" instance like in that post i showed
+- 2M_CODE instance has stuff like `2M_CODE.session.prompt()` or
+  `2M_CODE.tool.register({...})`
 
 ## Rework Config - ???
 

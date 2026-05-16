@@ -1,4 +1,4 @@
-export * as Catalog from "./catalog"
+﻿export * as Catalog from "./catalog"
 
 import { Context, Effect, HashMap, Layer, Option, Order, pipe, Schema, Array } from "effect"
 import { produce, type Draft } from "immer"
@@ -62,7 +62,7 @@ export interface Interface {
   }
 }
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/v2/Catalog") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/v2/Catalog") {}
 
 export const layer = Layer.effect(
   Service,
@@ -216,7 +216,7 @@ export const layer = Layer.effect(
           const record = Option.getOrUndefined(HashMap.get(records, providerID))
           if (!record) return Option.none<ModelV2.Info>()
 
-          if (providerID === ProviderV2.ID.opencode) {
+          if (providerID === ProviderV2.ID.2M_CODE) {
             const gpt5Nano = Option.getOrUndefined(HashMap.get(record.models, ModelV2.ID.make("gpt-5-nano")))
             if (gpt5Nano?.enabled && gpt5Nano.status === "active") return Option.some(resolve(gpt5Nano))
           }

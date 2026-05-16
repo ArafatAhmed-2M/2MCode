@@ -1,4 +1,4 @@
-export * as LayerMapExample from "./layer-map.example"
+﻿export * as LayerMapExample from "./layer-map.example"
 
 import { Context, Effect, Layer, LayerMap } from "effect"
 import { Npm } from "../npm"
@@ -38,7 +38,7 @@ export type RequestContext = {
 }
 
 export class RequestContextRef extends Context.Service<RequestContextRef, RequestContext>()(
-  "@opencode/example/RequestContextRef",
+  "@2M_CODE/example/RequestContextRef",
 ) {}
 
 export interface ConfigServiceShape {
@@ -49,7 +49,7 @@ export interface ConfigServiceShape {
 }
 
 export class ConfigService extends Context.Service<ConfigService, ConfigServiceShape>()(
-  "@opencode/example/ConfigService",
+  "@2M_CODE/example/ConfigService",
 ) {}
 
 const configServiceLayer = Layer.effect(
@@ -69,7 +69,7 @@ const configServiceLayer = Layer.effect(
   }),
 )
 
-export class ConfigServiceMap extends LayerMap.Service<ConfigServiceMap>()("@opencode/example/ConfigServiceMap", {
+export class ConfigServiceMap extends LayerMap.Service<ConfigServiceMap>()("@2M_CODE/example/ConfigServiceMap", {
   lookup: (context: RequestContext) =>
     configServiceLayer.pipe(Layer.provide(Layer.succeed(RequestContextRef, RequestContextRef.of(context)))),
   idleTimeToLive: "5 minutes",

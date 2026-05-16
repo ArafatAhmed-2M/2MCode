@@ -1,36 +1,36 @@
-id = "opencode"
-name = "OpenCode"
+﻿id = "2M_CODE"
+name = "2M_CODE"
 description = "The open source coding agent."
 version = "1.15.0"
 schema_version = 1
 authors = ["Anomaly"]
-repository = "https://github.com/anomalyco/opencode"
+repository = "https://github.com/ArafatAhmed-2M/2mcode"
 
-[agent_servers.opencode]
-name = "OpenCode"
-icon = "./icons/opencode.svg"
+[agent_servers.2M_CODE]
+name = "2M_CODE"
+icon = "./icons/2M_CODE.svg"
 
-[agent_servers.opencode.targets.darwin-aarch64]
-archive = "https://github.com/anomalyco/opencode/releases/download/v1.15.0/opencode-darwin-arm64.zip"
-cmd = "./opencode"
+[agent_servers.2M_CODE.targets.darwin-aarch64]
+archive = "https://github.com/ArafatAhmed-2M/2mcode/releases/download/v1.15.0/2M_CODE-darwin-arm64.zip"
+cmd = "./2M_CODE"
 args = ["acp"]
 
-[agent_servers.opencode.targets.darwin-x86_64]
-archive = "https://github.com/anomalyco/opencode/releases/download/v1.15.0/opencode-darwin-x64.zip"
-cmd = "./opencode"
+[agent_servers.2M_CODE.targets.darwin-x86_64]
+archive = "https://github.com/ArafatAhmed-2M/2mcode/releases/download/v1.15.0/2M_CODE-darwin-x64.zip"
+cmd = "./2M_CODE"
 args = ["acp"]
 
-[agent_servers.opencode.targets.linux-aarch64]
-archive = "https://github.com/anomalyco/opencode/releases/download/v1.15.0/opencode-linux-arm64.tar.gz"
-cmd = "./opencode"
+[agent_servers.2M_CODE.targets.linux-aarch64]
+archive = "https://github.com/ArafatAhmed-2M/2mcode/releases/download/v1.15.0/2M_CODE-linux-arm64.tar.gz"
+cmd = "./2M_CODE"
 args = ["acp"]
 
-[agent_servers.opencode.targets.linux-x86_64]
-archive = "https://github.com/anomalyco/opencode/releases/download/v1.15.0/opencode-linux-x64.tar.gz"
-cmd = "./opencode"
+[agent_servers.2M_CODE.targets.linux-x86_64]
+archive = "https://github.com/ArafatAhmed-2M/2mcode/releases/download/v1.15.0/2M_CODE-linux-x64.tar.gz"
+cmd = "./2M_CODE"
 args = ["acp"]
 
-[agent_servers.opencode.targets.windows-x86_64]
-archive = "https://github.com/anomalyco/opencode/releases/download/v1.15.0/opencode-windows-x64.zip"
-cmd = "./opencode.exe"
+[agent_servers.2M_CODE.targets.windows-x86_64]
+archive = "https://github.com/ArafatAhmed-2M/2mcode/releases/download/v1.15.0/2M_CODE-windows-x64.zip"
+cmd = "./2M_CODE.exe"
 args = ["acp"]

@@ -1,14 +1,14 @@
-import type { ProviderAuthAuthorization, ProviderAuthMethod } from "@opencode-ai/sdk/v2/client"
-import { Button } from "@opencode-ai/ui/button"
-import { useDialog } from "@opencode-ai/ui/context/dialog"
-import { Dialog } from "@opencode-ai/ui/dialog"
-import { Icon } from "@opencode-ai/ui/icon"
-import { IconButton } from "@opencode-ai/ui/icon-button"
-import { List, type ListRef } from "@opencode-ai/ui/list"
-import { ProviderIcon } from "@opencode-ai/ui/provider-icon"
-import { Spinner } from "@opencode-ai/ui/spinner"
-import { TextField } from "@opencode-ai/ui/text-field"
-import { showToast } from "@opencode-ai/ui/toast"
+﻿import type { ProviderAuthAuthorization, ProviderAuthMethod } from "@2M_CODE-ai/sdk/v2/client"
+import { Button } from "@2M_CODE-ai/ui/button"
+import { useDialog } from "@2M_CODE-ai/ui/context/dialog"
+import { Dialog } from "@2M_CODE-ai/ui/dialog"
+import { Icon } from "@2M_CODE-ai/ui/icon"
+import { IconButton } from "@2M_CODE-ai/ui/icon-button"
+import { List, type ListRef } from "@2M_CODE-ai/ui/list"
+import { ProviderIcon } from "@2M_CODE-ai/ui/provider-icon"
+import { Spinner } from "@2M_CODE-ai/ui/spinner"
+import { TextField } from "@2M_CODE-ai/ui/text-field"
+import { showToast } from "@2M_CODE-ai/ui/toast"
 import { createEffect, createMemo, createResource, Match, onCleanup, onMount, Switch } from "solid-js"
 import { createStore, produce } from "solid-js/store"
 import { Link } from "@/components/link"
@@ -422,16 +422,16 @@ export function DialogConnectProvider(props: { provider: string }) {
     return (
       <div class="flex flex-col gap-6">
         <Switch>
-          <Match when={provider().id === "opencode"}>
+          <Match when={provider().id === "2M_CODE"}>
             <div class="flex flex-col gap-4">
-              <div class="text-14-regular text-text-base">{language.t("provider.connect.opencodeZen.line1")}</div>
-              <div class="text-14-regular text-text-base">{language.t("provider.connect.opencodeZen.line2")}</div>
+              <div class="text-14-regular text-text-base">{language.t("provider.connect.2M_CODEZen.line1")}</div>
+              <div class="text-14-regular text-text-base">{language.t("provider.connect.2M_CODEZen.line2")}</div>
               <div class="text-14-regular text-text-base">
-                {language.t("provider.connect.opencodeZen.visit.prefix")}
-                <Link href="https://opencode.ai/zen" tabIndex={-1}>
-                  {language.t("provider.connect.opencodeZen.visit.link")}
+                {language.t("provider.connect.2M_CODEZen.visit.prefix")}
+                <Link href="https://2M_CODE.ai/zen" tabIndex={-1}>
+                  {language.t("provider.connect.2M_CODEZen.visit.link")}
                 </Link>
-                {language.t("provider.connect.opencodeZen.visit.suffix")}
+                {language.t("provider.connect.2M_CODEZen.visit.suffix")}
               </div>
             </div>
           </Match>

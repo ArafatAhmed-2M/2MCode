@@ -1,4 +1,4 @@
-import { Cause, Context, Effect, Queue, Stream } from "effect"
+﻿import { Cause, Context, Effect, Queue, Stream } from "effect"
 import { Headers } from "effect/unstable/http"
 import { Auth, type Auth as AuthDef } from "../auth"
 import type { Endpoint } from "../endpoint"
@@ -26,7 +26,7 @@ type WebSocketConstructorWithHeaders = new (
   options?: { readonly headers?: Headers.Headers },
 ) => globalThis.WebSocket
 
-export class Service extends Context.Service<Service, Interface>()("@opencode/LLM/WebSocketExecutor") {}
+export class Service extends Context.Service<Service, Interface>()("@2M_CODE/LLM/WebSocketExecutor") {}
 
 const transportError = (
   method: string,

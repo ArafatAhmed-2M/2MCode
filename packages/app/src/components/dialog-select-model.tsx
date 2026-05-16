@@ -1,20 +1,20 @@
-import { Popover as Kobalte } from "@kobalte/core/popover"
+﻿import { Popover as Kobalte } from "@kobalte/core/popover"
 import { Component, ComponentProps, createMemo, JSX, Show, ValidComponent } from "solid-js"
 import { createStore } from "solid-js/store"
 import { useLocal } from "@/context/local"
-import { useDialog } from "@opencode-ai/ui/context/dialog"
+import { useDialog } from "@2M_CODE-ai/ui/context/dialog"
 import { popularProviders } from "@/hooks/use-providers"
-import { Button } from "@opencode-ai/ui/button"
-import { IconButton } from "@opencode-ai/ui/icon-button"
-import { Tag } from "@opencode-ai/ui/tag"
-import { Dialog } from "@opencode-ai/ui/dialog"
-import { List } from "@opencode-ai/ui/list"
-import { Tooltip } from "@opencode-ai/ui/tooltip"
+import { Button } from "@2M_CODE-ai/ui/button"
+import { IconButton } from "@2M_CODE-ai/ui/icon-button"
+import { Tag } from "@2M_CODE-ai/ui/tag"
+import { Dialog } from "@2M_CODE-ai/ui/dialog"
+import { List } from "@2M_CODE-ai/ui/list"
+import { Tooltip } from "@2M_CODE-ai/ui/tooltip"
 import { ModelTooltip } from "./model-tooltip"
 import { useLanguage } from "@/context/language"
 
 const isFree = (provider: string, cost: { input: number } | undefined) =>
-  provider === "opencode" && (!cost || cost.input === 0)
+  provider === "2M_CODE" && (!cost || cost.input === 0)
 
 type ModelState = ReturnType<typeof useLocal>["model"]
 

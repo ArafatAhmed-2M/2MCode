@@ -1,4 +1,4 @@
-import { describe, expect, test } from "bun:test"
+﻿import { describe, expect, test } from "bun:test"
 import { terminalWebSocketURL } from "./terminal-websocket-url"
 
 describe("terminalWebSocketURL", () => {
@@ -9,14 +9,14 @@ describe("terminalWebSocketURL", () => {
       directory: "/tmp/project",
       cursor: 0,
       sameOrigin: false,
-      username: "opencode",
+      username: "2M_CODE",
       password: "secret",
     })
 
     expect(url.protocol).toBe("ws:")
     expect(url.username).toBe("")
     expect(url.password).toBe("")
-    expect(url.searchParams.get("auth_token")).toBe(btoa("opencode:secret"))
+    expect(url.searchParams.get("auth_token")).toBe(btoa("2M_CODE:secret"))
   })
 
   test("omits query auth for same-origin saved credentials", () => {
@@ -26,7 +26,7 @@ describe("terminalWebSocketURL", () => {
       directory: "/tmp/project",
       cursor: 10,
       sameOrigin: true,
-      username: "opencode",
+      username: "2M_CODE",
       password: "secret",
     })
 
@@ -41,12 +41,12 @@ describe("terminalWebSocketURL", () => {
       directory: "/tmp/project",
       cursor: 10,
       sameOrigin: true,
-      username: "opencode",
+      username: "2M_CODE",
       password: "secret",
       authToken: true,
     })
 
     expect(url.protocol).toBe("wss:")
-    expect(url.searchParams.get("auth_token")).toBe(btoa("opencode:secret"))
+    expect(url.searchParams.get("auth_token")).toBe(btoa("2M_CODE:secret"))
   })
 })

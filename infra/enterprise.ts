@@ -1,4 +1,4 @@
-import { SECRET } from "./secret"
+﻿import { SECRET } from "./secret"
 import { shortDomain } from "./stage"
 
 const storage = new sst.cloudflare.Bucket("EnterpriseStorage")
@@ -8,10 +8,10 @@ new sst.cloudflare.x.SolidStart("Teams", {
   path: "packages/enterprise",
   buildCommand: "bun run build:cloudflare",
   environment: {
-    OPENCODE_STORAGE_ADAPTER: "r2",
-    OPENCODE_STORAGE_ACCOUNT_ID: sst.cloudflare.DEFAULT_ACCOUNT_ID,
-    OPENCODE_STORAGE_ACCESS_KEY_ID: SECRET.R2AccessKey.value,
-    OPENCODE_STORAGE_SECRET_ACCESS_KEY: SECRET.R2SecretKey.value,
-    OPENCODE_STORAGE_BUCKET: storage.name,
+    2M_CODE_STORAGE_ADAPTER: "r2",
+    2M_CODE_STORAGE_ACCOUNT_ID: sst.cloudflare.DEFAULT_ACCOUNT_ID,
+    2M_CODE_STORAGE_ACCESS_KEY_ID: SECRET.R2AccessKey.value,
+    2M_CODE_STORAGE_SECRET_ACCESS_KEY: SECRET.R2SecretKey.value,
+    2M_CODE_STORAGE_BUCKET: storage.name,
   },
 })

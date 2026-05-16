@@ -1,8 +1,8 @@
-import { describe, expect } from "bun:test"
+﻿import { describe, expect } from "bun:test"
 import { Effect } from "effect"
-import { PluginV2 } from "@opencode-ai/core/plugin"
-import { ProviderPlugins } from "@opencode-ai/core/plugin/provider"
-import { NvidiaPlugin } from "@opencode-ai/core/plugin/provider/nvidia"
+import { PluginV2 } from "@2M_CODE-ai/core/plugin"
+import { ProviderPlugins } from "@2M_CODE-ai/core/plugin/provider"
+import { NvidiaPlugin } from "@2M_CODE-ai/core/plugin/provider/nvidia"
 import { expectPluginRegistered, it, provider } from "./provider-helper"
 
 describe("NvidiaPlugin", () => {
@@ -32,9 +32,9 @@ describe("NvidiaPlugin", () => {
       const ignored = yield* plugin.trigger("provider.update", {}, { provider: provider("openrouter"), cancel: false })
       expect(result.provider.options.headers).toEqual({
         Existing: "value",
-        "HTTP-Referer": "https://opencode.ai/",
-        "X-Title": "opencode",
-        "X-BILLING-INVOKE-ORIGIN": "OpenCode",
+        "HTTP-Referer": "https://2M_CODE.ai/",
+        "X-Title": "2M_CODE",
+        "X-BILLING-INVOKE-ORIGIN": "2M_CODE",
       })
       expect(ignored.provider.options.headers).toEqual({})
     }),
@@ -57,9 +57,9 @@ describe("NvidiaPlugin", () => {
       )
 
       expect(result.provider.options.headers).toEqual({
-        "HTTP-Referer": "https://opencode.ai/",
-        "X-Title": "opencode",
-        "X-BILLING-INVOKE-ORIGIN": "OpenCode",
+        "HTTP-Referer": "https://2M_CODE.ai/",
+        "X-Title": "2M_CODE",
+        "X-BILLING-INVOKE-ORIGIN": "2M_CODE",
       })
     }),
   )
@@ -84,8 +84,8 @@ describe("NvidiaPlugin", () => {
       )
 
       expect(result.provider.options.headers).toEqual({
-        "HTTP-Referer": "https://opencode.ai/",
-        "X-Title": "opencode",
+        "HTTP-Referer": "https://2M_CODE.ai/",
+        "X-Title": "2M_CODE",
         "X-BILLING-INVOKE-ORIGIN": "CustomOrigin",
       })
     }),

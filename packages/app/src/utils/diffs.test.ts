@@ -1,6 +1,6 @@
-import { describe, expect, test } from "bun:test"
-import type { SnapshotFileDiff } from "@opencode-ai/sdk/v2"
-import type { Message } from "@opencode-ai/sdk/v2/client"
+﻿import { describe, expect, test } from "bun:test"
+import type { SnapshotFileDiff } from "@2M_CODE-ai/sdk/v2"
+import type { Message } from "@2M_CODE-ai/sdk/v2/client"
 import { diffs, message } from "./diffs"
 
 const item = {

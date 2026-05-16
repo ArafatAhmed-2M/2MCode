@@ -1,4 +1,4 @@
-## Usage
+﻿## Usage
 
 Dependencies for these templates are managed with [pnpm](https://pnpm.io) using `pnpm up -Lri`.
 
@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 ## E2E Testing
 
-Playwright starts the Vite dev server automatically via `webServer`, and UI tests expect an opencode backend at `localhost:4096` by default.
+Playwright starts the Vite dev server automatically via `webServer`, and UI tests expect an 2M_CODE backend at `localhost:4096` by default.
 
 ```bash
 bunx playwright install chromium
