@@ -1,13 +1,13 @@
 // @ts-nocheck
 
-import { 2M_CODE } from "@2mcode-ai/core"
+import { _2mcode } from "@2mcode-ai/core"
 import { ReadTool } from "@2mcode-ai/core/tools"
 
-const 2M_CODE = 2M_CODE.make({})
+const _2mcode = _2mcode.make({})
 
-2M_CODE.tool.add(ReadTool)
+_2mcode.tool.add(ReadTool)
 
-2M_CODE.tool.add({
+_2mcode.tool.add({
   name: "bash",
   schema: {
     type: "object",
@@ -22,13 +22,13 @@ const 2M_CODE = 2M_CODE.make({})
   execute(input, ctx) {},
 })
 
-2M_CODE.auth.add({
+_2mcode.auth.add({
   provider: "openai",
   type: "api",
   value: process.env.OPENAI_API_KEY,
 })
 
-2M_CODE.agent.add({
+_2mcode.agent.add({
   name: "build",
   permissions: [],
   model: {
@@ -38,20 +38,20 @@ const 2M_CODE = 2M_CODE.make({})
   },
 })
 
-const sessionID = await 2M_CODE.session.create({
+const sessionID = await _2mcode.session.create({
   agent: "build",
 })
 
-2M_CODE.subscribe((event) => {
+_2mcode.subscribe((event) => {
   console.log(event)
 })
 
-await 2M_CODE.session.prompt({
+await _2mcode.session.prompt({
   sessionID,
   text: "hey what is up",
 })
 
-await 2M_CODE.session.prompt({
+await _2mcode.session.prompt({
   sessionID,
   text: "what is up with this",
   files: [
@@ -62,6 +62,6 @@ await 2M_CODE.session.prompt({
   ],
 })
 
-await 2M_CODE.session.wait()
+await _2mcode.session.wait()
 
-console.log(await 2M_CODE.session.messages(sessionID))
+console.log(await _2mcode.session.messages(sessionID))
