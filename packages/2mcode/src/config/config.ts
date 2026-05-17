@@ -39,6 +39,7 @@ import { ConfigReference } from "./reference"
 import { ConfigServer } from "./server"
 import { ConfigSkills } from "./skills"
 import { ConfigVariable } from "./variable"
+import { EnvConfig } from "@/util/env-config"
 import { Npm } from "@2mcode-ai/core/npm"
 
 const log = Log.create({ service: "config" })
@@ -476,6 +477,9 @@ export const layer = Layer.effect(
         let result: Info = {}
         const consoleManagedProviders = new Set<string>()
         let activeOrgName: string | undefined
+
+        // Env-var defaults — lowest priority; any 2mcode.jsonc setting overrides these
+        result = mergeConfig(result, EnvConfig.fromEnv() as Info)
 
         const pluginScopeForSource = Effect.fnUntraced(function* (source: string) {
           if (source.startsWith("http://") || source.startsWith("https://")) return "global"

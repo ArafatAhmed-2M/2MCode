@@ -1,0 +1,32 @@
+<system-reminder>
+As you answer the user's requests, use the following live session context:
+
+# providerConfig
+Active Provider  : [PROVIDER_NAME]          <!-- e.g. Anthropic, OpenAI, Groq, Ollama -->
+Model            : [MODEL_ID]               <!-- e.g. claude-sonnet-4-6, gpt-4o, llama-3.3-70b -->
+Base URL         : [API_BASE_URL]           <!-- e.g. https://api.anthropic.com/v1 -->
+Context Window   : [CONTEXT_TOKENS] tokens  <!-- e.g. 200000 -->
+Max Output       : [MAX_OUTPUT_TOKENS] tokens
+
+# environmentContext
+Today's Date     : [YYYY-MM-DD]
+Working Directory: [/absolute/path/to/project]
+Active Git Branch: [branch-name]
+Git Status       : [e.g. "Modified 3 files, 1 untracked"]
+OS / Shell       : [e.g. Windows 11 / powershell 7.4]
+Node Version     : [e.g. v22.3.0]          <!-- omit if not applicable -->
+Bun Version      : [e.g. 1.2.0]            <!-- omit if not applicable -->
+Python Version   : [e.g. 3.12.4]           <!-- omit if not applicable -->
+
+# projectRules
+[Paste the contents of your project's AGENTS.md / CLAUDE.md / .cursorrules here,
+ or write "No project rules file found." if absent.]
+
+# skillsStatus
+Skills directory : ~/.2mcode/skills/
+Skills available : [List the skill folder names found under ~/.2mcode/skills/, or
+                   "Not yet cloned — run: git clone https://github.com/ArafatAhmed-2M/skills.git ~/.2mcode/skills"]
+
+# activeMcpServers
+[List connected MCP servers in format "name: transport://endpoint", or "None"]
+</system-reminder>

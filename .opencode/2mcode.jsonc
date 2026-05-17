@@ -3,6 +3,9 @@
   "provider": {},
   "permission": {},
   "mcp": {},
+  "skills": {
+    "paths": ["~/.2mcode/skills"],
+  },
   "tools": {
     "github-triage": false,
     "github-pr-search": false,
