@@ -64,7 +64,7 @@ beforeAll(async () => {
   }))
 
   mock.module("@2mcode-ai/sdk/v2/client", () => ({
-    create2M_CODEClient: (input: { directory: string }) => {
+    create_2MCodeClient: (input: { directory: string }) => {
       createdClients.push(input.directory)
       return clientFor(input.directory)
     },

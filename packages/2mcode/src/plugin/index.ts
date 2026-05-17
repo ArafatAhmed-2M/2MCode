@@ -8,7 +8,7 @@ import type {
 import { Config } from "@/config/config"
 import { Bus } from "../bus"
 import * as Log from "@2mcode-ai/core/util/log"
-import { create2M_CODEClient } from "@2mcode-ai/sdk"
+import { create_2MCodeClient } from "@2mcode-ai/sdk"
 import { ServerAuth } from "@/server/auth"
 import { CodexAuthPlugin } from "./codex"
 import { Session } from "@/session/session"
@@ -125,7 +125,7 @@ export const layer = Layer.effect(
 
         const { Server } = yield* Effect.promise(() => import("../server/server"))
 
-        const client = create2M_CODEClient({
+        const client = create_2MCodeClient({
           baseUrl: "http://localhost:4096",
           directory: ctx.directory,
           headers: ServerAuth.headers(),

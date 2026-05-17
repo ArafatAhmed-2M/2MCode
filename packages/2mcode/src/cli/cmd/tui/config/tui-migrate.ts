@@ -30,8 +30,8 @@ interface MigrateInput {
  * skips only locations where a tui.json already exists.
  */
 export async function migrateTuiConfig(input: MigrateInput) {
-  const 2M_CODE = await 2M_CODEFiles(input)
-  for (const file of 2M_CODE) {
+  const _2mcodeFiles = await _2MCodeFiles(input)
+  for (const file of _2mcodeFiles) {
     const source = await Filesystem.readText(file).catch((error) => {
       log.warn("failed to read config for tui migration", { path: file, error })
       return undefined
@@ -134,7 +134,7 @@ async function backupAndStripLegacy(file: string, source: string) {
     })
 }
 
-async function 2M_CODEFiles(input: { directories: string[]; cwd: string }) {
+async function _2MCodeFiles(input: { directories: string[]; cwd: string }) {
   const files = [
     ...ConfigPaths.fileInDirectory(Global.Path.config, "2M_CODE"),
     ...(await Filesystem.findUp(["2M_CODE.json", "2M_CODE.jsonc"], input.cwd, undefined, { rootFirst: true })),

@@ -1,6 +1,6 @@
 import type {
   Config,
-  2M_CODEClient,
+  _2MCodeClient,
   Path,
   PermissionRequest,
   Project,
@@ -83,13 +83,13 @@ function showErrors(input: {
   })
 }
 
-export const loadGlobalConfigQuery = (sdk: 2M_CODEClient) =>
+export const loadGlobalConfigQuery = (sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: ["config"],
     queryFn: () => retry(() => sdk.global.config.get().then((x) => x.data!)),
   })
 
-export const loadProjectsQuery = (sdk: 2M_CODEClient) =>
+export const loadProjectsQuery = (sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: ["project"],
     queryFn: () =>
@@ -105,7 +105,7 @@ export const loadProjectsQuery = (sdk: 2M_CODEClient) =>
   })
 
 export async function bootstrapGlobal(input: {
-  globalSDK: 2M_CODEClient
+  globalSDK: _2MCodeClient
   requestFailedTitle: string
   translate: (key: string, vars?: Record<string, string | number>) => string
   formatMoreCount: (count: number) => string
@@ -162,7 +162,7 @@ function warmSessions(input: {
   ids: string[]
   store: Store<State>
   setStore: SetStoreFunction<State>
-  sdk: 2M_CODEClient
+  sdk: _2MCodeClient
 }) {
   const known = new Set(input.store.session.map((item) => item.id))
   const ids = [...new Set(input.ids)].filter((id) => !!id && !known.has(id))
@@ -178,19 +178,19 @@ function warmSessions(input: {
   ).then(() => undefined)
 }
 
-export const loadProvidersQuery = (directory: string | null, sdk: 2M_CODEClient) =>
+export const loadProvidersQuery = (directory: string | null, sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: [directory, "providers"],
     queryFn: () => retry(() => sdk.provider.list().then((x) => normalizeProviderList(x.data!))),
   })
 
-export const loadAgentsQuery = (directory: string | null, sdk: 2M_CODEClient) =>
+export const loadAgentsQuery = (directory: string | null, sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: [directory, "agents"],
     queryFn: () => retry(() => sdk.app.agents().then((x) => normalizeAgentList(x.data))),
   })
 
-export const loadPathQuery = (directory: string | null, sdk: 2M_CODEClient) =>
+export const loadPathQuery = (directory: string | null, sdk: _2MCodeClient) =>
   queryOptions<Path>({
     queryKey: [directory, "path"],
     queryFn: () => retry(() => sdk.path.get().then((x) => x.data!)),
@@ -198,7 +198,7 @@ export const loadPathQuery = (directory: string | null, sdk: 2M_CODEClient) =>
 
 export async function bootstrapDirectory(input: {
   directory: string
-  sdk: 2M_CODEClient
+  sdk: _2MCodeClient
   store: Store<State>
   setStore: SetStoreFunction<State>
   vcsCache: VcsCache

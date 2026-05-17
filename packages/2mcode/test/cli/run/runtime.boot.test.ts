@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, mock, spyOn, test } from "bun:test"
-import { 2M_CODEClient, type Provider } from "@2mcode-ai/sdk/v2"
+import { _2MCodeClient, type Provider } from "@2mcode-ai/sdk/v2"
 import { TuiConfig, type Resolved } from "@/cli/cmd/tui/config/tui"
 import { formatBindings } from "@/cli/cmd/run/keymap.shared"
 import { resolveDiffStyle, resolveFooterKeybinds, resolveModelInfo } from "@/cli/cmd/run/runtime.boot"
@@ -152,7 +152,7 @@ describe("run runtime boot", () => {
   })
 
   test("prefers configured providers for model selector data", async () => {
-    const sdk = new 2M_CODEClient()
+    const sdk = new _2MCodeClient()
     const data: {
       all: Provider[]
       default: Record<string, string>
@@ -218,7 +218,7 @@ describe("run runtime boot", () => {
   })
 
   test("falls back to provider list when configured providers are unavailable", async () => {
-    const sdk = new 2M_CODEClient()
+    const sdk = new _2MCodeClient()
     const data: {
       all: Provider[]
       default: Record<string, string>

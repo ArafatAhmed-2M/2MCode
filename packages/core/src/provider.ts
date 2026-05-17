@@ -7,7 +7,7 @@ export const ID = Schema.String.pipe(
   Schema.brand("ProviderV2.ID"),
   withStatics((schema) => ({
     // Well-known providers
-    2M_CODE: schema.make("2M_CODE"),
+    "2M_CODE": schema.make("2M_CODE"),
     anthropic: schema.make("anthropic"),
     openai: schema.make("openai"),
     google: schema.make("google"),

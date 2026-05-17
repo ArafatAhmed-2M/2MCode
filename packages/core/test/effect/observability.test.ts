@@ -2,14 +2,14 @@ import { afterEach, describe, expect, test } from "bun:test"
 import { resource } from "@2mcode-ai/core/effect/observability"
 
 const otelResourceAttributes = process.env.OTEL_RESOURCE_ATTRIBUTES
-const 2M_CODEClient = process.env._2MCODE_CLIENT
+const _2MCodeClient = process.env._2MCODE_CLIENT
 
 afterEach(() => {
   if (otelResourceAttributes === undefined) delete process.env.OTEL_RESOURCE_ATTRIBUTES
   else process.env.OTEL_RESOURCE_ATTRIBUTES = otelResourceAttributes
 
-  if (2M_CODEClient === undefined) delete process.env._2MCODE_CLIENT
-  else process.env._2MCODE_CLIENT = 2M_CODEClient
+  if (_2MCodeClient === undefined) delete process.env._2MCODE_CLIENT
+  else process.env._2MCODE_CLIENT = _2MCodeClient
 })
 
 describe("resource", () => {

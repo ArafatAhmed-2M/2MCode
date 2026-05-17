@@ -1,15 +1,15 @@
 import { afterEach, describe, expect, mock, spyOn, test } from "bun:test"
-import { 2M_CODEClient, type GlobalEvent } from "@2mcode-ai/sdk/v2"
+import { _2MCodeClient, type GlobalEvent } from "@2mcode-ai/sdk/v2"
 import { createSessionTransport } from "@/cli/cmd/run/stream.transport"
 import type { FooterApi, FooterEvent, RunFilePart, StreamCommit } from "@/cli/cmd/run/types"
 
-type EventStream = Awaited<ReturnType<2M_CODEClient["event"]["subscribe"]>>["stream"]
-type GlobalEventStream = Awaited<ReturnType<2M_CODEClient["global"]["event"]>>["stream"]
+type EventStream = Awaited<ReturnType<_2MCodeClient["event"]["subscribe"]>>["stream"]
+type GlobalEventStream = Awaited<ReturnType<_2MCodeClient["global"]["event"]>>["stream"]
 type SdkEvent = EventStream extends AsyncGenerator<infer T, unknown, unknown> ? T : never
-type SessionMessage = NonNullable<Awaited<ReturnType<2M_CODEClient["session"]["messages"]>>["data"]>[number]
-type SessionChild = NonNullable<Awaited<ReturnType<2M_CODEClient["session"]["children"]>>["data"]>[number]
+type SessionMessage = NonNullable<Awaited<ReturnType<_2MCodeClient["session"]["messages"]>>["data"]>[number]
+type SessionChild = NonNullable<Awaited<ReturnType<_2MCodeClient["session"]["children"]>>["data"]>[number]
 type SessionToolPart = Extract<SessionMessage["parts"][number], { type: "tool" }>
-type SessionStatusMap = NonNullable<Awaited<ReturnType<2M_CODEClient["session"]["status"]>>["data"]>
+type SessionStatusMap = NonNullable<Awaited<ReturnType<_2MCodeClient["session"]["status"]>>["data"]>
 type TextPart = Extract<SessionMessage["parts"][number], { type: "text" }>
 
 afterEach(() => {
@@ -363,27 +363,27 @@ function sdk(
   input: {
     stream?: EventStream
     globalStream?: GlobalEventStream
-    subscribe?: 2M_CODEClient["event"]["subscribe"]
-    globalEvent?: 2M_CODEClient["global"]["event"]
-    promptAsync?: 2M_CODEClient["session"]["promptAsync"]
-    status?: 2M_CODEClient["session"]["status"]
-    messages?: 2M_CODEClient["session"]["messages"]
-    children?: 2M_CODEClient["session"]["children"]
-    permissions?: 2M_CODEClient["permission"]["list"]
-    questions?: 2M_CODEClient["question"]["list"]
+    subscribe?: _2MCodeClient["event"]["subscribe"]
+    globalEvent?: _2MCodeClient["global"]["event"]
+    promptAsync?: _2MCodeClient["session"]["promptAsync"]
+    status?: _2MCodeClient["session"]["status"]
+    messages?: _2MCodeClient["session"]["messages"]
+    children?: _2MCodeClient["session"]["children"]
+    permissions?: _2MCodeClient["permission"]["list"]
+    questions?: _2MCodeClient["question"]["list"]
   } = {},
 ) {
-  const client = new 2M_CODEClient()
+  const client = new _2MCodeClient()
 
-  const subscribe: 2M_CODEClient["event"]["subscribe"] = input.subscribe ?? (() => sse(input.stream ?? emptyStream()))
-  const globalEvent: 2M_CODEClient["global"]["event"] =
+  const subscribe: _2MCodeClient["event"]["subscribe"] = input.subscribe ?? (() => sse(input.stream ?? emptyStream()))
+  const globalEvent: _2MCodeClient["global"]["event"] =
     input.globalEvent ?? (() => globalSse(input.globalStream ?? wrapGlobalStream(input.stream ?? emptyStream())))
-  const promptAsync: 2M_CODEClient["session"]["promptAsync"] = input.promptAsync ?? (() => ok(undefined))
-  const status: 2M_CODEClient["session"]["status"] = input.status ?? (() => ok({}))
-  const messages: 2M_CODEClient["session"]["messages"] = input.messages ?? (() => ok([]))
-  const children: 2M_CODEClient["session"]["children"] = input.children ?? (() => ok([]))
-  const permissions: 2M_CODEClient["permission"]["list"] = input.permissions ?? (() => ok([]))
-  const questions: 2M_CODEClient["question"]["list"] = input.questions ?? (() => ok([]))
+  const promptAsync: _2MCodeClient["session"]["promptAsync"] = input.promptAsync ?? (() => ok(undefined))
+  const status: _2MCodeClient["session"]["status"] = input.status ?? (() => ok({}))
+  const messages: _2MCodeClient["session"]["messages"] = input.messages ?? (() => ok([]))
+  const children: _2MCodeClient["session"]["children"] = input.children ?? (() => ok([]))
+  const permissions: _2MCodeClient["permission"]["list"] = input.permissions ?? (() => ok([]))
+  const questions: _2MCodeClient["question"]["list"] = input.questions ?? (() => ok([]))
 
   spyOn(client.event, "subscribe").mockImplementation(subscribe)
   spyOn(client.global, "event").mockImplementation(globalEvent)

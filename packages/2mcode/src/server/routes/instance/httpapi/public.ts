@@ -1,5 +1,5 @@
 import { OpenApi } from "effect/unstable/httpapi"
-import { 2M_CODEHttpApi } from "./api"
+import { _2MCodeHttpApi } from "./api"
 import { QueryBooleanOpenApi } from "./groups/query"
 
 type OpenApiParameter = {
@@ -419,7 +419,7 @@ function fixSelfReferencingComponents(spec: OpenApiSpec) {
     }
   }
   // Simplest fix: generate the raw spec (without transform) to get correct schemas
-  const raw: OpenApiSpec = OpenApi.fromApi(2M_CODEHttpApi)
+  const raw: OpenApiSpec = OpenApi.fromApi(_2MCodeHttpApi)
   const rawSchemas = raw.components?.schemas
   if (!rawSchemas) return
   for (const name of selfRefs) {
@@ -497,7 +497,7 @@ function normalizeParameter(param: OpenApiParameter, route: string) {
   param.schema = stripOptionalNull(param.schema)
 }
 
-export const PublicApi = 2M_CODEHttpApi.annotateMerge(
+export const PublicApi = _2MCodeHttpApi.annotateMerge(
   OpenApi.annotations({
     title: "2M_CODE",
     version: "1.0.0",

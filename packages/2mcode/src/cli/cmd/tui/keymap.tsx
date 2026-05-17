@@ -19,7 +19,7 @@ import { TuiKeybind } from "./config/keybind"
 
 export const LEADER_TOKEN = "leader"
 
-export const 2M_CODEKeymapProvider = KeymapProvider
+export const _2MCodeKeymapProvider = KeymapProvider
 export const use2M_CODEKeymap = useKeymap
 
 export { reactiveMatcherFromSignal, useBindings, useKeymapSelector }

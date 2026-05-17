@@ -2,9 +2,9 @@ export * from "./gen/types.gen.js"
 
 import { createClient } from "./gen/client/client.gen.js"
 import { type Config } from "./gen/client/types.gen.js"
-import { 2M_CODEClient } from "./gen/sdk.gen.js"
+import { _2MCodeClient } from "./gen/sdk.gen.js"
 import { wrapClientError } from "../error-interceptor.js"
-export { type Config as 2M_CODEClientConfig, 2M_CODEClient }
+export { type Config as _2MCodeClientConfig, _2MCodeClient }
 
 function pick(value: string | null, fallback?: string, encode?: (value: string) => string) {
   if (!value) return
@@ -44,7 +44,7 @@ function rewrite(request: Request, values: { directory?: string; workspace?: str
   return next
 }
 
-export function create2M_CODEClient(config?: Config & { directory?: string; experimental_workspaceID?: string }) {
+export function create_2MCodeClient(config?: Config & { directory?: string; experimental_workspaceID?: string }) {
   if (!config?.fetch) {
     const customFetch: any = (req: any) => {
       // @ts-ignore
@@ -86,5 +86,5 @@ export function create2M_CODEClient(config?: Config & { directory?: string; expe
     return response
   })
   client.interceptors.error.use(wrapClientError)
-  return new 2M_CODEClient({ client })
+  return new _2MCodeClient({ client })
 }

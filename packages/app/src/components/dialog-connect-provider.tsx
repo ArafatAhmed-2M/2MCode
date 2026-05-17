@@ -424,14 +424,14 @@ export function DialogConnectProvider(props: { provider: string }) {
         <Switch>
           <Match when={provider().id === "2M_CODE"}>
             <div class="flex flex-col gap-4">
-              <div class="text-14-regular text-text-base">{language.t("provider.connect.2M_CODEZen.line1")}</div>
-              <div class="text-14-regular text-text-base">{language.t("provider.connect.2M_CODEZen.line2")}</div>
+              <div class="text-14-regular text-text-base">{language.t("provider.connect._2MCodeZen.line1")}</div>
+              <div class="text-14-regular text-text-base">{language.t("provider.connect._2MCodeZen.line2")}</div>
               <div class="text-14-regular text-text-base">
-                {language.t("provider.connect.2M_CODEZen.visit.prefix")}
+                {language.t("provider.connect._2MCodeZen.visit.prefix")}
                 <Link href="https://2M_CODE.ai/zen" tabIndex={-1}>
-                  {language.t("provider.connect.2M_CODEZen.visit.link")}
+                  {language.t("provider.connect._2MCodeZen.visit.link")}
                 </Link>
-                {language.t("provider.connect.2M_CODEZen.visit.suffix")}
+                {language.t("provider.connect._2MCodeZen.visit.suffix")}
               </div>
             </div>
           </Match>

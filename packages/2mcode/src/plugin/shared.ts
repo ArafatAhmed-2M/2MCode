@@ -191,16 +191,16 @@ export async function resolvePathPluginTarget(spec: string) {
   throw new Error(`Plugin directory ${file} is missing package.json or index file`)
 }
 
-export async function checkPluginCompatibility(target: string, 2M_CODEVersion: string, pkg?: PluginPackage) {
-  if (!semver.valid(2M_CODEVersion) || semver.major(2M_CODEVersion) === 0) return
+export async function checkPluginCompatibility(target: string, _2MCodeVersion: string, pkg?: PluginPackage) {
+  if (!semver.valid(_2MCodeVersion) || semver.major(_2MCodeVersion) === 0) return
   const hit = pkg ?? (await readPluginPackage(target).catch(() => undefined))
   if (!hit) return
   const engines = hit.json.engines
   if (!isRecord(engines)) return
-  const range = engines.2M_CODE
+  const range = engines["2M_CODE"]
   if (typeof range !== "string") return
-  if (!semver.satisfies(2M_CODEVersion, range)) {
-    throw new Error(`Plugin requires 2M_CODE ${range} but running ${2M_CODEVersion}`)
+  if (!semver.satisfies(_2MCodeVersion, range)) {
+    throw new Error(`Plugin requires 2M_CODE ${range} but running ${_2MCodeVersion}`)
   }
 }
 

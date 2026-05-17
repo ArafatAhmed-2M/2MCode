@@ -1901,7 +1901,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
   })
 
   test("preserves metadata using providerID key when store is false", () => {
-    const 2M_CODEModel = {
+    const _2MCodeModel = {
       ...openaiModel,
       providerID: "2M_CODE",
       api: {
@@ -1928,14 +1928,14 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
       },
     ] as any[]
 
-    const result = ProviderTransform.message(msgs, 2M_CODEModel, { store: false }) as any[]
+    const result = ProviderTransform.message(msgs, _2MCodeModel, { store: false }) as any[]
 
-    expect(result[0].content[0].providerOptions?.2M_CODE?.itemId).toBe("msg_123")
-    expect(result[0].content[0].providerOptions?.2M_CODE?.otherOption).toBe("value")
+    expect(result[0].content[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_123")
+    expect(result[0].content[0].providerOptions?["2M_CODE"]?.otherOption).toBe("value")
   })
 
   test("preserves itemId across all providerOptions keys", () => {
-    const 2M_CODEModel = {
+    const _2MCodeModel = {
       ...openaiModel,
       providerID: "2M_CODE",
       api: {
@@ -1966,13 +1966,13 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
       },
     ] as any[]
 
-    const result = ProviderTransform.message(msgs, 2M_CODEModel, { store: false }) as any[]
+    const result = ProviderTransform.message(msgs, _2MCodeModel, { store: false }) as any[]
 
     expect(result[0].providerOptions?.openai?.itemId).toBe("msg_root")
-    expect(result[0].providerOptions?.2M_CODE?.itemId).toBe("msg_2M_CODE")
+    expect(result[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_2M_CODE")
     expect(result[0].providerOptions?.extra?.itemId).toBe("msg_extra")
     expect(result[0].content[0].providerOptions?.openai?.itemId).toBe("msg_openai_part")
-    expect(result[0].content[0].providerOptions?.2M_CODE?.itemId).toBe("msg_2M_CODE_part")
+    expect(result[0].content[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_2M_CODE_part")
     expect(result[0].content[0].providerOptions?.extra?.itemId).toBe("msg_extra_part")
   })
 

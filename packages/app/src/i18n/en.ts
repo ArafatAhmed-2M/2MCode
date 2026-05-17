@@ -103,7 +103,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "Recommended",
   "dialog.provider.2M_CODE.note": "Curated models including Claude, GPT, Gemini and more",
   "dialog.provider.2M_CODE.tagline": "Reliable optimized models",
-  "dialog.provider.2M_CODEGo.tagline": "Low cost subscription for everyone",
+  "dialog.provider._2MCodeGo.tagline": "Low cost subscription for everyone",
   "dialog.provider.anthropic.note": "Direct access to Claude models, including Pro and Max",
   "dialog.provider.copilot.note": "AI models for coding assistance via GitHub Copilot",
   "dialog.provider.openai.note": "GPT models for fast, capable general AI tasks",
@@ -135,13 +135,13 @@ export const dict = {
   "provider.connect.apiKey.label": "{{provider}} API key",
   "provider.connect.apiKey.placeholder": "API key",
   "provider.connect.apiKey.required": "API key is required",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zen gives you access to a curated set of reliable optimized models for coding agents.",
-  "provider.connect.2M_CODEZen.line2":
+  "provider.connect._2MCodeZen.line2":
     "With a single API key you'll get access to models such as Claude, GPT, Gemini, GLM and more.",
-  "provider.connect.2M_CODEZen.visit.prefix": "Visit ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " to collect your API key.",
+  "provider.connect._2MCodeZen.visit.prefix": "Visit ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " to collect your API key.",
   "provider.connect.oauth.code.visit.prefix": "Visit ",
   "provider.connect.oauth.code.visit.link": "this link",
   "provider.connect.oauth.code.visit.suffix":

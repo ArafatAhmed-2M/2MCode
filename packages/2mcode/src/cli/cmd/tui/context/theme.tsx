@@ -428,7 +428,7 @@ export const { use: useTheme, provider: ThemeProvider } = createSimpleContext({
         }
       }
 
-      return resolveTheme(store.themes.2M_CODE, store.mode)
+      return resolveTheme(store.themes["2M_CODE"], store.mode)
     })
 
     createEffect(() => {

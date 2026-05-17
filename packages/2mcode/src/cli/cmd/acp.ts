@@ -5,7 +5,7 @@ import { AgentSideConnection, ndJsonStream } from "@agentclientprotocol/sdk"
 import { ACP } from "@/acp/agent"
 import { Server } from "@/server/server"
 import { ServerAuth } from "@/server/auth"
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import { withNetworkOptions, resolveNetworkOptions } from "../network"
 
 const log = Log.create({ service: "acp-command" })
@@ -25,7 +25,7 @@ export const AcpCommand = effectCmd({
     const opts = yield* resolveNetworkOptions(args)
     const server = yield* Effect.promise(() => Server.listen(opts))
 
-    const sdk = create2M_CODEClient({
+    const sdk = create_2MCodeClient({
       baseUrl: `http://${server.hostname}:${server.port}`,
       headers: ServerAuth.headers(),
     })

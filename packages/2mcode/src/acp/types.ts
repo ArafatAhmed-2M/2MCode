@@ -1,5 +1,5 @@
 import type { McpServer } from "@agentclientprotocol/sdk"
-import type { 2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import type { _2MCodeClient } from "@2mcode-ai/sdk/v2"
 import type { ProviderID, ModelID } from "../provider/schema"
 
 export interface ACPSessionState {
@@ -16,7 +16,7 @@ export interface ACPSessionState {
 }
 
 export interface ACPConfig {
-  sdk: 2M_CODEClient
+  sdk: _2MCodeClient
   defaultModel?: {
     providerID: ProviderID
     modelID: ModelID

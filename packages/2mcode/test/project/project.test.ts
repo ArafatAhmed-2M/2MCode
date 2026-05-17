@@ -113,8 +113,8 @@ describe("Project.fromDirectory", () => {
       expect(project.vcs).toBe("git")
       expect(project.worktree).toBe(tmp)
 
-      const 2M_CODEFile = path.join(tmp, ".git", "2M_CODE")
-      expect(yield* Effect.promise(() => Bun.file(2M_CODEFile).exists())).toBe(false)
+      const _2MCodeFile = path.join(tmp, ".git", "2M_CODE")
+      expect(yield* Effect.promise(() => Bun.file(_2MCodeFile).exists())).toBe(false)
     }),
   )
 
@@ -129,8 +129,8 @@ describe("Project.fromDirectory", () => {
       expect(project.vcs).toBe("git")
       expect(project.worktree).toBe(tmp)
 
-      const 2M_CODEFile = path.join(tmp, ".git", "2M_CODE")
-      expect(yield* Effect.promise(() => Bun.file(2M_CODEFile).exists())).toBe(true)
+      const _2MCodeFile = path.join(tmp, ".git", "2M_CODE")
+      expect(yield* Effect.promise(() => Bun.file(_2MCodeFile).exists())).toBe(true)
     }),
   )
 

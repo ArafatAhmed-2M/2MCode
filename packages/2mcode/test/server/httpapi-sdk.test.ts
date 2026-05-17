@@ -6,7 +6,7 @@ import { ChildProcessSpawner } from "effect/unstable/process"
 import { AppFileSystem } from "@2mcode-ai/core/filesystem"
 import { CrossSpawnSpawner } from "@2mcode-ai/core/cross-spawn-spawner"
 import { Flag } from "@2mcode-ai/core/flag/flag"
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import { validateSession } from "../../src/cli/cmd/tui/validate-session"
 import { InstanceBootstrap } from "../../src/project/bootstrap-service"
 import { InstanceStore } from "../../src/project/instance-store"
@@ -39,7 +39,7 @@ const original = {
 }
 
 type ServerPath = "default" | "raw"
-type Sdk = ReturnType<typeof create2M_CODEClient>
+type Sdk = ReturnType<typeof create_2MCodeClient>
 type SdkResult = { response: Response; data?: unknown; error?: unknown }
 type Captured = { status: number; data?: unknown; error?: unknown }
 type ProjectFixture = { sdk: Sdk; directory: string }
@@ -78,7 +78,7 @@ function client(
   directory?: string,
   input?: { password?: string; username?: string; headers?: Record<string, string> },
 ) {
-  return create2M_CODEClient({
+  return create_2MCodeClient({
     baseUrl: "http://localhost",
     directory,
     headers: input?.headers,

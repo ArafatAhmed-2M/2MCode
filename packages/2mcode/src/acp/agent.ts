@@ -49,7 +49,7 @@ import { ConfigMCP } from "@/config/mcp"
 import { Todo } from "@/session/todo"
 import { Result, Schema } from "effect"
 import { LoadAPIKeyError } from "ai"
-import type { AssistantMessage, Event, 2M_CODEClient, SessionMessageResponse, ToolPart } from "@2mcode-ai/sdk/v2"
+import type { AssistantMessage, Event, _2MCodeClient, SessionMessageResponse, ToolPart } from "@2mcode-ai/sdk/v2"
 import { applyPatch } from "diff"
 import { InstallationVersion } from "@2mcode-ai/core/installation/version"
 import { ShellID } from "@/tool/shell/id"
@@ -63,7 +63,7 @@ const DEFAULT_VARIANT_VALUE = "default"
 const log = Log.create({ service: "acp-agent" })
 
 async function getContextLimit(
-  sdk: 2M_CODEClient,
+  sdk: _2MCodeClient,
   providerID: ProviderID,
   modelID: ModelID,
   directory: string,
@@ -83,7 +83,7 @@ async function getContextLimit(
 
 async function sendUsageUpdate(
   connection: AgentSideConnection,
-  sdk: 2M_CODEClient,
+  sdk: _2MCodeClient,
   sessionID: string,
   directory: string,
 ): Promise<void> {
@@ -131,7 +131,7 @@ async function sendUsageUpdate(
     })
 }
 
-export function init({ sdk: _sdk }: { sdk: 2M_CODEClient }) {
+export function init({ sdk: _sdk }: { sdk: _2MCodeClient }) {
   return {
     create: (connection: AgentSideConnection, fullConfig: ACPConfig) => {
       return new Agent(connection, fullConfig)
@@ -142,7 +142,7 @@ export function init({ sdk: _sdk }: { sdk: 2M_CODEClient }) {
 export class Agent implements ACPAgent {
   private connection: AgentSideConnection
   private config: ACPConfig
-  private sdk: 2M_CODEClient
+  private sdk: _2MCodeClient
   private sessionManager: ACPSessionManager
   private eventAbort = new AbortController()
   private eventStarted = false
@@ -1697,9 +1697,9 @@ async function defaultModel(config: ACPConfig, cwd?: string): Promise<{ provider
   const lastUsed = await lastUsedModel(sdk, directory, providers)
   if (lastUsed) return lastUsed
 
-  const 2M_CODEProvider = providers.find((p) => p.id === "2M_CODE")
-  if (2M_CODEProvider) {
-    const [best] = Provider.sort(Object.values(2M_CODEProvider.models))
+  const _2MCodeProvider = providers.find((p) => p.id === "2M_CODE")
+  if (_2MCodeProvider) {
+    const [best] = Provider.sort(Object.values(_2MCodeProvider.models))
     if (best) {
       return {
         providerID: ProviderID.make(best.providerID),
@@ -1722,7 +1722,7 @@ async function defaultModel(config: ACPConfig, cwd?: string): Promise<{ provider
 }
 
 async function lastUsedModel(
-  sdk: 2M_CODEClient,
+  sdk: _2MCodeClient,
   directory: string,
   providers: Array<{ id: string; models: Record<string, unknown> }>,
 ): Promise<{ providerID: ProviderID; modelID: ModelID } | undefined> {
@@ -1868,7 +1868,7 @@ function buildVariantMeta(input: {
   availableVariants: string[]
 }) {
   return {
-    2M_CODE: {
+    "2M_CODE": {
       modelId: `${input.model.providerID}/${input.model.modelID}`,
       variant: input.variant ?? null,
       availableVariants: input.availableVariants,

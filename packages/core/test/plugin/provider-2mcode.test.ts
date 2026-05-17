@@ -4,19 +4,19 @@ import { Catalog } from "@2mcode-ai/core/catalog"
 import { Location } from "@2mcode-ai/core/location"
 import { ModelV2 } from "@2mcode-ai/core/model"
 import { PluginV2 } from "@2mcode-ai/core/plugin"
-import { 2M_CODEPlugin } from "@2mcode-ai/core/plugin/provider/2M_CODE"
+import { _2MCodePlugin } from "@2mcode-ai/core/plugin/provider/2M_CODE"
 import { ProviderV2 } from "@2mcode-ai/core/provider"
 import { it, model, provider, withEnv } from "./provider-helper"
 
 const cost = (input: number, output = 0) => [{ input, output, cache: { read: 0, write: 0 } }]
 const locationLayer = Layer.succeed(Location.Service, Location.Service.of({ directory: "test" }))
 
-describe("2M_CODEPlugin", () => {
+describe("_2MCodePlugin", () => {
   it.effect("uses a public key and cancels paid models without credentials", () =>
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger("provider.update", {}, { provider: provider("2M_CODE"), cancel: false })
         const paid = yield* plugin.trigger(
           "model.update",
@@ -33,7 +33,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         yield* plugin.trigger("provider.update", {}, { provider: provider("2M_CODE"), cancel: false })
         const free = yield* plugin.trigger(
           "model.update",
@@ -49,7 +49,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         yield* plugin.trigger("provider.update", {}, { provider: provider("2M_CODE"), cancel: false })
         const outputOnly = yield* plugin.trigger(
           "model.update",
@@ -65,7 +65,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: "secret" }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger("provider.update", {}, { provider: provider("2M_CODE"), cancel: false })
         const paid = yield* plugin.trigger(
           "model.update",
@@ -82,7 +82,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined, CUSTOM_2M_CODE_API_KEY: "secret" }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger(
           "provider.update",
           {},
@@ -103,7 +103,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger(
           "provider.update",
           {},
@@ -136,7 +136,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger(
           "provider.update",
           {},
@@ -157,7 +157,7 @@ describe("2M_CODEPlugin", () => {
     withEnv({ _2MCODE_API_KEY: undefined }, () =>
       Effect.gen(function* () {
         const plugin = yield* PluginV2.Service
-        yield* plugin.add(2M_CODEPlugin)
+        yield* plugin.add(_2MCodePlugin)
         const updated = yield* plugin.trigger("provider.update", {}, { provider: provider("openai"), cancel: false })
         const paid = yield* plugin.trigger(
           "model.update",
@@ -173,7 +173,7 @@ describe("2M_CODEPlugin", () => {
   it.effect("prefers gpt-5-nano as the 2M_CODE small model", () =>
     Effect.gen(function* () {
       const catalog = yield* Catalog.Service
-      const providerID = ProviderV2.ID.2M_CODE
+      const providerID = ProviderV2.ID["2M_CODE"]
 
       yield* catalog.provider.update(providerID, () => {})
       yield* catalog.model.update(providerID, ModelV2.ID.make("cheap-mini"), (model) => {

@@ -1,4 +1,4 @@
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import type { GlobalEvent } from "@2mcode-ai/sdk/v2"
 import { createSimpleContext } from "./helper"
 import { createGlobalEmitter } from "@solid-primitives/event-bus"
@@ -22,7 +22,7 @@ export const { use: useSDK, provider: SDKProvider } = createSimpleContext({
     let sse: AbortController | undefined
 
     function createSDK() {
-      return create2M_CODEClient({
+      return create_2MCodeClient({
         baseUrl: props.url,
         signal: abort.signal,
         directory: props.directory,

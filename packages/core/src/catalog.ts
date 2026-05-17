@@ -216,7 +216,7 @@ export const layer = Layer.effect(
           const record = Option.getOrUndefined(HashMap.get(records, providerID))
           if (!record) return Option.none<ModelV2.Info>()
 
-          if (providerID === ProviderV2.ID.2M_CODE) {
+          if (providerID === ProviderV2.ID["2M_CODE"]) {
             const gpt5Nano = Option.getOrUndefined(HashMap.get(record.models, ModelV2.ID.make("gpt-5-nano")))
             if (gpt5Nano?.enabled && gpt5Nano.status === "active") return Option.some(resolve(gpt5Nano))
           }

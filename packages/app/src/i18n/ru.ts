@@ -100,7 +100,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "Рекомендуемые",
   "dialog.provider.2M_CODE.note": "Отобранные модели, включая Claude, GPT, Gemini и другие",
   "dialog.provider.2M_CODE.tagline": "Надежные оптимизированные модели",
-  "dialog.provider.2M_CODEGo.tagline": "Доступная подписка для всех",
+  "dialog.provider._2MCodeGo.tagline": "Доступная подписка для всех",
   "dialog.provider.anthropic.note": "Прямой доступ к моделям Claude, включая Pro и Max",
   "dialog.provider.copilot.note": "ИИ-модели для помощи в кодировании через GitHub Copilot",
   "dialog.provider.openai.note": "Модели GPT для быстрых и мощных задач общего ИИ",
@@ -132,13 +132,13 @@ export const dict = {
   "provider.connect.apiKey.label": "{{provider}} API ключ",
   "provider.connect.apiKey.placeholder": "API ключ",
   "provider.connect.apiKey.required": "API ключ обязателен",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zen даёт вам доступ к отобранным надёжным оптимизированным моделям для агентов программирования.",
-  "provider.connect.2M_CODEZen.line2":
+  "provider.connect._2MCodeZen.line2":
     "С одним API ключом вы получите доступ к таким моделям как Claude, GPT, Gemini, GLM и другим.",
-  "provider.connect.2M_CODEZen.visit.prefix": "Посетите ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " чтобы получить ваш API ключ.",
+  "provider.connect._2MCodeZen.visit.prefix": "Посетите ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " чтобы получить ваш API ключ.",
   "provider.connect.oauth.code.visit.prefix": "Посетите ",
   "provider.connect.oauth.code.visit.link": "эту ссылку",
   "provider.connect.oauth.code.visit.suffix":

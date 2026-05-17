@@ -100,7 +100,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "Anbefalet",
   "dialog.provider.2M_CODE.note": "Udvalgte modeller inklusive Claude, GPT, Gemini og flere",
   "dialog.provider.2M_CODE.tagline": "Pålidelige optimerede modeller",
-  "dialog.provider.2M_CODEGo.tagline": "Billigt abonnement for alle",
+  "dialog.provider._2MCodeGo.tagline": "Billigt abonnement for alle",
   "dialog.provider.anthropic.note": "Direkte adgang til Claude-modeller, inklusive Pro og Max",
   "dialog.provider.copilot.note": "AI-modeller til kodningsassistance via GitHub Copilot",
   "dialog.provider.openai.note": "GPT-modeller til hurtige, kompetente generelle AI-opgaver",
@@ -132,13 +132,13 @@ export const dict = {
   "provider.connect.apiKey.label": "{{provider}} API-nøgle",
   "provider.connect.apiKey.placeholder": "API-nøgle",
   "provider.connect.apiKey.required": "API-nøgle er påkrævet",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zen giver dig adgang til et udvalg af pålidelige optimerede modeller til kodningsagenter.",
-  "provider.connect.2M_CODEZen.line2":
+  "provider.connect._2MCodeZen.line2":
     "Med en enkelt API-nøgle får du adgang til modeller som Claude, GPT, Gemini, GLM og flere.",
-  "provider.connect.2M_CODEZen.visit.prefix": "Besøg ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " for at hente din API-nøgle.",
+  "provider.connect._2MCodeZen.visit.prefix": "Besøg ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " for at hente din API-nøgle.",
   "provider.connect.oauth.code.visit.prefix": "Besøg ",
   "provider.connect.oauth.code.visit.link": "dette link",
   "provider.connect.oauth.code.visit.suffix":

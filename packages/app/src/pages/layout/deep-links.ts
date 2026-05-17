@@ -36,13 +36,13 @@ export const collectOpenProjectDeepLinks = (urls: string[]) =>
 export const collectNewSessionDeepLinks = (urls: string[]) =>
   urls.map(parseNewSessionDeepLink).filter((link): link is { directory: string; prompt?: string } => !!link)
 
-type 2M_CODEWindow = Window & {
+type _2MCodeWindow = Window & {
   __2M_CODE__?: {
     deepLinks?: string[]
   }
 }
 
-export const drainPendingDeepLinks = (target: 2M_CODEWindow) => {
+export const drainPendingDeepLinks = (target: _2MCodeWindow) => {
   const pending = target.__2M_CODE__?.deepLinks ?? []
   if (pending.length === 0) return []
   if (target.__2M_CODE__) target.__2M_CODE__.deepLinks = []

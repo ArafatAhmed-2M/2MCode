@@ -27,7 +27,7 @@ await createClient({
     },
     {
       name: "@hey-api/sdk",
-      instance: "2M_CODEClient",
+      instance: "_2MCodeClient",
       exportFromIndex: false,
       auth: false,
       paramsStructure: "flat",

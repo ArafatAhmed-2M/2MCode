@@ -106,7 +106,7 @@ const cli = yargs(args)
     Heap.start()
 
     process.env.AGENT = "1"
-    process.env.2M_CODE = "1"
+    process.env["2M_CODE"] = "1"
     process.env._2MCODE_PID = String(process.pid)
 
     Log.Default.info("2M_CODE", {

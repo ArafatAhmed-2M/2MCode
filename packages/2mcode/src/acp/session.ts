@@ -1,15 +1,15 @@
 import { RequestError, type McpServer } from "@agentclientprotocol/sdk"
 import type { ACPSessionState } from "./types"
 import * as Log from "@2mcode-ai/core/util/log"
-import type { 2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import type { _2MCodeClient } from "@2mcode-ai/sdk/v2"
 
 const log = Log.create({ service: "acp-session-manager" })
 
 export class ACPSessionManager {
   private sessions = new Map<string, ACPSessionState>()
-  private sdk: 2M_CODEClient
+  private sdk: _2MCodeClient
 
-  constructor(sdk: 2M_CODEClient) {
+  constructor(sdk: _2MCodeClient) {
     this.sdk = sdk
   }
 

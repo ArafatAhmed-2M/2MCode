@@ -92,7 +92,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "Recommandé",
   "dialog.provider.2M_CODE.note": "Modèles sélectionnés incluant Claude, GPT, Gemini et plus",
   "dialog.provider.2M_CODE.tagline": "Modèles optimisés et fiables",
-  "dialog.provider.2M_CODEGo.tagline": "Abonnement abordable pour tous",
+  "dialog.provider._2MCodeGo.tagline": "Abonnement abordable pour tous",
   "dialog.provider.anthropic.note": "Connectez-vous avec Claude Pro/Max ou une clé API",
   "dialog.provider.copilot.note": "Connectez-vous avec Copilot ou une clé API",
   "dialog.provider.openai.note": "Connectez-vous avec ChatGPT Pro/Plus ou une clé API",
@@ -120,13 +120,13 @@ export const dict = {
   "provider.connect.apiKey.label": "Clé API {{provider}}",
   "provider.connect.apiKey.placeholder": "Clé API",
   "provider.connect.apiKey.required": "La clé API est requise",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zen vous donne accès à un ensemble sélectionné de modèles fiables et optimisés pour les agents de codage.",
-  "provider.connect.2M_CODEZen.line2":
+  "provider.connect._2MCodeZen.line2":
     "Avec une seule clé API, vous aurez accès à des modèles tels que Claude, GPT, Gemini, GLM et plus encore.",
-  "provider.connect.2M_CODEZen.visit.prefix": "Visitez ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " pour récupérer votre clé API.",
+  "provider.connect._2MCodeZen.visit.prefix": "Visitez ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " pour récupérer votre clé API.",
   "provider.connect.oauth.code.visit.prefix": "Visitez ",
   "provider.connect.oauth.code.visit.link": "ce lien",
   "provider.connect.oauth.code.visit.suffix":

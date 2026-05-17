@@ -8,7 +8,7 @@
  * extracted from the response body, plus `.status` and `.body` attached.
  */
 import { afterEach, describe, expect, test } from "bun:test"
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import { Server } from "../../src/server/server"
 import * as Log from "@2mcode-ai/core/util/log"
 import { disposeAllInstances, tmpdir } from "../fixture/fixture"
@@ -22,7 +22,7 @@ afterEach(async () => {
 })
 
 function client(directory: string) {
-  return create2M_CODEClient({
+  return create_2MCodeClient({
     baseUrl: "http://test",
     directory,
     fetch: ((req: Request) => Server.Default().app.fetch(req)) as unknown as typeof fetch,

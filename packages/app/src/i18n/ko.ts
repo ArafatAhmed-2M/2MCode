@@ -92,7 +92,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "추천",
   "dialog.provider.2M_CODE.note": "Claude, GPT, Gemini 등을 포함한 엄선된 모델",
   "dialog.provider.2M_CODE.tagline": "신뢰할 수 있는 최적화 모델",
-  "dialog.provider.2M_CODEGo.tagline": "모두를 위한 저렴한 구독",
+  "dialog.provider._2MCodeGo.tagline": "모두를 위한 저렴한 구독",
   "dialog.provider.anthropic.note": "Claude Pro/Max 또는 API 키로 연결",
   "dialog.provider.copilot.note": "Copilot 또는 API 키로 연결",
   "dialog.provider.openai.note": "ChatGPT Pro/Plus 또는 API 키로 연결",
@@ -120,12 +120,12 @@ export const dict = {
   "provider.connect.apiKey.label": "{{provider}} API 키",
   "provider.connect.apiKey.placeholder": "API 키",
   "provider.connect.apiKey.required": "API 키가 필요합니다",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zen은 코딩 에이전트를 위해 최적화된 신뢰할 수 있는 엄선된 모델에 대한 액세스를 제공합니다.",
-  "provider.connect.2M_CODEZen.line2": "단일 API 키로 Claude, GPT, Gemini, GLM 등 다양한 모델에 액세스할 수 있습니다.",
-  "provider.connect.2M_CODEZen.visit.prefix": "다음 ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": "을 방문하여 API 키를 받으세요.",
+  "provider.connect._2MCodeZen.line2": "단일 API 키로 Claude, GPT, Gemini, GLM 등 다양한 모델에 액세스할 수 있습니다.",
+  "provider.connect._2MCodeZen.visit.prefix": "다음 ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": "을 방문하여 API 키를 받으세요.",
   "provider.connect.oauth.code.visit.prefix": "다음 ",
   "provider.connect.oauth.code.visit.link": "이 링크",
   "provider.connect.oauth.code.visit.suffix":

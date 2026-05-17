@@ -1154,7 +1154,7 @@ class Event extends _HeyApiClient {
   }
 }
 
-export class 2M_CODEClient extends _HeyApiClient {
+export class _2MCodeClient extends _HeyApiClient {
   /**
    * Respond to a permission request
    */

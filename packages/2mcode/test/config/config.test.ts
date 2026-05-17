@@ -802,12 +802,12 @@ test("migrates mode field to agent field", async () => {
   })
 })
 
-test("loads config from .2M_CODE directory", async () => {
+test("loads config from ["2M_CODE"] directory", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
-      const agentDir = path.join(2M_CODEDir, "agent")
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
+      const agentDir = path.join(_2MCodeDir, "agent")
       await fs.mkdir(agentDir, { recursive: true })
 
       await Filesystem.write(
@@ -864,10 +864,10 @@ Ordered permissions`,
 test("loads agents from .2M_CODE/agents (plural)", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
-      const agentsDir = path.join(2M_CODEDir, "agents")
+      const agentsDir = path.join(_2MCodeDir, "agents")
       await fs.mkdir(path.join(agentsDir, "nested"), { recursive: true })
 
       await Filesystem.write(
@@ -915,10 +915,10 @@ Nested agent prompt`,
 test("loads commands from .2M_CODE/command (singular)", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
-      const commandDir = path.join(2M_CODEDir, "command")
+      const commandDir = path.join(_2MCodeDir, "command")
       await fs.mkdir(path.join(commandDir, "nested"), { recursive: true })
 
       await Filesystem.write(
@@ -960,10 +960,10 @@ Nested command template`,
 test("loads commands from .2M_CODE/commands (plural)", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
-      const commandsDir = path.join(2M_CODEDir, "commands")
+      const commandsDir = path.join(_2MCodeDir, "commands")
       await fs.mkdir(path.join(commandsDir, "nested"), { recursive: true })
 
       await Filesystem.write(
@@ -1163,10 +1163,10 @@ test("resolves scoped npm plugins in config", async () => {
 test("merges plugin arrays from global and local configs", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      // Create a nested project structure with local .2M_CODE config
+      // Create a nested project structure with local ["2M_CODE"] config
       const projectDir = path.join(dir, "project")
-      const 2M_CODEDir = path.join(projectDir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(projectDir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
       // Global config with plugins
       await Filesystem.write(
@@ -1177,9 +1177,9 @@ test("merges plugin arrays from global and local configs", async () => {
         }),
       )
 
-      // Local .2M_CODE config with different plugins
+      // Local ["2M_CODE"] config with different plugins
       await Filesystem.write(
-        path.join(2M_CODEDir, "2M_CODE.json"),
+        path.join(_2MCodeDir, "2M_CODE.json"),
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           plugin: ["local-plugin-1"],
@@ -1209,9 +1209,9 @@ test("merges plugin arrays from global and local configs", async () => {
 test("does not error when only custom agent is a subagent", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
-      const agentDir = path.join(2M_CODEDir, "agent")
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
+      const agentDir = path.join(_2MCodeDir, "agent")
       await fs.mkdir(agentDir, { recursive: true })
 
       await Filesystem.write(
@@ -1242,8 +1242,8 @@ test("merges instructions arrays from global and local configs", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
       const projectDir = path.join(dir, "project")
-      const 2M_CODEDir = path.join(projectDir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(projectDir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
       await Filesystem.write(
         path.join(dir, "2M_CODE.json"),
@@ -1254,7 +1254,7 @@ test("merges instructions arrays from global and local configs", async () => {
       )
 
       await Filesystem.write(
-        path.join(2M_CODEDir, "2M_CODE.json"),
+        path.join(_2MCodeDir, "2M_CODE.json"),
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           instructions: ["local-instructions.md"],
@@ -1281,8 +1281,8 @@ test("deduplicates duplicate instructions from global and local configs", async 
   await using tmp = await tmpdir({
     init: async (dir) => {
       const projectDir = path.join(dir, "project")
-      const 2M_CODEDir = path.join(projectDir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(projectDir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
       await Filesystem.write(
         path.join(dir, "2M_CODE.json"),
@@ -1293,7 +1293,7 @@ test("deduplicates duplicate instructions from global and local configs", async 
       )
 
       await Filesystem.write(
-        path.join(2M_CODEDir, "2M_CODE.json"),
+        path.join(_2MCodeDir, "2M_CODE.json"),
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           instructions: ["duplicate.md", "local-only.md"],
@@ -1322,10 +1322,10 @@ test("deduplicates duplicate instructions from global and local configs", async 
 test("deduplicates duplicate plugins from global and local configs", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
-      // Create a nested project structure with local .2M_CODE config
+      // Create a nested project structure with local ["2M_CODE"] config
       const projectDir = path.join(dir, "project")
-      const 2M_CODEDir = path.join(projectDir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      const _2MCodeDir = path.join(projectDir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
 
       // Global config with plugins
       await Filesystem.write(
@@ -1336,9 +1336,9 @@ test("deduplicates duplicate plugins from global and local configs", async () =>
         }),
       )
 
-      // Local .2M_CODE config with some overlapping plugins
+      // Local ["2M_CODE"] config with some overlapping plugins
       await Filesystem.write(
-        path.join(2M_CODEDir, "2M_CODE.json"),
+        path.join(_2MCodeDir, "2M_CODE.json"),
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           plugin: ["duplicate-plugin", "local-plugin-1"],
@@ -1893,7 +1893,7 @@ test("MCP config deep merges preserving base config properties", async () => {
   })
 })
 
-test("local .2M_CODE config can override MCP from project config", async () => {
+test("local ["2M_CODE"] config can override MCP from project config", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
       // Project config with disabled MCP
@@ -1910,11 +1910,11 @@ test("local .2M_CODE config can override MCP from project config", async () => {
           },
         }),
       )
-      // Local .2M_CODE directory config enables it
-      const 2M_CODEDir = path.join(dir, ".2M_CODE")
-      await fs.mkdir(2M_CODEDir, { recursive: true })
+      // Local ["2M_CODE"] directory config enables it
+      const _2MCodeDir = path.join(dir, ".2M_CODE")
+      await fs.mkdir(_2MCodeDir, { recursive: true })
       await Filesystem.write(
-        path.join(2M_CODEDir, "2M_CODE.json"),
+        path.join(_2MCodeDir, "2M_CODE.json"),
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           mcp: {
@@ -2246,8 +2246,8 @@ describe("deduplicatePluginOrigins", () => {
     await using tmp = await tmpdir({
       init: async (dir) => {
         const projectDir = path.join(dir, "project")
-        const 2M_CODEDir = path.join(projectDir, ".2M_CODE")
-        const pluginDir = path.join(2M_CODEDir, "plugin")
+        const _2MCodeDir = path.join(projectDir, ".2M_CODE")
+        const pluginDir = path.join(_2MCodeDir, "plugin")
         await fs.mkdir(pluginDir, { recursive: true })
 
         await Filesystem.write(
@@ -2319,17 +2319,17 @@ describe("_2MCODE_DISABLE_PROJECT_CONFIG", () => {
     try {
       await using tmp = await tmpdir({
         init: async (dir) => {
-          // Create a .2M_CODE directory with a command
-          const 2M_CODEDir = path.join(dir, ".2M_CODE", "command")
-          await fs.mkdir(2M_CODEDir, { recursive: true })
-          await Filesystem.write(path.join(2M_CODEDir, "test-cmd.md"), "# Test Command\nThis is a test command.")
+          // Create a ["2M_CODE"] directory with a command
+          const _2MCodeDir = path.join(dir, ".2M_CODE", "command")
+          await fs.mkdir(_2MCodeDir, { recursive: true })
+          await Filesystem.write(path.join(_2MCodeDir, "test-cmd.md"), "# Test Command\nThis is a test command.")
         },
       })
       await withTestInstance({
         directory: tmp.path,
         fn: async (ctx) => {
           const directories = await listDirs(ctx)
-          // Project .2M_CODE should NOT be in directories list
+          // Project ["2M_CODE"] should NOT be in directories list
           const hasProject2M_CODE = directories.some((d) => d.startsWith(tmp.path))
           expect(hasProject2M_CODE).toBe(false)
         },

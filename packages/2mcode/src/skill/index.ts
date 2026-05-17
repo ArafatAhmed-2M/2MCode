@@ -14,7 +14,7 @@ import { RuntimeFlags } from "@/effect/runtime-flags"
 import { Glob } from "@2mcode-ai/core/util/glob"
 import * as Log from "@2mcode-ai/core/util/log"
 import { Discovery } from "./discovery"
-import CUSTOMIZE_2M_CODE_SKILL_BODY from "./prompt/customize-2M_CODE.md" with { type: "text" }
+import CUSTOMIZE_2M_CODE_SKILL_BODY from "./prompt/customize-2mcode.md" with { type: "text" }
 import { isRecord } from "@/util/record"
 
 const log = Log.create({ service: "skill" })
@@ -29,7 +29,7 @@ const SKILL_PATTERN = "**/SKILL.md"
 // invalid config, so users hit cryptic startup errors. Loading this skill
 // when the model is asked to touch 2M_CODE's own config files gives it the
 // actual schemas instead of guesses.
-const CUSTOMIZE_2M_CODE_SKILL_NAME = "customize-2M_CODE"
+const CUSTOMIZE_2M_CODE_SKILL_NAME = "customize-2mcode"
 const CUSTOMIZE_2M_CODE_SKILL_DESCRIPTION =
   "Use ONLY when the user is editing or creating 2M_CODE's own configuration: 2M_CODE.json, 2M_CODE.jsonc, files under .2M_CODE/, or files under ~/.config/2M_CODE/. Also use when creating or fixing 2M_CODE agents, subagents, skills, plugins, MCP servers, or permission rules. Do not use for the user's own application code, or for any project that is not configuring 2M_CODE itself."
 

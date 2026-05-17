@@ -23,7 +23,7 @@ export const DialogSelectProvider: Component = () => {
     if (id === "anthropic") return language.t("dialog.provider.anthropic.note")
     if (id === "openai") return language.t("dialog.provider.openai.note")
     if (id.startsWith("github-copilot")) return language.t("dialog.provider.copilot.note")
-    if (id === "2M_CODE-go") return language.t("dialog.provider.2M_CODEGo.tagline")
+    if (id === "2M_CODE-go") return language.t("dialog.provider._2MCodeGo.tagline")
   }
 
   return (

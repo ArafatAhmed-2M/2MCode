@@ -92,7 +92,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "موصى به",
   "dialog.provider.2M_CODE.note": "نماذج مختارة تتضمن Claude و GPT و Gemini والمزيد",
   "dialog.provider.2M_CODE.tagline": "نماذج موثوقة ومحسنة",
-  "dialog.provider.2M_CODEGo.tagline": "اشتراك منخفض التكلفة للجميع",
+  "dialog.provider._2MCodeGo.tagline": "اشتراك منخفض التكلفة للجميع",
   "dialog.provider.anthropic.note": "اتصل باستخدام Claude Pro/Max أو مفتاح API",
   "dialog.provider.copilot.note": "اتصل باستخدام Copilot أو مفتاح API",
   "dialog.provider.openai.note": "اتصل باستخدام ChatGPT Pro/Plus أو مفتاح API",
@@ -120,13 +120,13 @@ export const dict = {
   "provider.connect.apiKey.label": "مفتاح واجهة برمجة تطبيقات {{provider}}",
   "provider.connect.apiKey.placeholder": "مفتاح API",
   "provider.connect.apiKey.required": "مفتاح API مطلوب",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "يمنحك 2M_CODE Zen الوصول إلى مجموعة مختارة من النماذج الموثوقة والمحسنة لوكلاء البرمجة.",
-  "provider.connect.2M_CODEZen.line2":
+  "provider.connect._2MCodeZen.line2":
     "باستخدام مفتاح API واحد، ستحصل على إمكانية الوصول إلى نماذج مثل Claude و GPT و Gemini و GLM والمزيد.",
-  "provider.connect.2M_CODEZen.visit.prefix": "قم بزيارة ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " للحصول على مفتاح API الخاص بك.",
+  "provider.connect._2MCodeZen.visit.prefix": "قم بزيارة ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " للحصول على مفتاح API الخاص بك.",
   "provider.connect.oauth.code.visit.prefix": "قم بزيارة ",
   "provider.connect.oauth.code.visit.link": "هذا الرابط",
   "provider.connect.oauth.code.visit.suffix":

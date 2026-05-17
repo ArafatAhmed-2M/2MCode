@@ -6,7 +6,7 @@ import * as core from "@actions/core"
 import * as github from "@actions/github"
 import type { Context as GitHubContext } from "@actions/github/lib/context"
 import type { IssueCommentEvent, PullRequestReviewCommentEvent } from "@octokit/webhooks-types"
-import { create2M_CODEClient } from "@2mcode-ai/sdk"
+import { create_2MCodeClient } from "@2mcode-ai/sdk"
 import { spawn } from "node:child_process"
 import { setTimeout as sleep } from "node:timers/promises"
 
@@ -233,7 +233,7 @@ function create2M_CODE() {
   const port = 4096
   const url = `http://${host}:${port}`
   const proc = spawn(`2M_CODE`, [`serve`, `--hostname=${host}`, `--port=${port}`])
-  const client = create2M_CODEClient({ baseUrl: url })
+  const client = create_2MCodeClient({ baseUrl: url })
 
   return {
     server: { url, close: () => proc.kill() },

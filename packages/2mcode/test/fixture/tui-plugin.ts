@@ -1,4 +1,4 @@
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import { RGBA, type CliRenderer } from "@opentui/core"
 import type { HostPluginApi } from "../../src/cli/cmd/tui/plugin/slots"
 import { createTuiResolvedConfig } from "./tui-runtime"
@@ -126,7 +126,7 @@ export function createTuiPluginApi(opts: Opts = {}): HostPluginApi {
   const kv: Record<string, unknown> = {}
   const count = opts.count
   const ctrl = new AbortController()
-  const own = create2M_CODEClient({
+  const own = create_2MCodeClient({
     baseUrl: "http://localhost:4096",
   })
   const fallback = () => own

@@ -1,8 +1,8 @@
-import { create2M_CODEClient, create2M_CODEServer } from "@2mcode-ai/sdk"
+import { create_2MCodeClient, create2M_CODEServer } from "@2mcode-ai/sdk"
 import { pathToFileURL } from "bun"
 
 const server = await create2M_CODEServer()
-const client = create2M_CODEClient({ baseUrl: server.url })
+const client = create_2MCodeClient({ baseUrl: server.url })
 
 const input = await Array.fromAsync(new Bun.Glob("packages/core/*.ts").scan())
 

@@ -1,4 +1,4 @@
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2/client"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2/client"
 import type { ServerConnection } from "@/context/server"
 import { decode64 } from "@/utils/base64"
 
@@ -20,7 +20,7 @@ export function authFromToken(token: string | null) {
 export function createSdkForServer({
   server,
   ...config
-}: Omit<NonNullable<Parameters<typeof create2M_CODEClient>[0]>, "baseUrl"> & {
+}: Omit<NonNullable<Parameters<typeof create_2MCodeClient>[0]>, "baseUrl"> & {
   server: ServerConnection.HttpBase
 }) {
   const auth = (() => {
@@ -30,7 +30,7 @@ export function createSdkForServer({
     }
   })()
 
-  return create2M_CODEClient({
+  return create_2MCodeClient({
     ...config,
     headers: {
       ...(config.headers instanceof Headers ? Object.fromEntries(config.headers.entries()) : config.headers),

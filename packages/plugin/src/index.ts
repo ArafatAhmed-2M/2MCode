@@ -1,6 +1,6 @@
 import type {
   Event,
-  create2M_CODEClient,
+  create_2MCodeClient,
   Project,
   Model,
   Provider,
@@ -54,7 +54,7 @@ export type WorkspaceAdapter = {
 }
 
 export type PluginInput = {
-  client: ReturnType<typeof create2M_CODEClient>
+  client: ReturnType<typeof create_2MCodeClient>
   project: Project
   directory: string
   worktree: string

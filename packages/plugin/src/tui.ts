@@ -1,6 +1,6 @@
 import type {
   AgentPart,
-  2M_CODEClient,
+  _2MCodeClient,
   Event,
   FilePart,
   LspStatus,
@@ -609,7 +609,7 @@ export type TuiPluginApi = {
   kv: TuiKV
   state: TuiState
   theme: TuiTheme
-  client: 2M_CODEClient
+  client: _2MCodeClient
   event: TuiEventBus
   renderer: CliRenderer
   slots: TuiSlots

@@ -12,7 +12,7 @@
 //   3. starts the stream transport (SDK event subscription), lazily for fresh
 //      local sessions,
 //   4. runs the prompt queue until the footer closes.
-import { create2M_CODEClient } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient } from "@2mcode-ai/sdk/v2"
 import { Flag } from "@2mcode-ai/core/flag/flag"
 import { createRunDemo } from "./demo"
 import { resolveDiffStyle, resolveFooterKeybinds, resolveModelInfo, resolveSessionInfo } from "./runtime.boot"
@@ -711,7 +711,7 @@ export async function runInteractiveLocalMode(input: RunLocalInput): Promise<voi
       "2M_CODE.demo": input.demo,
     },
     async () => {
-      const sdk = create2M_CODEClient({
+      const sdk = create_2MCodeClient({
         baseUrl: "http://2M_CODE.internal",
         fetch: input.fetch,
         directory: input.directory,

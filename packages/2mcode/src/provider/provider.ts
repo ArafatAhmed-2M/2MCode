@@ -157,7 +157,7 @@ function custom(dep: CustomDep): Record<string, CustomLoader> {
           },
         },
       }),
-    2M_CODE: Effect.fnUntraced(function* (input: Info) {
+    "2M_CODE": Effect.fnUntraced(function* (input: Info) {
       const env = yield* dep.env()
       const hasKey = iife(() => {
         if (input.env.some((item) => env[item])) return true

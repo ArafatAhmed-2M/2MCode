@@ -98,10 +98,10 @@ export const PrCommand = effectCmd({
     UI.println("Starting 2M_CODE...")
     UI.println()
 
-    const 2M_CODEArgs = sessionId ? ["-s", sessionId] : []
+    const _2MCodeArgs = sessionId ? ["-s", sessionId] : []
     const code = yield* Effect.promise(
       () =>
-        Process.spawn(["2M_CODE", ...2M_CODEArgs], {
+        Process.spawn(["2M_CODE", ..._2MCodeArgs], {
           stdin: "inherit",
           stdout: "inherit",
           stderr: "inherit",

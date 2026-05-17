@@ -1,6 +1,6 @@
 import { Context } from "effect"
 
-const 2M_CODEOrigin = /^https:\/\/([a-z0-9-]+\.)*2M_CODE\.ai$/
+const _2MCodeOrigin = /^https:\/\/([a-z0-9-]+\.)*2M_CODE\.ai$/
 
 export type CorsOptions = { readonly cors?: ReadonlyArray<string> }
 
@@ -15,7 +15,7 @@ export function isAllowedCorsOrigin(input: string | undefined, opts?: CorsOption
   if (input.startsWith("oc://renderer")) return true
   if (input === "tauri://localhost" || input === "http://tauri.localhost" || input === "https://tauri.localhost")
     return true
-  if (2M_CODEOrigin.test(input)) return true
+  if (_2MCodeOrigin.test(input)) return true
   return opts?.cors?.includes(input) ?? false
 }
 

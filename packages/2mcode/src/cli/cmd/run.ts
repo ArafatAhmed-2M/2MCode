@@ -20,7 +20,7 @@ import { effectCmd } from "../effect-cmd"
 import { ServerAuth } from "@/server/auth"
 import { EOL } from "os"
 import { Filesystem } from "@/util/filesystem"
-import { create2M_CODEClient, type 2M_CODEClient, type ToolPart } from "@2mcode-ai/sdk/v2"
+import { create_2MCodeClient, type _2MCodeClient, type ToolPart } from "@2mcode-ai/sdk/v2"
 import { Agent } from "@/agent/agent"
 import { Permission } from "@/permission"
 import { RuntimeFlags } from "@/effect/runtime-flags"
@@ -28,7 +28,7 @@ import { FormatError, FormatUnknownError } from "../error"
 import { INTERACTIVE_INPUT_ERROR, resolveInteractiveStdin } from "./run/runtime.stdin"
 
 const runtimeTask = import("./run/runtime")
-type ModelInput = Parameters<2M_CODEClient["session"]["prompt"]>[0]["model"]
+type ModelInput = Parameters<_2MCodeClient["session"]["prompt"]>[0]["model"]
 
 function pick(value: string | undefined): ModelInput | undefined {
   if (!value) return undefined
@@ -296,7 +296,7 @@ export const RunCommand = effectCmd({
         ? ServerAuth.headers({ password: args.password, username: args.username })
         : undefined
       const attachSDK = (dir?: string) => {
-        return create2M_CODEClient({
+        return create_2MCodeClient({
           baseUrl: args.attach!,
           directory: dir,
           headers: attachHeaders,
@@ -365,7 +365,7 @@ export const RunCommand = effectCmd({
         return message.slice(0, 50) + (message.length > 50 ? "..." : "")
       }
 
-      async function session(sdk: 2M_CODEClient): Promise<SessionInfo | undefined> {
+      async function session(sdk: _2MCodeClient): Promise<SessionInfo | undefined> {
         if (args.session) {
           const current = await sdk.session
             .get({
@@ -444,7 +444,7 @@ export const RunCommand = effectCmd({
         }
       }
 
-      async function share(sdk: 2M_CODEClient, sessionID: string) {
+      async function share(sdk: _2MCodeClient, sessionID: string) {
         const cfg = await sdk.config.get()
         if (!cfg.data) return
         if (cfg.data.share !== "auto" && !flags.autoShare && !args.share) return
@@ -460,7 +460,7 @@ export const RunCommand = effectCmd({
       }
 
       async function createFreshSession(
-        sdk: 2M_CODEClient,
+        sdk: _2MCodeClient,
         input: { agent: string | undefined; model: ModelInput | undefined; variant: string | undefined },
       ): Promise<SessionInfo> {
         const result = await sdk.session.create({
@@ -487,7 +487,7 @@ export const RunCommand = effectCmd({
         }
       }
 
-      async function current(sdk: 2M_CODEClient): Promise<string> {
+      async function current(sdk: _2MCodeClient): Promise<string> {
         if (!args.attach) {
           return directory ?? root
         }
@@ -528,7 +528,7 @@ export const RunCommand = effectCmd({
         return name
       }
 
-      async function attachAgent(sdk: 2M_CODEClient) {
+      async function attachAgent(sdk: _2MCodeClient) {
         if (!args.agent) return undefined
         const name = args.agent
 
@@ -568,7 +568,7 @@ export const RunCommand = effectCmd({
         return name
       }
 
-      async function pickAgent(sdk: 2M_CODEClient) {
+      async function pickAgent(sdk: _2MCodeClient) {
         if (!args.agent) return undefined
         if (args.attach) {
           return attachAgent(sdk)
@@ -577,7 +577,7 @@ export const RunCommand = effectCmd({
         return localAgent()
       }
 
-      async function execute(sdk: 2M_CODEClient) {
+      async function execute(sdk: _2MCodeClient) {
         const sess = await session(sdk)
         if (!sess?.id) {
           UI.error("Session not found")
@@ -604,7 +604,7 @@ export const RunCommand = effectCmd({
         // to stdout/UI. `client` is passed explicitly because attach mode may
         // rebind the SDK to the session's directory after the subscription is
         // created, and replies issued from inside the loop must use that client.
-        async function loop(client: 2M_CODEClient, events: Awaited<ReturnType<typeof sdk.event.subscribe>>) {
+        async function loop(client: _2MCodeClient, events: Awaited<ReturnType<typeof sdk.event.subscribe>>) {
           const toggles = new Map<string, boolean>()
           let error: string | undefined
 
@@ -837,7 +837,7 @@ export const RunCommand = effectCmd({
         const request = new Request(input, init)
         return Server.Default().app.fetch(request)
       }) as typeof globalThis.fetch
-      const sdk = create2M_CODEClient({
+      const sdk = create_2MCodeClient({
         baseUrl: "http://2M_CODE.internal",
         fetch: fetchFn,
         directory,

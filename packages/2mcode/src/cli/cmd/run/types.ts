@@ -13,7 +13,7 @@
 //         → OpenTUI split-footer renderer writes to terminal
 import type { KeyEvent, Renderable } from "@opentui/core"
 import type { Binding } from "@opentui/keymap"
-import type { 2M_CODEClient, PermissionRequest, QuestionRequest, ToolPart } from "@2mcode-ai/sdk/v2"
+import type { _2MCodeClient, PermissionRequest, QuestionRequest, ToolPart } from "@2mcode-ai/sdk/v2"
 
 export type RunFilePart = {
   type: "file"
@@ -22,14 +22,14 @@ export type RunFilePart = {
   mime: string
 }
 
-type PromptModel = Parameters<2M_CODEClient["session"]["prompt"]>[0]["model"]
-type PromptInput = Parameters<2M_CODEClient["session"]["prompt"]>[0]
+type PromptModel = Parameters<_2MCodeClient["session"]["prompt"]>[0]["model"]
+type PromptInput = Parameters<_2MCodeClient["session"]["prompt"]>[0]
 
 export type RunPromptPart = NonNullable<PromptInput["parts"]>[number]
 
-export type RunCommand = NonNullable<Awaited<ReturnType<2M_CODEClient["command"]["list"]>>["data"]>[number]
+export type RunCommand = NonNullable<Awaited<ReturnType<_2MCodeClient["command"]["list"]>>["data"]>[number]
 
-export type RunProvider = NonNullable<Awaited<ReturnType<2M_CODEClient["provider"]["list"]>>["data"]>["all"][number]
+export type RunProvider = NonNullable<Awaited<ReturnType<_2MCodeClient["provider"]["list"]>>["data"]>["all"][number]
 
 export type RunPrompt = {
   text: string
@@ -40,14 +40,14 @@ export type RunPrompt = {
   }
 }
 
-export type RunAgent = NonNullable<Awaited<ReturnType<2M_CODEClient["app"]["agents"]>>["data"]>[number]
+export type RunAgent = NonNullable<Awaited<ReturnType<_2MCodeClient["app"]["agents"]>>["data"]>[number]
 
-type RunResourceMap = NonNullable<Awaited<ReturnType<2M_CODEClient["experimental"]["resource"]["list"]>>["data"]>
+type RunResourceMap = NonNullable<Awaited<ReturnType<_2MCodeClient["experimental"]["resource"]["list"]>>["data"]>
 
 export type RunResource = RunResourceMap[string]
 
 export type RunInput = {
-  sdk: 2M_CODEClient
+  sdk: _2MCodeClient
   directory: string
   sessionID: string
   sessionTitle?: string
@@ -255,11 +255,11 @@ export type FooterEvent =
       state: FooterSubagentState
     }
 
-export type PermissionReply = Parameters<2M_CODEClient["permission"]["reply"]>[0]
+export type PermissionReply = Parameters<_2MCodeClient["permission"]["reply"]>[0]
 
-export type QuestionReply = Parameters<2M_CODEClient["question"]["reply"]>[0]
+export type QuestionReply = Parameters<_2MCodeClient["question"]["reply"]>[0]
 
-export type QuestionReject = Parameters<2M_CODEClient["question"]["reject"]>[0]
+export type QuestionReject = Parameters<_2MCodeClient["question"]["reject"]>[0]
 
 type FooterBinding = Binding<Renderable, KeyEvent>
 

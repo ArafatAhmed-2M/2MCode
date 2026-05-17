@@ -189,7 +189,7 @@ const loadState = Effect.fn("TuiConfig.loadState")(function* (ctx: { directory: 
       acc.plugin_origins = plugins
     })
 
-  // Every config dir we may read from: global config dir, any `.2M_CODE`
+  // Every config dir we may read from: global config dir, any `["2M_CODE"]`
   // folders between cwd and home, and _2MCODE_CONFIG_DIR.
   const directories = yield* ConfigPaths.directories(ctx.directory)
   yield* Effect.promise(() => migrateTuiConfig({ directories, cwd: ctx.directory }))
@@ -218,7 +218,7 @@ const loadState = Effect.fn("TuiConfig.loadState")(function* (ctx: { directory: 
     yield* mergeFile(acc, file)
   }
 
-  // 4. `.2M_CODE` directories (and _2MCODE_CONFIG_DIR) discovered while
+  // 4. `["2M_CODE"]` directories (and _2MCODE_CONFIG_DIR) discovered while
   // walking up the tree. Also returned below so callers can install plugin
   // dependencies from each location.
   const dirs = unique(directories).filter((dir) => dir.endsWith(".2M_CODE") || dir === Flag._2MCODE_CONFIG_DIR)

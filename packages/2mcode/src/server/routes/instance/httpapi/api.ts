@@ -51,7 +51,7 @@ export const InstanceHttpApi = HttpApi.make("2M_CODE-instance")
   .addHttpApi(WorkspaceApi)
   .middleware(SchemaErrorMiddleware)
 
-export const 2M_CODEHttpApi = HttpApi.make("2M_CODE")
+export const _2MCodeHttpApi = HttpApi.make("2M_CODE")
   .addHttpApi(RootHttpApi)
   .addHttpApi(EventApi)
   .addHttpApi(InstanceHttpApi)

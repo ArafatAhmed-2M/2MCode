@@ -1,6 +1,6 @@
 import type {
   Config,
-  2M_CODEClient,
+  _2MCodeClient,
   Path,
   Project,
   ProviderAuthResponse,
@@ -51,19 +51,19 @@ type GlobalStore = {
   reload: undefined | "pending" | "complete"
 }
 
-export const loadMcpQuery = (directory: string, sdk: 2M_CODEClient) =>
+export const loadMcpQuery = (directory: string, sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: [directory, "mcp"] as const,
     queryFn: () => sdk.mcp.status().then((r) => r.data ?? {}),
   })
 
-export const loadLspQuery = (directory: string, sdk: 2M_CODEClient) =>
+export const loadLspQuery = (directory: string, sdk: _2MCodeClient) =>
   queryOptions({
     queryKey: [directory, "lsp"] as const,
     queryFn: () => sdk.lsp.status().then((r) => r.data ?? []),
   })
 
-function makeQueryOptionsApi(globalSDK: () => 2M_CODEClient, sdkFor: (dir: PathKey) => 2M_CODEClient) {
+function makeQueryOptionsApi(globalSDK: () => _2MCodeClient, sdkFor: (dir: PathKey) => _2MCodeClient) {
   return {
     globalConfig: () => loadGlobalConfigQuery(globalSDK()),
     projects: () => loadProjectsQuery(globalSDK()),
@@ -84,7 +84,7 @@ function createGlobalSync() {
   const owner = getOwner()
   if (!owner) throw new Error("GlobalSync must be created within owner")
 
-  const sdkCache = new Map<string, 2M_CODEClient>()
+  const sdkCache = new Map<string, _2MCodeClient>()
   const booting = new Map<string, Promise<void>>()
   const sessionLoads = new Map<string, Promise<void>>()
   const sessionMeta = new Map<string, { limit: number }>()

@@ -67,7 +67,7 @@ import type { RouteMap } from "@/cli/cmd/tui/plugin/api"
 import { createTuiAttention } from "@/cli/cmd/tui/attention"
 import { FormatError, FormatUnknownError } from "@/cli/error"
 import { CommandPaletteProvider, useCommandPalette } from "./context/command-palette"
-import { 2M_CODEKeymapProvider, register2M_CODEKeymap, useBindings, use2M_CODEKeymap } from "./keymap"
+import { _2MCodeKeymapProvider, register2M_CODEKeymap, useBindings, use2M_CODEKeymap } from "./keymap"
 
 import type { EventSource } from "./context/sdk"
 import { DialogVariant } from "./component/dialog-variant"
@@ -197,7 +197,7 @@ export function tui(input: {
             <ErrorComponent error={error} reset={reset} onBeforeExit={onBeforeExit} onExit={onExit} mode={mode} />
           )}
         >
-          <2M_CODEKeymapProvider keymap={keymap}>
+          <_2MCodeKeymapProvider keymap={keymap}>
             <ArgsProvider {...input.args}>
               <ExitProvider onBeforeExit={onBeforeExit} onExit={onExit}>
                 <KVProvider>
@@ -252,7 +252,7 @@ export function tui(input: {
                 </KVProvider>
               </ExitProvider>
             </ArgsProvider>
-          </2M_CODEKeymapProvider>
+          </_2MCodeKeymapProvider>
         </ErrorBoundary>
       )
     }, renderer)

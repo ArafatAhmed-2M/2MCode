@@ -265,7 +265,7 @@ export const GithubInstallCommand = effectCmd({
 
         async function promptProvider() {
           const priority: Record<string, number> = {
-            2M_CODE: 0,
+            "2M_CODE": 0,
             anthropic: 1,
             openai: 2,
             google: 3,
@@ -384,7 +384,7 @@ on:
     types: [created]
 
 jobs:
-  2M_CODE:
+  "2M_CODE":
     if: |
       contains(github.event.comment.body, ' /oc') ||
       startsWith(github.event.comment.body, '/oc') ||

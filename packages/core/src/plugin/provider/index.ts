@@ -20,7 +20,7 @@ import { MistralPlugin } from "./mistral"
 import { NvidiaPlugin } from "./nvidia"
 import { OpenAIPlugin } from "./openai"
 import { OpenAICompatiblePlugin } from "./openai-compatible"
-import { 2M_CODEPlugin } from "./2M_CODE"
+import { _2MCodePlugin } from "./2mcode"
 import { OpenRouterPlugin } from "./openrouter"
 import { PerplexityPlugin } from "./perplexity"
 import { SapAICorePlugin } from "./sap-ai-core"
@@ -52,7 +52,7 @@ export const ProviderPlugins = [
   LLMGatewayPlugin,
   MistralPlugin,
   NvidiaPlugin,
-  2M_CODEPlugin,
+  _2MCodePlugin,
   OpenAICompatiblePlugin,
   OpenAIPlugin,
   OpenRouterPlugin,

@@ -92,7 +92,7 @@ export const dict = {
   "dialog.provider.tag.recommended": "推奨",
   "dialog.provider.2M_CODE.note": "Claude, GPT, Geminiなどを含む厳選されたモデル",
   "dialog.provider.2M_CODE.tagline": "信頼性の高い最適化モデル",
-  "dialog.provider.2M_CODEGo.tagline": "すべての人に低価格のサブスクリプション",
+  "dialog.provider._2MCodeGo.tagline": "すべての人に低価格のサブスクリプション",
   "dialog.provider.anthropic.note": "Claude Pro/MaxまたはAPIキーで接続",
   "dialog.provider.copilot.note": "CopilotまたはAPIキーで接続",
   "dialog.provider.openai.note": "ChatGPT Pro/PlusまたはAPIキーで接続",
@@ -120,12 +120,12 @@ export const dict = {
   "provider.connect.apiKey.label": "{{provider}} APIキー",
   "provider.connect.apiKey.placeholder": "APIキー",
   "provider.connect.apiKey.required": "APIキーが必要です",
-  "provider.connect.2M_CODEZen.line1":
+  "provider.connect._2MCodeZen.line1":
     "2M_CODE Zenは、コーディングエージェント向けに最適化された信頼性の高いモデルへのアクセスを提供します。",
-  "provider.connect.2M_CODEZen.line2": "1つのAPIキーで、Claude、GPT、Gemini、GLMなどのモデルにアクセスできます。",
-  "provider.connect.2M_CODEZen.visit.prefix": " ",
-  "provider.connect.2M_CODEZen.visit.link": "2M_CODE.ai/zen",
-  "provider.connect.2M_CODEZen.visit.suffix": " にアクセスしてAPIキーを取得してください。",
+  "provider.connect._2MCodeZen.line2": "1つのAPIキーで、Claude、GPT、Gemini、GLMなどのモデルにアクセスできます。",
+  "provider.connect._2MCodeZen.visit.prefix": " ",
+  "provider.connect._2MCodeZen.visit.link": "2M_CODE.ai/zen",
+  "provider.connect._2MCodeZen.visit.suffix": " にアクセスしてAPIキーを取得してください。",
   "provider.connect.oauth.code.visit.prefix": " ",
   "provider.connect.oauth.code.visit.link": "このリンク",
   "provider.connect.oauth.code.visit.suffix":

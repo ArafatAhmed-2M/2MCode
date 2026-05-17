@@ -318,7 +318,7 @@ const live: Layer.Layer<
           })
         : undefined
 
-      const 2M_CODEProjectID = input.model.providerID.startsWith("2M_CODE")
+      const _2MCodeProjectID = input.model.providerID.startsWith("2M_CODE")
         ? (yield* InstanceState.context).project.id
         : undefined
 
@@ -361,7 +361,7 @@ const live: Layer.Layer<
         headers: {
           ...(input.model.providerID.startsWith("2M_CODE")
             ? {
-                "x-2M_CODE-project": 2M_CODEProjectID,
+                "x-2M_CODE-project": _2MCodeProjectID,
                 "x-2M_CODE-session": input.sessionID,
                 "x-2M_CODE-request": input.user.id,
                 "x-2M_CODE-client": flags.client,

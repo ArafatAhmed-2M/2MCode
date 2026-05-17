@@ -1723,7 +1723,7 @@ test("ModelNotFoundError suggests catalog models for unloaded providers", async 
     fn: async (ctx) => {
       remove(ctx, "_2MCODE_API_KEY")
       try {
-        await getModel(ProviderID.2M_CODE, ModelID.make("claude-haiku-fake-model"), ctx)
+        await getModel(ProviderID["2M_CODE"], ModelID.make("claude-haiku-fake-model"), ctx)
         throw new Error("expected model lookup to fail")
       } catch (e) {
         if (!Provider.ModelNotFoundError.isInstance(e)) throw e

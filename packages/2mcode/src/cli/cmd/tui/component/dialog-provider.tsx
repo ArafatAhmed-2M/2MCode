@@ -17,7 +17,7 @@ import { useConnected } from "./use-connected"
 import { useBindings } from "../keymap"
 
 const PROVIDER_PRIORITY: Record<string, number> = {
-  2M_CODE: 0,
+  "2M_CODE": 0,
   "2M_CODE-go": 1,
   openai: 2,
   "github-copilot": 3,
@@ -55,7 +55,7 @@ export function providerOptions(list: { id: string; name: string }[]): ProviderO
         value: provider.id,
         providerID: provider.id,
         description: {
-          2M_CODE: "(Recommended)",
+          "2M_CODE": "(Recommended)",
           anthropic: "(API key)",
           openai: "(ChatGPT Plus/Pro or API key)",
           "2M_CODE-go": "Low cost subscription for everyone",
@@ -355,7 +355,7 @@ function ApiMethod(props: ApiMethodProps) {
       placeholder="API key"
       description={
         {
-          2M_CODE: (
+          "2M_CODE": (
             <box gap={1}>
               <text fg={theme.textMuted}>
                 2M_CODE Zen gives you access to all the best coding models at the cheapest prices with a single API

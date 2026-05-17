@@ -16,9 +16,9 @@ export const GenerateCommand = {
           {
             lang: "js",
             source: [
-              `import { create2M_CODEClient } from "@2mcode-ai/sdk`,
+              `import { create_2MCodeClient } from "@2mcode-ai/sdk`,
               ``,
-              `const client = create2M_CODEClient()`,
+              `const client = create_2MCodeClient()`,
               `await client.${operation.operationId}({`,
               `  ...`,
               `})`,
