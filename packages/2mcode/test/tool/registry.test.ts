@@ -134,8 +134,8 @@ describe("tool.registry", () => {
   it.instance("loads tools from .2M_CODE/tool (singular)", () =>
     Effect.gen(function* () {
       const test = yield* TestInstance
-      const 2M_CODE = path.join(test.directory, ".2M_CODE")
-      const tool = path.join(2M_CODE, "tool")
+      const dotDir = path.join(test.directory, ".2M_CODE")
+      const tool = path.join(dotDir, "tool")
       yield* Effect.promise(() => fs.mkdir(tool, { recursive: true }))
       yield* Effect.promise(() =>
         Bun.write(
@@ -188,8 +188,8 @@ describe("tool.registry", () => {
   it.instance("loads tools from .2M_CODE/tools (plural)", () =>
     Effect.gen(function* () {
       const test = yield* TestInstance
-      const 2M_CODE = path.join(test.directory, ".2M_CODE")
-      const tools = path.join(2M_CODE, "tools")
+      const dotDir = path.join(test.directory, ".2M_CODE")
+      const tools = path.join(dotDir, "tools")
       yield* Effect.promise(() => fs.mkdir(tools, { recursive: true }))
       yield* Effect.promise(() =>
         Bun.write(
@@ -268,13 +268,13 @@ describe("tool.registry", () => {
     () =>
       Effect.gen(function* () {
         const test = yield* TestInstance
-        const 2M_CODE = path.join(test.directory, ".2M_CODE")
-        const customTools = path.join(2M_CODE, "tools")
-        const plugin = path.join(2M_CODE, "node_modules", "@2mcode-ai", "plugin")
+        const dotDir = path.join(test.directory, ".2M_CODE")
+        const customTools = path.join(dotDir, "tools")
+        const plugin = path.join(dotDir, "node_modules", "@2mcode-ai", "plugin")
         yield* Effect.promise(() => fs.mkdir(path.join(plugin, "dist"), { recursive: true }))
         yield* Effect.promise(() => fs.mkdir(customTools, { recursive: true }))
         yield* Effect.promise(() =>
-          fs.cp(path.dirname(fileURLToPath(import.meta.resolve("zod"))), path.join(2M_CODE, "node_modules", "zod"), {
+          fs.cp(path.dirname(fileURLToPath(import.meta.resolve("zod"))), path.join(dotDir, "node_modules", "zod"), {
             dereference: true,
             recursive: true,
           }),
@@ -410,12 +410,12 @@ describe("tool.registry", () => {
   it.instance("loads tools with external dependencies without crashing", () =>
     Effect.gen(function* () {
       const test = yield* TestInstance
-      const 2M_CODE = path.join(test.directory, ".2M_CODE")
-      const tools = path.join(2M_CODE, "tools")
+      const dotDir = path.join(test.directory, ".2M_CODE")
+      const tools = path.join(dotDir, "tools")
       yield* Effect.promise(() => fs.mkdir(tools, { recursive: true }))
       yield* Effect.promise(() =>
         Bun.write(
-          path.join(2M_CODE, "package.json"),
+          path.join(dotDir, "package.json"),
           JSON.stringify({
             name: "custom-tools",
             dependencies: {
@@ -427,7 +427,7 @@ describe("tool.registry", () => {
       )
       yield* Effect.promise(() =>
         Bun.write(
-          path.join(2M_CODE, "package-lock.json"),
+          path.join(dotDir, "package-lock.json"),
           JSON.stringify({
             name: "custom-tools",
             lockfileVersion: 3,
@@ -443,7 +443,7 @@ describe("tool.registry", () => {
         ),
       )
 
-      const cowsay = path.join(2M_CODE, "node_modules", "cowsay")
+      const cowsay = path.join(dotDir, "node_modules", "cowsay")
       yield* Effect.promise(() => fs.mkdir(cowsay, { recursive: true }))
       yield* Effect.promise(() =>
         Bun.write(
