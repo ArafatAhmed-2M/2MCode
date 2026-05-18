@@ -802,7 +802,7 @@ test("migrates mode field to agent field", async () => {
   })
 })
 
-test("loads config from ["2M_CODE"] directory", async () => {
+test("loads config from .2M_CODE directory", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
       const _2MCodeDir = path.join(dir, ".2M_CODE")
@@ -1893,7 +1893,7 @@ test("MCP config deep merges preserving base config properties", async () => {
   })
 })
 
-test("local ["2M_CODE"] config can override MCP from project config", async () => {
+test("local .2M_CODE config can override MCP from project config", async () => {
   await using tmp = await tmpdir({
     init: async (dir) => {
       // Project config with disabled MCP

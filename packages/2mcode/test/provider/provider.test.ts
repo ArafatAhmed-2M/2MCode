@@ -2729,7 +2729,7 @@ test("2M_CODE loader keeps paid models when config apiKey is present", async () 
         JSON.stringify({
           $schema: "https://2M_CODE.ai/config.json",
           provider: {
-            2M_CODE: {
+            "2M_CODE": {
               options: {
                 apiKey: "test-key",
               },
@@ -2788,7 +2788,7 @@ test("2M_CODE loader keeps paid models when auth exists", async () => {
     await Filesystem.write(
       authPath,
       JSON.stringify({
-        2M_CODE: {
+        "2M_CODE": {
           type: "api",
           key: "test-key",
         },
