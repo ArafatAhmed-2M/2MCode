@@ -13,15 +13,15 @@ console.log("- Bot token present:", !!process.env.SLACK_BOT_TOKEN)
 console.log("- Signing secret present:", !!process.env.SLACK_SIGNING_SECRET)
 console.log("- App token present:", !!process.env.SLACK_APP_TOKEN)
 
-console.log("🚀 Starting 2M_CODE server...")
-const 2M_CODE = await create2M_CODE({
+console.log("🚀 Starting 2M Code server...")
+const server2M = await create2M_CODE({
   port: 0,
 })
-console.log("✅ 2M_CODE server ready")
+console.log("✅ 2M Code server ready")
 
 const sessions = new Map<string, { client: any; server: any; sessionId: string; channel: string; thread: string }>()
 void (async () => {
-  const events = await 2M_CODE.client.event.subscribe()
+  const events = await server2M.client.event.subscribe()
   for await (const event of events.stream) {
     if (event.type === "message.part.updated") {
       const part = event.properties.part
@@ -72,8 +72,8 @@ app.message(async ({ message, say }) => {
   let session = sessions.get(sessionKey)
 
   if (!session) {
-    console.log("🆕 Creating new 2M_CODE session...")
-    const { client, server } = 2M_CODE
+    console.log("🆕 Creating new 2M Code session...")
+    const { client, server } = server2M
 
     const createResult = await client.session.create({
       body: { title: `Slack thread ${thread}` },
@@ -88,7 +88,7 @@ app.message(async ({ message, say }) => {
       return
     }
 
-    console.log("✅ Created 2M_CODE session:", createResult.data.id)
+    console.log("✅ Created 2M Code session:", createResult.data.id)
 
     session = { client, server, sessionId: createResult.data.id, channel, thread }
     sessions.set(sessionKey, session)
@@ -101,13 +101,13 @@ app.message(async ({ message, say }) => {
     }
   }
 
-  console.log("📝 Sending to 2M_CODE:", message.text)
+  console.log("📝 Sending to 2M Code:", message.text)
   const result = await session.client.session.prompt({
     path: { id: session.sessionId },
     body: { parts: [{ type: "text", text: message.text }] },
   })
 
-  console.log("📤 2M_CODE response:", JSON.stringify(result, null, 2))
+  console.log("📤 2M Code response:", JSON.stringify(result, null, 2))
 
   if (result.error) {
     console.error("❌ Failed to send message:", result.error)
