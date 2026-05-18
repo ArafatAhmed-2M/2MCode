@@ -46,8 +46,30 @@
 
 ### Installation
 
+#### Global Install from Source (Recommended for Developers & Customization)
+
+If you have cloned this repository, you can compile an optimized, native self-contained TUI executable and register it globally in your system path with a single command:
+
 ```bash
-# Quick install
+# 1. Install dependencies
+bun install
+
+# 2. Compile native binary and register it globally in PATH
+bun run install:global
+```
+
+* **Windows**: Compiles `2mcode.exe` and installs it to `~/.local/bin`, adding it to your user registry `PATH`.
+  > [!TIP]
+  > **Note for Windows Users:** You must restart your terminal or reload environment variables in your current PowerShell session for the `2mcode` command to be recognized:
+  > `$env:Path = [System.Environment]::GetEnvironmentVariable("Path", "User") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "Machine")`
+* **macOS / Linux**: Compiles `2mcode` and installs it to `~/.local/bin/2mcode`, automatically appending the folder to your shell profile (`.zshrc`, `.bashrc`, etc.) if not already present.
+
+---
+
+#### Quick Package & Binary Installation
+
+```bash
+# Quick install script (macOS & Linux)
 curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
 
 # npm / bun / pnpm

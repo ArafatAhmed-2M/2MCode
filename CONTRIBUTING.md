@@ -1,6 +1,6 @@
-# Contributing to 2M_CODE
+# Contributing to 2M Code
 
-We want to make it easy for you to contribute to 2M_CODE. Here are the most common type of changes that get merged:
+We want to make it easy for you to contribute to 2M Code. Here are the most common type of changes that get merged:
 
 - Bug fixes
 - Additional LSPs / Formatters
@@ -29,7 +29,7 @@ Want to take on an issue? Leave a comment and a maintainer may assign it to you 
 New providers shouldn't require many if ANY code changes, but if you want to add support for a new provider first make a PR to:
 https://github.com/anomalyco/models.dev
 
-## Developing 2M_CODE
+## Developing 2M Code
 
 - Requirements: Bun 1.3+
 - Install dependencies and start the dev server from the repo root:
@@ -41,44 +41,49 @@ https://github.com/anomalyco/models.dev
 
 ### Running against a different directory
 
-By default, `bun dev` runs 2M_CODE in the `packages/2M_CODE` directory. To run it against a different directory or repository:
+By default, `bun dev` runs 2M Code in the `packages/2mcode` directory. To run it against a different directory or repository:
 
 ```bash
 bun dev <directory>
 ```
 
-To run 2M_CODE in the root of the 2M_CODE repo itself:
+To run 2M Code in the root of the 2M Code repo itself:
 
 ```bash
 bun dev .
 ```
 
-### Building a "localcode"
+### Building and Installing Locally
 
-To compile a standalone executable:
-
-```bash
-./packages/2M_CODE/script/build.ts --single
-```
-
-Then run it with:
+To compile an optimized, native TUI executable and install it globally as a standalone command:
 
 ```bash
-./packages/2M_CODE/dist/2M_CODE-<platform>/bin/2M_CODE
+bun run install:global
 ```
 
-Replace `<platform>` with your platform (e.g., `darwin-arm64`, `linux-x64`).
+Alternatively, to compile a standalone executable manually:
+
+```bash
+bun run build:local
+```
+
+This puts the executable in:
+```bash
+./packages/2mcode/dist/2mcode-<platform>-<arch>/bin/2mcode
+```
+
+Replace `<platform>` with your platform (e.g., `darwin`, `linux`, `windows`) and `<arch>` with your CPU architecture (`x64`, `arm64`).
 
 - Core pieces:
-  - `packages/2M_CODE`: 2M_CODE core business logic & server.
-  - `packages/2M_CODE/src/cli/cmd/tui/`: The TUI code, written in SolidJS with [opentui](https://github.com/sst/opentui)
-  - `packages/app`: The shared web UI components, written in SolidJS
-  - `packages/desktop`: The native desktop app, built with Electron (wraps `packages/app`)
-  - `packages/plugin`: Source for `@2mcode-ai/plugin`
+  - `packages/2mcode`: 2M Code core business logic, TUI server, and CLI commands.
+  - `packages/2mcode/src/cli/cmd/tui/`: The TUI code, written in SolidJS with [opentui](https://github.com/sst/opentui).
+  - `packages/app`: The shared web UI components, written in SolidJS.
+  - `packages/desktop`: The native desktop app, built with Electron (wraps `packages/app`).
+  - `packages/plugin`: Source for `@2mcode-ai/plugin`.
 
-### Understanding bun dev vs 2M_CODE
+### Understanding bun dev vs 2mcode CLI
 
-During development, `bun dev` is the local equivalent of the built `2M_CODE` command. Both run the same CLI interface:
+During development, `bun dev` is the local equivalent of the built `2mcode` command. Both run the same CLI interface:
 
 ```bash
 # Development (from project root)
@@ -87,16 +92,16 @@ bun dev serve            # Start headless API server
 bun dev web              # Start server + open web interface
 bun dev <directory>      # Start TUI in specific directory
 
-# Production
-2M_CODE --help          # Show all available commands
-2M_CODE serve           # Start headless API server
-2M_CODE web             # Start server + open web interface
-2M_CODE <directory>     # Start TUI in specific directory
+# Production / Built globally
+2mcode --help            # Show all available commands
+2mcode serve             # Start headless API server
+2mcode web               # Start server + open web interface
+2mcode <directory>       # Start TUI in specific directory
 ```
 
 ### Running the API Server
 
-To start the 2M_CODE headless API server:
+To start the 2M Code headless API server:
 
 ```bash
 bun dev serve
@@ -112,7 +117,7 @@ bun dev serve --port 8080
 
 To test UI changes during development:
 
-1. **First, start the 2M_CODE server** (see [Running the API Server](#running-the-api-server) section above)
+1. **First, start the 2M Code server** (see [Running the API Server](#running-the-api-server) section above)
 2. **Then run the web app:**
 
 ```bash
@@ -139,7 +144,7 @@ bun run --cwd packages/desktop package
 ```
 
 > [!NOTE]
-> If you make changes to the API or SDK (e.g. `packages/2M_CODE/src/server/server.ts`), run `./script/generate.ts` to regenerate the SDK and related files.
+> If you make changes to the API or SDK (e.g. `packages/2mcode/src/server/server.ts`), run `./packages/sdk/js/script/build.ts` to regenerate the SDK and related files.
 
 Please try to follow the [style guide](./AGENTS.md)
 
@@ -147,17 +152,17 @@ Please try to follow the [style guide](./AGENTS.md)
 
 Bun debugging is currently rough around the edges. We hope this guide helps you get set up and avoid some pain points.
 
-The most reliable way to debug 2M_CODE is to run it manually in a terminal via `bun run --inspect=<url> dev ...` and attach
+The most reliable way to debug 2mcode is to run it manually in a terminal via `bun run --inspect=<url> dev ...` and attach
 your debugger via that URL. Other methods can result in breakpoints being mapped incorrectly, at least in VSCode (YMMV).
 
 Caveats:
 
-- If you want to run the 2M_CODE TUI and have breakpoints triggered in the server code, you might need to run `bun dev spawn` instead of
+- If you want to run the 2mcode TUI and have breakpoints triggered in the server code, you might need to run `bun dev spawn` instead of
   the usual `bun dev`. This is because `bun dev` runs the server in a worker thread and breakpoints might not work there.
 - If `spawn` does not work for you, you can debug the server separately:
-  - Debug server: `bun run --inspect=ws://localhost:6499/ --cwd packages/2M_CODE ./src/index.ts serve --port 4096`,
-    then attach TUI with `2M_CODE attach http://localhost:4096`
-  - Debug TUI: `bun run --inspect=ws://localhost:6499/ --cwd packages/2M_CODE --conditions=browser ./src/index.ts`
+  - Debug server: `bun run --inspect=ws://localhost:6499/ --cwd packages/2mcode ./src/index.ts serve --port 4096`,
+    then attach TUI with `2mcode attach http://localhost:4096`
+  - Debug TUI: `bun run --inspect=ws://localhost:6499/ --cwd packages/2mcode --conditions=browser ./src/index.ts`
 
 Other tips and tricks:
 
@@ -171,7 +176,7 @@ If you use VSCode, you can use our example configurations [.vscode/settings.exam
 Some debug methods that can be problematic:
 
 - Debug configurations with `"request": "launch"` can have breakpoints incorrectly mapped and thus unusable
-- The same problem arises when running 2M_CODE in the VSCode `JavaScript Debug Terminal`
+- The same problem arises when running 2mcode in the VSCode `JavaScript Debug Terminal`
 
 With that said, you may want to try these methods, as they might work for you.
 
@@ -224,7 +229,7 @@ You can optionally include a scope to indicate which package is affected:
 
 - `feat(app):` feature in the app package
 - `fix(desktop):` bug fix in the desktop package
-- `chore(2M_CODE):` maintenance in the 2M_CODE package
+- `chore(2mcode):` maintenance in the 2mcode package
 
 Examples:
 
@@ -250,7 +255,7 @@ These are not strictly enforced, they are just general guidelines:
 
 ## Feature Requests
 
-For net-new functionality, start with a design conversation. Open an issue describing the problem, your proposed approach (optional), and why it belongs in 2M_CODE. The core team will help decide whether it should move forward; please wait for that approval instead of opening a feature PR directly.
+For net-new functionality, start with a design conversation. Open an issue describing the problem, your proposed approach (optional), and why it belongs in 2mcode. The core team will help decide whether it should move forward; please wait for that approval instead of opening a feature PR directly.
 
 ## Trust & Vouch System
 
@@ -259,7 +264,7 @@ This project uses [vouch](https://github.com/mitchellh/vouch) to manage contribu
 ### How it works
 
 - **Vouched users** are explicitly trusted contributors.
-- **Denounced users** are explicitly blocked. Issues and pull requests from denounced users are automatically closed. If you have been denounced, you can request to be unvouched by reaching out to a maintainer on [Discord](https://2M_CODE.ai/discord)
+- **Denounced users** are explicitly blocked. Issues and pull requests from denounced users are automatically closed. If you have been denounced, you can request to be unvouched by reaching out to a maintainer on [Discord](https://2mcode.ai/discord)
 - **Everyone else** can participate normally — you don't need to be vouched to open issues or PRs.
 
 ### For maintainers
