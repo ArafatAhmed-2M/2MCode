@@ -16,6 +16,8 @@
     "upgrade-opentui": "bun run script/upgrade-opentui.ts",
     "postinstall": "bun run --cwd packages/2mcode fix-node-pty",
     "prepare": "husky",
+    "build:local": "bun run --cwd packages/2mcode script/build.ts --single --skip-embed-web-ui",
+    "install:global": "bun run --cwd packages/2mcode script/install.ts",
     "random": "echo 'Random script'",
     "hello": "echo 'Hello World!'",
     "test": "echo 'do not run tests from root' && exit 1"
