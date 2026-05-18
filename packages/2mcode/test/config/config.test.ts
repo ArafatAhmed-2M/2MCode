@@ -555,7 +555,7 @@ test("resolves env templates in account config with account token", async () => 
     config: () =>
       Effect.succeed(
         Option.some({
-          provider: { 2M_CODE: { options: { apiKey: "{env:_2MCODE_CONSOLE_TOKEN}" } } },
+          provider: { "2M_CODE": { options: { apiKey: "{env:_2MCODE_CONSOLE_TOKEN}" } } },
         }),
       ),
     token: () => Effect.succeed(Option.some(AccessToken.make("st_test_token"))),
