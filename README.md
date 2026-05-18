@@ -46,49 +46,21 @@
 
 ## Installation
 
-### Global Install from Source (Recommended for Developers & Customization)
-
-If you have cloned this repository, you can compile an optimized, native self-contained TUI executable and register it globally in your system path with a single command:
-
 ```bash
-# 1. Install dependencies
+git clone -b rebrand-main https://github.com/ArafatAhmed-2M/2MCode.git
+cd 2MCode
 bun install
-
-# 2. Compile native binary and register it globally in PATH
 bun run install:global
 ```
 
-* **Windows**: Compiles `2mcode.exe` and installs it to `~/.local/bin`, adding it to your user registry `PATH`.
+- **Windows**: Compiles `2mcode.exe` and installs it to `~/.local/bin`, adding it to your user registry `PATH`.
   > [!TIP]
-  > **Note for Windows Users:** You must restart your terminal or reload environment variables in your current PowerShell session for the `2mcode` command to be recognized:
+  > After installing, restart your terminal or run:
   > `$env:Path = [System.Environment]::GetEnvironmentVariable("Path", "User") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "Machine")`
-* **macOS / Linux**: Compiles `2mcode` and installs it to `~/.local/bin/2mcode`, automatically appending the folder to your shell profile (`.zshrc`, `.bashrc`, etc.) if not already present.
-
----
-
-### Quick Package & Binary Installation
-
-```bash
-# Quick install script (macOS & Linux)
-curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
-
-# npm / bun / pnpm
-npm i -g 2mcode@latest
-bun add -g 2mcode
-pnpm add -g 2mcode
-
-# Windows (Scoop)
-scoop install 2mcode
-
-# macOS / Linux (Homebrew)
-brew install ArafatAhmed-2M/tap/2mcode
-
-# Arch Linux
-paru -S 2mcode-bin
-```
+- **macOS / Linux**: Compiles `2mcode` and installs it to `~/.local/bin/2mcode`, automatically adding the folder to your shell profile (`.zshrc`, `.bashrc`, etc.) if not already present.
 
 > [!TIP]
-> After install, simply type `2mcode` in any project directory to start.
+> After install, type `2mcode` in any project directory to start.
 
 ## Quick Start
 
@@ -150,20 +122,6 @@ Mention `@general` in your message to invoke the general-purpose subagent for co
 | `2mcode web`            | Start server + open web interface                  |
 | `2mcode attach <url>`   | Attach TUI to a running server                     |
 | `2mcode <directory>`    | Start TUI in a specific directory                  |
-
-### Installation Directory
-
-The install script uses the following priority for the installation path:
-
-1. `$_2MCODE_INSTALL_DIR` - Custom installation directory
-2. `$XDG_BIN_DIR` - XDG Base Directory Specification compliant path
-3. `$HOME/bin` - Standard user binary directory
-4. `$HOME/.2mcode/bin` - Default fallback
-
-```bash
-# Custom install dir example
-_2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
-```
 
 ## Agents
 
