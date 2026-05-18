@@ -90,6 +90,67 @@ paru -S 2mcode-bin
 > [!TIP]
 > After install, simply type `2mcode` in any project directory to start.
 
+## Quick Start
+
+After installing, here's how to get started in under a minute:
+
+### 1. Set Your API Key
+
+Copy the example config and add your LLM provider key:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` to set your provider and key:
+
+```bash
+2MCODE_PROVIDER=anthropic
+ANTHROPIC_API_KEY=sk-ant-...
+```
+
+Supported providers: `anthropic`, `openai`, `gemini`, `deepseek`, `groq`, `ollama`, `openrouter`, and any OpenAI-compatible endpoint.
+
+### 2. Run 2M Code
+
+Navigate to any project directory and run:
+
+```bash
+2mcode
+```
+
+This opens the **TUI** (terminal user interface). You'll see a chat prompt where you can ask the AI to help with your code.
+
+### 3. Give Your First Command
+
+```text
+@build Add error handling to the login function in src/auth.ts
+```
+
+2M Code will read your codebase, plan the change, and execute it — creating files, editing code, and running commands as needed.
+
+### 4. Switch Agents with Tab
+
+Press `Tab` to toggle between agents:
+
+| Agent    | Access  | Best for                                         |
+| -------- | ------- | ------------------------------------------------ |
+| `@build` | Full    | Writing code, editing files, running commands     |
+| `@plan`  | Read-only | Exploring code, asking questions, planning changes |
+
+Mention `@general` in your message to invoke the general-purpose subagent for complex multi-step searches.
+
+### CLI Commands
+
+| Command                 | Description                                        |
+| ----------------------- | -------------------------------------------------- |
+| `2mcode`                | Start the TUI in the current directory             |
+| `2mcode --help`         | Show all available commands and flags              |
+| `2mcode serve`          | Start headless API server                          |
+| `2mcode web`            | Start server + open web interface                  |
+| `2mcode attach <url>`   | Attach TUI to a running server                     |
+| `2mcode <directory>`    | Start TUI in a specific directory                  |
+
 ## Desktop App (BETA)
 
 2M Code is also available as a desktop application. Download directly from the [releases page](https://github.com/ArafatAhmed-2M/2MCode/releases).
