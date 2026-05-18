@@ -1918,7 +1918,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
             type: "text",
             text: "Hello",
             providerOptions: {
-              2M_CODE: {
+              "2M_CODE": {
                 itemId: "msg_123",
                 otherOption: "value",
               },
@@ -1930,8 +1930,8 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
 
     const result = ProviderTransform.message(msgs, _2MCodeModel, { store: false }) as any[]
 
-    expect(result[0].content[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_123")
-    expect(result[0].content[0].providerOptions?["2M_CODE"]?.otherOption).toBe("value")
+    expect(result[0].content[0].providerOptions?.["2M_CODE"]?.itemId).toBe("msg_123")
+    expect(result[0].content[0].providerOptions?.["2M_CODE"]?.otherOption).toBe("value")
   })
 
   test("preserves itemId across all providerOptions keys", () => {
@@ -1949,7 +1949,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
         role: "assistant",
         providerOptions: {
           openai: { itemId: "msg_root" },
-          2M_CODE: { itemId: "msg_2M_CODE" },
+          "2M_CODE": { itemId: "msg_2M_CODE" },
           extra: { itemId: "msg_extra" },
         },
         content: [
@@ -1958,7 +1958,7 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
             text: "Hello",
             providerOptions: {
               openai: { itemId: "msg_openai_part" },
-              2M_CODE: { itemId: "msg_2M_CODE_part" },
+              "2M_CODE": { itemId: "msg_2M_CODE_part" },
               extra: { itemId: "msg_extra_part" },
             },
           },
@@ -1969,10 +1969,10 @@ describe("ProviderTransform.message - strip openai metadata when store=false", (
     const result = ProviderTransform.message(msgs, _2MCodeModel, { store: false }) as any[]
 
     expect(result[0].providerOptions?.openai?.itemId).toBe("msg_root")
-    expect(result[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_2M_CODE")
+    expect(result[0].providerOptions?.["2M_CODE"]?.itemId).toBe("msg_2M_CODE")
     expect(result[0].providerOptions?.extra?.itemId).toBe("msg_extra")
     expect(result[0].content[0].providerOptions?.openai?.itemId).toBe("msg_openai_part")
-    expect(result[0].content[0].providerOptions?["2M_CODE"]?.itemId).toBe("msg_2M_CODE_part")
+    expect(result[0].content[0].providerOptions?.["2M_CODE"]?.itemId).toBe("msg_2M_CODE_part")
     expect(result[0].content[0].providerOptions?.extra?.itemId).toBe("msg_extra_part")
   })
 

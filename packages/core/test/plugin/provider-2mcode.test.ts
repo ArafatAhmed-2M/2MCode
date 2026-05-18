@@ -4,7 +4,7 @@ import { Catalog } from "@2mcode-ai/core/catalog"
 import { Location } from "@2mcode-ai/core/location"
 import { ModelV2 } from "@2mcode-ai/core/model"
 import { PluginV2 } from "@2mcode-ai/core/plugin"
-import { _2MCodePlugin } from "@2mcode-ai/core/plugin/provider/2M_CODE"
+import { _2MCodePlugin } from "@2mcode-ai/core/plugin/provider/2mcode"
 import { ProviderV2 } from "@2mcode-ai/core/provider"
 import { it, model, provider, withEnv } from "./provider-helper"
 
