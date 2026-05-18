@@ -1,26 +1,25 @@
 # Security
 
-## IMPORTANT
-
-We do not accept AI generated security reports. We receive a large number of
-these and we absolutely do not have the resources to review them all. If you
-submit one that will be an automatic ban from the project.
+> [!WARNING]
+> We do **not** accept AI-generated security reports. We receive a large number of these and do not have the resources to review them all. Submitting one will result in an automatic ban from the project.
 
 ## Threat Model
 
 ### Overview
 
-2M_CODE is an AI-powered coding assistant that runs locally on your machine. It provides an agent system with access to powerful tools including shell execution, file operations, and web access.
+2M Code is an AI-powered coding assistant that runs locally on your machine. It provides an agent system with access to powerful tools including shell execution, file operations, and web access.
 
-### No Sandbox
+> [!CAUTION]
+> ### No Sandbox
+> 
+> 2M Code does **not** sandbox the agent. The permission system exists as a UX feature to help users stay aware of what actions the agent is taking - it prompts for confirmation before executing commands, writing files, etc. However, it is not designed to provide security isolation.
 
-2M_CODE does **not** sandbox the agent. The permission system exists as a UX feature to help users stay aware of what actions the agent is taking - it prompts for confirmation before executing commands, writing files, etc. However, it is not designed to provide security isolation.
+If you need true isolation, run `2mcode` inside a Docker container or VM.
 
-If you need true isolation, run 2M_CODE inside a Docker container or VM.
-
-### Server Mode
-
-Server mode is opt-in only. When enabled, set `_2MCODE_SERVER_PASSWORD` to require HTTP Basic Auth. Without this, the server runs unauthenticated (with a warning). It is the end user's responsibility to secure the server - any functionality it provides is not a vulnerability.
+> [!NOTE]
+> ### Server Mode
+> 
+> Server mode is opt-in only. When enabled, set `_2MCODE_SERVER_PASSWORD` to require HTTP Basic Auth. Without this, the server runs unauthenticated (with a warning). It is the end user's responsibility to secure the server — any functionality it provides is not a vulnerability.
 
 ### Out of Scope
 

@@ -44,9 +44,9 @@
 
 ---
 
-### Installation
+## Installation
 
-#### Global Install from Source (Recommended for Developers & Customization)
+### Global Install from Source (Recommended for Developers & Customization)
 
 If you have cloned this repository, you can compile an optimized, native self-contained TUI executable and register it globally in your system path with a single command:
 
@@ -66,7 +66,7 @@ bun run install:global
 
 ---
 
-#### Quick Package & Binary Installation
+### Quick Package & Binary Installation
 
 ```bash
 # Quick install script (macOS & Linux)
@@ -90,7 +90,7 @@ paru -S 2mcode-bin
 > [!TIP]
 > After install, simply type `2mcode` in any project directory to start.
 
-### Desktop App (BETA)
+## Desktop App (BETA)
 
 2M Code is also available as a desktop application. Download directly from the [releases page](https://github.com/ArafatAhmed-2M/2MCode/releases).
 
@@ -101,7 +101,7 @@ paru -S 2mcode-bin
 | Windows               | `2mcode-desktop-windows-x64.exe`      |
 | Linux                 | `.deb`, `.rpm`, or `.AppImage`        |
 
-#### Installation Directory
+### Installation Directory
 
 The install script uses the following priority for the installation path:
 
@@ -115,7 +115,7 @@ The install script uses the following priority for the installation path:
 _2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/ArafatAhmed-2M/2MCode/main/install | bash
 ```
 
-### Agents
+## Agents
 
 2M Code includes two built-in agents you can switch between with the `Tab` key.
 
@@ -128,21 +128,21 @@ _2MCODE_INSTALL_DIR=/usr/local/bin curl -fsSL https://raw.githubusercontent.com/
 Also included is a **general** subagent for complex searches and multistep tasks.
 This is used internally and can be invoked using `@general` in messages.
 
-### Documentation
+## Documentation
 
 For more info on how to configure 2M Code, [**head over to our docs**](https://github.com/ArafatAhmed-2M/2MCode/wiki).
 
-### Contributing
+## Contributing
 
 If you're interested in contributing to 2M Code, please read our [contributing docs](./CONTRIBUTING.md) before submitting a pull request.
 
-### Building on 2M Code
+## Building on 2M Code
 
 If you are working on a project that's related to 2M Code and is using "2M Code" as part of its name, please add a note to your README to clarify that it is not built by the 2M Code team and is not affiliated with us.
 
-### FAQ
+## FAQ
 
-#### How is this different from Claude Code?
+### How is this different from Claude Code?
 
 It's very similar to Claude Code in terms of capability. Here are the key differences:
 

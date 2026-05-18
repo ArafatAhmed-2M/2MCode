@@ -120,8 +120,8 @@ const table = sqliteTable("session", {
 
 - Avoid mocks as much as possible
 - Test actual implementation, do not duplicate logic into tests
-- Tests cannot run from repo root (guard: `do-not-run-tests-from-root`); run from package dirs like `packages/2M_CODE`.
+- Tests cannot run from repo root (guard: `do-not-run-tests-from-root`); run from package dirs like `packages/2mcode`.
 
 ## Type Checking
 
-- Always run `bun typecheck` from package directories (e.g., `packages/2M_CODE`), never `tsc` directly.
+- Always run `bun typecheck` from package directories (e.g., `packages/2mcode`), never `tsc` directly.

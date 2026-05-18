@@ -9,12 +9,15 @@
 - **Output**: creates `migration/<timestamp>_<slug>/migration.sql` and `snapshot.json`.
 - **Tests**: migration tests should read the per-folder layout (no `_journal.json`).
 
+> [!NOTE]
+> The `@2M_CODE/` prefix on Effect Service tags (e.g. `@2M_CODE/Account`) is a framework convention, not the product name. Do not rename these tags.
+
 ## Development server
 
-- Running `bun dev` from `packages/2M_CODE` starts the live interactive TUI. Do not run it as a blocking foreground command when you need to inspect the result.
-- Start it in `tmux` instead: `tmux new-session -d -s 2M_CODE-dev 'bun dev'`.
-- Capture the current TUI output with: `tmux capture-pane -pt 2M_CODE-dev`.
-- Stop the session explicitly when done: `tmux kill-session -t 2M_CODE-dev`.
+- Running `bun dev` from `packages/2mcode` starts the live interactive TUI. Do not run it as a blocking foreground command when you need to inspect the result.
+- Start it in `tmux` instead: `tmux new-session -d -s 2mcode-dev 'bun dev'`.
+- Capture the current TUI output with: `tmux capture-pane -pt 2mcode-dev`.
+- Stop the session explicitly when done: `tmux kill-session -t 2mcode-dev`.
 
 # Module shape
 
