@@ -151,17 +151,6 @@ Mention `@general` in your message to invoke the general-purpose subagent for co
 | `2mcode attach <url>`   | Attach TUI to a running server                     |
 | `2mcode <directory>`    | Start TUI in a specific directory                  |
 
-## Desktop App (BETA)
-
-2M Code is also available as a desktop application. Download directly from the [releases page](https://github.com/ArafatAhmed-2M/2MCode/releases).
-
-| Platform              | Download                              |
-| --------------------- | ------------------------------------- |
-| macOS (Apple Silicon) | `2mcode-desktop-mac-arm64.dmg`        |
-| macOS (Intel)         | `2mcode-desktop-mac-x64.dmg`          |
-| Windows               | `2mcode-desktop-windows-x64.exe`      |
-| Linux                 | `.deb`, `.rpm`, or `.AppImage`        |
-
 ### Installation Directory
 
 The install script uses the following priority for the installation path:
