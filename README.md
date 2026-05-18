@@ -114,14 +114,17 @@ Mention `@general` in your message to invoke the general-purpose subagent for co
 
 ### CLI Commands
 
-| Command                 | Description                                        |
-| ----------------------- | -------------------------------------------------- |
-| `2mcode`                | Start the TUI in the current directory             |
-| `2mcode --help`         | Show all available commands and flags              |
-| `2mcode serve`          | Start headless API server                          |
-| `2mcode web`            | Start server + open web interface                  |
-| `2mcode attach <url>`   | Attach TUI to a running server                     |
-| `2mcode <directory>`    | Start TUI in a specific directory                  |
+| Command                         | Description                                        |
+| ------------------------------- | -------------------------------------------------- |
+| `2mcode`                        | Start the TUI in the current directory             |
+| `2mcode run <message>`          | Run non-interactive with a message                 |
+| `2mcode serve`                  | Start headless API server                          |
+| `2mcode web`                    | Start server + open web interface                  |
+| `2mcode attach <url>`           | Attach TUI to a running server                     |
+| `2mcode models`                 | List available models                              |
+| `2mcode providers`              | Manage AI providers and credentials                |
+| `2mcode upgrade`                | Upgrade to the latest version                      |
+| `2mcode --help`                 | Show all commands and flags                        |
 
 ## Agents
 
